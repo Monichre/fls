@@ -255,11 +255,11 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(
 						<div className="absolute inset-0 bg-none z-0" />
 
 						{/* 3D Model Canvas */}
-						<div className="relative z-10 h-full w-full flex items-center justify-center overflow-visible canvas-wrapper">
+						{/* <div className="relative z-10 h-full w-full flex items-center justify-center overflow-visible canvas-wrapper">
 							<div className="relative animate-float">
-								{/* <div className="absolute -inset-0.5 bg-gradient-to-r from-yellow-400 to-yellow-600 opacity-30 blur-sm rounded-lg -z-10"></div> */}
+								<div className="absolute -inset-0.5 bg-gradient-to-r from-yellow-400 to-yellow-600 opacity-30 blur-sm rounded-lg -z-10"></div>
 							</div>
-							{/* <Canvas
+							 <Canvas
 									camera={{ position: [0, 0, 6], fov: 40 }}
 									shadows
 									dpr={[1, 2]}
@@ -267,10 +267,10 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(
 									style={{ height: "100%", width: "100%", overflow: "visible" }}
 								>
 									<Scene y={typeof y === "number" ? y : 0} />
-								</Canvas> */}
+								</Canvas> 
 
 							{/* Zoom controls - now OUTSIDE the Canvas */}
-							{/* <div className="hero-buttons absolute bottom-4 right-4 flex flex-col gap-2 bg-black/30 backdrop-blur-sm p-2 rounded-lg">
+						{/* <div className="hero-buttons absolute bottom-4 right-4 flex flex-col gap-2 bg-black/30 backdrop-blur-sm p-2 rounded-lg">
 								<Button
 									onClick={zoomIn}
 									className="p-2 bg-zinc-800 hover:bg-zinc-700 rounded-full text-white"
@@ -292,8 +292,9 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(
 								>
 									<RotateCcw size={16} />
 								</Button>
-							</div> */}
+							</div> 
 						</div>
+						*/}
 					</div>
 				</motion.div>
 
