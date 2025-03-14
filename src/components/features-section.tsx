@@ -78,7 +78,7 @@ export function FeaturesSection() {
 			{/* Background image */}
 			<div className="absolute inset-0">
 				<Image
-					src="/banner-.png"
+					src="/banner.png"
 					alt="FLS Lighter Features Background"
 					fill
 					className="object-cover"
