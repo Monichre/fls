@@ -73,7 +73,7 @@ export function FeaturesSection() {
 	return (
 		<section
 			ref={sectionRef}
-			className="relative bg-zinc-900 py-20 md:py-32 overflow-hidden h-min-[1030px] h-auto flex flex-col items-center justify-center"
+			className="relative bg-zinc-900 py-20 md:py-32 overflow-hidden h-max-[1280px] h-auto flex flex-col items-center justify-center"
 		>
 			{/* Background image */}
 			<div className="absolute inset-0">
