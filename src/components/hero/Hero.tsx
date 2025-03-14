@@ -10,6 +10,7 @@ import * as THREE from "three";
 import { Button } from "@/components/ui/button";
 import { ZoomIn, ZoomOut, RotateCcw } from "lucide-react";
 import { Divider } from "@/components/ui";
+import { PinContainer } from "@/components/ui/3d-pin";
 
 // Define types for the LighterModel
 interface LighterModelProps {
@@ -20,6 +21,28 @@ interface LighterModelProps {
 // Custom 3D lighter model using Three.js primitives
 function LighterModel({ y = 0, ...props }: LighterModelProps) {
 	const meshRef = useRef<THREE.Group>(null);
+
+	// Import the Model component from the lighter component
+	// import { Model } from "@/components/3d/lighter/lighter";
+
+	// Create a texture loader for the logo
+	const texture = new THREE.TextureLoader().load("/mobile_screen_medium.png");
+
+	// Set texture properties for better rendering
+	texture.wrapS = texture.wrapT = THREE.ClampToEdgeWrapping;
+	texture.minFilter = THREE.LinearFilter;
+	texture.needsUpdate = true;
+
+	// Create a material with the texture
+	// Create a material with the texture
+	const logoMaterial = new THREE.MeshStandardMaterial({
+		map: texture,
+		transparent: true,
+		roughness: 0.3,
+		metalness: 0.2,
+	});
+
+	// To use this material, we'll apply it to a mesh in the return function
 
 	// Animation using y value for rotation
 	useFrame(() => {
@@ -39,42 +62,56 @@ function LighterModel({ y = 0, ...props }: LighterModelProps) {
 
 	return (
 		<group ref={meshRef} {...props} dispose={null} scale={1.5}>
-			{/* Lighter body */}
 			<mesh position={[0, 0, 0]} castShadow receiveShadow>
 				<boxGeometry args={[1, 2, 0.5]} />
 				<meshStandardMaterial color="#222222" roughness={0.5} metalness={0.8} />
 			</mesh>
-
-			{/* Lighter top */}
-			<mesh position={[0, 1.2, 0]} castShadow receiveShadow>
-				<boxGeometry args={[1, 0.4, 0.5]} />
-				<meshStandardMaterial color="#333333" roughness={0.3} metalness={0.9} />
-			</mesh>
-
-			{/* Wheel */}
-			<mesh
-				position={[0, 1.4, 0.3]}
-				rotation={[Math.PI / 2, 0, 0]}
-				castShadow
-				receiveShadow
-			>
-				<cylinderGeometry args={[0.3, 0.3, 0.1, 32]} />
-				<meshStandardMaterial color="#444444" roughness={0.2} metalness={1} />
-			</mesh>
-
-			{/* Yellow accent */}
+			{/* Logo using the texture material */}
 			<mesh position={[0, 0, 0.26]} castShadow receiveShadow>
-				<boxGeometry args={[0.8, 1.8, 0.05]} />
-				<meshStandardMaterial color="#FFCC00" roughness={0.4} metalness={0.2} />
-			</mesh>
-
-			{/* FLS logo */}
-			<mesh position={[0, -0.5, 0.29]} castShadow receiveShadow>
-				<boxGeometry args={[0.6, 0.6, 0.01]} />
-				<meshStandardMaterial color="#FFCC00" roughness={0.4} metalness={0.2} />
+				<planeGeometry args={[0.8, 1.6]} />
+				<primitive object={logoMaterial} attach="material" />
 			</mesh>
 		</group>
 	);
+
+	// return (
+	// 	<group ref={meshRef} {...props} dispose={null} scale={1.5}>
+	// 		{/* Lighter body */}
+	// 		<mesh position={[0, 0, 0]} castShadow receiveShadow>
+	// 			<boxGeometry args={[1, 2, 0.5]} />
+	// 			<meshStandardMaterial color="#222222" roughness={0.5} metalness={0.8} />
+	// 		</mesh>
+
+	// 		{/* Lighter top */}
+	// 		<mesh position={[0, 1.2, 0]} castShadow receiveShadow>
+	// 			<boxGeometry args={[1, 0.4, 0.5]} />
+	// 			<meshStandardMaterial color="#333333" roughness={0.3} metalness={0.9} />
+	// 		</mesh>
+
+	// 		{/* Wheel */}
+	// 		<mesh
+	// 			position={[0, 1.4, 0.3]}
+	// 			rotation={[Math.PI / 2, 0, 0]}
+	// 			castShadow
+	// 			receiveShadow
+	// 		>
+	// 			<cylinderGeometry args={[0.3, 0.3, 0.1, 32]} />
+	// 			<meshStandardMaterial color="#444444" roughness={0.2} metalness={1} />
+	// 		</mesh>
+
+	// 		{/* Yellow accent */}
+	// 		<mesh position={[0, 0, 0.26]} castShadow receiveShadow>
+	// 			<boxGeometry args={[0.8, 1.8, 0.05]} />
+	// 			<meshStandardMaterial color="#FFCC00" roughness={0.4} metalness={0.2} />
+	// 		</mesh>
+
+	// 		{/* FLS logo */}
+	// 		<mesh position={[0, -0.5, 0.29]} castShadow receiveShadow>
+	// 			<boxGeometry args={[0.6, 0.6, 0.01]} />
+	// 			<meshStandardMaterial color="#FFCC00" roughness={0.4} metalness={0.2} />
+	// 		</mesh>
+	// 	</group>
+	// );
 }
 
 // Define types for Scene
@@ -115,7 +152,13 @@ function Scene({
 			<Environment preset="city" />
 
 			<Float rotationIntensity={0.4}>
-				<LighterModel y={y} />
+				{/* <LighterModel y={y} /> */}
+				<Image
+					src="/mobile_screen_medium.png"
+					alt="FLS Lighter"
+					width={100}
+					height={100}
+				/>
 			</Float>
 		</>
 	);
@@ -180,7 +223,7 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(
 					style={{ y, opacity }}
 					className="container mx-auto px-4 md:px-6 z-20 flex flex-col md:flex-row items-center justify-start overflow-visible"
 				>
-					<div className="md:w-1/2 mb-10 md:mb-0">
+					<div className="sm:w-full md:w-1/2 mb-10 md:mb-0">
 						<Image
 							width={217}
 							height={85}
@@ -213,15 +256,18 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(
 
 						{/* 3D Model Canvas */}
 						<div className="relative z-10 h-full w-full flex items-center justify-center overflow-visible canvas-wrapper">
-							<Canvas
-								camera={{ position: [0, 0, 6], fov: 40 }}
-								shadows
-								dpr={[1, 2]}
-								gl={{ preserveDrawingBuffer: true, alpha: true }}
-								style={{ height: "100%", width: "100%", overflow: "visible" }}
-							>
-								<Scene y={typeof y === "number" ? y : 0} />
-							</Canvas>
+							<div className="relative animate-float">
+								{/* <div className="absolute -inset-0.5 bg-gradient-to-r from-yellow-400 to-yellow-600 opacity-30 blur-sm rounded-lg -z-10"></div> */}
+							</div>
+							{/* <Canvas
+									camera={{ position: [0, 0, 6], fov: 40 }}
+									shadows
+									dpr={[1, 2]}
+									gl={{ preserveDrawingBuffer: true, alpha: true }}
+									style={{ height: "100%", width: "100%", overflow: "visible" }}
+								>
+									<Scene y={typeof y === "number" ? y : 0} />
+								</Canvas> */}
 
 							{/* Zoom controls - now OUTSIDE the Canvas */}
 							{/* <div className="hero-buttons absolute bottom-4 right-4 flex flex-col gap-2 bg-black/30 backdrop-blur-sm p-2 rounded-lg">

@@ -1,9 +1,13 @@
 import type { Metadata } from "next";
 import { Poppins, Roboto, Roboto_Mono } from "next/font/google";
 import "./globals.css";
+// Import our CSS utilities
+import "@/styles/mobile-optimizations.css";
+import "@/styles/responsive-utils.css";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
+import { MobileProvider } from "@/contexts/mobile-context";
 
 import localFont from "next/font/local";
 
@@ -90,9 +94,11 @@ export default function RootLayout({
 			<body
 				className={`${roboto.variable} ${poppins.variable} ${poppinsBlack.variable} ${proximaNova.variable} antialiased`}
 			>
-				<Navbar />
-				{children}
-				<Footer />
+				<MobileProvider>
+					<Navbar />
+					{children}
+					<Footer />
+				</MobileProvider>
 			</body>
 		</html>
 	);

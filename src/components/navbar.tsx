@@ -18,7 +18,7 @@ const navItems = [
 ];
 
 export function Navbar() {
-	const [isScrolled, setIsScrolled] = useState(false);
+	const [isScrolled, setIsScrolled] = useState(true);
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
 	// Handle scroll effect
@@ -32,55 +32,56 @@ export function Navbar() {
 	}, []);
 
 	return (
-		<motion.header
-			className="fixed top-10 left-0 right-0 z-50 transition-colors duration-300 bg-transparent"
-			initial={{ y: -100 }}
-			animate={{ y: 0 }}
-			transition={{ duration: 0.5, ease: "easeOut" }}
-		>
-			<div className="container mx-auto px-4 md:px-6">
-				<div className="flex items-center justify-between h-16 md:h-20">
-					{/* Logo */}
-					<Link
-						href="/"
-						className="flex items-center h-[65px] w-[65px] bg-yellow-400 rounded-lg"
-					>
-						<Image
-							src="/logo-letters-black.png"
-							alt="FLS Logo"
-							width={55}
-							height={55}
-						/>
-					</Link>
+		<AnimatePresence>
+			<motion.header
+				className="fixed top-[20px] left-0 right-0 z-50 transition-colors duration-300 bg-transparent"
+				// initial={{ y: -100 }}
+				// animate={{ y: 0 }}
+				// transition={{ duration: 0.5, ease: "easeOut" }}
+			>
+				<div className="container mx-auto px-4 md:px-6">
+					<div className="flex items-center justify-between h-16 md:h-20">
+						{/* Logo */}
+						<Link
+							href="/"
+							className="flex items-center h-[65px] w-[65px] bg-yellow-400 rounded-lg"
+						>
+							<Image
+								src="/logo-letters-black.png"
+								alt="FLS Logo"
+								width={55}
+								height={55}
+							/>
+						</Link>
 
-					{/* Desktop Navigation */}
-					<nav className="hidden md:flex items-center space-x-4 bg-black px-6 py-2 rounded-full">
-						{navItems.map((item) => (
-							<Link
-								key={item.label}
-								href={item.href}
-								className="text-sm font-medium text-white/80 hover:text-white transition-colors px-4 py-2"
-							>
-								{item.label}
-							</Link>
-						))}
-					</nav>
+						{/* Desktop Navigation */}
+						<nav className="hidden md:flex items-center space-x-4 bg-black px-6 py-2 rounded-full">
+							{navItems.map((item) => (
+								<Link
+									key={item.label}
+									href={item.href}
+									className="text-sm font-medium text-white/80 hover:text-white transition-colors px-4 py-2"
+								>
+									{item.label}
+								</Link>
+							))}
+						</nav>
 
-					{/* Mobile Menu Button */}
-					<Button
-						variant="ghost"
-						size="icon"
-						className="md:hidden text-white"
-						onClick={() => setMobileMenuOpen(true)}
-					>
-						<Menu className="h-6 w-6" />
-						<span className="sr-only">Open menu</span>
-					</Button>
+						{/* Mobile Menu Button */}
+						<Button
+							variant="ghost"
+							size="icon"
+							className="md:hidden text-white"
+							onClick={() => setMobileMenuOpen(true)}
+						>
+							<Menu className="h-6 w-6" />
+							<span className="sr-only">Open menu</span>
+						</Button>
+					</div>
 				</div>
-			</div>
 
-			{/* Mobile Menu */}
-			<AnimatePresence>
+				{/* Mobile Menu */}
+
 				{mobileMenuOpen && (
 					<motion.div
 						className="fixed inset-0 bg-zinc-900 z-50 md:hidden"
@@ -132,7 +133,7 @@ export function Navbar() {
 						</div>
 					</motion.div>
 				)}
-			</AnimatePresence>
-		</motion.header>
+			</motion.header>
+		</AnimatePresence>
 	);
 }

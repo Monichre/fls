@@ -1,0 +1,91 @@
+/* 
+ * Responsive utilities for Tailwind CSS
+ * These classes complement Tailwind's mobile-first approach
+ */
+
+/* Base responsive classes from our useResponsive hook */
+html.is-mobile .mobile-only {
+	display: block;
+}
+html:not(.is-mobile) .mobile-only {
+	display: none;
+}
+
+html.is-tablet .tablet-only {
+	display: block;
+}
+html:not(.is-tablet) .tablet-only {
+	display: none;
+}
+
+html.is-desktop .desktop-only {
+	display: block;
+}
+html:not(.is-desktop) .desktop-only {
+	display: none;
+}
+
+/* Landscape mode optimizations */
+html.landscape.is-mobile .landscape-view {
+	/* Optimize layout for landscape mobile */
+	& section {
+		min-height: 100vh;
+		height: auto;
+	}
+
+	/* Adjust hero section for landscape */
+	& section.hero {
+		height: 100vh;
+
+		/* Use Tailwind's responsive approach where possible */
+		/* These classes only apply when manual adjustments are needed */
+		& .container {
+			@apply flex-row justify-between items-center;
+		}
+	}
+
+	/* Performance optimizations for mobile */
+	& * {
+		@apply will-change-auto;
+		backface-visibility: hidden;
+		-webkit-font-smoothing: antialiased;
+	}
+}
+
+/* Touch device optimizations */
+.touch-manipulation {
+	touch-action: manipulation;
+
+	/* Avoid hover effects on touch devices */
+	& *:hover {
+		@apply transform-none transition-none;
+	}
+
+	/* Improve scroll performance */
+	& * {
+		-webkit-overflow-scrolling: touch;
+	}
+
+	/* Optimize image loading */
+	& img {
+		@apply max-w-full h-auto;
+		content-visibility: auto;
+	}
+}
+
+/* Reduced motion preferences */
+html.prefers-reduced-motion * {
+	@apply animate-none transition-none;
+	scroll-behavior: auto;
+
+	/* Disable parallax and other intensive animations */
+	& .parallax-element,
+	& [style*="transform"] {
+		@apply transform-none;
+	}
+
+	/* Simplify animations */
+	& .gsap-animated {
+		@apply transition-opacity;
+	}
+}

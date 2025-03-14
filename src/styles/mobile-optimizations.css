@@ -1,0 +1,170 @@
+/* Mobile optimization styles */
+
+/* Global mobile adjustments */
+.is-mobile-view {
+	--animation-duration: 0.7; /* Reduce animation durations */
+	--animation-delay: 0.3; /* Reduce animation delays */
+	--stagger-time: 0.1; /* Reduce stagger time */
+	scroll-behavior: smooth;
+}
+
+/* Mobile container styles */
+.mobile-optimized {
+	overflow-x: hidden;
+}
+
+/* Landscape mode optimizations */
+.landscape-mobile {
+	/* Special handling for mobile in landscape mode */
+	& section {
+		min-height: 100vh;
+		height: auto !important;
+	}
+
+	/* Adjust hero section for landscape */
+	& section.hero {
+		height: 100vh !important;
+		max-height: none;
+
+		/* Adjust content layout */
+		& .container {
+			flex-direction: row !important;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		/* Adjust text sizes for landscape */
+		& h1 {
+			font-size: 2rem !important;
+		}
+
+		& p {
+			font-size: 0.9rem !important;
+		}
+
+		/* Optimize 3D model display in landscape */
+		& .canvas-wrapper {
+			height: 100% !important;
+			width: 50% !important;
+		}
+	}
+
+	/* Optimize dual sections for landscape */
+	& .dual-section {
+		flex-direction: row !important;
+
+		& > div {
+			flex: 1;
+			min-height: 100vh;
+		}
+	}
+}
+
+.mobile-optimized-container {
+	/* Add padding for better touch interactions */
+	padding: 0 1rem;
+
+	/* Optimize scrolling */
+	overflow-x: hidden;
+
+	/* Reduce margins between sections */
+	& > section:not(:first-child) {
+		margin-top: 2rem;
+	}
+
+	/* Improve text readability on mobile */
+	font-size: 16px;
+
+	/* Optimize font sizes for mobile */
+	& h1 {
+		font-size: 2.5rem !important;
+	}
+
+	& h2 {
+		font-size: 2rem !important;
+	}
+
+	& h3 {
+		font-size: 1.5rem !important;
+	}
+
+	& p {
+		font-size: 1rem !important;
+		line-height: 1.5;
+	}
+
+	/* Improve button sizes for touch targets */
+	& button,
+	& .button {
+		min-height: 44px;
+		min-width: 44px;
+		padding: 0.75rem 1.25rem;
+		font-size: 1rem;
+	}
+
+	/* Optimize images for mobile */
+	& img {
+		max-width: 100%;
+		height: auto;
+	}
+
+	/* Optimize GSAP animations for mobile */
+	& .fade-in {
+		will-change: opacity, transform;
+		backface-visibility: hidden;
+	}
+
+	/* Improve 3D model performance on mobile */
+	& .canvas-wrapper {
+		pointer-events: none;
+	}
+
+	/* Hero section adjustments */
+	& section.hero {
+		max-height: 80vh;
+	}
+
+	/* Stack sections vertically on mobile */
+	& .dual-section {
+		flex-direction: column !important;
+	}
+
+	/* Reduce parallax effects for better performance */
+	& .parallax-element {
+		transform: none !important;
+		transition: none !important;
+	}
+
+	/* Image optimizations */
+	& img {
+		content-visibility: auto;
+	}
+
+	/* Additional mobile performance optimizations */
+	& * {
+		-webkit-tap-highlight-color: transparent;
+	}
+}
+
+/* Media query for larger mobile devices */
+@media (min-width: 520px) and (max-width: 767px) {
+	.mobile-optimized-container {
+		padding: 0 1.5rem;
+
+		& h1 {
+			font-size: 3rem !important;
+		}
+
+		& h2 {
+			font-size: 2.25rem !important;
+		}
+	}
+}
+
+/* Remove hover effects on mobile to improve performance */
+@media (hover: none) {
+	.mobile-optimized-container *:hover {
+		transform: none !important;
+		transition: none !important;
+	}
+}
