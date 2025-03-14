@@ -17,7 +17,9 @@ export function Footer() {
 					</div>
 
 					<div>
-						<h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+						<h3 className="text-lg font-semibold mb-4 text-white">
+							Quick Links
+						</h3>
 						<ul className="space-y-2">
 							{["Home", "Products", "About", "Contact"].map((item) => (
 								<li key={item}>
@@ -33,7 +35,7 @@ export function Footer() {
 					</div>
 
 					<div>
-						<h3 className="text-lg font-semibold mb-4">Support</h3>
+						<h3 className="text-lg font-semibold mb-4 text-white">Support</h3>
 						<ul className="space-y-2">
 							{["FAQ", "Shipping", "Returns", "Privacy Policy"].map((item) => (
 								<li key={item}>
@@ -49,7 +51,9 @@ export function Footer() {
 					</div>
 
 					<div>
-						<h3 className="text-lg font-semibold mb-4">Connect With Us</h3>
+						<h3 className="text-lg font-semibold mb-4 text-white">
+							Connect With Us
+						</h3>
 						<div className="flex space-x-4">
 							{[
 								{ icon: Facebook, label: "Facebook" },

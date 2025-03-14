@@ -57,7 +57,7 @@ export function SignatureDesignSection() {
 					</div>
 
 					{/* Image */}
-					<div className="md:w-1/2 relative h-[500px] md:h-[700px] flex items-center justify-center">
+					<div className="w-full md:w-1/2 relative h-[500px] md:h-[700px] flex items-center justify-center">
 						<Image
 							src="/dual-lighters.png"
 							alt="FLS Signature Lighter Design"

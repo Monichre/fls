@@ -221,9 +221,9 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(
 				{/* Content */}
 				<motion.div
 					style={{ y, opacity }}
-					className="container mx-auto px-4 md:px-6 z-20 flex flex-col md:flex-row items-center justify-start overflow-visible"
+					className="container mx-auto px-4 lg:px-6 z-20 flex md:flex-col lg:flex-row items-center justify-center overflow-visible"
 				>
-					<div className="sm:w-full md:w-1/2 mb-10 md:mb-0">
+					<div className="sm:w-full sm:h-auto lg:w-1/2 mb-10 lg:mb-0">
 						<Image
 							width={217}
 							height={85}
@@ -231,7 +231,7 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(
 							alt="FLS Logo"
 						/>
 						<h1
-							className="hero-text text-4xl md:text-6xl font-bold text-white my-2"
+							className="hero-text text-4xl lg:text-6xl font-bold text-white my-2"
 							style={{ letterSpacing: "-1px" }}
 						>
 							FIRE UP THE FUN
@@ -250,7 +250,7 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(
 						</div>
 					</div>
 
-					<div className="md:w-1/2 h-[600px] md:h-[600px] relative overflow-visible">
+					<div className="lg:w-1/2 h-[600px] lg:h-[600px] relative overflow-visible">
 						{/* Semi-transparent backdrop for 3D model */}
 						<div className="absolute inset-0 bg-none z-0" />
 
