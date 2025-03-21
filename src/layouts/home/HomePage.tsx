@@ -1,14 +1,9 @@
 'use client'
 
-import {ProductCollection} from './ProductCollection'
-import {About} from './About'
-import {WholeSale} from './WholeSale'
-
 import {useRef, lazy, Suspense} from 'react'
 import {useScroll, useTransform} from 'framer-motion'
 import {gsap} from 'gsap'
 import {ScrollTrigger} from 'gsap/ScrollTrigger'
-import {Navbar} from '@/components/navbar'
 
 import {Hero} from '@/components/hero'
 import {useResponsive, cn} from '@/hooks'
@@ -40,11 +35,11 @@ const FeaturesSection = lazy(() =>
   }))
 )
 
-gsap.registerPlugin(useGSAP)
-
 // Register GSAP plugins
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger)
+
+  gsap.registerPlugin(useGSAP)
 }
 
 export const HomePage = () => {
@@ -101,7 +96,7 @@ export const HomePage = () => {
 
       // Animate buttons
       gsap.fromTo(
-        '.hero-buttons .button',
+        '.hero-buttons',
         {
           y: isMobile ? 5 : 10,
           opacity: 0,
@@ -111,8 +106,8 @@ export const HomePage = () => {
           opacity: 1,
           duration: isMobile ? 0.6 : 0.8,
           stagger: staggerTime,
-          delay: isMobile ? 0.3 : 0.5,
-          ease: 'power3.out',
+          delay: isMobile ? 0.3 : 0.8,
+          ease: 'power3.out', // Other options: 'back.out', 'elastic.out', 'bounce.out', 'expo.out', 'sine.out'
         }
       )
 
@@ -123,6 +118,7 @@ export const HomePage = () => {
             opacity: 1,
             y: 0,
             stagger: isMobile ? 0.1 : 0.15,
+            delay: isMobile ? 0.5 : 0.8,
             duration: isMobile ? 0.6 : 0.8,
             ease: 'power3.out',
           })

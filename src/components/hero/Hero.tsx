@@ -239,11 +239,14 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(
             </h1>
 
             <div className='hero-buttons flex flex-wrap gap-4'>
-              <Button className='bg-yellow rounded-full button ' size='lg'>
+              <Button
+                className='bg-yellow rounded-full button transition-all duration-300'
+                size='lg'
+              >
                 Our Products
               </Button>
               <Button
-                className='bg-white text-black hover:bg-white/10 rounded-full button '
+                className='bg-white text-black hover:bg-white/10 rounded-full button transition-all duration-300'
                 size='lg'
               >
                 View More
