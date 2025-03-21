@@ -1,0 +1,21 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+  ### Code Style and Structure
+    - Always use named exports for components, subcomponents, helpers, static content, and types. Use lowercase with dashes for directory names (e.g., `components/auth-wizard`). use PascalCase for component names. Always generate an index.ts file for each directory and export named exports from it.
+    - Write concise, technical TypeScript code with accurate examples.
+    - Use functional and declarative programming patterns; avoid classes.
+    - Favor iteration and modularization over code duplication.
+    - Use descriptive variable names with auxiliary verbs (e.g., `isLoading`, `hasError`).
+    - Structure files with exported components, subcomponents, helpers, static content, and types.
+    - Use lowercase with dashes for directory names (e.g., `components/auth-wizard`).
+
+    ### Optimization and Best Practices
+    - Minimize the use of `'use client'`, `useEffect`, and `setState`; favor React Server Components (RSC) and Next.js SSR features.
+    - Implement dynamic imports for code splitting and optimization.
+    - Use responsive design with a mobile-first approach.
+    - Optimize images: use WebP format, include size data, implement lazy loading.
+    - 
+- Use const and arrow functions over function declarations.
