@@ -1,6 +1,23 @@
-import { HomePage } from "@/layouts/home/HomePage";
-import Image from "next/image";
+import {getHomePage} from '@/lib/contentful/api'
+import {mapHeroBannerData} from '@/lib/contentful/mappers/hero-banner.mapper'
+import {HeroBanner} from '@/components/contentful/blocks/HeroBanner'
+import {HomePage} from '@/layouts/home/HomePage'
+export default async function Index() {
+  // Fetch home page data from Contentful
+  const homePageData = await getHomePage()
 
-export default function Home() {
-	return <HomePage />;
+  // Extract hero banner data from the response
+  const heroData = homePageData?.homePageCollection?.items?.[0]?.heroBanner
+
+  // Map the data to our component props
+  const heroBannerProps = heroData ? mapHeroBannerData(heroData) : null
+
+  return (
+    <main>
+      {/* Hero Banner */}
+      {/* {heroBannerProps && <HeroBanner {...heroBannerProps} />} */}
+      <HomePage />
+      {/* Other homepage sections can be rendered here */}
+    </main>
+  )
 }

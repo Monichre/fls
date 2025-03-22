@@ -42,7 +42,11 @@ if (typeof window !== 'undefined') {
   gsap.registerPlugin(useGSAP)
 }
 
-export const HomePage = () => {
+interface HomePageProps {
+  data?: any
+}
+
+export const HomePage = ({data}: HomePageProps) => {
   const containerRef = useRef(null)
   const heroRef = useRef(null)
 
@@ -55,6 +59,9 @@ export const HomePage = () => {
     breakpoint,
     prefersReducedMotion,
   } = useResponsive()
+
+  // Check if we have data from contentful
+  const hasContentfulData = data && data.homePage
 
   // Parallax effect - adjust based on device capabilities
   const {scrollYProgress} = useScroll({
@@ -134,7 +141,7 @@ export const HomePage = () => {
         }
       }
     },
-    {scope: containerRef, dependencies: [isMobile, prefersReducedMotion]} // Re-run when dependencies change
+    {scope: containerRef, dependencies: [isMobile, prefersReducedMotion]}
   )
 
   // Loading component for suspense fallback using Tailwind classes
@@ -158,7 +165,10 @@ export const HomePage = () => {
         y={y}
         opacity={opacity}
         ref={heroRef}
-        {...{isMobile, isLandscape, prefersReducedMotion}}
+        // {...{isMobile, isLandscape, prefersReducedMotion}}
+        // contentfulData={
+        //   hasContentfulData ? data.homePage.heroBanner : undefined
+        // }
       />
 
       <Suspense fallback={<LoadingFallback />}>

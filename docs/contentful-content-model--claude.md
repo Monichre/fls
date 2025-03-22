@@ -31,10 +31,9 @@
     - Title (Short Text) - "Crafted for Perfection"
     - Subtitle (Short Text)
     - Background Image (Media)
-    - CTA Text (Short Text)
-    - CTA Link (Short Text)
-    - Text Color (Short Text) - for customization
-    - Background Color (Short Text) - for customization
+    - Icon
+    - Content (Rich Text)
+    - CTA Links (Reference to CTA Link)
 
 ### 4. Feature Blocks
 

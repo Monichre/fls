@@ -140,9 +140,10 @@ export function DualSection() {
               src='/lighter-transparent.png'
               alt='FLS Lighter Flame'
               fill
-              className='object-fill object-right'
+              className='object-cover object-center'
               priority
               quality={100}
+              style={{objectFit: 'cover'}}
             />
             <div className='absolute inset-0 bg-gradient-to-r from-zinc-900 to-transparent z-10' />
           </motion.div>
