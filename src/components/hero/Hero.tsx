@@ -11,6 +11,7 @@ import {Button} from '@/components/ui/button'
 import {ZoomIn, ZoomOut, RotateCcw} from 'lucide-react'
 import {Divider} from '@/components/ui'
 import {PinContainer} from '@/components/ui/3d-pin'
+import {NewsletterSignup} from '@/components/newsletter-signup'
 
 // Define types for the LighterModel
 interface LighterModelProps {
@@ -238,15 +239,15 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(
               FIRE UP THE FUN
             </h1>
 
-            <div className='hero-buttons flex flex-wrap gap-4'>
+            <div className='hero-buttons flex flex-wrap gap-4 mt-2'>
               <Button
-                className='bg-yellow rounded-full button transition-all duration-300'
+                className='bg-yellow rounded-full button transition-all duration-300 button fade-in'
                 size='lg'
               >
                 Our Products
               </Button>
               <Button
-                className='bg-white text-black hover:bg-white/10 rounded-full button transition-all duration-300'
+                className='bg-white text-black hover:bg-white/10 rounded-full button transition-all duration-300 button fade-in'
                 size='lg'
               >
                 View More
@@ -254,9 +255,26 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(
             </div>
           </div>
 
-          <div className='lg:w-1/2 h-[600px] lg:h-[600px] relative overflow-visible'>
+          <div className='lg:w-1/2 h-[600px] lg:h-[600px] relative overflow-visible flex items-center justify-center content-center'>
             {/* Semi-transparent backdrop for 3D model */}
             <div className='absolute inset-0 bg-none z-0' />
+            <div className='relative z-10'>
+              <div className='max-w-3xl text-center mb-10 fade-in opacity-0 translate-y-10'>
+                <h1
+                  className='hero-text text-4xl lg:text-6xl font-bold text-left mb-2 text-[#F7CB00] uppercase font-poppins-black'
+                  style={{letterSpacing: '-1px', color: '#F7CB00'}}
+                >
+                  Join the Waitlist
+                </h1>
+                <p className='text-white text-left text-lg md:text-xl text-white/80 bottom-content-item'>
+                  Subscribe to our newsletter for exclusive offers and updates
+                </p>
+              </div>
+
+              <div className='max-w-md  fade-in opacity-0 translate-y-10'>
+                <NewsletterSignup />
+              </div>
+            </div>
 
             {/* 3D Model Canvas */}
             {/* <div className="relative z-10 h-full w-full flex items-center justify-center overflow-visible canvas-wrapper">

@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import {Facebook, Instagram, Twitter, Youtube} from 'lucide-react'
+import {NewsletterSignup} from '@/components/newsletter-signup'
 
 export function Footer() {
   return (
@@ -54,6 +55,9 @@ export function Footer() {
             <h3 className='text-lg font-semibold mb-4 text-white'>
               Connect With Us
             </h3>
+            <div className='my-2'>
+              <NewsletterSignup />
+            </div>
             <div className='flex space-x-4'>
               {[
                 {icon: Facebook, label: 'Facebook'},
