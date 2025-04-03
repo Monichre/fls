@@ -104,7 +104,7 @@ export function DualSection() {
             {/* <div className='inline-block bg-yellow-400 text-black px-4 py-1 rounded-full mb-6 top-content-item'>
               <span className='font-medium'>Premium Quality</span>
             </div> */}
-            <h2 className='text-3xl md:text-4xl  text-white mb-6 top-content-item'>
+            <h2 className='text-4xl md:text-6xl text-white mb-6 top-content-item leading-tight'>
               Introducing <br />
               CounterCulture
             </h2>

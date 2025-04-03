@@ -71,15 +71,10 @@ export function Navbar() {
             {/* Logo */}
             <Link
               href='/#home'
-              className='flex items-center h-[65px] w-[65px] bg-yellow-400 rounded-lg'
+              className='flex items-center h-[75px] w-[75px] rounded-lg'
               onClick={(e) => scrollToSection(e, '#home')}
             >
-              <Image
-                src='/logo-letters-black.png'
-                alt='FLS Logo'
-                width={55}
-                height={55}
-              />
+              <Image src='/logo.png' alt='FLS Logo' width={55} height={55} />
             </Link>
 
             {/* Desktop Navigation */}
