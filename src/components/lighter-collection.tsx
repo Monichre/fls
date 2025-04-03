@@ -91,7 +91,7 @@ export function LighterCollection() {
           <Button
             size='lg'
             variant='outline'
-            className='collection-content border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black rounded-full'
+            className='collection-content bg-yellow-400 text-white hover:bg-white hover:text-yellow-400 rounded-full px-8 py-6'
           >
             View More
           </Button>

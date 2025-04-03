@@ -236,7 +236,7 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(
               className='hero-text text-4xl lg:text-6xl font-bold text-white my-2'
               style={{letterSpacing: '-1px'}}
             >
-              FIRE UP THE FUN
+              SPARK THE EXCITEMENT
             </h1>
 
             <div className='hero-buttons flex flex-wrap gap-4 mt-2'>
@@ -264,10 +264,11 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(
                   className='hero-text text-4xl lg:text-6xl font-bold text-left mb-2 text-[#F7CB00] uppercase font-poppins-black'
                   style={{letterSpacing: '-1px', color: '#F7CB00'}}
                 >
-                  Join the Waitlist
+                  Be in the know
                 </h1>
                 <p className='text-white text-left text-lg md:text-xl text-white/80 bottom-content-item'>
-                  Subscribe to our newsletter for exclusive offers and updates
+                  Wholesalers and distributors join our newsletter for exclusive
+                  offers and updates.
                 </p>
               </div>
 

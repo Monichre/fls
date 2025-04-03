@@ -101,23 +101,37 @@ export function DualSection() {
           className='relative z-20 container mx-auto px-4 md:px-6 h-full flex flex-col justify-center'
         >
           <div className='max-w-2xl'>
-            <div className='inline-block bg-yellow-400 text-black px-4 py-1 rounded-full mb-6 top-content-item'>
+            {/* <div className='inline-block bg-yellow-400 text-black px-4 py-1 rounded-full mb-6 top-content-item'>
               <span className='font-medium'>Premium Quality</span>
-            </div>
-            <h2 className='text-4xl md:text-6xl font-bold text-white mb-6 top-content-item'>
-              Crafted for <span className='text-yellow-400'>Perfection</span>
+            </div> */}
+            <h2 className='text-3xl md:text-4xl  text-white mb-6 top-content-item'>
+              Introducing <br />
+              CounterCulture
             </h2>
-            <p className='text-lg md:text-xl text-white/80 mb-8 top-content-item'>
-              Our lighters are designed with precision engineering and premium
-              materials to ensure reliability in any condition. Experience the
-              perfect flame, every time.
+            <p className='text-2xl md:text-xl text-white/80 mb-8 top-content-item'>
+              The parent company of FLS USA is CounterCulture. As founders,
+              Ibrahim Najara, Bradly Fadly and Samuel Habib have a passion for
+              all things C-store that is matched only by their love of America.
+              It’s their pioneering and innovative spirit that has driven their
+              success as value product retailers and wholesalers. They
+              understand, better than anyone, that C-store checkout areas are
+              mini-ecosystems of their own. And through wise purchasing along
+              with smart curating, they know exactly how to make each one of
+              those places a success for all.
+              {/* CounterCulture is the parent company of FLS USA. Ibrahim Najara,
+              Bradly Fadly, and Samuel Habib, the visionaries behind FLS-USA,
+              blend a fierce passion for C-stores with unwavering American
+              pride. Their bold innovation drives its success in value goods for
+              retailers and wholesalers. Masters of C-store checkout
+              micro-worlds, they spark triumph through savvy sourcing and
+              curation. */}
             </p>
             <div className='flex flex-wrap gap-4 top-content-item'>
               <Button
                 size='lg'
-                className='bg-yellow-400 hover:bg-yellow-500 text-black rounded-full'
+                className='bg-yellow-400 hover:bg-yellow-500 text-black rounded-full px-12 py-8'
               >
-                Explore Features <ArrowRight className='ml-2 h-4 w-4' />
+                Learn More <ArrowRight className='ml-2 h-4 w-4' />
               </Button>
             </div>
           </div>
@@ -140,7 +154,7 @@ export function DualSection() {
               src='/lighter-transparent.png'
               alt='FLS Lighter Flame'
               fill
-              className='object-cover object-center'
+              className='object-scale-down object-left'
               priority
               quality={100}
               style={{objectFit: 'cover'}}
@@ -159,7 +173,7 @@ export function DualSection() {
               <Flame className='mr-2 h-4 w-4' />
               <span className='font-medium'>Wind Resistant</span>
             </div>
-            <h2 className='text-4xl md:text-6xl font-bold text-white mb-6 bottom-content-item'>
+            <h2 className='text-4xl md:text-6xl text-white mb-6 bottom-content-item'>
               Reliable in <span className='text-yellow-400'>Any Condition</span>
             </h2>
             <p className='text-lg md:text-xl text-white/80 mb-8 bottom-content-item'>
@@ -177,7 +191,7 @@ export function DualSection() {
               </Button>
               <Button
                 size='lg'
-                className='bg-yellow-400 hover:bg-yellow-500 text-black rounded-full'
+                className='bg-yellow-300 hover:bg-yellow-500 text-black rounded-full'
               >
                 Shop Now <ArrowRight className='ml-2 h-4 w-4' />
               </Button>
