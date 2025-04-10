@@ -6,7 +6,7 @@ import confetti from 'canvas-confetti'
 export function SignUp() {
   const [step, setStep] = React.useState<'one' | 'two' | 'three'>('one')
   return (
-    <div className='relative flex justify-center md:justify-end'>
+    <div className='relative flex justify-center md:justify-center'>
       <motion.div
         layoutId='input'
         className='relative flex h-[68px] w-auto md:w-[196px] items-center justify-center'

@@ -245,10 +245,10 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(
               className='mb-10 mx-auto md:mx-0'
             />
             <h1
-              className='hero-text text-center md:text-left text-4xl lg:text-6xl font-bold text-white mb-4'
+              className='hero-text text-center md:text-left text-4xl lg:text-6xl font-bold text-white mb-4 mx-auto'
               style={{letterSpacing: '-1px'}}
             >
-              SPARK THE EXCITEMENT
+              SPARK THE <br /> EXCITEMENT
             </h1>
 
             <div className='hero-buttons flex flex-wrap gap-4 mt-2 justify-center md:justify-start'>
@@ -275,12 +275,12 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(
             <div className='relative z-10'>
               <div className='max-w-3xl text-center mb-10 fade-in opacity-0 translate-y-10'>
                 <h1
-                  className='hero-text text-center md:text-left text-4xl lg:text-6xl font-bold font-italic mb-2 text-[#F7CB00] uppercase font-poppins-black'
+                  className='hero-text text-center text-4xl lg:text-6xl font-bold font-italic mb-2 text-[#F7CB00] uppercase font-poppins-black max-w-3xl mx-auto'
                   style={{letterSpacing: '-1px', color: '#fff'}}
                 >
                   Be in the know
                 </h1>
-                <p className='text-white text-center md:text-left text-lg md:text-xl text-white/80 bottom-content-item'>
+                <p className='text-white max-w-md mx-auto text-center text-lg md:text-xl text-white/80 bottom-content-item'>
                   Wholesalers and distributors join our newsletter for exclusive
                   offers and updates.
                 </p>
