@@ -117,11 +117,18 @@ export function DualSection() {
               <span className='font-medium'>Premium Quality</span>
             </div> */}
             <h2
-              className='text-4xl md:text-6xl font-bold text-white mb-6 top-content-item leading-tight'
+              className='text-4xl md:text-6xl font-bold text-white mb-6 top-content-item leading-tight flex items-center justify-center align-middle'
               style={{letterSpacing: '-1px'}}
             >
-              Introducing <br />
-              CounterCulture
+              <span className='mr-4'>Introducing</span>
+
+              <Image
+                src='/CounterCultureWhitelogo.png'
+                alt='Counter Culture Logo'
+                width={175}
+                height={75}
+                className='object-contain w-auto h-auto'
+              />
             </h2>
             <p className='text-lg md:text-base text-white/80 mb-8 top-content-item'>
               The parent company of FLS USA is CounterCulture. As founders,
@@ -144,10 +151,10 @@ export function DualSection() {
             <div className='flex flex-wrap gap-4 top-content-item'>
               <Button
                 size='sm'
-                className='bg-yellow-400 hover:bg-yellow-500 text-black rounded-full px-12 py-8'
+                className='bg-yellow-400 hover:bg-yellow-500 px-16 py-6 text-black rounded-full'
                 onClick={() => handleClick('#features')}
               >
-                Learn More <ArrowRight className='ml-2 h-4 w-4' />
+                Learn More <ArrowRight className='ml-1 h-4 w-4' />
               </Button>
             </div>
           </div>

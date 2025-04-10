@@ -269,7 +269,7 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(
             </div>
           </div>
 
-          <div className='lg:w-1/2 h-[300px] lg:h-[600px] relative overflow-visible flex items-center justify-center content-center'>
+          <div className='lg:w-1/2   relative overflow-visible flex items-center justify-center content-center'>
             {/* Semi-transparent backdrop for 3D model */}
             <div className='absolute inset-0 bg-none z-0' />
             <div className='relative z-10'>

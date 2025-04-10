@@ -19,7 +19,7 @@ export function SignUp() {
         </div>
         <motion.button
           layoutId='button'
-          className='bg-[#F7CB00] px-10 py-3 ring-2'
+          className='bg-[#F7CB00] px-10 py-3'
           style={{borderRadius: 40}}
           onClick={() => setStep('two')}
         >
