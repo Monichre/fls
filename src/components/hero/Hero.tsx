@@ -234,9 +234,9 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(
         {/* Content */}
         <motion.div
           style={{y, opacity}}
-          className='container h-full flex flex-col align-center items-center  mx-auto px-4 lg:px-6 z-20 md:flex md:flex-row justify-center items-center overflow-visible'
+          className='container h-full flex flex-col justify-center align-center items-center  mx-auto px-4 lg:px-6 z-20 md:flex md:flex-row justify-center items-center overflow-visible'
         >
-          <div className='sm:w-full sm:h-auto lg:w-1/2 mb-10 lg:mb-0 mx-auto'>
+          <div className='sm:w-full sm:h-auto md:w-1/2 md:w-[40vw] mb-10 lg:mb-0 mx-auto px-12'>
             <Image
               width={217}
               height={85}
@@ -269,7 +269,7 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(
             </div>
           </div>
 
-          <div className='lg:w-1/2   relative overflow-visible flex items-center justify-center content-center'>
+          <div className='lg:w-1/2  relative overflow-visible flex items-center justify-center content-center'>
             {/* Semi-transparent backdrop for 3D model */}
             <div className='absolute inset-0 bg-none z-0' />
             <div className='relative z-10'>

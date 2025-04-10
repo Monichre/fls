@@ -44,7 +44,7 @@ export function SignUp() {
             <div className='relative w-full shrink-0'>
               <motion.input
                 layoutId='input'
-                className='w-full border-2 border-zinc-200 bg-white py-5 pl-14 pr-40 outline-none ring-0'
+                className='w-full border-2 border-zinc-200 bg-white py-5 pl-14 pr-40 outline-none ring-0 text-black'
                 style={{borderRadius: 40}}
                 placeholder='Email address'
               />

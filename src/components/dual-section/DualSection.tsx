@@ -117,7 +117,7 @@ export function DualSection() {
               <span className='font-medium'>Premium Quality</span>
             </div> */}
             <h2
-              className='text-4xl md:text-6xl font-bold text-white mb-6 top-content-item leading-tight flex items-center justify-center align-middle'
+              className='text-4xl md:text-6xl font-bold text-white mb-6 top-content-item leading-tight flex flex-col md:flex-row items-center justify-center align-middle'
               style={{letterSpacing: '-1px'}}
             >
               <span className='mr-4'>Introducing</span>
