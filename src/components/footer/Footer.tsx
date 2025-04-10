@@ -1,9 +1,11 @@
 'use client'
 import Link from 'next/link'
-import {Facebook, Instagram, Twitter, Youtube} from 'lucide-react'
+import {Facebook, Instagram, MailIcon, Twitter, Youtube} from 'lucide-react'
 import {NewsletterSignup} from '@/components/newsletter-signup'
 import {useResponsive} from '@/hooks'
-
+import {Logo} from '@/components/header'
+import Image from 'next/image'
+import {navItems} from '@/lib/nav-links'
 export function Footer() {
   const {isMobile} = useResponsive({defaultBreakpoint: 'md'})
 
@@ -15,56 +17,54 @@ export function Footer() {
         <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>
           {isMobile ? null : (
             <div>
-              <div className='bg-yellow-400 text-black font-bold text-xl p-2 rounded inline-block mb-4'>
-                FLS
-              </div>
-              <p className='text-zinc-400 max-w-xs'>
-                Premium quality lighters designed for reliability and style.
-                Fire up your adventures with FLS.
+              <Image src='/logo.png' alt='FLS Logo' width={55} height={55} />
+              <p className='text-zinc-400 max-w-xs mt-4'>
+                1040 S RAYMOND AVE S. E FULLERTON, CA 92831
               </p>
             </div>
           )}
           {isMobile && (
-            <>
+            <div className='footer-newsletter-signup-2'>
               <h3 className='text-lg font-semibold mb-0 md:mb-4 text-white'>
                 Connect With Us
               </h3>
               <div className='my-2'>
                 <NewsletterSignup />
               </div>
-            </>
+            </div>
           )}
           <div>
             <h3 className='text-lg font-semibold mb-4 text-white'>
               Quick Links
             </h3>
             <ul className='space-y-2'>
-              {['Home', 'Products', 'About', 'Contact'].map((item) => (
-                <li key={item}>
-                  <Link
-                    href={`/${item.toLowerCase()}`}
-                    className='text-zinc-400 hover:text-white transition-colors'
-                  >
-                    {item}
-                  </Link>
-                </li>
-              ))}
+              {navItems.map((item) => {
+                if (item.label.toLowerCase() === 'contact') return null
+                return (
+                  <li key={item.label}>
+                    <Link
+                      href={item.href}
+                      className='text-zinc-400 hover:text-white transition-colors'
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                )
+              })}
             </ul>
           </div>
 
           <div>
             <h3 className='text-lg font-semibold mb-4 text-white'>Support</h3>
             <ul className='space-y-2'>
-              {['FAQ', 'Shipping', 'Returns', 'Privacy Policy'].map((item) => (
-                <li key={item}>
-                  <Link
-                    href={`/${item.toLowerCase().replace(' ', '-')}`}
-                    className='text-zinc-400 hover:text-white transition-colors'
-                  >
-                    {item}
-                  </Link>
-                </li>
-              ))}
+              <li>
+                <Link
+                  href='mailto:SALES@gocounterculture.com'
+                  className='text-zinc-400 hover:text-white transition-colors'
+                >
+                  Contact Us
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -79,7 +79,7 @@ export function Footer() {
                 </div>
               </>
             )}
-            <div className='flex space-x-4'>
+            <div className='flex space-x-4 mt-8'>
               {[
                 {icon: Facebook, label: 'Facebook'},
                 {icon: Instagram, label: 'Instagram'},
@@ -98,13 +98,10 @@ export function Footer() {
             </div>
           </div>
           {isMobile && (
-            <div>
-              <div className='bg-yellow-400 text-black font-bold text-xl p-2 rounded inline-block mb-4'>
-                FLS
-              </div>
-              <p className='text-zinc-400 max-w-xs'>
-                Premium quality lighters designed for reliability and style.
-                Fire up your adventures with FLS.
+            <div className='flex flex-row items-center justify-center gap-2 md:flex-col'>
+              <Image src='/logo.png' alt='FLS Logo' width={55} height={55} />
+              <p className='text-white max-w-xs'>
+                1040 S RAYMOND AVE S. E FULLERTON, CA 92831
               </p>
             </div>
           )}

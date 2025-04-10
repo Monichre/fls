@@ -46,7 +46,7 @@ export function NewsletterSignup() {
   return (
     <div className='w-full'>
       {!isSuccess ? (
-        <form onSubmit={handleSubmit} className='space-y-4'>
+        <form onSubmit={handleSubmit} className='space-y-4 mt-4'>
           <div className='flex flex-col md:flex-row gap-3'>
             <Input
               type='email'
@@ -68,10 +68,6 @@ export function NewsletterSignup() {
               <Plus className='h-4 w-4' />
             </Button>
           </div>
-          <p className='text-xs text-zinc-400 text-center sm:text-left'>
-            By subscribing, you agree to our Terms of Service and Privacy
-            Policy.
-          </p>
         </form>
       ) : (
         <motion.div
@@ -80,7 +76,7 @@ export function NewsletterSignup() {
           className='bg-white p-6 rounded-lg text-center'
         >
           <CheckCircle2 className='h-12 w-12 text-green-500 mx-auto mb-4' />
-          <h3 className='text-xl text-black font-medium mb-2'>
+          <h3 className='text-xl text-black font-medium mb-4'>
             Thanks for subscribing!
           </h3>
           <p className='text-black'>
