@@ -12,6 +12,7 @@ import {ZoomIn, ZoomOut, RotateCcw} from 'lucide-react'
 import {Divider} from '@/components/ui'
 import {PinContainer} from '@/components/ui/3d-pin'
 import {NewsletterSignup} from '@/components/newsletter-signup'
+import {SignUp} from '@/components/hero/sign-up'
 
 // Define types for the LighterModel
 interface LighterModelProps {
@@ -223,23 +224,24 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(
         {/* Content */}
         <motion.div
           style={{y, opacity}}
-          className='container mx-auto px-4 lg:px-6 z-20 flex md:flex-col lg:flex-row items-center justify-center overflow-visible'
+          className='container h-full flex flex-col align-center items-center  mx-auto px-4 lg:px-6 z-20 md:flex md:flex-row justify-center items-center overflow-visible'
         >
-          <div className='sm:w-full sm:h-auto lg:w-1/2 mb-10 lg:mb-0'>
+          <div className='sm:w-full sm:h-auto lg:w-1/2 mb-10 lg:mb-0 mx-auto'>
             <Image
               width={217}
               height={85}
               src='/logo-letters.png'
               alt='FLS Logo'
+              className='mb-10 mx-auto md:mx-0'
             />
             <h1
-              className='hero-text text-4xl lg:text-6xl font-bold text-white my-2'
+              className='hero-text text-center md:text-left text-4xl lg:text-6xl font-bold text-white mb-4'
               style={{letterSpacing: '-1px'}}
             >
               SPARK THE EXCITEMENT
             </h1>
 
-            <div className='hero-buttons flex flex-wrap gap-4 mt-2'>
+            <div className='hero-buttons flex flex-wrap gap-4 mt-2 justify-center md:justify-start'>
               <Button
                 className='bg-yellow rounded-full button transition-all duration-300 button fade-in'
                 size='lg'
@@ -255,25 +257,26 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(
             </div>
           </div>
 
-          <div className='lg:w-1/2 h-[600px] lg:h-[600px] relative overflow-visible flex items-center justify-center content-center'>
+          <div className='lg:w-1/2 h-[300px] lg:h-[600px] relative overflow-visible flex items-center justify-center content-center'>
             {/* Semi-transparent backdrop for 3D model */}
             <div className='absolute inset-0 bg-none z-0' />
             <div className='relative z-10'>
               <div className='max-w-3xl text-center mb-10 fade-in opacity-0 translate-y-10'>
                 <h1
-                  className='hero-text text-4xl lg:text-6xl font-bold text-left mb-2 text-[#F7CB00] uppercase font-poppins-black'
-                  style={{letterSpacing: '-1px', color: '#F7CB00'}}
+                  className='hero-text text-center md:text-left text-4xl lg:text-6xl font-bold font-italic mb-2 text-[#F7CB00] uppercase font-poppins-black'
+                  style={{letterSpacing: '-1px', color: '#fff'}}
                 >
                   Be in the know
                 </h1>
-                <p className='text-white text-left text-lg md:text-xl text-white/80 bottom-content-item'>
+                <p className='text-white text-center md:text-left text-lg md:text-xl text-white/80 bottom-content-item'>
                   Wholesalers and distributors join our newsletter for exclusive
                   offers and updates.
                 </p>
               </div>
 
-              <div className='max-w-md  fade-in opacity-0 translate-y-10'>
-                <NewsletterSignup />
+              <div className='max-w-[300px] md:max-w-md mx-auto md:mx-0 fade-in opacity-0 translate-y-10'>
+                {/* <NewsletterSignup /> */}
+                <SignUp />
               </div>
             </div>
 

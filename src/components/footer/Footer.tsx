@@ -1,22 +1,39 @@
+'use client'
 import Link from 'next/link'
 import {Facebook, Instagram, Twitter, Youtube} from 'lucide-react'
 import {NewsletterSignup} from '@/components/newsletter-signup'
+import {useResponsive} from '@/hooks'
 
 export function Footer() {
+  const {isMobile} = useResponsive({defaultBreakpoint: 'md'})
+
+  console.log('🚀 ~ Footer ~ isMobile:', isMobile)
+
   return (
     <footer className='bg-zinc-900 border-t border-zinc-800' id='footer'>
       <div className='container mx-auto px-4 md:px-6 py-12'>
         <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>
-          <div>
-            <div className='bg-yellow-400 text-black font-bold text-xl p-2 rounded inline-block mb-4'>
-              FLS
+          {isMobile ? null : (
+            <div>
+              <div className='bg-yellow-400 text-black font-bold text-xl p-2 rounded inline-block mb-4'>
+                FLS
+              </div>
+              <p className='text-zinc-400 max-w-xs'>
+                Premium quality lighters designed for reliability and style.
+                Fire up your adventures with FLS.
+              </p>
             </div>
-            <p className='text-zinc-400 max-w-xs'>
-              Premium quality lighters designed for reliability and style. Fire
-              up your adventures with FLS.
-            </p>
-          </div>
-
+          )}
+          {isMobile && (
+            <>
+              <h3 className='text-lg font-semibold mb-0 md:mb-4 text-white'>
+                Connect With Us
+              </h3>
+              <div className='my-2'>
+                <NewsletterSignup />
+              </div>
+            </>
+          )}
           <div>
             <h3 className='text-lg font-semibold mb-4 text-white'>
               Quick Links
@@ -52,12 +69,16 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className='text-lg font-semibold mb-4 text-white'>
-              Connect With Us
-            </h3>
-            <div className='my-2'>
-              <NewsletterSignup />
-            </div>
+            {isMobile ? null : (
+              <>
+                <h3 className='text-lg font-semibold mb-4 text-white'>
+                  Connect With Us
+                </h3>
+                <div className='my-2'>
+                  <NewsletterSignup />
+                </div>
+              </>
+            )}
             <div className='flex space-x-4'>
               {[
                 {icon: Facebook, label: 'Facebook'},
@@ -76,6 +97,17 @@ export function Footer() {
               ))}
             </div>
           </div>
+          {isMobile && (
+            <div>
+              <div className='bg-yellow-400 text-black font-bold text-xl p-2 rounded inline-block mb-4'>
+                FLS
+              </div>
+              <p className='text-zinc-400 max-w-xs'>
+                Premium quality lighters designed for reliability and style.
+                Fire up your adventures with FLS.
+              </p>
+            </div>
+          )}
         </div>
 
         <div className='border-t border-zinc-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center'>

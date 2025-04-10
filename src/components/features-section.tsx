@@ -145,11 +145,11 @@ export function FeaturesSection() {
         className='container mx-auto p-4 md:px-6 relative z-10'
       >
         {/* Header content */}
-        <div className='max-w-3xl mx-auto text-center mb-20'>
+        <div className='max-w-3xl mx-auto text-center mb-20 bg-black/50 p-4 rounded-xl pb-8'>
           <h2 className='features-header text-4xl md:text-6xl font-bold text-white mb-6'>
             Features
           </h2>
-          <p className='features-header text-lg md:text-xl text-zinc-300'>
+          <p className='features-header text-lg md:text-xl text-white'>
             Discover the outstanding features of the FLS Lighter, a perfect
             blend of innovation, design, and reliability. From its sleek and
             ergonomic design to its advanced fixed flame technology, each aspect

@@ -68,7 +68,7 @@ export function DualSection() {
   return (
     <section
       ref={sectionRef}
-      className='relative overflow-hidden'
+      className='relative overflow-hidden pt-20 md:pt-0'
       id='dual-section'
     >
       <Divider
@@ -79,7 +79,7 @@ export function DualSection() {
         position='top'
       />
       {/* Top part with uploaded image background */}
-      <div className='relative h-[600px] md:h-[800px]'>
+      <div className='relative h-auto md:h-[600px] lg:h-[800px]'>
         {/* Background Image - Replace with your uploaded image */}
         <div className='absolute inset-0 z-0'>
           <motion.div style={{y: y1}} className='h-[120%] w-full'>
@@ -100,15 +100,18 @@ export function DualSection() {
           ref={topContentRef}
           className='relative z-20 container mx-auto px-4 md:px-6 h-full flex flex-col justify-center'
         >
-          <div className='max-w-2xl'>
+          <div className='max-w-2xl mt-4'>
             {/* <div className='inline-block bg-yellow-400 text-black px-4 py-1 rounded-full mb-6 top-content-item'>
               <span className='font-medium'>Premium Quality</span>
             </div> */}
-            <h2 className='text-4xl md:text-6xl text-white mb-6 top-content-item leading-tight'>
+            <h2
+              className='text-4xl md:text-6xl font-bold text-white mb-6 top-content-item leading-tight'
+              style={{letterSpacing: '-1px'}}
+            >
               Introducing <br />
               CounterCulture
             </h2>
-            <p className='text-2xl md:text-xl text-white/80 mb-8 top-content-item'>
+            <p className='text-lg md:text-base text-white/80 mb-8 top-content-item'>
               The parent company of FLS USA is CounterCulture. As founders,
               Ibrahim Najara, Bradly Fadly and Samuel Habib have a passion for
               all things C-store that is matched only by their love of America.
@@ -128,7 +131,7 @@ export function DualSection() {
             </p>
             <div className='flex flex-wrap gap-4 top-content-item'>
               <Button
-                size='lg'
+                size='sm'
                 className='bg-yellow-400 hover:bg-yellow-500 text-black rounded-full px-12 py-8'
               >
                 Learn More <ArrowRight className='ml-2 h-4 w-4' />
@@ -139,7 +142,7 @@ export function DualSection() {
 
         {/* Diagonal divider */}
         <div
-          className='absolute bottom-0 left-0 right-0 h-20 bg-zinc-900 z-20'
+          className='absolute bottom-0 left-0 right-0 h-20 bg-zinc-900 z-1'
           style={{clipPath: 'polygon(0 100%, 100% 0, 100% 100%, 0% 100%)'}}
         />
       </div>
@@ -173,10 +176,13 @@ export function DualSection() {
               <Flame className='mr-2 h-4 w-4' />
               <span className='font-medium'>Wind Resistant</span>
             </div>
-            <h2 className='text-4xl md:text-6xl text-white mb-6 bottom-content-item'>
+            <h2
+              className='text-4xl md:text-6xl font-bold text-white mb-6 bottom-content-item leading-tight'
+              style={{letterSpacing: '-1px'}}
+            >
               Reliable in <span className='text-yellow-400'>Any Condition</span>
             </h2>
-            <p className='text-lg md:text-xl text-white/80 mb-8 bottom-content-item'>
+            <p className='text-md md:text-lg md:text-xl text-white/80 mb-8 bottom-content-item'>
               From mountain peaks to beach bonfires, our wind-resistant
               technology ensures your FLS lighter performs flawlessly in
               challenging environments.
