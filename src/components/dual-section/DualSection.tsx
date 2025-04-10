@@ -130,9 +130,12 @@ export function DualSection() {
                 className='object-contain w-auto h-auto'
               />
             </h2>
-            <p className='text-lg md:text-base text-white/80 mb-8 top-content-item'>
+            <p
+              className=' md:text-base text-white mb-8 top-content-item'
+              style={{fontSize: '18px'}}
+            >
               The parent company of FLS USA is CounterCulture. As founders,
-              Ibrahim Najara, Bradly Fadly and Samuel Habib have a passion for
+              Ibrahim Najajra, Bradly Fadly and Samuel Habib have a passion for
               all things C-store that is matched only by their love of America.
               It’s their pioneering and innovative spirit that has driven their
               success as value product retailers and wholesalers. They
