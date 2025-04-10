@@ -1,6 +1,6 @@
 'use client'
 
-import {useRef, useEffect} from 'react'
+import {useRef, useEffect, useState} from 'react'
 import Image from 'next/image'
 import {motion, useScroll, useTransform} from 'framer-motion'
 import {gsap} from 'gsap'
@@ -9,6 +9,8 @@ import {Button} from '@/components/ui/button'
 import {ArrowRight, Flame} from 'lucide-react'
 import {useGSAP} from '@gsap/react'
 import {Divider} from '@/components/ui/divider'
+import {useScrollToSection} from '@/hooks/useScrollToSection'
+import {HeroVideoDialog} from '@/components/dual-section/video-modal'
 
 // Register GSAP plugins
 if (typeof window !== 'undefined') {
@@ -64,7 +66,17 @@ export function DualSection() {
     },
     {scope: sectionRef}
   )
+  const {isScrolled, mobileMenuOpen, scrollTo, scrollToSection} =
+    useScrollToSection()
 
+  const handleClick = (href: string) => {
+    // const targetId = href.split('#')[1]
+    scrollTo(href)
+  }
+  const [isVideoOpen, setIsVideoOpen] = useState(false)
+  const toggleVideo = () => {
+    setIsVideoOpen(!isVideoOpen)
+  }
   return (
     <section
       ref={sectionRef}
@@ -133,6 +145,7 @@ export function DualSection() {
               <Button
                 size='sm'
                 className='bg-yellow-400 hover:bg-yellow-500 text-black rounded-full px-12 py-8'
+                onClick={() => handleClick('#features')}
               >
                 Learn More <ArrowRight className='ml-2 h-4 w-4' />
               </Button>
@@ -190,20 +203,43 @@ export function DualSection() {
             <div className='flex flex-wrap gap-4 md:justify-end bottom-content-item'>
               <Button
                 size='lg'
+                onClick={toggleVideo}
                 variant='outline'
                 className='bg-white border-white text-black hover:bg-white/10 rounded-full'
               >
                 Watch Demo
               </Button>
-              <Button
-                size='lg'
-                className='bg-yellow-300 hover:bg-yellow-500 text-black rounded-full'
-              >
-                Shop Now <ArrowRight className='ml-2 h-4 w-4' />
-              </Button>
             </div>
           </div>
         </div>
+      </div>
+      {/* <HeroVideoDialog
+        isVideoOpen={isVideoOpen}
+        toggleVideoOpen={toggleVideo}
+        className='block dark:hidden'
+        animationStyle='top-in-bottom-out'
+        videoSrc='/file.mp4'
+        thumbnailSrc='/thumbnail.png'
+        thumbnailAlt='Hero Video'
+      /> */}
+      <div className='relative'>
+        {/* <HeroVideoDialog
+          className='hidden dark:hidden'
+          animationStyle='top-in-bottom-out'
+          videoSrc='/file.mp4'
+          thumbnailSrc='/thumbnail.png'
+          isVideoOpen={isVideoOpen}
+          toggleVideoOpen={toggleVideo}
+          thumbnailAlt='Hero Video'
+        /> */}
+        <HeroVideoDialog
+          animationStyle='top-in-bottom-out'
+          isVideoOpen={isVideoOpen}
+          toggleVideoOpen={toggleVideo}
+          videoSrc='/file.mp4'
+          thumbnailSrc='/thumbnail.png'
+          thumbnailAlt='Hero Video'
+        />
       </div>
     </section>
   )

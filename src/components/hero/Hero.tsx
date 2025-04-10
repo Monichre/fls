@@ -13,6 +13,8 @@ import {Divider} from '@/components/ui'
 import {PinContainer} from '@/components/ui/3d-pin'
 import {NewsletterSignup} from '@/components/newsletter-signup'
 import {SignUp} from '@/components/hero/sign-up'
+import {useScrollToSection} from '@/hooks/useScrollToSection'
+import Link from 'next/link'
 
 // Define types for the LighterModel
 interface LighterModelProps {
@@ -200,6 +202,14 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(
       }
     }
 
+    const {isScrolled, mobileMenuOpen, scrollTo, scrollToSection} =
+      useScrollToSection()
+
+    const handleClick = (href: string) => {
+      // const targetId = href.split('#')[1]
+      scrollTo(href)
+    }
+
     return (
       <section
         id='hero'
@@ -245,12 +255,14 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(
               <Button
                 className='bg-yellow rounded-full button transition-all duration-300 button fade-in'
                 size='lg'
+                onClick={() => handleClick('#lighter-collection')}
               >
                 Our Products
               </Button>
               <Button
                 className='bg-white text-black hover:bg-white/10 rounded-full button transition-all duration-300 button fade-in'
                 size='lg'
+                onClick={(e) => handleClick('#signature-design')}
               >
                 View More
               </Button>

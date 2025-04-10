@@ -6,7 +6,7 @@ import {Button} from '@/components/ui/button'
 import {Input} from '@/components/ui/input'
 import {toast} from 'sonner'
 
-import {CheckCircle2, Loader2} from 'lucide-react'
+import {CheckCircle2, Loader2, Plus} from 'lucide-react'
 
 export function NewsletterSignup() {
   const [email, setEmail] = useState('')
@@ -47,7 +47,7 @@ export function NewsletterSignup() {
     <div className='w-full'>
       {!isSuccess ? (
         <form onSubmit={handleSubmit} className='space-y-4'>
-          <div className='flex flex-col sm:flex-row gap-3'>
+          <div className='flex flex-col md:flex-row gap-3'>
             <Input
               type='email'
               placeholder='Enter your email'
@@ -58,13 +58,14 @@ export function NewsletterSignup() {
             />
             <Button
               type='submit'
+              size='sm'
               className='bg-yellow-400 hover:bg-yellow-500 text-black rounded-full'
               disabled={isSubmitting}
             >
               {isSubmitting ? (
                 <Loader2 className='h-4 w-4 animate-spin mr-2' />
               ) : null}
-              Subscribe
+              <Plus className='h-4 w-4' />
             </Button>
           </div>
           <p className='text-xs text-zinc-400 text-center sm:text-left'>
@@ -76,13 +77,15 @@ export function NewsletterSignup() {
         <motion.div
           initial={{opacity: 0, y: 10}}
           animate={{opacity: 1, y: 0}}
-          className='bg-zinc-800/50 p-6 rounded-lg text-center'
+          className='bg-white p-6 rounded-lg text-center'
         >
           <CheckCircle2 className='h-12 w-12 text-green-500 mx-auto mb-4' />
-          <h3 className='text-xl font-medium mb-2'>Thanks for subscribing!</h3>
-          <p className='text-zinc-400'>
+          <h3 className='text-xl text-black font-medium mb-2'>
+            Thanks for subscribing!
+          </h3>
+          <p className='text-black'>
             We've sent a confirmation email to{' '}
-            <span className='text-white font-medium'>{email}</span>
+            <span className='text-black font-medium'>{email}</span>
           </p>
         </motion.div>
       )}

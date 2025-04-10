@@ -74,7 +74,7 @@ export function Footer() {
                 <h3 className='text-lg font-semibold mb-4 text-white'>
                   Connect With Us
                 </h3>
-                <div className='my-2'>
+                <div className='my-2 footer-newsletter-signup'>
                   <NewsletterSignup />
                 </div>
               </>

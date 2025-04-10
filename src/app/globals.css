@@ -244,3 +244,11 @@ button,
 	background-color: white;
 	color: var(--brand-yellow);
 }
+
+.footer-newsletter-signup form button {
+	width: min-content;
+}
+
+.footer-newsletter-signup form input {
+	width: 200px;
+}

@@ -6,57 +6,12 @@ import {motion, AnimatePresence} from 'motion/react'
 import {Menu, X} from 'lucide-react'
 import {Button} from '@/components/ui/button'
 import Image from 'next/image'
-
-const navItems = [
-  {label: 'Home', href: '#hero'},
-  {label: 'Explore', href: '#dual-section'},
-  {label: 'Signature Design', href: '#signature-design'},
-  {label: 'Lighter Collection', href: '#lighter-collection'},
-  {label: 'Features', href: '#features'},
-  {label: 'Contact', href: '#footer'},
-]
+import {useScrollToSection} from '@/hooks/useScrollToSection'
+import {navItems} from '@/lib/nav-links'
 
 export function Navbar() {
-  const [isScrolled, setIsScrolled] = useState(true)
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-
-  // Handle scroll effect
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10)
-    }
-
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
-
-  const scrollToSection = (
-    e: React.MouseEvent<HTMLAnchorElement>,
-    href: string
-  ) => {
-    e.preventDefault()
-
-    // Close mobile menu if open
-    if (mobileMenuOpen) {
-      setMobileMenuOpen(false)
-    }
-
-    // Get the target element
-    const targetId = href.replace('#', '')
-    const element = document.getElementById(targetId)
-
-    if (element) {
-      // Add offset for fixed header (adjust the value based on your header height)
-      const offset = 80
-      const elementPosition = element.getBoundingClientRect().top
-      const offsetPosition = elementPosition + window.pageYOffset - offset
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth',
-      })
-    }
-  }
+  const {isScrolled, mobileMenuOpen, setMobileMenuOpen, scrollToSection} =
+    useScrollToSection()
 
   return (
     <AnimatePresence>
