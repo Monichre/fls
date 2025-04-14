@@ -209,7 +209,9 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(
       // const targetId = href.split('#')[1]
       scrollTo(href)
     }
-
+    // email
+    // name
+    // company
     return (
       <section
         id='hero'
@@ -281,13 +283,14 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(
                   Be in the know
                 </h1>
                 <p className='text-white max-w-md mx-auto text-center text-lg md:text-xl text-white/80 bottom-content-item'>
-                  Wholesalers and distributors join our newsletter for exclusive
-                  offers and updates.
+                  Wholesalers and distributors get exclusive pricing and offers.
                 </p>
               </div>
 
               <div className='max-w-[300px] md:max-w-md mx-auto md:mx-0 fade-in opacity-0 translate-y-10'>
                 {/* <NewsletterSignup /> */}
+                {/* email */}
+
                 <SignUp />
               </div>
             </div>

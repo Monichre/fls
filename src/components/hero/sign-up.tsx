@@ -67,7 +67,7 @@ export function SignUp() {
                     layoutId='text-input'
                     className='font-semibold text-white'
                   >
-                    Sign Up
+                    Click Here
                   </motion.span>
                 </motion.button>
               </div>
