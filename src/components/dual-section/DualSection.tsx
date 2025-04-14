@@ -1,6 +1,6 @@
 'use client'
 
-import {useRef, useEffect, useState} from 'react'
+import {useRef, useState} from 'react'
 import Image from 'next/image'
 import {motion, useScroll, useTransform} from 'framer-motion'
 import {gsap} from 'gsap'
@@ -18,12 +18,20 @@ if (typeof window !== 'undefined') {
   gsap.registerPlugin(useGSAP)
 }
 
-export function DualSection() {
+interface DualSectionProps {
+  prefersReducedMotion?: boolean
+  isMobile?: boolean
+}
+
+export function DualSection({
+  prefersReducedMotion = false,
+  isMobile = false,
+}: DualSectionProps) {
   const sectionRef = useRef<HTMLElement>(null)
   const topContentRef = useRef<HTMLDivElement>(null)
   const bottomContentRef = useRef<HTMLDivElement>(null)
 
-  // Parallax effect
+  // Framer Motion parallax effect (original implementation)
   const {scrollYProgress} = useScroll({
     target: sectionRef,
     offset: ['start end', 'end start'],
@@ -33,9 +41,11 @@ export function DualSection() {
   const y2 = useTransform(scrollYProgress, [0, 1], ['0%', '-20%'])
   const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [0, 1, 0])
 
-  // GSAP animations with useGSAP hook
+  // GSAP animations with useGSAP hook for entrance animations
   useGSAP(
     () => {
+      if (prefersReducedMotion) return
+
       // Top content animation
       gsap.from('.top-content-item', {
         y: 50,
@@ -66,11 +76,9 @@ export function DualSection() {
     },
     {scope: sectionRef}
   )
-  const {isScrolled, mobileMenuOpen, scrollTo, scrollToSection} =
-    useScrollToSection()
+  const {scrollTo} = useScrollToSection()
 
   const handleClick = (href: string) => {
-    // const targetId = href.split('#')[1]
     scrollTo(href)
   }
   const [isVideoOpen, setIsVideoOpen] = useState(false)
@@ -113,9 +121,6 @@ export function DualSection() {
           className='relative z-20 container mx-auto px-4 md:px-6 h-full flex flex-col justify-center'
         >
           <div className='max-w-2xl mt-4'>
-            {/* <div className='inline-block bg-yellow-400 text-black px-4 py-1 rounded-full mb-6 top-content-item'>
-              <span className='font-medium'>Premium Quality</span>
-            </div> */}
             <h2
               className='text-4xl md:text-6xl font-bold text-white mb-6 top-content-item leading-tight flex flex-col md:flex-row items-center justify-center align-middle'
               style={{letterSpacing: '-1px'}}
@@ -127,29 +132,22 @@ export function DualSection() {
                 alt='Counter Culture Logo'
                 width={175}
                 height={75}
-                className='object-contain w-auto h-auto'
+                className='object-contain w-auto h-auto dual-section-content'
               />
             </h2>
             <p
-              className=' md:text-base text-white mb-8 top-content-item'
+              className=' md:text-base text-white mb-8 top-content-item dual-section-content'
               style={{fontSize: '18px'}}
             >
               The parent company of FLS USA is CounterCulture. As founders,
               Ibrahim Najajra, Bradly Fadly and Samuel Habib have a passion for
               all things C-store that is matched only by their love of America.
-              It’s their pioneering and innovative spirit that has driven their
+              It's their pioneering and innovative spirit that has driven their
               success as value product retailers and wholesalers. They
               understand, better than anyone, that C-store checkout areas are
               mini-ecosystems of their own. And through wise purchasing along
               with smart curating, they know exactly how to make each one of
               those places a success for all.
-              {/* CounterCulture is the parent company of FLS USA. Ibrahim Najara,
-              Bradly Fadly, and Samuel Habib, the visionaries behind FLS-USA,
-              blend a fierce passion for C-stores with unwavering American
-              pride. Their bold innovation drives its success in value goods for
-              retailers and wholesalers. Masters of C-store checkout
-              micro-worlds, they spark triumph through savvy sourcing and
-              curation. */}
             </p>
             <div className='flex flex-wrap gap-4 top-content-item'>
               <Button
@@ -180,7 +178,7 @@ export function DualSection() {
               src='/lighter-transparent.png'
               alt='FLS Lighter Flame'
               fill
-              className='object-scale-down object-left'
+              className='object-scale-down object-left dual-section-content'
               priority
               quality={100}
               style={{objectFit: 'cover'}}
@@ -223,25 +221,7 @@ export function DualSection() {
           </div>
         </div>
       </div>
-      {/* <HeroVideoDialog
-        isVideoOpen={isVideoOpen}
-        toggleVideoOpen={toggleVideo}
-        className='block dark:hidden'
-        animationStyle='top-in-bottom-out'
-        videoSrc='/file.mp4'
-        thumbnailSrc='/thumbnail.png'
-        thumbnailAlt='Hero Video'
-      /> */}
       <div className='relative'>
-        {/* <HeroVideoDialog
-          className='hidden dark:hidden'
-          animationStyle='top-in-bottom-out'
-          videoSrc='/file.mp4'
-          thumbnailSrc='/thumbnail.png'
-          isVideoOpen={isVideoOpen}
-          toggleVideoOpen={toggleVideo}
-          thumbnailAlt='Hero Video'
-        /> */}
         <HeroVideoDialog
           animationStyle='top-in-bottom-out'
           isVideoOpen={isVideoOpen}
@@ -249,6 +229,7 @@ export function DualSection() {
           videoSrc='/file.mp4'
           thumbnailSrc='/thumbnail.png'
           thumbnailAlt='Hero Video'
+          className='w-full'
         />
       </div>
     </section>

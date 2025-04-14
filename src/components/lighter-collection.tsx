@@ -1,12 +1,13 @@
 'use client'
 
-import {useRef, useEffect} from 'react'
+import {useRef} from 'react'
 import Image from 'next/image'
 import {gsap} from 'gsap'
 import {ScrollTrigger} from 'gsap/ScrollTrigger'
 import {Button} from '@/components/ui/button'
 import {ChevronRight, ChevronLeft} from 'lucide-react'
 import useEmblaCarousel from 'embla-carousel-react'
+import {useParallax} from '@/hooks/useParallax'
 
 // Register GSAP plugins
 if (typeof window !== 'undefined') {
@@ -37,9 +38,18 @@ const lighters = [
   },
 ]
 
-export function LighterCollection() {
+interface LighterCollectionProps {
+  prefersReducedMotion?: boolean
+  isMobile?: boolean
+}
+
+export function LighterCollection({
+  prefersReducedMotion = false,
+  isMobile = false,
+}: LighterCollectionProps) {
   const sectionRef = useRef<HTMLElement>(null)
   const contentRef = useRef<HTMLDivElement>(null)
+  const carouselRef = useRef<HTMLDivElement>(null)
   const [emblaRef, emblaApi] = useEmblaCarousel({
     align: 'center',
     loop: true,
@@ -49,25 +59,27 @@ export function LighterCollection() {
   const scrollPrev = () => emblaApi?.scrollPrev()
   const scrollNext = () => emblaApi?.scrollNext()
 
-  // GSAP animations
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.from('.collection-content', {
-        y: 50,
-        opacity: 0,
-        duration: 0.8,
-        stagger: 0.2,
-        scrollTrigger: {
-          trigger: contentRef.current,
-          start: 'top 80%',
-          end: 'bottom 60%',
-          toggleActions: 'play none none reverse',
-        },
-      })
-    }, sectionRef)
+  // Apply parallax effect to the carousel items
+  useParallax(carouselRef, {
+    prefersReducedMotion,
+    isMobile,
+    debug: false, // Set to false in production
+    target: '.embla__slide',
+    stagger: true,
+    scale: true,
+    yDistance: isMobile ? 25 : 50,
+    scrub: 0.7,
+  })
 
-    return () => ctx.revert()
-  }, [])
+  // Apply parallax to content
+  useParallax(contentRef, {
+    prefersReducedMotion,
+    isMobile,
+    target: '.collection-content',
+    yDistance: isMobile ? -15 : -30, // Move in opposite direction
+    opacity: true,
+    scrub: 0.5,
+  })
 
   return (
     <section
@@ -98,7 +110,7 @@ export function LighterCollection() {
         </div>
 
         {/* Carousel */}
-        <div className='relative px-4 md:px-12'>
+        <div ref={carouselRef} className='relative px-4 md:px-12'>
           <div className='embla overflow-hidden' ref={emblaRef}>
             <div className='embla__container flex'>
               {lighters.map((lighter) => (
@@ -114,7 +126,7 @@ export function LighterCollection() {
                       src={lighter.image || '/placeholder.svg'}
                       alt={lighter.name}
                       fill
-                      className='object-contain p-4'
+                      className='object-contain p-4 lighter-item'
                       quality={100}
                       priority
                     />
@@ -132,6 +144,7 @@ export function LighterCollection() {
 
           {/* Navigation arrows */}
           <button
+            type='button'
             onClick={scrollPrev}
             className='absolute left-0 top-1/2 transform -translate-y-1/2 bg-yellow-400 rounded-full p-3 text-black hover:bg-yellow-500 transition-colors z-10'
             aria-label='Previous slide'
@@ -139,6 +152,7 @@ export function LighterCollection() {
             <ChevronLeft className='w-6 h-6' />
           </button>
           <button
+            type='button'
             onClick={scrollNext}
             className='absolute right-0 top-1/2 transform -translate-y-1/2 bg-yellow-400 rounded-full p-3 text-black hover:bg-yellow-500 transition-colors z-10'
             aria-label='Next slide'

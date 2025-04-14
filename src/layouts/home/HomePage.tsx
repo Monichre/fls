@@ -38,30 +38,29 @@ const FeaturesSection = lazy(() =>
 // Register GSAP plugins
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger)
-
   gsap.registerPlugin(useGSAP)
 }
 
 interface HomePageProps {
-  data?: any
+  data?: Record<string, unknown>
 }
 
 export const HomePage = ({data}: HomePageProps) => {
-  const containerRef = useRef(null)
-  const heroRef = useRef(null)
+  // Fix the ref types to properly handle DOM elements
+  const containerRef = useRef<HTMLDivElement>(null)
+  const heroRef = useRef<HTMLDivElement>(null)
 
   // Use our responsive hook instead of mobile context
   const {
     isMobile,
-    isTablet,
-    isDesktop,
+
     isLandscape,
-    breakpoint,
+
     prefersReducedMotion,
   } = useResponsive()
 
   // Check if we have data from contentful
-  const hasContentfulData = data && data.homePage
+  // const hasContentfulData = data?.homePage
 
   // Parallax effect - adjust based on device capabilities
   const {scrollYProgress} = useScroll({
@@ -82,7 +81,7 @@ export const HomePage = ({data}: HomePageProps) => {
     [1, 0]
   )
 
-  // Optimize animation settings based on device
+  // Only handle basic animations for the hero section in the HomePage component
   useGSAP(
     () => {
       // Skip animations for users who prefer reduced motion
@@ -114,7 +113,7 @@ export const HomePage = ({data}: HomePageProps) => {
           duration: isMobile ? 0.6 : 0.8,
           stagger: staggerTime,
           delay: isMobile ? 0.3 : 0.8,
-          ease: 'power3.out', // Other options: 'back.out', 'elastic.out', 'bounce.out', 'expo.out', 'sine.out'
+          ease: 'power3.out',
         }
       )
 
@@ -135,7 +134,6 @@ export const HomePage = ({data}: HomePageProps) => {
 
       // Clear ScrollTrigger on unmount to prevent memory leaks
       return () => {
-        // Use for...of instead of forEach for better performance
         for (const trigger of ScrollTrigger.getAll()) {
           trigger.kill()
         }
@@ -172,13 +170,23 @@ export const HomePage = ({data}: HomePageProps) => {
       />
 
       <Suspense fallback={<LoadingFallback />}>
-        {/* Use Tailwind mobile-first approach instead of conditional classes */}
-        {/* <div className='px-4 md:px-0 space-y-8 md:space-y-12 lg:space-y-24'> */}
-        <DualSection />
-        <SignatureDesignSection />
-        <LighterCollection />
-        <FeaturesSection />
-        {/* </div> */}
+        {/* Pass required props for parallax to each component */}
+        <DualSection
+          prefersReducedMotion={prefersReducedMotion}
+          isMobile={isMobile}
+        />
+        <SignatureDesignSection
+          prefersReducedMotion={prefersReducedMotion}
+          isMobile={isMobile}
+        />
+        <LighterCollection
+          prefersReducedMotion={prefersReducedMotion}
+          isMobile={isMobile}
+        />
+        <FeaturesSection
+          prefersReducedMotion={prefersReducedMotion}
+          isMobile={isMobile}
+        />
       </Suspense>
     </div>
   )

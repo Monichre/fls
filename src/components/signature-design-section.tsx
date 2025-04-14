@@ -1,39 +1,49 @@
 'use client'
 
-import {useRef, useEffect} from 'react'
+import {useRef} from 'react'
 import Image from 'next/image'
 import {gsap} from 'gsap'
 import {ScrollTrigger} from 'gsap/ScrollTrigger'
+import {useParallax} from '@/hooks/useParallax'
 
 // Register GSAP plugins
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger)
 }
 
-export function SignatureDesignSection() {
+interface SignatureDesignSectionProps {
+  prefersReducedMotion?: boolean
+  isMobile?: boolean
+}
+
+export function SignatureDesignSection({
+  prefersReducedMotion = false,
+  isMobile = false,
+}: SignatureDesignSectionProps) {
   const sectionRef = useRef<HTMLElement>(null)
   const contentRef = useRef<HTMLDivElement>(null)
+  const imageRef = useRef<HTMLDivElement>(null)
 
-  // GSAP animations
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      // Animate content
-      gsap.from('.signature-content', {
-        y: 50,
-        opacity: 0,
-        duration: 0.8,
-        stagger: 0.2,
-        scrollTrigger: {
-          trigger: contentRef.current,
-          start: 'top 80%',
-          end: 'bottom 60%',
-          toggleActions: 'play none none reverse',
-        },
-      })
-    }, sectionRef)
+  // Apply parallax effect to the image
+  useParallax(imageRef, {
+    prefersReducedMotion,
+    isMobile,
+    debug: false, // Set to false in production
+    yDistance: isMobile ? 30 : 60,
+    scale: true,
+    scrub: 0.6,
+  })
 
-    return () => ctx.revert()
-  }, [])
+  // Apply parallax to content with a different effect
+  useParallax(contentRef, {
+    prefersReducedMotion,
+    isMobile,
+    target: '.signature-content',
+    yDistance: isMobile ? -20 : -40, // Move in opposite direction
+    opacity: true,
+    stagger: true,
+    scrub: 0.4,
+  })
 
   return (
     <section
@@ -58,12 +68,15 @@ export function SignatureDesignSection() {
           </div>
 
           {/* Image */}
-          <div className='w-full md:w-1/2 relative h-[500px] md:h-[700px] flex items-center justify-center'>
+          <div
+            ref={imageRef}
+            className='w-full md:w-1/2 relative h-[500px] md:h-[700px] flex items-center justify-center'
+          >
             <Image
               src='/dual-lighters.png'
               alt='FLS Signature Lighter Design'
               fill
-              className='object-contain object-center scale-125 md:scale-100'
+              className='object-contain object-center scale-125 md:scale-100 signature-design-image'
               priority
               quality={100}
             />

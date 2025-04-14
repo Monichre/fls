@@ -1,9 +1,10 @@
 'use client'
 
-import {useRef, useEffect} from 'react'
+import {useRef} from 'react'
 import Image from 'next/image'
 import {gsap} from 'gsap'
 import {ScrollTrigger} from 'gsap/ScrollTrigger'
+import {useParallax} from '@/hooks/useParallax'
 
 // Register GSAP plugins
 if (typeof window !== 'undefined') {
@@ -35,79 +36,52 @@ const features = [
   },
 ]
 
-export function FeaturesSection() {
+interface FeaturesSectionProps {
+  prefersReducedMotion?: boolean
+  isMobile?: boolean
+}
+
+export function FeaturesSection({
+  prefersReducedMotion = false,
+  isMobile = false,
+}: FeaturesSectionProps) {
   const sectionRef = useRef<HTMLElement>(null)
   const contentRef = useRef<HTMLDivElement>(null)
   const image1Ref = useRef<HTMLDivElement>(null)
   const image2Ref = useRef<HTMLDivElement>(null)
+  const featurePointsRef = useRef<HTMLDivElement>(null)
 
-  // GSAP animations
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      // Animate heading and description
-      gsap.from('.features-header', {
-        y: 50,
-        opacity: 0,
-        duration: 1,
-        scrollTrigger: {
-          trigger: contentRef.current,
-          start: 'top 80%',
-          end: 'bottom 60%',
-          toggleActions: 'play none none reverse',
-        },
-      })
+  // Apply parallax effect to the background images for depth
+  useParallax(image1Ref, {
+    prefersReducedMotion,
+    isMobile,
+    debug: false, // Set to false in production
+    background: true, // Use background-position based animation
+    scrub: 1,
+  })
 
-      // Animate feature points
-      gsap.from('.feature-point', {
-        opacity: 0,
-        x: (i) => (i % 2 === 0 ? 50 : -50),
-        stagger: 0.2,
-        duration: 0.8,
-        scrollTrigger: {
-          trigger: contentRef.current,
-          start: 'top 60%',
-          end: 'bottom 60%',
-          toggleActions: 'play none none reverse',
-        },
-      })
+  // Apply parallax to the feature points with staggered animation
+  useParallax(featurePointsRef, {
+    prefersReducedMotion,
+    isMobile,
+    target: '.feature-point',
+    stagger: true,
+    yDistance: isMobile ? 20 : 40,
+    opacity: true,
+    rotation: true, // Add subtle rotation effect
+    scrub: 0.8,
+  })
 
-      // Create crossfade animation for background images
-      if (image1Ref.current && image2Ref.current) {
-        const duration = 2
-        const delay = 4
-
-        // Set initial states
-        gsap.set(image2Ref.current, {opacity: 0})
-
-        // Create timeline for crossfade animation
-        const tl = gsap.timeline({repeat: -1})
-
-        // Image 1 fade out, Image 2 fade in
-        tl.to(
-          image1Ref.current,
-          {opacity: 0, duration, ease: 'power1.inOut'},
-          delay
-        ).to(
-          image2Ref.current,
-          {opacity: 1, duration, ease: 'power1.inOut'},
-          delay
-        )
-
-        // Image 2 fade out, Image 1 fade in
-        tl.to(
-          image2Ref.current,
-          {opacity: 0, duration, ease: 'power1.inOut'},
-          `+=${delay}`
-        ).to(
-          image1Ref.current,
-          {opacity: 1, duration, ease: 'power1.inOut'},
-          `-=${duration}`
-        )
-      }
-    }, sectionRef)
-
-    return () => ctx.revert()
-  }, [])
+  // Apply parallax to header content
+  useParallax(contentRef, {
+    prefersReducedMotion,
+    isMobile,
+    target: '.features-header',
+    yDistance: isMobile ? -15 : -30,
+    opacity: true,
+    scale: true,
+    scrub: 0.5,
+  })
 
   return (
     <section
@@ -118,7 +92,7 @@ export function FeaturesSection() {
       {/* Background image */}
       <div className='absolute inset-0'>
         {/* Crossfade background images */}
-        <div ref={image1Ref} className='absolute inset-0 z-0'>
+        <div ref={image1Ref} className='absolute inset-0 z-0 features-bg'>
           <Image
             src='/banner-white.avif'
             alt='FLS Lighter Features Background'
@@ -128,7 +102,7 @@ export function FeaturesSection() {
             quality={100}
           />
         </div>
-        <div ref={image2Ref} className='absolute inset-0 z-0'>
+        <div ref={image2Ref} className='absolute inset-0 z-0 features-bg'>
           <Image
             src='/banner-black.avif'
             alt='FLS Lighter Features Background Alternate'
@@ -158,14 +132,12 @@ export function FeaturesSection() {
         </div>
 
         {/* Main feature showcase */}
-        <div className='relative h-[600px] md:h-[800px]'>
-          {/* Center lighter image */}
-
+        <div ref={featurePointsRef} className='relative h-[600px] md:h-[800px]'>
           {/* Feature points */}
           {features.map((feature, idx) => (
             <div
               key={feature.id}
-              className={`feature-point absolute ${
+              className={`feature-point absolute feature-card ${
                 feature.position
               } transform ${idx % 2 === 0 ? 'text-right' : 'text-left'}`}
             >
