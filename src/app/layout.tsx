@@ -110,7 +110,7 @@ export default function RootLayout({
           <Footer />
 
           {/* GoogleAnalytics */}
-          <GoogleAnalytics gaId={process.env.GOOGLE_TAG_IG as string} />
+          <GoogleAnalytics gaId={process.env.GOOGLE_TAG_ID as string} />
           <Analytics />
         </body>
       </html>
