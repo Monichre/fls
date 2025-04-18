@@ -165,7 +165,7 @@ export function SignUpForm() {
                 }}
                 initial={{opacity: 0, scale: 0.9}}
                 animate={{opacity: 1, scale: 1}}
-                // exit={{opacity: 0, scale: 0.9, y: 10}}
+                exit={{opacity: 0, scale: 0.9, y: 10}}
                 transition={{duration: 0.4}}
               >
                 <SuccessMessage message={successMessage} />
