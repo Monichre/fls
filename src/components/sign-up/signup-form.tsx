@@ -92,20 +92,27 @@ export function SignUpForm() {
         <motion.button
           onClick={handleOpenOptions}
           layoutId='signup-button'
-          className='flex items-center gap-2 px-6 py-3 bg-[#F7CB00] text-white hover:gap-3  hover:bg-[#e6bc00] active:scale-95 button transition-all duration-300 fade-in'
+          className='flex items-center gap-2 px-6 py-3 bg-[#F7CB00] !text-white transition-all duration-300 fade-in '
+          id='sign-up-button'
           style={{
             borderRadius: 40,
           }}
         >
-          <motion.div
-            layoutId='mail-icon'
-            className='flex items-center justify-center text-white'
-          >
-            <Mail className='size-5 text-white' />
-          </motion.div>
-          <motion.span layoutId='sign-up' className='!text-white block mt-0.5'>
-            Early Access
-          </motion.span>
+          <div className='flex items-center justify-center text-white hero-buttons fade-in'>
+            <motion.span
+              layoutId='mail-icon'
+              // layoutId='sign-up'
+              className='flex items-center justify-center text-white'
+            >
+              <Mail className='h-4 w-4 block text-white' />
+            </motion.span>
+            <motion.span
+              layoutId='sign-up'
+              className='!text-white block ml-4 opacity-100'
+            >
+              Early Access Early Access
+            </motion.span>
+          </div>
         </motion.button>
 
         {/* Options Panel */}
