@@ -86,19 +86,22 @@ export function SignUpForm() {
   )
 
   return (
-    <section className='relative w-full h-full flex items-start md:items-center justify-center px-4 py-10'>
-      <div className='flex items-center justify-center relative'>
+    <section className='relative w-full h-full flex items-start md:items-center justify-center px-4 py-10 z-50'>
+      <div className='flex items-center justify-center relative z-50'>
         {/* Main Sign Up Button */}
-        <motion.button
-          onClick={handleOpenOptions}
-          layoutId='signup-button'
-          className='flex items-center gap-2 px-6 py-3 bg-[#F7CB00] !text-white transition-all duration-300 fade-in '
-          id='sign-up-button'
-          style={{
-            borderRadius: 40,
-          }}
+        <motion.div
+          layout
+          className='flex items-center justify-center text-white hero-buttons fade-in'
         >
-          <div className='flex items-center justify-center text-white hero-buttons fade-in'>
+          <motion.button
+            onClick={handleOpenOptions}
+            layoutId='signup-button'
+            className='flex items-center gap-2 px-6 py-3 bg-[#F7CB00] !text-white transition-all duration-300 button'
+            id='sign-up-button'
+            style={{
+              borderRadius: 40,
+            }}
+          >
             <motion.span
               layoutId='mail-icon'
               // layoutId='sign-up'
@@ -107,13 +110,14 @@ export function SignUpForm() {
               <Mail className='h-4 w-4 block text-white' />
             </motion.span>
             <motion.span
-              layoutId='sign-up'
+              layout
+              // layoutId='sign-up'
               className='!text-white block ml-4 opacity-100'
             >
-              Early Access Early Access
+              Early Access
             </motion.span>
-          </div>
-        </motion.button>
+          </motion.button>
+        </motion.div>
 
         {/* Options Panel */}
         <AnimatePresence>

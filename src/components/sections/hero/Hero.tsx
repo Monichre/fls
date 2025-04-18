@@ -236,6 +236,7 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(
 
         {/* Content */}
         <motion.div
+          layoutId='hero-content'
           style={{y, opacity}}
           className='container h-full flex flex-col justify-center align-center items-center  mx-auto px-4 lg:px-6 z-20 md:flex md:flex-row justify-center items-center overflow-visible'
         >

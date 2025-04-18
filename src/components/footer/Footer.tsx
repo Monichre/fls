@@ -6,6 +6,7 @@ import {useResponsive} from '@/hooks'
 import {Logo} from '@/components/header'
 import Image from 'next/image'
 import {navItems} from '@/lib/nav-links'
+import {SignUpForm} from '@/components/sign-up/signup-form'
 export function Footer() {
   const {isMobile} = useResponsive({defaultBreakpoint: 'md'})
 
@@ -29,7 +30,7 @@ export function Footer() {
                 Connect With Us
               </h3>
               <div className='my-2'>
-                <NewsletterSignup />
+                <SignUpForm />
               </div>
             </div>
           )}
@@ -75,7 +76,7 @@ export function Footer() {
                   Connect With Us
                 </h3>
                 <div className='my-2 footer-newsletter-signup'>
-                  <NewsletterSignup />
+                  <SignUpForm />
                 </div>
               </>
             )}
