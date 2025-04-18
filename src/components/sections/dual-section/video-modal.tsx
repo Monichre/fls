@@ -3,6 +3,7 @@
 import {AnimatePresence, motion} from 'framer-motion'
 import {Play, XIcon} from 'lucide-react'
 import {useState} from 'react'
+import ReactPlayer from 'react-player'
 
 import {cn} from '@/lib/utils'
 
@@ -103,39 +104,25 @@ export function HeroVideoDialog({
               >
                 <XIcon className='size-5' />
               </motion.button>
-              <div className='relative isolate z-[1] size-full overflow-hidden rounded-2xl border-2 border-white'>
+              {/* <div className='relative isolate z-[1] size-full overflow-hidden rounded-2xl border-2 border-white'>
                 <iframe
                   src={videoSrc}
                   className='size-full rounded-2xl'
                   allowFullScreen
                   allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
                 ></iframe>
-              </div>
+              </div> */}
+              <ReactPlayer
+                url={videoSrc}
+                controls
+                height='100%'
+                width='100%'
+                playing
+              />
             </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
-    </div>
-  )
-}
-
-export function HeroVideoDialogDemoTopInBottomOut() {
-  return (
-    <div className='relative'>
-      <HeroVideoDialog
-        className='block dark:hidden'
-        animationStyle='top-in-bottom-out'
-        videoSrc='/file.mp4'
-        thumbnailSrc='/thumbnail.png'
-        thumbnailAlt='Hero Video'
-      />
-      <HeroVideoDialog
-        className='hidden dark:block'
-        animationStyle='top-in-bottom-out'
-        videoSrc='/file.mp4'
-        thumbnailSrc='/thumbnail.png'
-        thumbnailAlt='Hero Video'
-      />
     </div>
   )
 }

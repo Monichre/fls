@@ -287,7 +287,7 @@ export function DualSection({
           animationStyle='top-in-bottom-out'
           isVideoOpen={isVideoOpen}
           toggleVideoOpen={toggleVideo}
-          videoSrc='/file.mp4'
+          videoSrc='/fls-video.mp4'
           thumbnailSrc='/thumbnail.png'
           thumbnailAlt='Hero Video'
           className='w-full'
