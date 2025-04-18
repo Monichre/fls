@@ -2,7 +2,7 @@
 
 import {useRef, useState} from 'react'
 import Image from 'next/image'
-import {motion, useScroll, useTransform} from 'framer-motion'
+import {motion, useScroll, useTransform, AnimatePresence} from 'framer-motion'
 import {gsap} from 'gsap'
 import {ScrollTrigger} from 'gsap/ScrollTrigger'
 import {Button} from '@/components/ui/button'
@@ -13,7 +13,7 @@ import {useScrollToSection} from '@/hooks/useScrollToSection'
 import {HeroVideoDialog} from '@/components/sections/dual-section/video-modal'
 import {AnimatedLogo} from '@/components/animated-logo/AnimatedLogo'
 import {AnimatedLogoAdvanced} from '@/components/animated-logo/AnimatedLogoAdvanced'
-import {AnimatedLogoScroll, GptLogo} from '@/components/animated-logo/GptLogo'
+import {BoxReveal} from '@/components/magicui/box-reveal'
 
 // Register GSAP plugins
 if (typeof window !== 'undefined') {
@@ -88,6 +88,7 @@ export function DualSection({
   const toggleVideo = () => {
     setIsVideoOpen(!isVideoOpen)
   }
+
   return (
     <section
       ref={sectionRef}
@@ -159,15 +160,65 @@ export function DualSection({
             </div>
           </div>
           <div className='flex flex-col items-center justify-start py-12 fade-in-up top-content-item'>
-            {/* <Image
-              src='/CounterCultureWhitelogo.png'
-              alt='Counter Culture Logo'
-              width={400}
-              height={250}
-              className='object-contain w-auto h-auto dual-section-content'
-            /> */}
-            {/* <AnimatedLogo /> */}
-            <AnimatedLogoAdvanced />
+            {/* Animated Logo Container */}
+            <AnimatePresence>
+              <motion.div
+                initial={
+                  prefersReducedMotion
+                    ? {}
+                    : {opacity: 0, scale: 0.8, rotate: -5}
+                }
+                animate={{
+                  opacity: 1,
+                  scale: 1,
+                  rotate: 0,
+                  filter: [
+                    'drop-shadow(0 0 0px rgba(247, 203, 0, 0))',
+                    'drop-shadow(0 0 20px rgba(247, 203, 0, 0.7))',
+                    'drop-shadow(0 0 2px rgba(247, 203, 0, 0.3))',
+                  ],
+                }}
+                transition={{
+                  duration: 1.2,
+                  delay: 0.3,
+                  filter: {
+                    repeat: Number.POSITIVE_INFINITY,
+                    repeatType: 'reverse',
+                    duration: 2.5,
+                  },
+                }}
+                whileHover={{
+                  scale: 1.05,
+                  filter: 'drop-shadow(0 0 15px rgba(247, 203, 0, 0.9))',
+                }}
+                className='relative'
+              >
+                <motion.div
+                  className='absolute inset-0 bg-yellow-400/20'
+                  initial={{opacity: 0}}
+                  animate={{
+                    opacity: [0, 0.5, 0],
+                    scale: [1, 1.1, 1],
+                  }}
+                  transition={{
+                    duration: 3,
+                    repeat: Number.POSITIVE_INFINITY,
+                    repeatType: 'reverse',
+                  }}
+                  style={{
+                    borderRadius: '50%',
+                    filter: 'blur(30px)',
+                  }}
+                />
+                <Image
+                  src='/cc-white-logo.png'
+                  alt='Counter Culture Logo'
+                  width={400}
+                  height={250}
+                  className='object-contain w-auto h-auto dual-section-content z-10 relative'
+                />
+              </motion.div>
+            </AnimatePresence>
           </div>
         </div>
 

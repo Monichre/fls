@@ -34,7 +34,7 @@ function NewsletterFormComponent({
         <ArrowLeft className='size-5 text-gray-500' />
       </motion.button>
       <motion.h2
-        layoutId={`text-2`}
+        layoutId='text-2'
         className='text-xl font-semibold text-gray-800 my-4'
       >
         Newsletter Sign Up

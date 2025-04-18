@@ -25,7 +25,7 @@ function OptionsPanelComponent({
           layoutId='sign-up'
           className='text-xl font-semibold text-gray-800'
         >
-          Sign Up
+          Exclusive Perks
         </motion.h2>
         <motion.button
           layoutId='mail-icon'

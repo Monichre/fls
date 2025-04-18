@@ -9,6 +9,15 @@ import {FormField} from '@/components/ui/form-field'
 import {Button} from '@/components/ui/button'
 import {ANIMATION} from './constants'
 import type {SubmissionStatus} from '@/components/sign-up/signup-form'
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select'
 
 interface EarlyAccessFormProps {
   onBack: () => void
@@ -34,7 +43,7 @@ function EarlyAccessFormComponent({
         <ArrowLeft className='size-5 text-gray-500' />
       </motion.button>
       <motion.h2
-        layoutId={`text-1`}
+        layoutId='text-1'
         className='text-xl font-semibold text-gray-800 my-4'
       >
         Early Access Sign Up
@@ -62,14 +71,14 @@ function EarlyAccessFormComponent({
         />
         <FormField
           label='Company Name'
-          id='company'
+          id='companyName'
           required
           disabled={isSubmitting}
           index={1}
         />
         <FormField
           label='Business Email'
-          id='email'
+          id='businessEmail'
           type='email'
           required
           disabled={isSubmitting}
@@ -83,18 +92,19 @@ function EarlyAccessFormComponent({
           disabled={isSubmitting}
           index={3}
         >
-          <select
-            id='businessType'
-            name='businessType'
-            className='bg-white w-full px-4 py-3 rounded-2xl border-2 border-gray-200 focus:border-gray-300 focus:outline-none'
-            required
-            disabled={isSubmitting}
-          >
-            <option value=''>Select business type</option>
-            <option value='distributor'>Distributor</option>
-            <option value='wholesaler'>Wholesaler</option>
-            <option value='other'>Other</option>
-          </select>
+          <Select disabled={isSubmitting} name='businessType'>
+            <SelectTrigger className='w-full bg-white px-4 py-6 rounded-2xl border-2 border-gray-200 focus:border-gray-300 focus:outline-none text-black mb-4'>
+              <SelectValue placeholder='Select business type' />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectGroup>
+                <SelectLabel>Business Type</SelectLabel>
+                <SelectItem value='distributor'>Distributor</SelectItem>
+                <SelectItem value='wholesaler'>Wholesaler</SelectItem>
+                <SelectItem value='other'>Other</SelectItem>
+              </SelectGroup>
+            </SelectContent>
+          </Select>
         </FormField>
 
         <motion.div

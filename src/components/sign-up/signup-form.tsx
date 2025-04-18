@@ -1,6 +1,7 @@
 'use client'
 
 import type React from 'react'
+import type {JSX} from 'react'
 
 import {useState, useCallback} from 'react'
 import {motion, AnimatePresence} from 'motion/react'
@@ -55,6 +56,8 @@ export function SignUpForm() {
     onReset: resetForm,
   })
 
+  console.log('🚀 ~ SignUpForm ~ submissionStatus:', submissionStatus)
+
   // Event handlers
   const handleOpenOptions = useCallback(() => {
     setIsOpen(true)
@@ -89,19 +92,19 @@ export function SignUpForm() {
         <motion.button
           onClick={handleOpenOptions}
           layoutId='signup-button'
-          className='flex items-center gap-2 px-6 py-3 bg-[#F7CB00] text-white hover:gap-3  hover:bg-[#e6bc00] active:scale-95 button transition-all duration-300 button fade-in'
+          className='flex items-center gap-2 px-6 py-3 bg-[#F7CB00] text-white hover:gap-3  hover:bg-[#e6bc00] active:scale-95 button transition-all duration-300 fade-in'
           style={{
             borderRadius: 40,
           }}
         >
           <motion.div
             layoutId='mail-icon'
-            className='flex items-center justify-center'
+            className='flex items-center justify-center text-white'
           >
             <Mail className='size-5 text-white' />
           </motion.div>
-          <motion.span layoutId='sign-up' className='!text-white  block mt-0.5'>
-            Sign Up
+          <motion.span layoutId='sign-up' className='!text-white block mt-0.5'>
+            Early Access
           </motion.span>
         </motion.button>
 
@@ -151,7 +154,7 @@ export function SignUpForm() {
         </AnimatePresence>
 
         {/* Success Message */}
-        <AnimatePresence>
+        <AnimatePresence mode='popLayout' initial={false}>
           {submissionStatus === 'success' && (
             <div className='absolute flex items-center justify-center'>
               <motion.div
@@ -162,7 +165,7 @@ export function SignUpForm() {
                 }}
                 initial={{opacity: 0, scale: 0.9}}
                 animate={{opacity: 1, scale: 1}}
-                exit={{opacity: 0, scale: 0.9, y: 10}}
+                // exit={{opacity: 0, scale: 0.9, y: 10}}
                 transition={{duration: 0.4}}
               >
                 <SuccessMessage message={successMessage} />

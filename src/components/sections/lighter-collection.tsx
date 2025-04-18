@@ -114,13 +114,6 @@ export function LighterCollection({
             patterns, FLS Lighters not only work great but also add a splash of
             sophistication to any moment.
           </p>
-          <Button
-            size='lg'
-            variant='outline'
-            className='collection-content bg-yellow-400 text-white hover:bg-white hover:text-yellow-400 rounded-full px-8 py-6'
-          >
-            View More
-          </Button>
         </div>
 
         {/* Carousel */}
