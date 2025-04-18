@@ -19,8 +19,22 @@ const lighters = [
     id: 1,
     name: 'Inferno Red',
     description: 'Bold and powerful, with striking red accents',
-    image: '/mobile_screen_large.png',
+    image: '/lighter-black-and-red.avif',
     color: 'bg-red-500/20',
+  },
+  {
+    id: 4,
+    name: 'Solar Flare Yellow',
+    description: 'Bold and powerful, with striking yellow accents',
+    image: '/lighter-black-and-yellow.avif',
+    color: 'bg-yellow-500/20',
+  },
+  {
+    id: 5,
+    name: 'Electric Blue',
+    description: 'Energetic blue with high-visibility yellow branding',
+    image: '/lighter-black-and-blue.avif',
+    color: 'bg-blue-500/20',
   },
   {
     id: 2,

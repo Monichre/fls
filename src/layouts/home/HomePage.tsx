@@ -5,32 +5,32 @@ import {useScroll, useTransform} from 'framer-motion'
 import {gsap} from 'gsap'
 import {ScrollTrigger} from 'gsap/ScrollTrigger'
 
-import {Hero} from '@/components/hero'
+import {Hero} from '@/components/sections/hero'
 import {useResponsive, cn} from '@/hooks'
 
 import {useGSAP} from '@gsap/react'
 
 // Implement lazy loading for heavy components
 const DualSection = lazy(() =>
-  import('@/components/dual-section/DualSection').then((mod) => ({
+  import('@/components/sections/dual-section/DualSection').then((mod) => ({
     default: mod.DualSection,
   }))
 )
 
 const SignatureDesignSection = lazy(() =>
-  import('@/components/signature-design-section').then((mod) => ({
+  import('@/components/sections/signature-design-section').then((mod) => ({
     default: mod.SignatureDesignSection,
   }))
 )
 
 const LighterCollection = lazy(() =>
-  import('@/components/lighter-collection').then((mod) => ({
+  import('@/components/sections/lighter-collection').then((mod) => ({
     default: mod.LighterCollection,
   }))
 )
 
 const FeaturesSection = lazy(() =>
-  import('@/components/features-section').then((mod) => ({
+  import('@/components/sections/features-section').then((mod) => ({
     default: mod.FeaturesSection,
   }))
 )

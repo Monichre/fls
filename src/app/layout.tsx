@@ -7,9 +7,18 @@ import '@/styles/responsive-utils.css'
 import {Header} from '@/components/header'
 import {Footer} from '@/components/footer'
 import {Navbar} from '@/components/navbar'
-import {MobileProvider} from '@/contexts/mobile-context'
+import {AppProviders} from '@/contexts/app-providers'
 import {GoogleAnalytics} from '@next/third-parties/google'
+import {Analytics} from '@vercel/analytics/react'
+// <!-- Google tag (gtag.js) -->
+// <script async src="https://www.googletagmanager.com/gtag/js?id=G-ESN39WH7X5"></script>
+// <script>
+//   window.dataLayer = window.dataLayer || [];
+//   function gtag(){dataLayer.push(arguments);}
+//   gtag('js', new Date());
 
+//   gtag('config', 'G-ESN39WH7X5');
+// </script>
 import localFont from 'next/font/local'
 
 // Load local Poppins Black font
@@ -91,17 +100,20 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang='en'>
-      <body
-        className={`${roboto.variable} ${poppins.variable} ${poppinsBlack.variable} ${proximaNova.variable} antialiased`}
-      >
-        <MobileProvider>
+    <AppProviders>
+      <html lang='en'>
+        <body
+          className={`${roboto.variable} ${poppins.variable} ${poppinsBlack.variable} ${proximaNova.variable} antialiased`}
+        >
           <Navbar />
           {children}
           <Footer />
-        </MobileProvider>
-        {/* GoogleAnalytics */}
-      </body>
-    </html>
+
+          {/* GoogleAnalytics */}
+          <GoogleAnalytics gaId={process.env.GOOGLE_TAG_IG as string} />
+          <Analytics />
+        </body>
+      </html>
+    </AppProviders>
   )
 }

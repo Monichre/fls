@@ -10,7 +10,10 @@ import {ArrowRight, Flame} from 'lucide-react'
 import {useGSAP} from '@gsap/react'
 import {Divider} from '@/components/ui/divider'
 import {useScrollToSection} from '@/hooks/useScrollToSection'
-import {HeroVideoDialog} from '@/components/dual-section/video-modal'
+import {HeroVideoDialog} from '@/components/sections/dual-section/video-modal'
+import {AnimatedLogo} from '@/components/animated-logo/AnimatedLogo'
+import {AnimatedLogoAdvanced} from '@/components/animated-logo/AnimatedLogoAdvanced'
+import {AnimatedLogoScroll, GptLogo} from '@/components/animated-logo/GptLogo'
 
 // Register GSAP plugins
 if (typeof window !== 'undefined') {
@@ -118,22 +121,18 @@ export function DualSection({
         {/* Content */}
         <div
           ref={topContentRef}
-          className='relative z-20 container mx-auto px-4 md:px-6 h-full flex flex-col justify-center'
+          className='relative z-20 container mx-auto px-4 md:px-6 h-full flex flex-col justify-center md:flex-row md:justify-around md:pt-14 items-center'
         >
           <div className='max-w-2xl mt-4'>
             <h2
-              className='text-4xl md:text-6xl font-bold text-white mb-6 top-content-item leading-tight flex flex-col md:flex-row items-center justify-center align-middle'
+              className='text-4xl md:text-left md:text-6xl font-bold text-white mb-6 top-content-item leading-tight 
+              '
               style={{letterSpacing: '-1px'}}
             >
-              <span className='mr-4'>Introducing</span>
-
-              <Image
-                src='/CounterCultureWhitelogo.png'
-                alt='Counter Culture Logo'
-                width={175}
-                height={75}
-                className='object-contain w-auto h-auto dual-section-content'
-              />
+              Introducing <br />{' '}
+              <span className='text-yellow-400 !font-light italic'>
+                CounterCulture
+              </span>
             </h2>
             <p
               className=' md:text-base text-white mb-8 top-content-item dual-section-content'
@@ -158,6 +157,17 @@ export function DualSection({
                 Learn More <ArrowRight className='ml-1 h-4 w-4' />
               </Button>
             </div>
+          </div>
+          <div className='flex flex-col items-center justify-start py-12 fade-in-up top-content-item'>
+            {/* <Image
+              src='/CounterCultureWhitelogo.png'
+              alt='Counter Culture Logo'
+              width={400}
+              height={250}
+              className='object-contain w-auto h-auto dual-section-content'
+            /> */}
+            {/* <AnimatedLogo /> */}
+            <AnimatedLogoAdvanced />
           </div>
         </div>
 

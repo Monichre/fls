@@ -12,9 +12,10 @@ import {ZoomIn, ZoomOut, RotateCcw} from 'lucide-react'
 import {Divider} from '@/components/ui'
 import {PinContainer} from '@/components/ui/3d-pin'
 import {NewsletterSignup} from '@/components/newsletter-signup'
-import {SignUp} from '@/components/hero/sign-up'
+import {SignUp} from '@/components/sections/hero/sign-up'
 import {useScrollToSection} from '@/hooks/useScrollToSection'
 import Link from 'next/link'
+import {SignUpForm} from '@/components/sign-up/signup-form'
 
 // Define types for the LighterModel
 interface LighterModelProps {
@@ -287,11 +288,10 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(
                 </p>
               </div>
 
-              <div className='max-w-[300px] md:max-w-md mx-auto md:mx-0 fade-in opacity-0 translate-y-10'>
+              <div className='max-w-[300px] md:max-h-[500px] md:max-w-md mx-auto md:mx-0 '>
                 {/* <NewsletterSignup /> */}
                 {/* email */}
-
-                <SignUp />
+                <SignUpForm />
               </div>
             </div>
 
