@@ -277,7 +277,7 @@ export const HomePage = ({data}: HomePageProps) => {
         {/* Trust badges - new component for social proof */}
         <TrustBadges />
 
-        <Suspense fallback={<LoadingFallback />}>
+        <Suspense fallback={<div>Loading...</div>}>
           {/* Pass required props for parallax to each component */}
           <DualSection
             prefersReducedMotion={prefersReducedMotion}
