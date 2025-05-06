@@ -12,6 +12,7 @@ import {Button} from '@/components/ui/button'
 import {useScrollToSection} from '@/hooks/useScrollToSection'
 
 import {SignUpForm} from '@/components/sign-up/signup-form'
+import {Divider} from '@/components/ui'
 
 // Define types for the LighterModel
 interface LighterModelProps {
