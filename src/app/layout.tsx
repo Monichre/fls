@@ -4,21 +4,13 @@ import './globals.css'
 // Import our CSS utilities
 import '@/styles/mobile-optimizations.css'
 import '@/styles/responsive-utils.css'
-import {Header} from '@/components/header'
+
 import {Footer} from '@/components/footer'
 import {Navbar} from '@/components/navbar'
 import {AppProviders} from '@/contexts/app-providers'
 import {GoogleAnalytics} from '@next/third-parties/google'
 import {Analytics} from '@vercel/analytics/react'
-// <!-- Google tag (gtag.js) -->
-// <script async src="https://www.googletagmanager.com/gtag/js?id=G-ESN39WH7X5"></script>
-// <script>
-//   window.dataLayer = window.dataLayer || [];
-//   function gtag(){dataLayer.push(arguments);}
-//   gtag('js', new Date());
 
-//   gtag('config', 'G-ESN39WH7X5');
-// </script>
 import localFont from 'next/font/local'
 
 // Load local Poppins Black font
