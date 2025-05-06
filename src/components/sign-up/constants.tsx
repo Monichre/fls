@@ -61,14 +61,8 @@ export const SIGN_UP_OPTIONS: SignUpOption[] = [
   {
     id: 1,
     icon: <Users className='size-6 text-gray-600' />,
-    title: 'Early Access Sign Up',
-    description: 'For distributors and wholesalers',
-  },
-  {
-    id: 2,
-    icon: <Mail className='size-6 text-gray-600' />,
-    title: 'Newsletter Sign Up',
-    description: 'Stay updated with our latest news',
+    title: 'Get Pricing Now',
+    description: 'Exclusively for distributors and wholesalers',
   },
 ]
 
@@ -76,6 +70,4 @@ export const SIGN_UP_OPTIONS: SignUpOption[] = [
 export const SUCCESS_MESSAGES = {
   earlyAccess:
     "Thank you for your interest in early access! We'll review your application and get back to you soon.",
-  newsletter:
-    "Thank you for subscribing to our newsletter! You'll start receiving updates soon.",
 }

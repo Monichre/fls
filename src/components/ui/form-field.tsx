@@ -23,6 +23,7 @@ interface FormFieldProps {
   index?: number
   children?: React.ReactNode
   description?: string
+  variant?: 'default' | 'footer'
 }
 
 export function FormField({
@@ -34,9 +35,19 @@ export function FormField({
   index = 0,
   children,
   description,
+  variant = 'default',
 }: FormFieldProps) {
   const delay = ANIMATION.delay.base + index * ANIMATION.delay.stagger
   const form = useFormContext()
+  const isFooter = variant === 'footer'
+
+  const inputClasses = isFooter
+    ? 'bg-zinc-700 w-full px-4 py-2 rounded-xl border-2 border-zinc-600 focus:border-zinc-500 focus:outline-none text-white placeholder-zinc-400'
+    : 'bg-white w-full px-4 py-3 rounded-2xl border-2 border-gray-200 focus:border-gray-300 focus:outline-none'
+
+  const labelClasses = isFooter
+    ? 'block text-zinc-300 text-sm'
+    : 'block text-gray-500'
 
   if (!form) {
     // Fallback for when not used within a form context
@@ -48,7 +59,7 @@ export function FormField({
         transition={{duration: ANIMATION.duration.medium, delay}}
         className='space-y-2'
       >
-        <label htmlFor={id} className='block text-gray-500'>
+        <label htmlFor={id} className={labelClasses}>
           {label}
         </label>
         {children ? (
@@ -58,7 +69,7 @@ export function FormField({
             type={type}
             id={id}
             name={id}
-            className='bg-white w-full px-4 py-3 rounded-2xl border-2 border-gray-200 focus:border-gray-300 focus:outline-none'
+            className={inputClasses}
             required={required}
             disabled={disabled}
           />
@@ -78,8 +89,10 @@ export function FormField({
         control={form.control}
         name={id}
         render={({field}) => (
-          <FormItem>
-            <FormLabel>{label}</FormLabel>
+          <FormItem className={isFooter ? 'space-y-1' : 'space-y-2'}>
+            <FormLabel className={isFooter ? 'text-zinc-300 text-sm' : ''}>
+              {label}
+            </FormLabel>
             <FormControl>
               {children ? (
                 children
@@ -88,13 +101,19 @@ export function FormField({
                   type={type}
                   required={required}
                   disabled={disabled}
-                  className='bg-white w-full px-4 py-3 rounded-2xl border-2 border-gray-200 focus:border-gray-300 focus:outline-none'
+                  className={inputClasses}
                   {...field}
                 />
               )}
             </FormControl>
-            {description && <FormDescription>{description}</FormDescription>}
-            <FormMessage />
+            {description && (
+              <FormDescription
+                className={isFooter ? 'text-zinc-400 text-xs' : ''}
+              >
+                {description}
+              </FormDescription>
+            )}
+            <FormMessage className={isFooter ? 'text-red-400 text-xs' : ''} />
           </FormItem>
         )}
       />

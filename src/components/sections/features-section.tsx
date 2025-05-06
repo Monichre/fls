@@ -5,34 +5,44 @@ import Image from 'next/image'
 import {gsap} from 'gsap'
 import {ScrollTrigger} from 'gsap/ScrollTrigger'
 import {useParallax} from '@/hooks/useParallax'
+import {Button} from '@/components/ui/button'
+import {ShoppingCart} from 'lucide-react'
+import {useScrollToSection} from '@/hooks/useScrollToSection'
 
 // Register GSAP plugins
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger)
 }
 
-// Feature points data
+// Feature points data with enhanced benefit-driven descriptions
 const features = [
   {
     id: 'high-capacity',
     title: 'High-Capacity Lighter',
-    description: '1200 Ignitions',
+    description: 'Up to 1200 Ignitions - never run out when you need it most',
     position: 'top-1/4 right-0 md:right-10',
     linePosition: '-translate-x-16',
   },
   {
-    id: 'sculptured-body',
-    title: 'Sculptured Body',
-    description: '',
+    id: 'wind-resistant',
+    title: 'Wind-Resistant Technology',
+    description: 'Reliable flame even in challenging outdoor conditions',
     position: 'top-1/2 left-0 md:left-10',
     linePosition: 'translate-x-16',
   },
   {
+    id: 'sculptured-body',
+    title: 'Sculptured Ergonomic Body',
+    description: 'Comfortable to hold with secure grip that prevents slipping',
+    position: 'bottom-2/4 right-0 md:right-10',
+    linePosition: '-translate-x-16',
+  },
+  {
     id: 'curved-base',
     title: 'Distinctive Curved Base',
-    description: '',
-    position: 'bottom-1/4 right-0 md:right-10',
-    linePosition: '-translate-x-16',
+    description: 'Stands securely on any surface for convenient hands-free use',
+    position: 'bottom-1/4 left-0 md:left-10',
+    linePosition: 'translate-x-16',
   },
 ]
 
@@ -50,6 +60,7 @@ export function FeaturesSection({
   const image1Ref = useRef<HTMLDivElement>(null)
   const image2Ref = useRef<HTMLDivElement>(null)
   const featurePointsRef = useRef<HTMLDivElement>(null)
+  const {scrollTo} = useScrollToSection()
 
   // Apply parallax effect to the background images for depth
   useParallax(image1Ref, {
@@ -95,7 +106,7 @@ export function FeaturesSection({
         <div ref={image1Ref} className='absolute inset-0 z-0 features-bg'>
           <Image
             src='/banner-white.avif'
-            alt='FLS Lighter Features Background'
+            alt='FLS Lighter Features - Premium Wind-Resistant Lighter Technology'
             fill
             className='object-cover'
             priority
@@ -105,7 +116,7 @@ export function FeaturesSection({
         <div ref={image2Ref} className='absolute inset-0 z-0 features-bg'>
           <Image
             src='/banner-black.avif'
-            alt='FLS Lighter Features Background Alternate'
+            alt='FLS Lighter Features - High-Capacity Long-Lasting Lighter'
             fill
             className='object-cover'
             priority
@@ -119,15 +130,20 @@ export function FeaturesSection({
         className='container mx-auto p-4 md:px-6 relative z-10'
       >
         {/* Header content */}
-        <div className='max-w-3xl mx-auto text-center mb-20 bg-black/50 p-4 rounded-xl pb-8'>
+        <div className='max-w-3xl mx-auto text-center mb-16 bg-black/50 p-6 rounded-xl'>
           <h2 className='features-header text-4xl md:text-6xl font-bold text-white mb-6'>
-            Features
+            Exceptional Features for{' '}
+            <span className='text-yellow-400'>Unmatched Performance</span>
           </h2>
+          <p className='features-header text-lg md:text-xl text-white mb-4'>
+            Discover the outstanding features of FLS Lighters, designed
+            specifically to provide you with reliability and comfort in any
+            situation. Each feature was engineered with your needs in mind.
+          </p>
           <p className='features-header text-lg md:text-xl text-white'>
-            Discover the outstanding features of the FLS Lighter, a perfect
-            blend of innovation, design, and reliability. From its sleek and
-            ergonomic design to its advanced fixed flame technology, each aspect
-            of the FLS Lighter is crafted to exceed expectations.
+            From wind-resistant technology that works in challenging conditions
+            to the ergonomic design that fits perfectly in your hand, every
+            aspect of an FLS Lighter delivers performance you can depend on.
           </p>
         </div>
 
@@ -145,7 +161,7 @@ export function FeaturesSection({
                 <div
                   className={`absolute top-1/2 ${feature.linePosition} w-32 h-px bg-yellow-400/80 transform -translate-y-1/2`}
                 />
-                <div className='relative backdrop-blur-sm bg-black/30 p-2 rounded'>
+                <div className='relative backdrop-blur-sm bg-black/50 p-3 rounded'>
                   <h3 className='text-white font-bold mb-1'>{feature.title}</h3>
                   {feature.description && (
                     <p className='text-yellow-400 text-sm'>
@@ -156,6 +172,22 @@ export function FeaturesSection({
               </div>
             </div>
           ))}
+        </div>
+
+        {/* CTA Section */}
+        <div className='text-center bg-black/50 p-6 rounded-xl max-w-xl mx-auto'>
+          <p className='text-white mb-6'>
+            Experience the perfect blend of innovation and reliability with FLS
+            lighters. Join thousands of satisfied customers who trust FLS for
+            all their lighting needs.
+          </p>
+          <Button
+            onClick={() => scrollTo('#lighter-collection')}
+            size='lg'
+            className='bg-yellow-400 hover:bg-yellow-500 text-black rounded-full px-8'
+          >
+            Shop FLS Lighters <ShoppingCart className='ml-2 h-4 w-4' />
+          </Button>
         </div>
       </div>
     </section>

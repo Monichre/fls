@@ -7,6 +7,8 @@ import {ScrollTrigger} from 'gsap/ScrollTrigger'
 
 import {Hero} from '@/components/sections/hero'
 import {useResponsive, cn} from '@/hooks'
+import {TestimonialSection} from '@/components/sections/testimonial-section'
+import {TrustBadges} from '@/components/ui/trust-badges'
 
 import {useGSAP} from '@gsap/react'
 
@@ -51,13 +53,7 @@ export const HomePage = ({data}: HomePageProps) => {
   const heroRef = useRef<HTMLDivElement>(null)
 
   // Use our responsive hook instead of mobile context
-  const {
-    isMobile,
-
-    isLandscape,
-
-    prefersReducedMotion,
-  } = useResponsive()
+  const {isMobile, isLandscape, prefersReducedMotion} = useResponsive()
 
   // Check if we have data from contentful
   // const hasContentfulData = data?.homePage
@@ -149,45 +145,75 @@ export const HomePage = ({data}: HomePageProps) => {
     </div>
   )
 
-  return (
-    <div
-      ref={containerRef}
-      className={cn(
-        'min-h-screen bg-zinc-900 text-white overflow-hidden',
-        isMobile && 'touch-manipulation', // Optimize touch events on mobile
-        isLandscape && isMobile && 'landscape-view'
-      )}
-    >
-      {/* Hero component with responsive props */}
-      <Hero
-        y={y}
-        opacity={opacity}
-        ref={heroRef}
-        // {...{isMobile, isLandscape, prefersReducedMotion}}
-        // contentfulData={
-        //   hasContentfulData ? data.homePage.heroBanner : undefined
-        // }
-      />
+  // SEO data
+  const seoTitle =
+    'FLS Lighters – Windproof, High-Performance Lighters | FLS USA'
+  const seoDescription =
+    'FLS Lighters offers wind-resistant, ergonomic lighters designed for adventure. 1200+ ignitions, stylish designs, and reliable flames in any condition. Shop now for quality lighters that spark excitement.'
 
-      <Suspense fallback={<LoadingFallback />}>
-        {/* Pass required props for parallax to each component */}
-        <DualSection
-          prefersReducedMotion={prefersReducedMotion}
+  return (
+    <>
+      {/* Add SEO meta tags */}
+      <head>
+        <title>{seoTitle}</title>
+        <meta name='description' content={seoDescription} />
+        <meta property='og:title' content={seoTitle} />
+        <meta property='og:description' content={seoDescription} />
+        <meta property='og:type' content='website' />
+        <meta name='twitter:card' content='summary_large_image' />
+        <meta name='twitter:title' content={seoTitle} />
+        <meta name='twitter:description' content={seoDescription} />
+      </head>
+
+      <div
+        ref={containerRef}
+        className={cn(
+          'min-h-screen bg-zinc-900 text-white overflow-hidden',
+          isMobile && 'touch-manipulation', // Optimize touch events on mobile
+          isLandscape && isMobile && 'landscape-view'
+        )}
+      >
+        {/* Hero component with responsive props and value proposition */}
+        <Hero
+          y={y}
+          opacity={opacity}
+          ref={heroRef}
           isMobile={isMobile}
-        />
-        <SignatureDesignSection
+          isLandscape={isLandscape}
           prefersReducedMotion={prefersReducedMotion}
-          isMobile={isMobile}
+          valueProposition='Windproof, High-Performance Lighters for Adventure, Home & Everywhere in Between'
+          primaryCTA='Shop FLS Lighters'
+          secondaryCTA='Watch Demo'
         />
-        <LighterCollection
-          prefersReducedMotion={prefersReducedMotion}
-          isMobile={isMobile}
-        />
-        <FeaturesSection
-          prefersReducedMotion={prefersReducedMotion}
-          isMobile={isMobile}
-        />
-      </Suspense>
-    </div>
+
+        {/* Trust badges - new component for social proof */}
+        <TrustBadges />
+
+        <Suspense fallback={<LoadingFallback />}>
+          {/* Pass required props for parallax to each component */}
+          <DualSection
+            prefersReducedMotion={prefersReducedMotion}
+            isMobile={isMobile}
+          />
+          <SignatureDesignSection
+            prefersReducedMotion={prefersReducedMotion}
+            isMobile={isMobile}
+          />
+          <LighterCollection
+            prefersReducedMotion={prefersReducedMotion}
+            isMobile={isMobile}
+          />
+          <FeaturesSection
+            prefersReducedMotion={prefersReducedMotion}
+            isMobile={isMobile}
+          />
+          {/* New testimonials section */}
+          <TestimonialSection
+            prefersReducedMotion={prefersReducedMotion}
+            isMobile={isMobile}
+          />
+        </Suspense>
+      </div>
+    </>
   )
 }

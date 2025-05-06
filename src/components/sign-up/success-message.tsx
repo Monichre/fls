@@ -4,18 +4,24 @@ import {ANIMATION, COLORS} from '@/components/sign-up/constants'
 
 interface SuccessMessageProps {
   message: string
+  variant?: 'default' | 'footer'
 }
 
-export function SuccessMessage({message}: SuccessMessageProps) {
+export function SuccessMessage({
+  message,
+  variant = 'default',
+}: SuccessMessageProps) {
+  const isFooter = variant === 'footer'
+
   return (
     <div className='flex flex-col items-center justify-center text-center py-6'>
       <motion.div
         initial={{scale: 0, opacity: 0}}
         animate={{scale: 1, opacity: 1}}
         transition={ANIMATION.spring.default}
-        className={`mb-6 text-[${COLORS.primary}]`}
+        className={`mb-6 ${isFooter ? 'text-yellow-400' : `text-[${COLORS.primary}]`}`}
       >
-        <CheckCircle size={80} strokeWidth={1.5} />
+        <CheckCircle size={isFooter ? 60 : 80} strokeWidth={1.5} />
       </motion.div>
 
       <motion.h2
@@ -25,7 +31,7 @@ export function SuccessMessage({message}: SuccessMessageProps) {
           duration: ANIMATION.duration.long,
           delay: ANIMATION.delay.base * 2,
         }}
-        className='text-2xl font-semibold text-gray-800 mb-3'
+        className={`text-2xl font-semibold mb-3 ${isFooter ? 'text-white' : 'text-gray-800'}`}
       >
         Thank You!
       </motion.h2>
@@ -37,7 +43,7 @@ export function SuccessMessage({message}: SuccessMessageProps) {
           duration: ANIMATION.duration.long,
           delay: ANIMATION.delay.base * 2.5,
         }}
-        className='text-gray-600 max-w-[320px]'
+        className={`max-w-[320px] ${isFooter ? 'text-zinc-300 text-sm' : 'text-gray-600'}`}
       >
         {message}
       </motion.p>

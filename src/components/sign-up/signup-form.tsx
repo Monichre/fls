@@ -45,7 +45,7 @@ export function SignUpForm() {
   // State for controlling the visibility of different panels
   const [isOpen, setIsOpen] = useState(false)
   const [formType, setFormType] = useState<FormType>(null)
-
+  const [submitted, setSubmitted] = useState(false)
   // Reset form state
   const resetForm = useCallback(() => {
     setFormType(null)
@@ -55,8 +55,6 @@ export function SignUpForm() {
   const {submissionStatus, successMessage, handleSubmit} = useFormSubmission({
     onReset: resetForm,
   })
-
-  console.log('🚀 ~ SignUpForm ~ submissionStatus:', submissionStatus)
 
   // Event handlers
   const handleOpenOptions = useCallback(() => {
@@ -81,55 +79,53 @@ export function SignUpForm() {
   const handleFormSubmit = useCallback(
     (e: React.FormEvent<HTMLFormElement>) => {
       handleSubmit(e, formType)
+      setSubmitted(true)
     },
     [handleSubmit, formType]
   )
 
   return (
-    <section className='relative w-full h-full flex items-start md:items-center justify-center px-4 py-10 z-50'>
+    <section className='relative w-full  flex items-start md:items-center justify-start md:justify-center px-4 py-10 z-50 fade-in'>
       <div className='flex items-center justify-center relative z-50'>
         {/* Main Sign Up Button */}
-        <motion.div
-          layout
-          className='flex items-center justify-center text-white hero-buttons fade-in'
-        >
-          <motion.button
+        <div className='flex items-center justify-center hero-buttons mx-auto'>
+          <button
             onClick={handleOpenOptions}
-            layoutId='signup-button'
-            className='flex items-center gap-2 px-6 py-3 bg-[#F7CB00] !text-white transition-all duration-300 button'
+            type='button'
+            className='flex items-center gap-2 px-6 py-3 bg-yellow-400 button fade-in mx-auto text-black'
             id='sign-up-button'
+            disabled={submitted}
             style={{
               borderRadius: 40,
             }}
           >
-            <motion.span
-              layoutId='mail-icon'
-              // layoutId='sign-up'
-              className='flex items-center justify-center text-white'
-            >
-              <Mail className='h-4 w-4 block text-white' />
-            </motion.span>
-            <motion.span
-              layout
-              // layoutId='sign-up'
-              className='!text-white block ml-4 opacity-100'
-            >
-              Early Access
-            </motion.span>
-          </motion.button>
-        </motion.div>
+            <span className='flex items-center justify-center text-black'>
+              <Mail className='h-4 w-4 block text-black' />
+            </span>
+            <span className='!text-black block ml-2 font-medium'>
+              {submitted ? 'Thank You!' : 'Lock In Your Pricing!'}
+            </span>
+          </button>
+        </div>
 
         {/* Options Panel */}
         <AnimatePresence>
           {isOpen && (
             <div className='absolute flex items-center justify-center'>
-              <FormContainer>
+              <motion.div
+                initial={{opacity: 0, scale: 0.9}}
+                animate={{opacity: 1, scale: 1}}
+                exit={{opacity: 0, scale: 0.9}}
+                transition={{duration: 0.3}}
+                className='w-[440px] bg-white shadow-sm p-6 border'
+                style={{borderRadius: 30}}
+              >
                 <OptionsPanel
                   options={SIGN_UP_OPTIONS}
                   onClose={handleCloseOptions}
                   onSelectOption={handleSelectOption}
                 />
-              </FormContainer>
+              </motion.div>
             </div>
           )}
         </AnimatePresence>
@@ -149,7 +145,7 @@ export function SignUpForm() {
           )}
         </AnimatePresence>
 
-        {/* Newsletter Form */}
+        {/* Newsletter Form
         <AnimatePresence>
           {formType === 'newsletter' && submissionStatus !== 'success' && (
             <div className='absolute flex items-center justify-center'>
@@ -162,10 +158,11 @@ export function SignUpForm() {
               </FormContainer>
             </div>
           )}
-        </AnimatePresence>
+        </AnimatePresence> */}
 
         {/* Success Message */}
-        <AnimatePresence mode='popLayout' initial={false}>
+        {/* mode='popLayout' initial={false} */}
+        <AnimatePresence>
           {submissionStatus === 'success' && (
             <div className='absolute flex items-center justify-center'>
               <motion.div
@@ -176,7 +173,7 @@ export function SignUpForm() {
                 }}
                 initial={{opacity: 0, scale: 0.9}}
                 animate={{opacity: 1, scale: 1}}
-                exit={{opacity: 0, scale: 0.9, y: 10}}
+                // exit={{opacity: 0, scale: 0.9, y: 10}}
                 transition={{duration: 0.4}}
               >
                 <SuccessMessage message={successMessage} />

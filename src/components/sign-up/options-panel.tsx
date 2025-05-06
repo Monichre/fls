@@ -25,7 +25,7 @@ function OptionsPanelComponent({
           layoutId='sign-up'
           className='text-xl font-semibold text-gray-800'
         >
-          Exclusive Perks
+          Exclusive Offer
         </motion.h2>
         <motion.button
           layoutId='mail-icon'
@@ -46,7 +46,7 @@ function OptionsPanelComponent({
         }}
         className='text-gray-600 mb-6'
       >
-        Choose the sign-up option that best fits your needs.
+        Highest Quality Products at the Highest Margins
       </motion.p>
 
       <div className='space-y-3'>

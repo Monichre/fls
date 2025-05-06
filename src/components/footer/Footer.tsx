@@ -6,11 +6,10 @@ import {useResponsive} from '@/hooks'
 import {Logo} from '@/components/header'
 import Image from 'next/image'
 import {navItems} from '@/lib/nav-links'
-import {SignUpForm} from '@/components/sign-up/signup-form'
+import {FooterSignUpForm} from '@/components/sign-up/footer-signup-form'
+
 export function Footer() {
   const {isMobile} = useResponsive({defaultBreakpoint: 'md'})
-
-  console.log('🚀 ~ Footer ~ isMobile:', isMobile)
 
   return (
     <footer className='bg-zinc-900 border-t border-zinc-800' id='footer'>
@@ -25,12 +24,13 @@ export function Footer() {
             </div>
           )}
           {isMobile && (
-            <div className='footer-newsletter-signup-2'>
+            <div>
               <h3 className='text-lg font-semibold mb-0 md:mb-4 text-white'>
-                Connect With Us
+                Are you a wholesaler or distributor?
               </h3>
+              <p className='text-white'>Act Fast for early access</p>
               <div className='my-2'>
-                <SignUpForm />
+                <FooterSignUpForm />
               </div>
             </div>
           )}
@@ -69,14 +69,15 @@ export function Footer() {
             </ul>
           </div>
 
-          <div>
+          <div className='flex flex-col items-start justify-start'>
             {isMobile ? null : (
               <>
-                <h3 className='text-lg font-semibold mb-4 text-white'>
-                  Connect With Us
+                <h3 className='text-lg font-semibold mb-0 md:mb-4 text-white'>
+                  Are you a wholesaler or distributor?
                 </h3>
-                <div className='my-2 footer-newsletter-signup'>
-                  <SignUpForm />
+
+                <div className='my-2'>
+                  <FooterSignUpForm />
                 </div>
               </>
             )}

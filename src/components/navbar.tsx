@@ -21,7 +21,7 @@ export function Navbar() {
         // animate={{ y: 0 }}
         // transition={{ duration: 0.5, ease: "easeOut" }}
       >
-        <div className='container mx-auto px-4 md:px-6'>
+        <div className='w-full px-12 relative'>
           <div className='flex items-center justify-between h-16 md:h-20'>
             {/* Logo */}
             <Link
@@ -38,7 +38,7 @@ export function Navbar() {
                 <Link
                   key={item.label}
                   href={item.href}
-                  className='text-sm font-medium text-white/80 hover:text-white transition-colors px-4 py-2'
+                  className='text-sm font-medium text-white hover:text-white transition-colors px-4 py-2'
                   onClick={(e) => scrollToSection(e, item.href)}
                 >
                   {item.label}

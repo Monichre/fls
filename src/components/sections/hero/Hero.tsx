@@ -173,11 +173,27 @@ function Scene({
 interface HeroProps {
   y: number | MotionValue<number>
   opacity: number | MotionValue<number>
+  valueProposition?: string
+  primaryCTA?: string
+  secondaryCTA?: string
+  isMobile?: boolean
+  isLandscape?: boolean
+  prefersReducedMotion?: boolean
   [key: string]: unknown
 }
 
 export const Hero = forwardRef<HTMLDivElement, HeroProps>(
-  ({y, opacity, ...props}, ref) => {
+  (
+    {
+      y,
+      opacity,
+      valueProposition = 'High-Performance Lighters for Adventure, Home & Everywhere in Between',
+      primaryCTA = 'Shop FLS Lighters',
+      secondaryCTA = 'Watch Demo',
+      ...props
+    },
+    ref
+  ) => {
     const [zoom, setZoom] = useState(6)
     const cameraControlsRef = useRef<CameraControls>(null)
 
@@ -224,7 +240,7 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(
         <div className='absolute inset-0 z-0'>
           <Image
             src='/hero.avif'
-            alt='FLS Lighter'
+            alt='FLS Lighter - Premium Windproof Lighter'
             fill
             priority
             quality={100}
@@ -237,7 +253,7 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(
         {/* Content */}
         <motion.div
           layoutId='hero-content'
-          style={{y, opacity}}
+          // style={{y, opacity}}
           className='container h-full flex flex-col justify-center align-center items-center  mx-auto px-4 lg:px-6 z-20 md:flex md:flex-row justify-center items-center overflow-visible'
         >
           <div className='sm:w-full sm:h-auto md:w-1/2 md:w-[40vw] mb-10 lg:mb-0 mx-auto px-12'>
@@ -245,7 +261,7 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(
               width={217}
               height={85}
               src='/logo-letters.png'
-              alt='FLS Logo'
+              alt='FLS USA Logo - Premium Lighters'
               className='mb-10 mx-auto md:mx-0'
             />
             <h1
@@ -255,88 +271,51 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(
               SPARK THE <br /> EXCITEMENT
             </h1>
 
+            {/* Value proposition subheading */}
+            <p className='hero-text text-center md:text-left text-lg md:text-xl text-yellow-400 mb-6'>
+              {valueProposition}
+            </p>
+
             <div className='hero-buttons flex flex-wrap gap-4 mt-2 justify-center md:justify-start'>
               <Button
-                className='bg-yellow rounded-full button transition-all duration-300 button fade-in'
+                className='bg-yellow-400 hover:bg-yellow-500 text-black rounded-full button transition-all duration-300 button fade-in'
                 size='lg'
                 onClick={() => handleClick('#lighter-collection')}
               >
-                Our Products
+                {primaryCTA}
               </Button>
               <Button
-                className='bg-white text-black hover:bg-white/10 rounded-full button transition-all duration-300 button fade-in'
+                className='bg-white text-black hover:bg-white/10 hover:text-white rounded-full button transition-all duration-300 button fade-in'
                 size='lg'
                 onClick={(e) => handleClick('#signature-design')}
+                variant='outline'
               >
-                View More
+                {secondaryCTA}
               </Button>
             </div>
           </div>
 
-          <div className='lg:w-1/2  relative overflow-visible flex items-center justify-center content-center'>
+          <div className='lg:w-1/2 relative overflow-visible flex items-center justify-center content-center'>
             {/* Semi-transparent backdrop for 3D model */}
             <div className='absolute inset-0 bg-none z-0' />
             <div className='relative z-10'>
-              <div className='max-w-3xl text-center mb-10 fade-in opacity-0 translate-y-10'>
-                <h1
-                  className='hero-text text-center text-4xl lg:text-6xl font-bold font-italic mb-2 text-[#F7CB00] uppercase font-poppins-black max-w-3xl mx-auto'
+              <div className='max-w-3xl text-center fade-in opacity-0 translate-y-10'>
+                <h2
+                  className='hero-text text-center text-4xl lg:text-6xl font-bold mb-2  uppercase font-poppins-black max-w-3xl mx-auto'
                   style={{letterSpacing: '-1px', color: '#fff'}}
                 >
-                  Be in the know
-                </h1>
-                <p className='text-white max-w-md mx-auto text-center text-lg md:text-xl text-white/80 bottom-content-item'>
-                  Wholesalers and distributors get exclusive pricing and offers.
+                  Wholesalers <span className='text-[#F7CB00]'> & </span>{' '}
+                  Distributors
+                </h2>
+                <p className='text-white max-w-md mx-auto text-center text-lg md:text-xl text-[#F7CB00] bottom-content-item'>
+                  Get exclusive pricing and early access to new products
                 </p>
               </div>
 
-              <div className='max-w-[300px] md:max-h-[500px] md:max-w-md mx-auto md:mx-0 '>
-                {/* <NewsletterSignup /> */}
-                {/* email */}
-                <SignUpForm />
-              </div>
+              {/* <div className='max-w-[300px] md:max-h-[500px] md:max-w-md mx-auto md:mx-0 '> */}
+              <SignUpForm />
+              {/* </div> */}
             </div>
-
-            {/* 3D Model Canvas */}
-            {/* <div className="relative z-10 h-full w-full flex items-center justify-center overflow-visible canvas-wrapper">
-							<div className="relative animate-float">
-								<div className="absolute -inset-0.5 bg-gradient-to-r from-yellow-400 to-yellow-600 opacity-30 blur-sm rounded-lg -z-10"></div>
-							</div>
-							 <Canvas
-									camera={{ position: [0, 0, 6], fov: 40 }}
-									shadows
-									dpr={[1, 2]}
-									gl={{ preserveDrawingBuffer: true, alpha: true }}
-									style={{ height: "100%", width: "100%", overflow: "visible" }}
-								>
-									<Scene y={typeof y === "number" ? y : 0} />
-								</Canvas> 
-
-							{/* Zoom controls - now OUTSIDE the Canvas */}
-            {/* <div className="hero-buttons absolute bottom-4 right-4 flex flex-col gap-2 bg-black/30 backdrop-blur-sm p-2 rounded-lg">
-								<Button
-									onClick={zoomIn}
-									className="p-2 bg-zinc-800 hover:bg-zinc-700 rounded-full text-white"
-									aria-label="Zoom in"
-								>
-									<ZoomIn size={16} />
-								</Button>
-								<Button
-									onClick={zoomOut}
-									className="p-2 bg-zinc-800 hover:bg-zinc-700 rounded-full text-white"
-									aria-label="Zoom out"
-								>
-									<ZoomOut size={16} />
-								</Button>
-								<Button
-									onClick={resetView}
-									className="p-2 bg-zinc-800 hover:bg-zinc-700 rounded-full text-white"
-									aria-label="Reset view"
-								>
-									<RotateCcw size={16} />
-								</Button>
-							</div> 
-						</div>
-						*/}
           </div>
         </motion.div>
 

@@ -1,0 +1,25 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+---
+description: This rule explains React component patterns, hooks usage, and best practices.
+globs: **/*.jsx,**/*.tsx
+alwaysApply: false
+---
+
+# React rules
+
+- Use functional components with hooks instead of class components
+- Use custom hooks for reusable logic
+- Use the Context API for state management when needed
+- Use proper prop validation with PropTypes
+- Use React.memo for performance optimization when necessary
+- Use fragments to avoid unnecessary DOM elements
+- Use proper list rendering with keys
+- Prefer composition over inheritance
+
+# Storybook Rules
+- Check the package.json in the root of the project directory to see if the project uses Storybook, if so always create a Storybook Story for all new components.
+- 
