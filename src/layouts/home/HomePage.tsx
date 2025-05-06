@@ -68,11 +68,8 @@ const FeaturesSection = dynamic(
   {loading: () => <SectionSkeleton />}
 )
 
-// Register GSAP plugins
-if (typeof window !== 'undefined') {
-  gsap.registerPlugin(ScrollTrigger)
-  gsap.registerPlugin(useGSAP)
-}
+gsap.registerPlugin(ScrollTrigger)
+gsap.registerPlugin(useGSAP)
 
 interface HomePageProps {
   data?: Record<string, unknown>
@@ -261,19 +258,20 @@ export const HomePage = ({data}: HomePageProps) => {
           isLandscape && isMobile && 'landscape-view'
         )}
       >
-        {/* Hero component with responsive props and value proposition */}
-        <Hero
-          y={y}
-          opacity={opacity}
-          ref={heroRef}
-          isMobile={isMobile}
-          isLandscape={isLandscape}
-          prefersReducedMotion={prefersReducedMotion}
-          valueProposition='Windproof, High-Performance Lighters for Adventure, Home & Everywhere in Between'
-          primaryCTA='Shop FLS Lighters'
-          secondaryCTA='Watch Demo'
-        />
-
+        <Suspense fallback={<HeroSkeleton />}>
+          {/* Hero component with responsive props and value proposition */}
+          <Hero
+            y={y}
+            opacity={opacity}
+            ref={heroRef}
+            isMobile={isMobile}
+            isLandscape={isLandscape}
+            prefersReducedMotion={prefersReducedMotion}
+            valueProposition='Windproof, High-Performance Lighters for Adventure, Home & Everywhere in Between'
+            primaryCTA='Shop FLS Lighters'
+            secondaryCTA='Watch Demo'
+          />
+        </Suspense>
         {/* Trust badges - new component for social proof */}
         <TrustBadges />
 

@@ -85,14 +85,15 @@ export function SignUpForm() {
   )
 
   return (
-    <section className='relative w-full  flex items-start md:items-center justify-start md:justify-center px-4 py-10 z-50 fade-in'>
+    <section className='relative w-full  flex items-start md:items-center justify-center md:justify-center px-4 py-10 z-50'>
       <div className='flex items-center justify-center relative z-50'>
         {/* Main Sign Up Button */}
-        <div className='flex items-center justify-center hero-buttons mx-auto'>
-          <button
+        <div className='flex items-center justify-center mt-8 mx-auto hero-buttons'>
+          <motion.button
             onClick={handleOpenOptions}
             type='button'
-            className='flex items-center gap-2 px-6 py-3 bg-yellow-400 button fade-in mx-auto text-black'
+            layoutId='signup-button'
+            className='flex items-center gap-2 px-6 py-3 bg-yellow-400 button mx-auto text-black button'
             id='sign-up-button'
             disabled={submitted}
             style={{
@@ -105,7 +106,7 @@ export function SignUpForm() {
             <span className='!text-black block ml-2 font-medium'>
               {submitted ? 'Thank You!' : 'Lock In Your Pricing!'}
             </span>
-          </button>
+          </motion.button>
         </div>
 
         {/* Options Panel */}
@@ -161,7 +162,6 @@ export function SignUpForm() {
         </AnimatePresence> */}
 
         {/* Success Message */}
-        {/* mode='popLayout' initial={false} */}
         <AnimatePresence>
           {submissionStatus === 'success' && (
             <div className='absolute flex items-center justify-center'>
@@ -173,8 +173,8 @@ export function SignUpForm() {
                 }}
                 initial={{opacity: 0, scale: 0.9}}
                 animate={{opacity: 1, scale: 1}}
-                // exit={{opacity: 0, scale: 0.9, y: 10}}
-                transition={{duration: 0.4}}
+                exit={{opacity: 0, scale: 0.9, y: 10}}
+                transition={{duration: 0.4, delay: 0.1}}
               >
                 <SuccessMessage message={successMessage} />
               </motion.div>

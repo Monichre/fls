@@ -275,14 +275,14 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(
 
             <div className='hero-buttons flex flex-wrap gap-4 mt-2 justify-center md:justify-start'>
               <Button
-                className='bg-yellow-400 hover:bg-yellow-500 text-black rounded-full button transition-all duration-300 button fade-in'
+                className='bg-yellow-400 hover:bg-yellow-500 text-black rounded-full button transition-all duration-300'
                 size='lg'
                 onClick={() => handleClick('#lighter-collection')}
               >
                 {primaryCTA}
               </Button>
               <Button
-                className='bg-white text-black hover:bg-white/10 hover:text-white rounded-full button transition-all duration-300 button fade-in'
+                className='bg-white text-black hover:bg-white/10 hover:text-white rounded-full button transition-all duration-300'
                 size='lg'
                 onClick={(e) => handleClick('#signature-design')}
                 variant='outline'
@@ -294,11 +294,11 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(
 
           <div className='lg:w-1/2 relative overflow-visible flex items-center justify-center content-center'>
             {/* Semi-transparent backdrop for 3D model */}
-            <div className='absolute inset-0 bg-none z-0' />
+
             <div className='relative z-10'>
-              <div className='max-w-3xl text-center fade-in opacity-0 translate-y-10'>
+              <div className='max-w-3xl text-center translate-y-10'>
                 <h2
-                  className='hero-text text-center text-4xl lg:text-6xl font-bold mb-2  uppercase font-poppins-black max-w-3xl mx-auto'
+                  className='hero-text text-center text-4xl lg:text-6xl font-bold mb-2 uppercase font-poppins-black max-w-3xl mx-auto'
                   style={{letterSpacing: '-1px', color: '#fff'}}
                 >
                   Wholesalers <span className='text-[#F7CB00]'> & </span>{' '}
