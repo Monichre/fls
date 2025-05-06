@@ -1,40 +1,71 @@
 'use client'
 
-import {useRef, lazy, Suspense} from 'react'
+import {useRef, Suspense} from 'react'
+import dynamic from 'next/dynamic'
 import {useScroll, useTransform} from 'framer-motion'
 import {gsap} from 'gsap'
 import {ScrollTrigger} from 'gsap/ScrollTrigger'
-
-import {Hero} from '@/components/sections/hero'
-import {useResponsive, cn} from '@/hooks'
-import {TestimonialSection} from '@/components/sections/testimonial-section'
-import {TrustBadges} from '@/components/ui/trust-badges'
-
 import {useGSAP} from '@gsap/react'
+import {useResponsive, cn} from '@/hooks'
+
+// Dynamic imports for better code splitting and performance
+const Hero = dynamic(
+  () =>
+    import('@/components/sections/hero').then((mod) => ({
+      default: mod.Hero,
+    })),
+  {loading: () => <HeroSkeleton />}
+)
+
+const TestimonialSection = dynamic(
+  () =>
+    import('@/components/sections/testimonial-section').then((mod) => ({
+      default: mod.TestimonialSection,
+    })),
+  {loading: () => <TestimonialSkeleton />}
+)
+
+const TrustBadges = dynamic(
+  () =>
+    import('@/components/ui/trust-badges').then((mod) => ({
+      default: mod.TrustBadges,
+    })),
+  {loading: () => <TrustBadgesSkeleton />}
+)
 
 // Implement lazy loading for heavy components
-const DualSection = lazy(() =>
-  import('@/components/sections/dual-section/DualSection').then((mod) => ({
-    default: mod.DualSection,
-  }))
+
+// Replace React lazy with Next.js dynamic imports
+const DualSection = dynamic(
+  () =>
+    import('@/components/sections/dual-section/DualSection').then((mod) => ({
+      default: mod.DualSection,
+    })),
+  {loading: () => <SectionSkeleton />}
 )
 
-const SignatureDesignSection = lazy(() =>
-  import('@/components/sections/signature-design-section').then((mod) => ({
-    default: mod.SignatureDesignSection,
-  }))
+const SignatureDesignSection = dynamic(
+  () =>
+    import('@/components/sections/signature-design-section').then((mod) => ({
+      default: mod.SignatureDesignSection,
+    })),
+  {loading: () => <SectionSkeleton />}
 )
 
-const LighterCollection = lazy(() =>
-  import('@/components/sections/lighter-collection').then((mod) => ({
-    default: mod.LighterCollection,
-  }))
+const LighterCollection = dynamic(
+  () =>
+    import('@/components/sections/lighter-collection').then((mod) => ({
+      default: mod.LighterCollection,
+    })),
+  {loading: () => <CollectionSkeleton />}
 )
 
-const FeaturesSection = lazy(() =>
-  import('@/components/sections/features-section').then((mod) => ({
-    default: mod.FeaturesSection,
-  }))
+const FeaturesSection = dynamic(
+  () =>
+    import('@/components/sections/features-section').then((mod) => ({
+      default: mod.FeaturesSection,
+    })),
+  {loading: () => <SectionSkeleton />}
 )
 
 // Register GSAP plugins
@@ -46,6 +77,70 @@ if (typeof window !== 'undefined') {
 interface HomePageProps {
   data?: Record<string, unknown>
 }
+
+// At the top of the file, define section-specific skeleton components
+const HeroSkeleton = () => (
+  <div className='w-full h-screen flex flex-col justify-center px-6 space-y-6'>
+    <div className='w-3/4 h-10 bg-zinc-800 animate-pulse rounded-md mb-4' />
+    <div className='w-5/6 h-8 bg-zinc-800 animate-pulse rounded-md' />
+    <div className='w-4/6 h-8 bg-zinc-800 animate-pulse rounded-md' />
+    <div className='flex space-x-4 mt-8'>
+      <div className='w-32 h-12 bg-zinc-800 animate-pulse rounded-md' />
+      <div className='w-32 h-12 bg-zinc-800 animate-pulse rounded-md' />
+    </div>
+  </div>
+)
+
+const TrustBadgesSkeleton = () => (
+  <div className='w-full py-8 px-6'>
+    <div className='flex justify-center space-x-8 overflow-hidden'>
+      {[...Array(4)].map((_, i) => (
+        <div
+          key={i}
+          className='w-16 h-16 bg-zinc-800 animate-pulse rounded-full'
+        />
+      ))}
+    </div>
+  </div>
+)
+
+const SectionSkeleton = () => (
+  <div className='w-full py-16 px-6'>
+    <div className='w-2/3 h-8 bg-zinc-800 animate-pulse rounded-md mb-8' />
+    <div className='flex flex-col md:flex-row w-full gap-6'>
+      <div className='w-full md:w-1/2 h-64 bg-zinc-800 animate-pulse rounded-lg' />
+      <div className='w-full md:w-1/2 flex flex-col space-y-4'>
+        <div className='w-5/6 h-6 bg-zinc-800 animate-pulse rounded-md' />
+        <div className='w-full h-20 bg-zinc-800 animate-pulse rounded-md' />
+        <div className='w-4/6 h-10 bg-zinc-800 animate-pulse rounded-md' />
+      </div>
+    </div>
+  </div>
+)
+
+const CollectionSkeleton = () => (
+  <div className='w-full py-16 px-6'>
+    <div className='w-2/3 h-8 bg-zinc-800 animate-pulse rounded-md mb-8' />
+    <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
+      {[...Array(3)].map((_, i) => (
+        <div key={i} className='h-80 bg-zinc-800 animate-pulse rounded-lg' />
+      ))}
+    </div>
+  </div>
+)
+
+const TestimonialSkeleton = () => (
+  <div className='w-full py-16 px-6'>
+    <div className='w-2/3 h-8 bg-zinc-800 animate-pulse rounded-md mb-8 mx-auto' />
+    <div className='max-w-2xl mx-auto bg-zinc-800/30 p-6 rounded-lg'>
+      <div className='w-full h-24 bg-zinc-800 animate-pulse rounded-md mb-4' />
+      <div className='flex items-center'>
+        <div className='w-12 h-12 bg-zinc-800 animate-pulse rounded-full mr-4' />
+        <div className='w-32 h-6 bg-zinc-800 animate-pulse rounded-md' />
+      </div>
+    </div>
+  </div>
+)
 
 export const HomePage = ({data}: HomePageProps) => {
   // Fix the ref types to properly handle DOM elements
@@ -136,13 +231,6 @@ export const HomePage = ({data}: HomePageProps) => {
       }
     },
     {scope: containerRef, dependencies: [isMobile, prefersReducedMotion]}
-  )
-
-  // Loading component for suspense fallback using Tailwind classes
-  const LoadingFallback = () => (
-    <div className='w-full py-12 md:py-24 flex justify-center items-center'>
-      <div className='animate-pulse h-24 w-24 md:h-32 md:w-32 rounded-full bg-zinc-800' />
-    </div>
   )
 
   // SEO data

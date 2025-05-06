@@ -3,18 +3,14 @@
 import {forwardRef, useRef, useState} from 'react'
 import Image from 'next/image'
 import {motion, type MotionValue} from 'framer-motion'
-import {Canvas} from '@react-three/fiber'
+
 import {Environment, Float, CameraControls} from '@react-three/drei'
 import {useFrame} from '@react-three/fiber'
 import * as THREE from 'three'
 import {Button} from '@/components/ui/button'
-import {ZoomIn, ZoomOut, RotateCcw} from 'lucide-react'
-import {Divider} from '@/components/ui'
-import {PinContainer} from '@/components/ui/3d-pin'
-import {NewsletterSignup} from '@/components/newsletter-signup'
-import {SignUp} from '@/components/sections/hero/sign-up'
+
 import {useScrollToSection} from '@/hooks/useScrollToSection'
-import Link from 'next/link'
+
 import {SignUpForm} from '@/components/sign-up/signup-form'
 
 // Define types for the LighterModel
