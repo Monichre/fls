@@ -29,6 +29,18 @@ const LighterCollection = lazy(() =>
   }))
 )
 
+const DisplayBoxes = lazy(() =>
+  import('@/components/sections/display-boxes').then((mod) => ({
+    default: mod.DisplayBoxes,
+  }))
+)
+
+const Testimonials = lazy(() =>
+  import('@/components/sections/testimonials').then((mod) => ({
+    default: mod.Testimonials,
+  }))
+)
+
 const FeaturesSection = lazy(() =>
   import('@/components/sections/features-section').then((mod) => ({
     default: mod.FeaturesSection,
@@ -180,6 +192,14 @@ export const HomePage = ({data}: HomePageProps) => {
           isMobile={isMobile}
         />
         <LighterCollection
+          prefersReducedMotion={prefersReducedMotion}
+          isMobile={isMobile}
+        />
+        <DisplayBoxes
+          prefersReducedMotion={prefersReducedMotion}
+          isMobile={isMobile}
+        />
+        <Testimonials
           prefersReducedMotion={prefersReducedMotion}
           isMobile={isMobile}
         />
