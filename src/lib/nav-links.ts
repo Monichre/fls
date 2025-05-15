@@ -3,6 +3,7 @@ export const navItems = [
 	{ label: "Explore", href: "#dual-section" },
 	{ label: "Signature Design", href: "#signature-design" },
 	{ label: "Lighter Collection", href: "#lighter-collection" },
+	{ label: "Catalogue", href: "/catalogue" },
 	{ label: "Features", href: "#features" },
 	{ label: "Contact", href: "#footer" },
 ];

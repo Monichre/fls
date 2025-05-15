@@ -8,10 +8,27 @@ import {Button} from '@/components/ui/button'
 import Image from 'next/image'
 import {useScrollToSection} from '@/hooks/useScrollToSection'
 import {navItems} from '@/lib/nav-links'
+import { useRouter } from 'next/navigation'
 
 export function Navbar() {
   const {isScrolled, mobileMenuOpen, setMobileMenuOpen, scrollToSection} =
     useScrollToSection()
+  const router = useRouter()
+
+  // Handle navigation for both hash links and regular page links
+  const handleNavigation = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (mobileMenuOpen) {
+      setMobileMenuOpen(false)
+    }
+    
+    // If it's a hash link, use scrollToSection
+    if (href.startsWith('#')) {
+      scrollToSection(e, href)
+    } else {
+      // For regular page links, let the default navigation happen
+      // No need to prevent default
+    }
+  }
 
   return (
     <AnimatePresence>
@@ -39,7 +56,7 @@ export function Navbar() {
                   key={item.label}
                   href={item.href}
                   className='text-sm font-medium text-white/80 hover:text-white transition-colors px-4 py-2'
-                  onClick={(e) => scrollToSection(e, item.href)}
+                  onClick={(e) => handleNavigation(e, item.href)}
                 >
                   {item.label}
                 </Link>
@@ -105,7 +122,7 @@ export function Navbar() {
                     <Link
                       href={item.href}
                       className='text-xl font-medium text-white/80 hover:text-white transition-colors'
-                      onClick={(e) => scrollToSection(e, item.href)}
+                      onClick={(e) => handleNavigation(e, item.href)}
                     >
                       {item.label}
                     </Link>
