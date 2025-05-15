@@ -204,9 +204,9 @@ export function DisplayBoxSection({
                     <div className='absolute bottom-0 left-0 right-0 p-6 text-white bg-black/60 backdrop-blur-sm rounded-b-2xl'>
                       <div className='flex justify-between items-center mb-2'>
                         <h3 className='text-xl font-bold'>{box.name}</h3>
-                        <span className='text-yellow-400 font-bold'>
+                        {/* <span className='text-yellow-400 font-bold'>
                           {box.price}
-                        </span>
+                        </span> */}
                       </div>
                       <p className='text-sm text-white/80 mb-4'>
                         {box.description}
