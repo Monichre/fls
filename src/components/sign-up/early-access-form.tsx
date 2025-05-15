@@ -87,43 +87,7 @@ function EarlyAccessFormComponent({
           index={1}
           variant={variant}
         />
-        {!isMobile && (
-          <FormField
-            label='Industry'
-            id='industry'
-            required
-            disabled={isSubmitting}
-            index={2}
-            variant={variant}
-          >
-            <Select disabled={isSubmitting} name='industry'>
-              <SelectTrigger
-                className={`w-full px-4 py-${isFooter ? '4' : '6'} rounded-${isFooter ? 'xl' : '2xl'} border-2 ${
-                  isFooter
-                    ? 'bg-zinc-700 border-zinc-600 focus:border-zinc-500 text-white'
-                    : 'bg-white border-gray-200 focus:border-gray-300 text-black'
-                } focus:outline-none mb-4`}
-              >
-                <SelectValue placeholder='Select industry' />
-              </SelectTrigger>
-              <SelectContent
-                className={
-                  isFooter ? 'bg-zinc-800 text-white border-zinc-700' : ''
-                }
-              >
-                <SelectGroup>
-                  <SelectLabel className={isFooter ? 'text-zinc-400' : ''}>
-                    Industry
-                  </SelectLabel>
-                  <SelectItem value='convenience'>Convenience</SelectItem>
-                  <SelectItem value='outdoor'>Outdoor</SelectItem>
-                  <SelectItem value='vape'>Vape</SelectItem>
-                  <SelectItem value='other'>Other</SelectItem>
-                </SelectGroup>
-              </SelectContent>
-            </Select>
-          </FormField>
-        )}
+
         <FormField
           label='Company Email'
           id='businessEmail'
@@ -142,54 +106,6 @@ function EarlyAccessFormComponent({
           index={4}
           variant={variant}
         />
-
-        <FormField
-          label='Business Type'
-          id='businessType'
-          required
-          disabled={isSubmitting}
-          index={5}
-          variant={variant}
-        >
-          <Select disabled={isSubmitting} name='businessType'>
-            <SelectTrigger
-              className={`w-full px-4 py-${isFooter ? '4' : '6'} rounded-${isFooter ? 'xl' : '2xl'} border-2 ${
-                isFooter
-                  ? 'bg-zinc-700 border-zinc-600 focus:border-zinc-500 text-white'
-                  : 'bg-white border-gray-200 focus:border-gray-300 text-black'
-              } focus:outline-none mb-4`}
-            >
-              <SelectValue placeholder='Select business type' />
-            </SelectTrigger>
-            <SelectContent
-              className={
-                isFooter ? 'bg-zinc-800 text-white border-zinc-700' : ''
-              }
-            >
-              <SelectGroup>
-                <SelectLabel className={isFooter ? 'text-zinc-400' : ''}>
-                  Business Type
-                </SelectLabel>
-                <SelectItem value='distributor'>Distributor</SelectItem>
-                <SelectItem value='wholesaler'>Wholesaler</SelectItem>
-                <SelectItem value='other'>Other</SelectItem>
-              </SelectGroup>
-            </SelectContent>
-          </Select>
-        </FormField>
-        {/* 
-        <FormField
-          label='Industry'
-          id='industry'
-          disabled={isSubmitting}
-          index={4}
-        >
-          <Select disabled={isSubmitting} name='industry'>
-            <SelectTrigger className='w-full bg-white px-4 py-6 rounded-2xl border-2 border-gray-200 focus:border-gray-300 focus:outline-none text-black mb-4'>
-              <SelectValue placeholder='Select industry' />
-            </SelectTrigger>
-          </Select>
-        </FormField> */}
 
         <motion.div
           initial={{opacity: 0, y: 10, scale: 0.9}}

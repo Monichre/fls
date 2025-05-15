@@ -46,7 +46,7 @@ function OptionsPanelComponent({
         }}
         className='text-gray-600 mb-6'
       >
-        Highest Quality Products at the Highest Margins
+        Highest Quality Products at the best margins
       </motion.p>
 
       <div className='space-y-3'>
