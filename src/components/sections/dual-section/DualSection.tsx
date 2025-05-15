@@ -153,9 +153,15 @@ export function DualSection({
               <Button
                 size='sm'
                 className='bg-yellow-400 hover:bg-yellow-500 px-16 py-6 text-black rounded-full'
-                onClick={() => handleClick('#features')}
+                asChild
               >
-                Learn More <ArrowRight className='ml-1 h-4 w-4' />
+                <a
+                  href='/catalogue.pdf'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  See Catalogue <ArrowRight className='ml-1 h-4 w-4' />
+                </a>
               </Button>
             </div>
           </div>

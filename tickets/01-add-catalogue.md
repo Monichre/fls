@@ -1,6 +1,6 @@
 # Add "Catalogue" Nav Link
 ✅ done · ⏳ pending · 🛑 blocked  
-Status: ⏳ pending
+Status: ✅ done
 
 ## Description
 Add a top-level "Catalogue" link to the primary navigation of **FLS USA**.
@@ -15,7 +15,7 @@ Add a top-level "Catalogue" link to the primary navigation of **FLS USA**.
 - Keep styling consistent with current nav items.
 
 ### QA Checklist
-- [ ] Link present on all viewports.
-- [ ] Hover/active styles match other links.
-- [ ] No CLS shift introduced.
+- [x] Link present on all viewports.
+- [x] Hover/active styles match other links.
+- [x] No CLS shift introduced.
 

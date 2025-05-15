@@ -1,5 +1,5 @@
 # Add "Industry" Dropdown to Form
-Status: ⏳ pending
+Status: ✅ done
 
 ## Description
 Add a select field labelled **"Industry"** with common options (e.g., Convenience, Outdoor, Vape, Other).

@@ -87,12 +87,56 @@ function EarlyAccessFormComponent({
           variant={variant}
         />
         <FormField
+          label='Industry'
+          id='industry'
+          required
+          disabled={isSubmitting}
+          index={2}
+          variant={variant}
+        >
+          <Select disabled={isSubmitting} name='industry'>
+            <SelectTrigger
+              className={`w-full px-4 py-${isFooter ? '4' : '6'} rounded-${isFooter ? 'xl' : '2xl'} border-2 ${
+                isFooter
+                  ? 'bg-zinc-700 border-zinc-600 focus:border-zinc-500 text-white'
+                  : 'bg-white border-gray-200 focus:border-gray-300 text-black'
+              } focus:outline-none mb-4`}
+            >
+              <SelectValue placeholder='Select industry' />
+            </SelectTrigger>
+            <SelectContent
+              className={
+                isFooter ? 'bg-zinc-800 text-white border-zinc-700' : ''
+              }
+            >
+              <SelectGroup>
+                <SelectLabel className={isFooter ? 'text-zinc-400' : ''}>
+                  Industry
+                </SelectLabel>
+                <SelectItem value='convenience'>Convenience</SelectItem>
+                <SelectItem value='outdoor'>Outdoor</SelectItem>
+                <SelectItem value='vape'>Vape</SelectItem>
+                <SelectItem value='other'>Other</SelectItem>
+              </SelectGroup>
+            </SelectContent>
+          </Select>
+        </FormField>
+        <FormField
           label='Company Email'
           id='businessEmail'
           type='email'
           required
           disabled={isSubmitting}
-          index={2}
+          index={3}
+          variant={variant}
+        />
+
+        <FormField
+          label='Phone Number (optional)'
+          id='phoneNumber'
+          type='tel'
+          disabled={isSubmitting}
+          index={4}
           variant={variant}
         />
 
@@ -101,7 +145,7 @@ function EarlyAccessFormComponent({
           id='businessType'
           required
           disabled={isSubmitting}
-          index={3}
+          index={5}
           variant={variant}
         >
           <Select disabled={isSubmitting} name='businessType'>

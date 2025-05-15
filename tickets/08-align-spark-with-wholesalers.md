@@ -1,5 +1,5 @@
 # Align "Spark the …" Caption with Wholesalers Text
-Status: ⏳ pending
+Status: DONE
 
 ## Description
 Visually align the **"Spark the …"** tagline so its left edge lines up with the "Wholesalers" heading beneath.

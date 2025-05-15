@@ -17,7 +17,7 @@ if (typeof window !== 'undefined') {
 // More detailed lighter data with benefits
 const lighters = [
   {
-    id: 1,
+    id: 0,
     name: 'Inferno Red',
     description:
       'Bold and powerful, with striking red accents. Features our signature wind-resistant technology for reliable flame in any condition.',
@@ -28,7 +28,7 @@ const lighters = [
     inStock: true,
   },
   {
-    id: 4,
+    id: 1,
     name: 'Solar Flare Yellow',
     description:
       'Vibrant yellow design with high visibility. The ergonomic curved base fits perfectly in your hand for comfortable, secure grip.',
@@ -39,7 +39,7 @@ const lighters = [
     inStock: true,
   },
   {
-    id: 5,
+    id: 2,
     name: 'Electric Blue',
     description:
       'Energetic blue with our premium high-capacity fuel chamber. Get up to 1200 ignitions from a single lighter - reliability you can count on.',
@@ -50,7 +50,7 @@ const lighters = [
     inStock: true,
   },
   {
-    id: 2,
+    id: 3,
     name: 'Classic Black',
     description:
       'Sleek all-black design with subtle texture. Perfect for everyday use with our signature curved base and reliable wind-resistant flame technology.',
@@ -61,7 +61,7 @@ const lighters = [
     inStock: true,
   },
   {
-    id: 3,
+    id: 4,
     name: 'Royal Purple',
     description:
       'Luxurious purple gradient with premium finish. Limited edition design combines sophistication with our trusted FLS technology.',
@@ -88,6 +88,7 @@ export function LighterCollection({
   const [emblaRef, emblaApi] = useEmblaCarousel({
     align: 'center',
     loop: true,
+    // startIndex: 0,
   })
 
   // Scroll to next/previous slide
@@ -233,8 +234,11 @@ export function LighterCollection({
           <Button
             size='lg'
             className='bg-yellow-400 hover:bg-yellow-500 text-black rounded-full px-8 py-6'
+            asChild
           >
-            Shop the Full Collection <ChevronRight className='ml-2 h-4 w-4' />
+            <a href='/catalogue.pdf' target='_blank' rel='noopener noreferrer'>
+              See Catalogue <ChevronRight className='ml-2 h-4 w-4' />
+            </a>
           </Button>
         </div>
       </div>

@@ -1,5 +1,5 @@
 # Add Mike S. Wholesaler Testimonial
-Status: ⏳ pending
+Status: ✅ done
 
 ## Description
 Add a testimonial block quoting wholesaler Mike S.:

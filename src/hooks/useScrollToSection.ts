@@ -26,28 +26,41 @@ export const useScrollToSection = () => {
 			closeMobileMenu?: boolean;
 		},
 	) => {
-		e?.preventDefault();
-		console.log("🚀 ~ scrollToSection ~ e:", e);
 		// Close mobile menu if open and option is enabled
 		if (mobileMenuOpen && (options?.closeMobileMenu ?? true)) {
 			setMobileMenuOpen(false);
 		}
 
-		// Get the target element
-		const targetId = href.replace("#", "");
-		const element = document.getElementById(targetId);
+		// Handle different types of links
+		if (href.startsWith("#")) {
+			// This is an anchor link - handle with scroll
+			e?.preventDefault();
 
-		if (element) {
-			// Add offset for fixed header (default or custom)
-			const offset = options?.offset ?? 80;
-			const elementPosition = element.getBoundingClientRect().top;
-			const offsetPosition = elementPosition + window.pageYOffset - offset;
+			// Get the target element
+			const targetId = href.replace("#", "");
+			const element = document.getElementById(targetId);
 
-			window.scrollTo({
-				top: offsetPosition,
-				behavior: "smooth",
-			});
+			if (element) {
+				// Add offset for fixed header (default or custom)
+				const offset = options?.offset ?? 80;
+				const elementPosition = element.getBoundingClientRect().top;
+				const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+				window.scrollTo({
+					top: offsetPosition,
+					behavior: "smooth",
+				});
+			}
+		} else if (
+			href.toLowerCase().endsWith(".pdf") ||
+			href.includes("/catalogue")
+		) {
+			// This is a PDF link - open in new tab
+			e?.preventDefault();
+			console.log("Opening PDF link:", href);
+			window.open(href, "_blank", "noopener,noreferrer");
 		}
+		// For all other links, let the default navigation happen
 	};
 
 	const scrollTo = (
@@ -57,20 +70,33 @@ export const useScrollToSection = () => {
 			closeMobileMenu?: boolean;
 		},
 	) => {
-		// Get the target element
-		const targetId = href.replace("#", "");
-		const element = document.getElementById(targetId);
+		// Only handle hash links in scrollTo
+		if (href.startsWith("#")) {
+			// Get the target element
+			const targetId = href.replace("#", "");
+			const element = document.getElementById(targetId);
 
-		if (element) {
-			// Add offset for fixed header (default or custom)
-			const offset = options?.offset ?? 80;
-			const elementPosition = element.getBoundingClientRect().top;
-			const offsetPosition = elementPosition + window.pageYOffset - offset;
+			if (element) {
+				// Add offset for fixed header (default or custom)
+				const offset = options?.offset ?? 80;
+				const elementPosition = element.getBoundingClientRect().top;
+				const offsetPosition = elementPosition + window.pageYOffset - offset;
 
-			window.scrollTo({
-				top: offsetPosition,
-				behavior: "smooth",
-			});
+				window.scrollTo({
+					top: offsetPosition,
+					behavior: "smooth",
+				});
+			}
+		} else if (
+			href.toLowerCase().endsWith(".pdf") ||
+			href.includes("/catalogue")
+		) {
+			// This is a PDF link - open in new tab
+			console.log("Opening PDF link:", href);
+			window.open(href, "_blank", "noopener,noreferrer");
+		} else {
+			// For other links, navigate to the page
+			window.location.href = href;
 		}
 	};
 

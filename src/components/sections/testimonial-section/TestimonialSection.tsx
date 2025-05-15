@@ -10,23 +10,13 @@ import {Star, ArrowRight} from 'lucide-react'
 import {useScrollToSection} from '@/hooks/useScrollToSection'
 
 // Register GSAP plugins
-if (typeof window !== 'undefined') {
-  gsap.registerPlugin(ScrollTrigger)
-}
+
+gsap.registerPlugin(ScrollTrigger)
 
 // Testimonial data
 const testimonials = [
   {
-    id: 1,
-    name: 'Michael T.',
-    role: 'Camping Enthusiast',
-    content:
-      "The FLS lighter is the best I've ever owned, it even worked on a windy fishing trip! The curved design makes it comfortable to hold and the flame is strong and reliable.",
-    rating: 5,
-    image: '/assets/testimonial-1.jpg',
-  },
-  {
-    id: 2,
+    id: 0,
     name: 'Sarah K.',
     role: 'Store Owner',
     content:
@@ -35,13 +25,22 @@ const testimonials = [
     image: '/assets/testimonial-2.jpg',
   },
   {
-    id: 3,
+    id: 1,
     name: 'James R.',
     role: 'Outdoor Guide',
     content:
       'I lead wilderness trips and depend on reliable equipment. These lighters have never failed me, even in harsh conditions. The 1200 ignition capacity is a game-changer.',
     rating: 4,
     image: '/assets/testimonial-3.jpg',
+  },
+  {
+    id: 2,
+    name: 'Mike S.',
+    role: 'Wholesaler (20 yrs)',
+    content:
+      "I've been wholesaling for 20 years and these lighters are moving faster than anything I've seen!",
+    rating: 5,
+    image: '',
   },
 ]
 
@@ -165,11 +164,13 @@ export const TestimonialSection = ({
         {/* CTA section */}
         <div className='text-center'>
           <Button
-            onClick={() => scrollTo('#lighter-collection')}
             size='lg'
             className='bg-yellow-400 hover:bg-yellow-500 text-black rounded-full px-8'
+            asChild
           >
-            Shop FLS Lighters <ArrowRight className='ml-2 h-4 w-4' />
+            <a href='/catalogue.pdf' target='_blank' rel='noopener noreferrer'>
+              See Catalogue <ArrowRight className='ml-2 h-4 w-4' />
+            </a>
           </Button>
         </div>
       </div>

@@ -5,6 +5,8 @@ interface WholesalerEmailTemplateProps {
   companyName: string
   businessEmail: string
   businessType: string
+  phoneNumber?: string | null
+  industry?: string | null
 }
 
 export const WholesalerEmailTemplate = ({
@@ -12,6 +14,8 @@ export const WholesalerEmailTemplate = ({
   companyName,
   businessEmail,
   businessType,
+  phoneNumber,
+  industry,
 }: WholesalerEmailTemplateProps) => {
   return (
     <div
@@ -35,10 +39,12 @@ export const WholesalerEmailTemplate = ({
         access program.
       </p>
       <p style={{fontSize: '16px', lineHeight: '1.5', marginBottom: '20px'}}>
-        As a {businessType}, you'll be among the first to access our platform
-        and new product offerings. Our team will reach out to you shortly at{' '}
-        <strong>{businessEmail}</strong> to discuss how we can help maximize
-        your business needs in the {businessType} industry.
+        As a {businessType}
+        {industry ? ` in the ${industry} industry` : ''}, you'll be among the
+        first to access our platform and new product offerings. Our team will
+        reach out to you shortly at <strong>{businessEmail}</strong>
+        {phoneNumber ? ` or ${phoneNumber}` : ''} to discuss how we can help
+        maximize your business needs in the {businessType} industry.
       </p>
       <div
         style={{

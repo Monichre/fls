@@ -33,6 +33,15 @@ const TrustBadges = dynamic(
   {loading: () => <TrustBadgesSkeleton />}
 )
 
+// New component for Digital Catalogue CTA
+const DigitalCatalogueCTA = dynamic(
+  () =>
+    import('@/components/sections/digital-catalogue-cta').then((mod) => ({
+      default: mod.DigitalCatalogueCTA,
+    })),
+  {loading: () => <div className='w-full py-6 bg-zinc-900' />}
+)
+
 // Implement lazy loading for heavy components
 
 // Replace React lazy with Next.js dynamic imports
@@ -56,6 +65,14 @@ const LighterCollection = dynamic(
   () =>
     import('@/components/sections/lighter-collection').then((mod) => ({
       default: mod.LighterCollection,
+    })),
+  {loading: () => <CollectionSkeleton />}
+)
+
+const DisplayBoxSection = dynamic(
+  () =>
+    import('@/components/sections/display-box-section').then((mod) => ({
+      default: mod.DisplayBoxSection,
     })),
   {loading: () => <CollectionSkeleton />}
 )
@@ -286,6 +303,10 @@ export const HomePage = ({data}: HomePageProps) => {
             isMobile={isMobile}
           />
           <LighterCollection
+            prefersReducedMotion={prefersReducedMotion}
+            isMobile={isMobile}
+          />
+          <DisplayBoxSection
             prefersReducedMotion={prefersReducedMotion}
             isMobile={isMobile}
           />

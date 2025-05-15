@@ -42,6 +42,8 @@ export function useFormSubmission({
 						companyName: formEntries.companyName as string,
 						businessEmail: formEntries.businessEmail as string,
 						businessType: formEntries.businessType as string,
+						phoneNumber: formEntries.phoneNumber as string,
+						industry: formEntries.industry as string,
 					};
 
 					// Call the wholesaler API endpoint

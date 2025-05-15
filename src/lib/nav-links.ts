@@ -5,4 +5,5 @@ export const navItems = [
 	{ label: "Lighter Collection", href: "#lighter-collection" },
 	{ label: "Features", href: "#features" },
 	{ label: "Contact", href: "#footer" },
+	{ label: "Catalogue", href: "/catalogue.pdf" },
 ];

@@ -1,5 +1,5 @@
 # Make Phone Number Optional Field
-Status: ⏳ pending
+Status: ✅ done
 
 ## Description
 In the checkout / lead-capture form, add an **optional** "Phone Number" input.

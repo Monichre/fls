@@ -1,5 +1,5 @@
 # Set Font Size to 1.5 rem for Highlight Block
-Status: ⏳ pending
+Status: DONE
 
 ## Description
 Increase font-size of the specified highlight text to **1.5 rem**.

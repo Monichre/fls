@@ -296,7 +296,7 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(
             {/* Semi-transparent backdrop for 3D model */}
 
             <div className='relative z-10'>
-              <div className='max-w-3xl text-center translate-y-10'>
+              <div className='max-w-3xl text-center translate-y-10 mt-24'>
                 <h2
                   className='hero-text text-center text-4xl lg:text-6xl font-bold mb-2 uppercase font-poppins-black max-w-3xl mx-auto'
                   style={{letterSpacing: '-1px', color: '#fff'}}

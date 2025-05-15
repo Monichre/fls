@@ -1,5 +1,5 @@
 # Copy Tweak: "at the best margins"
-Status: ⏳ pending
+Status: ✅ done
 
 ## Description
 Append the phrase **"at the best margins"** to marketing sentence(s) per Liam's note.

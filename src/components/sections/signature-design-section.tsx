@@ -78,11 +78,17 @@ export function SignatureDesignSection({
             </p>
             <div className='flex flex-wrap signature-content'>
               <Button
-                onClick={() => scrollTo('#lighter-collection')}
                 size='lg'
-                className='bg-white text-black hover:bg-black hover:text-white rounded-full px-8'
+                className='bg-white text-black hover:bg-black hover:text-yellow-400 rounded-full px-8'
+                asChild
               >
-                Shop Now <ArrowRight className='ml-2 h-4 w-4' />
+                <a
+                  href='/catalogue.pdf'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  See Catalogue <ArrowRight className='ml-2 h-4 w-4' />
+                </a>
               </Button>
             </div>
           </div>
