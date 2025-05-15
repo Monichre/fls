@@ -95,6 +95,7 @@ export default function RootLayout({
   return (
     <AppProviders>
       <html lang='en'>
+        <meta name='apple-mobile-web-app-title' content='FLS USA' />
         <body
           className={`${roboto.variable} ${poppins.variable} ${poppinsBlack.variable} ${proximaNova.variable} antialiased`}
         >

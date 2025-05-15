@@ -14,6 +14,9 @@ This file defines all project rules, coding standards, workflow guidelines, refe
 * Mobile layout and UI should be optimized for the `@features-section.tsx` component.  Specific improvements include: stacked vertical layout for features on mobile; logical feature order with clean borders and spacing;  hidden absolute positioning layout on mobile (desktop only); reduced mobile text sizes; responsive margins/padding; darker backgrounds (60% opacity); backdrop blur for legibility; disabled mobile rotation and scaling effects; optimized image quality (90 instead of 100) with `sizes='100vw'`; full-width mobile CTA button;  added left border accent to mobile feature cards. (Added 2025-05-15 based on user request)
 * Desktop feature tooltips should have purposeful placement, clearly referencing aspects of the lighter in the background image. (Added 2025-05-15 based on user request)
 * The background image should crossfade between the white and black lighter images. (Added 2025-05-15 based on user request)
+* A sticky sub-navigation should be implemented below the main navigation, aligned right on desktop, containing email and phone contact buttons.  Mobile version should display these buttons below the navigation items. (Added 2025-05-15)  Buttons should utilize `lucide-react` icons for email and phone. (Added 2025-05-15)  Desktop buttons should have a semi-transparent black background with backdrop blur and smooth entrance animations. (Added 2025-05-15)  The desktop email button should utilize a dropdown menu to allow the user to select their preferred email client (Gmail, Outlook, Yahoo, or default). (Added 2025-05-15 based on user request) The mobile email button should also utilize a dropdown menu for email client selection. (Added 2025-05-15 based on user request)
+* The contact sub-navigation should include a dropdown menu for email client selection on both desktop and mobile versions.  (Added 2025-05-15 based on user request)  The dropdown should offer options for Gmail, Outlook, Yahoo, and the default email client. (Added 2025-05-15 based on user request)
+* Phone number clicks should utilize the `tel:` URL scheme for direct dialing.  (Added 2025-05-15 based on user request)  Additionally, a dropdown menu should be provided to allow users to select their preferred calling application (Phone, WhatsApp, Skype, FaceTime, Telegram, SMS). (Added 2025-05-15 based on user request)
 
 
 ## WORKFLOW & RELEASE RULES
@@ -22,6 +25,10 @@ This file defines all project rules, coding standards, workflow guidelines, refe
 * Mobile menu animations should be thoroughly tested for both entrance and exit behaviors. (Added 2025-05-15 based on user request)
 * Mobile optimizations for `@features-section.tsx` should be thoroughly tested on various devices before release.  Testing should include verification of the new mobile layout, visual hierarchy improvements, performance optimizations, and touch experience enhancements. (Added 2025-05-15 based on user request)
 * Desktop layout should be reviewed to ensure tooltips are meaningfully placed and the image crossfade effect functions correctly. (Added 2025-05-15 based on user request)
+* API routes must be updated to match new form fields in `@early-access-form.tsx`. (Added 2025-05-15 based on user request).  Specifically, the route `src/app/api/send/wholesalers/route.ts` must be updated to handle the removal of `businessType` and `industry` fields from the form, defaulting `businessType` to "wholesaler" and setting `industry` to null.  The corresponding email template (`src/components/emails/wholesaler-email-template.tsx`) should be updated for compatibility. (Added 2025-05-15 based on user request)
+* The new contact sub-navigation should be thoroughly tested on various screen sizes and devices. (Added 2025-05-15)  Testing should include verifying that the email and phone buttons function correctly and link to the appropriate email address and phone number. (Added 2025-05-15 based on user request)  Additionally, the email client selection dropdown should be tested to ensure it functions correctly and opens the user's preferred email client. (Added 2025-05-15 based on user request).
+* The phone number dropdown should be tested to ensure that all selected calling applications function correctly. (Added 2025-05-15 based on user request)
+
 
 ## DEBUGGING
 
@@ -29,6 +36,9 @@ This file defines all project rules, coding standards, workflow guidelines, refe
 * When debugging mobile menu animations, verify that the exit animation mirrors the entrance animation. (Added 2025-05-15 based on user request)
 * When debugging mobile layout, ensure responsiveness across different screen sizes for `@features-section.tsx`. Pay close attention to the new mobile-specific layout elements and ensure they function correctly and look good across various devices. (Added 2025-05-15 based on user request)
 * When debugging the desktop layout, verify that tooltips are correctly positioned and that the image crossfade effect works as intended. (Added 2025-05-15 based on user request)
+* When debugging API integrations, verify that the API routes for `@early-access-form.tsx` correctly handle the new form fields. (Added 2025-05-15 based on user request). Specifically, ensure `src/app/api/send/wholesalers/route.ts` correctly handles the changes described in the WORKFLOW & RELEASE RULES section. (Added 2025-05-15 based on user request)
+* When debugging the contact sub-navigation, ensure that both the desktop and mobile versions function correctly and display appropriately on various devices and screen sizes. (Added 2025-05-15)  Specifically, test the functionality of the email and phone buttons and the email client selection dropdown. (Added 2025-05-15 based on user request)
+* When debugging the phone number dropdown, ensure that each calling application opens correctly and functions as expected. (Added 2025-05-15 based on user request)
 
 
 ## CODING STANDARDS
@@ -40,6 +50,9 @@ This file defines all project rules, coding standards, workflow guidelines, refe
 
 * [List existing technologies]
 * framer-motion (Added 2025-05-15 based on user request)
+* lucide-react (Added 2025-05-15)
+* shadcn/ui (Added 2025-05-15 based on user request)
+
 
 ## REFERENCES
 

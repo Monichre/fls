@@ -16,9 +16,9 @@ export async function POST(request: Request) {
 				name: body.name,
 				companyName: body.companyName,
 				businessEmail: body.businessEmail,
-				businessType: body.businessType,
+				businessType: "wholesaler",
 				phoneNumber: body.phoneNumber || null,
-				industry: body.industry || null,
+				industry: null,
 			}),
 		});
 
