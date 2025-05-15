@@ -105,7 +105,7 @@ export function FooterSignUpForm() {
             <div className='absolute bottom-full mb-4 flex items-center justify-center'>
               <motion.div
                 layoutId='footer-signup-button'
-                className='w-[440px] bg-white shadow-sm p-6 border'
+                className='w-full md:w-[440px] bg-white shadow-sm p-6 border'
                 style={{
                   borderRadius: 30,
                 }}

@@ -13,6 +13,7 @@ import {useScrollToSection} from '@/hooks/useScrollToSection'
 
 import {SignUpForm} from '@/components/sign-up/signup-form'
 import {Divider} from '@/components/ui'
+import {useResponsive} from '@/hooks'
 
 // Define types for the LighterModel
 interface LighterModelProps {
@@ -226,11 +227,13 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(
     // email
     // name
     // company
+
+    const {isMobile} = useResponsive()
     return (
       <section
         id='hero'
         ref={ref}
-        className='relative !h-[944px] flex items-center overflow-hidden'
+        className='relative !h-[944px] flex items-center'
         style={{height: '944px'}}
       >
         {/* Hero Background Image */}
@@ -255,8 +258,8 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(
         >
           <div className='sm:w-full sm:h-auto md:w-1/2 md:w-[40vw] mb-10 lg:mb-0 mx-auto px-12'>
             <Image
-              width={217}
-              height={85}
+              width={isMobile ? 150 : 190}
+              height={isMobile ? 40 : 65}
               src='/logo-letters.png'
               alt='FLS USA Logo - Premium Lighters'
               className='mb-10 mx-auto md:mx-0'
@@ -281,22 +284,24 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(
               >
                 {primaryCTA}
               </Button>
-              <Button
-                className='bg-white text-black hover:bg-white/10 hover:text-white rounded-full button transition-all duration-300'
-                size='lg'
-                onClick={(e) => handleClick('#signature-design')}
-                variant='outline'
-              >
-                {secondaryCTA}
-              </Button>
+              {isMobile ? null : (
+                <Button
+                  className='bg-white text-black hover:bg-white/10 hover:text-white rounded-full button transition-all duration-300'
+                  size='lg'
+                  onClick={(e) => handleClick('#signature-design')}
+                  variant='outline'
+                >
+                  {secondaryCTA}
+                </Button>
+              )}
             </div>
           </div>
 
-          <div className='lg:w-1/2 relative overflow-visible flex items-center justify-center content-center'>
+          <div className='lg:w-1/2 relative z-50  overflow-visible flex items-center justify-center content-center'>
             {/* Semi-transparent backdrop for 3D model */}
 
-            <div className='relative z-10'>
-              <div className='max-w-3xl text-center translate-y-10 mt-24'>
+            <div className='relative z-10 z-50'>
+              <div className='max-w-3xl text-center md:translate-y-10 md:mt-24'>
                 <h2
                   className='hero-text text-center text-4xl lg:text-6xl font-bold mb-2 uppercase font-poppins-black max-w-3xl mx-auto'
                   style={{letterSpacing: '-1px', color: '#fff'}}

@@ -2,7 +2,7 @@
 
 import {useState, useEffect} from 'react'
 import Link from 'next/link'
-import {motion, AnimatePresence} from 'motion/react'
+import {motion, AnimatePresence} from 'framer-motion'
 import {Menu, X} from 'lucide-react'
 import {Button} from '@/components/ui/button'
 import Image from 'next/image'
@@ -14,7 +14,7 @@ export function Navbar() {
     useScrollToSection()
 
   return (
-    <AnimatePresence>
+    <>
       <motion.header
         className='fixed top-[20px] left-0 right-0 z-50 transition-colors duration-300 bg-transparent'
         // initial={{ y: -100 }}
@@ -60,62 +60,72 @@ export function Navbar() {
         </div>
 
         {/* Mobile Menu */}
-
-        {mobileMenuOpen && (
-          <motion.div
-            className='fixed inset-0 bg-zinc-900 z-50 md:hidden'
-            initial={{opacity: 0}}
-            animate={{opacity: 1}}
-            exit={{opacity: 0}}
-            transition={{duration: 0.2}}
-          >
-            <div className='flex flex-col h-full p-6'>
-              <div className='flex justify-between items-center mb-8'>
-                <Link
-                  href='/#home'
-                  className='flex items-center'
-                  onClick={(e) => {
-                    setMobileMenuOpen(false)
-                    scrollToSection(e, '#home')
-                  }}
-                >
-                  <div className='bg-yellow-400 text-black font-bold text-xl p-2 rounded'>
-                    FLS
-                  </div>
-                </Link>
-                <Button
-                  variant='ghost'
-                  size='icon'
-                  className='text-white'
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  <X className='h-6 w-6' />
-                  <span className='sr-only'>Close menu</span>
-                </Button>
-              </div>
-
-              <nav className='flex flex-col space-y-6 mt-8'>
-                {navItems.map((item, index) => (
-                  <motion.div
-                    key={item.label}
-                    initial={{opacity: 0, x: -20}}
-                    animate={{opacity: 1, x: 0}}
-                    transition={{delay: index * 0.1}}
+        <AnimatePresence>
+          {mobileMenuOpen && (
+            <motion.div
+              className='fixed inset-0 bg-zinc-900 z-50 md:hidden'
+              initial={{opacity: 0}}
+              animate={{opacity: 1}}
+              exit={{opacity: 0}}
+              transition={{duration: 0.2}}
+            >
+              <div className='flex flex-col h-full p-6'>
+                <div className='flex justify-between items-center mb-8'>
+                  <Link
+                    href='/#home'
+                    className='flex items-center'
+                    onClick={(e) => {
+                      setMobileMenuOpen(false)
+                      scrollToSection(e, '#home')
+                    }}
                   >
-                    <Link
-                      href={item.href}
-                      className='text-xl font-medium text-white/80 hover:text-white transition-colors'
-                      onClick={(e) => scrollToSection(e, item.href)}
-                    >
-                      {item.label}
-                    </Link>
-                  </motion.div>
-                ))}
-              </nav>
-            </div>
-          </motion.div>
-        )}
+                    <div className='bg-yellow-400 text-black font-bold text-xl p-2 rounded'>
+                      FLS
+                    </div>
+                  </Link>
+                  <Button
+                    variant='ghost'
+                    size='icon'
+                    className='text-white'
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    <X className='h-6 w-6' />
+                    <span className='sr-only'>Close menu</span>
+                  </Button>
+                </div>
+
+                <nav className='flex flex-col space-y-6 mt-8'>
+                  <AnimatePresence>
+                    {navItems.map((item, index) => (
+                      <motion.div
+                        key={item.label}
+                        initial={{opacity: 0, x: -20}}
+                        animate={{opacity: 1, x: 0}}
+                        exit={{opacity: 0, x: -20}}
+                        transition={{
+                          delay: mobileMenuOpen ? index * 0.1 : 0,
+                          duration: 0.2,
+                        }}
+                      >
+                        <Link
+                          href={item.href}
+                          className='text-xl font-medium text-white/80 hover:text-white transition-colors'
+                          onClick={(e) => {
+                            setMobileMenuOpen(false)
+                            scrollToSection(e, item.href)
+                          }}
+                        >
+                          {item.label}
+                        </Link>
+                      </motion.div>
+                    ))}
+                  </AnimatePresence>
+                </nav>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </motion.header>
-    </AnimatePresence>
+    </>
   )
 }

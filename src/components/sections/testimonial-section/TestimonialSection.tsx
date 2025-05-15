@@ -22,7 +22,7 @@ const testimonials = [
     content:
       "As a store owner, I've seen many lighter brands come and go. FLS lighters are not only stylish but they actually deliver on their promises - my customers love them.",
     rating: 5,
-    image: '/assets/testimonial-2.jpg',
+    image: '/testimony-1.png',
   },
   {
     id: 1,
@@ -31,7 +31,7 @@ const testimonials = [
     content:
       'I lead wilderness trips and depend on reliable equipment. These lighters have never failed me, even in harsh conditions. The 1200 ignition capacity is a game-changer.',
     rating: 4,
-    image: '/assets/testimonial-3.jpg',
+    image: '/testimony-2.png',
   },
   {
     id: 2,
@@ -40,7 +40,7 @@ const testimonials = [
     content:
       "I've been wholesaling for 20 years and these lighters are moving faster than anything I've seen!",
     rating: 5,
-    image: '',
+    image: '/testimony-3.png',
   },
 ]
 

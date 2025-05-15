@@ -85,8 +85,8 @@ export function SignUpForm() {
   )
 
   return (
-    <section className='relative w-full  flex items-start md:items-center justify-center md:justify-center px-4 py-10 z-50'>
-      <div className='flex items-center justify-center relative z-50'>
+    <section className='relative w-full flex items-start md:items-center justify-center md:justify-center px-4 md:py-10 z-50'>
+      <div className='flex items-center justify-center relative z-50 w-full'>
         {/* Main Sign Up Button */}
         <div className='flex items-center justify-center mt-8 mx-auto hero-buttons'>
           <motion.button
@@ -112,13 +112,13 @@ export function SignUpForm() {
         {/* Options Panel */}
         <AnimatePresence>
           {isOpen && (
-            <div className='absolute flex items-center justify-center'>
+            <div className='absolute flex items-center justify-center z-50'>
               <motion.div
                 initial={{opacity: 0, scale: 0.9}}
                 animate={{opacity: 1, scale: 1}}
                 exit={{opacity: 0, scale: 0.9}}
                 transition={{duration: 0.3}}
-                className='w-[440px] bg-white shadow-sm p-6 border'
+                className='w-full md:w-[440px] bg-white shadow-sm p-6 border'
                 style={{borderRadius: 30}}
               >
                 <OptionsPanel
@@ -134,7 +134,7 @@ export function SignUpForm() {
         {/* Early Access Form */}
         <AnimatePresence>
           {formType === 'earlyAccess' && submissionStatus !== 'success' && (
-            <div className='absolute flex items-center justify-center'>
+            <div className='absolute  flex items-center justify-center z-50'>
               <FormContainer>
                 <EarlyAccessForm
                   onBack={handleBackToOptions}
@@ -164,10 +164,10 @@ export function SignUpForm() {
         {/* Success Message */}
         <AnimatePresence>
           {submissionStatus === 'success' && (
-            <div className='absolute flex items-center justify-center'>
+            <div className='absolute flex items-center justify-center z-50'>
               <motion.div
                 layoutId='signup-button'
-                className='w-[440px] bg-white shadow-sm p-6 border'
+                className='w-full md:w-[440px] bg-white shadow-sm p-6 border'
                 style={{
                   borderRadius: 30,
                 }}

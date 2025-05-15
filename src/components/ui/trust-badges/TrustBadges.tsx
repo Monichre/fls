@@ -16,7 +16,12 @@ interface TrustBadgesProps {
  */
 export const TrustBadges = ({className}: TrustBadgesProps) => {
   return (
-    <div className={cn('bg-zinc-800/50 py-3 px-4 backdrop-blur-sm', className)}>
+    <div
+      className={cn(
+        'bg-zinc-800/50 py-3 px-4 backdrop-blur-sm relative z-10',
+        className
+      )}
+    >
       <div className='container mx-auto'>
         <div className='flex flex-wrap justify-center md:justify-between items-center gap-4 md:gap-6'>
           {/* Guarantee Badge */}

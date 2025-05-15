@@ -1,0 +1,46 @@
+---
+description: AI rules derived by SpecStory from the project AI interaction history
+globs: *
+---
+
+## AI Coding Assistant Rules File
+
+This file defines all project rules, coding standards, workflow guidelines, references, documentation structures, and best practices.  It is a living document and will evolve over time.
+
+## PROJECT DOCUMENTATION & CONTEXT SYSTEM
+
+* All components should have entrance and exit animations defined.  Mobile menu items should have matching entrance and exit animations.  (Added 2025-05-15 based on user request)
+* All animations should mirror entrance animations where appropriate. (Added 2025-05-15 based on user request)
+* Mobile layout and UI should be optimized for the `@features-section.tsx` component.  Specific improvements include: stacked vertical layout for features on mobile; logical feature order with clean borders and spacing;  hidden absolute positioning layout on mobile (desktop only); reduced mobile text sizes; responsive margins/padding; darker backgrounds (60% opacity); backdrop blur for legibility; disabled mobile rotation and scaling effects; optimized image quality (90 instead of 100) with `sizes='100vw'`; full-width mobile CTA button;  added left border accent to mobile feature cards. (Added 2025-05-15 based on user request)
+* Desktop feature tooltips should have purposeful placement, clearly referencing aspects of the lighter in the background image. (Added 2025-05-15 based on user request)
+* The background image should crossfade between the white and black lighter images. (Added 2025-05-15 based on user request)
+
+
+## WORKFLOW & RELEASE RULES
+
+* Animations should be reviewed for consistency and visual appeal before release. (Added 2025-05-15 based on user request)
+* Mobile menu animations should be thoroughly tested for both entrance and exit behaviors. (Added 2025-05-15 based on user request)
+* Mobile optimizations for `@features-section.tsx` should be thoroughly tested on various devices before release.  Testing should include verification of the new mobile layout, visual hierarchy improvements, performance optimizations, and touch experience enhancements. (Added 2025-05-15 based on user request)
+* Desktop layout should be reviewed to ensure tooltips are meaningfully placed and the image crossfade effect functions correctly. (Added 2025-05-15 based on user request)
+
+## DEBUGGING
+
+* When debugging animations, ensure that both entrance and exit animations are tested thoroughly. (Added 2025-05-15 based on user request)
+* When debugging mobile menu animations, verify that the exit animation mirrors the entrance animation. (Added 2025-05-15 based on user request)
+* When debugging mobile layout, ensure responsiveness across different screen sizes for `@features-section.tsx`. Pay close attention to the new mobile-specific layout elements and ensure they function correctly and look good across various devices. (Added 2025-05-15 based on user request)
+* When debugging the desktop layout, verify that tooltips are correctly positioned and that the image crossfade effect works as intended. (Added 2025-05-15 based on user request)
+
+
+## CODING STANDARDS
+
+* Maintain consistent naming conventions for animation files and functions.
+* Use `framer-motion` for animation libraries. (Added 2025-05-15 based on user request)
+
+## TECH STACK
+
+* [List existing technologies]
+* framer-motion (Added 2025-05-15 based on user request)
+
+## REFERENCES
+
+* [List existing references]

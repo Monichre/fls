@@ -285,7 +285,12 @@ button,
 }
 
 
-p {
-	font-size: 22px!important;
+@media (min-width: 1024px) {
+	p {
+		font-size: 22px !important;
+	}
 }
 
+p {
+	font-size: 16px !important;
+}

@@ -17,7 +17,7 @@ function FormContainerComponent({
   return (
     <motion.div
       {...motionProps}
-      className={`w-[440px] bg-white shadow-sm p-6 border ${className}`}
+      className={`w-full md:w-[440px] bg-white shadow-sm p-6 border ${className}`}
       style={{
         borderRadius: 30,
       }}
