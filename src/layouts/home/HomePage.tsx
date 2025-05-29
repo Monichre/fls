@@ -33,6 +33,12 @@ const TrustBadges = dynamic(
   {loading: () => <TrustBadgesSkeleton />}
 )
 
+// Floating Chat Component
+const FloatingChat = dynamic(
+  () => import('@/components/langbase-agent').then((mod) => mod.FloatingChat),
+  {ssr: false}
+)
+
 // New component for Digital Catalogue CTA
 const DigitalCatalogueCTA = dynamic(
   () =>
@@ -320,6 +326,9 @@ export const HomePage = ({data}: HomePageProps) => {
             isMobile={isMobile}
           />
         </Suspense>
+
+        {/* Floating Chat Component */}
+        <FloatingChat buttonLabel='Chat with FLS' mobile={isMobile} />
       </div>
     </>
   )

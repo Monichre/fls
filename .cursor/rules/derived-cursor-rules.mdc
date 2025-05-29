@@ -17,7 +17,12 @@ This file defines all project rules, coding standards, workflow guidelines, refe
 * A sticky sub-navigation should be implemented below the main navigation, aligned right on desktop, containing email and phone contact buttons.  Mobile version should display these buttons below the navigation items. (Added 2025-05-15)  Buttons should utilize `lucide-react` icons for email and phone. (Added 2025-05-15)  Desktop buttons should have a semi-transparent black background with backdrop blur and smooth entrance animations. (Added 2025-05-15)  The desktop email button should utilize a dropdown menu to allow the user to select their preferred email client (Gmail, Outlook, Yahoo, or default). (Added 2025-05-15 based on user request) The mobile email button should also utilize a dropdown menu for email client selection. (Added 2025-05-15 based on user request)
 * The contact sub-navigation should include a dropdown menu for email client selection on both desktop and mobile versions.  (Added 2025-05-15 based on user request)  The dropdown should offer options for Gmail, Outlook, Yahoo, and the default email client. (Added 2025-05-15 based on user request)
 * Phone number clicks should utilize the `tel:` URL scheme for direct dialing.  (Added 2025-05-15 based on user request)  Additionally, a dropdown menu should be provided to allow users to select their preferred calling application (Phone, WhatsApp, Skype, FaceTime, Telegram, SMS). (Added 2025-05-15 based on user request)
-
+* Implement an AI chatbot modal UI, modeled after employee Ibrahim, using the Vercel AI SDK UI.  The modal should be accessible from most pages, support desktop and mobile layouts, persist messages, have entrance/exit animations, and be dismissible.  The chatbot should use the `useChat` hook, be styled with shadcn/ui and Tailwind, and have a backend API route (e.g., `/api/chat`). (Added 2025-05-15 based on user request)  The chatbot should display Ibrahim’s avatar and name in the header. The chat UI should use the Vercel AI SDK’s `useChat` hook for real-time streaming. The modal should be styled with shadcn/ui and Tailwind, matching the site’s design system. The chatbot should have a friendly, helpful, and knowledgeable tone, reflecting Ibrahim’s persona. The modal should not interfere with other UI elements (z-index, focus management). The modal should be accessible (ARIA roles, keyboard navigation). The chatbot should handle errors gracefully (e.g., API errors, network issues). The modal should be responsive and mobile-optimized.  The chatbot should use a backend API route (e.g., `/api/chat`) for model interaction. The modal should not require authentication for basic use. The chatbot should not expose sensitive company information. The modal should be performant and not bloat the initial page load (dynamic import). The chatbot should have a recognizable icon/button for opening (e.g., chat bubble with Ibrahim’s avatar).
+* All API services should be located in `src/lib/api`. (Added 2025-05-16)
+* Langbase AI agent service should be implemented as described in `src/lib/api/langbase.ts`.  This service is now located at `src/lib/api/langbase-agent.ts` (Updated 2025-05-16)
+* Implement a floating chat popup in the bottom right corner of the home page, connecting to the Langbase agent. (Added 2025-05-16 based on user request)
+* Use `21st_magic_component_inspiration` and `21st_magic_component_builder` to build an extremely eye-catching animation for the "Lock In Your Pricing" button to grab attention. (Added 2025-05-29 based on user request)
+* The "Lock In Your Pricing" button should now be implemented using the `MagicLockPricingButton` component. (Added 2025-05-29 based on user request)
 
 ## WORKFLOW & RELEASE RULES
 
@@ -28,7 +33,10 @@ This file defines all project rules, coding standards, workflow guidelines, refe
 * API routes must be updated to match new form fields in `@early-access-form.tsx`. (Added 2025-05-15 based on user request).  Specifically, the route `src/app/api/send/wholesalers/route.ts` must be updated to handle the removal of `businessType` and `industry` fields from the form, defaulting `businessType` to "wholesaler" and setting `industry` to null.  The corresponding email template (`src/components/emails/wholesaler-email-template.tsx`) should be updated for compatibility. (Added 2025-05-15 based on user request)
 * The new contact sub-navigation should be thoroughly tested on various screen sizes and devices. (Added 2025-05-15)  Testing should include verifying that the email and phone buttons function correctly and link to the appropriate email address and phone number. (Added 2025-05-15 based on user request)  Additionally, the email client selection dropdown should be tested to ensure it functions correctly and opens the user's preferred email client. (Added 2025-05-15 based on user request).
 * The phone number dropdown should be tested to ensure that all selected calling applications function correctly. (Added 2025-05-15 based on user request)
-
+* The AI chatbot modal UI should be thoroughly tested across different browsers and devices, ensuring functionality, responsiveness, and performance. (Added 2025-05-15 based on user request)
+* All API calls must use the `callLangbaseAgent` function from `src/lib/api/langbase-agent.ts`. (Added 2025-05-16)
+* The Langbase chat popup should be thoroughly tested on various devices and browsers. (Added 2025-05-16 based on user request)
+* The "Lock In Your Pricing" button animation must be thoroughly tested across different browsers and devices to ensure it is eye-catching and attention-grabbing. (Added 2025-05-29 based on user request)
 
 ## DEBUGGING
 
@@ -39,12 +47,16 @@ This file defines all project rules, coding standards, workflow guidelines, refe
 * When debugging API integrations, verify that the API routes for `@early-access-form.tsx` correctly handle the new form fields. (Added 2025-05-15 based on user request). Specifically, ensure `src/app/api/send/wholesalers/route.ts` correctly handles the changes described in the WORKFLOW & RELEASE RULES section. (Added 2025-05-15 based on user request)
 * When debugging the contact sub-navigation, ensure that both the desktop and mobile versions function correctly and display appropriately on various devices and screen sizes. (Added 2025-05-15)  Specifically, test the functionality of the email and phone buttons and the email client selection dropdown. (Added 2025-05-15 based on user request)
 * When debugging the phone number dropdown, ensure that each calling application opens correctly and functions as expected. (Added 2025-05-15 based on user request)
-
+* When debugging the AI chatbot, verify that the chatbot responds appropriately, handles errors gracefully, and maintains session persistence.  Test various user inputs and edge cases. (Added 2025-05-15 based on user request)
+* When debugging the Langbase chat popup, ensure it functions correctly and displays appropriately on various devices and screen sizes. (Added 2025-05-16 based on user request)
+* When debugging the "Lock In Your Pricing" button animation, verify that it is eye-catching and attention-grabbing across different browsers and devices. (Added 2025-05-29 based on user request)
 
 ## CODING STANDARDS
 
 * Maintain consistent naming conventions for animation files and functions.
 * Use `framer-motion` for animation libraries. (Added 2025-05-15 based on user request)
+* All new API services must be written in TypeScript. (Added 2025-05-16)
+* API functions should include comprehensive error handling and logging. (Added 2025-05-16)
 
 ## TECH STACK
 
@@ -52,8 +64,10 @@ This file defines all project rules, coding standards, workflow guidelines, refe
 * framer-motion (Added 2025-05-15 based on user request)
 * lucide-react (Added 2025-05-15)
 * shadcn/ui (Added 2025-05-15 based on user request)
-
+* Vercel AI SDK UI (Added 2025-05-15 based on user request)
+* Langbase API (Added 2025-05-16)
 
 ## REFERENCES
 
 * [List existing references]
+* Langbase AI Agent documentation: `docs/LangbaseAgent.md` (Added 2025-05-16)

@@ -1,6 +1,6 @@
 'use client'
 
-import {forwardRef, useRef, useState} from 'react'
+import {forwardRef, useRef, useState, useEffect, useCallback} from 'react'
 import Image from 'next/image'
 import {motion, type MotionValue} from 'framer-motion'
 
@@ -22,100 +22,6 @@ interface LighterModelProps {
 }
 
 // Custom 3D lighter model using Three.js primitives
-function LighterModel({y = 0, ...props}: LighterModelProps) {
-  const meshRef = useRef<THREE.Group>(null)
-
-  // Import the Model component from the lighter component
-  // import { Model } from "@/components/3d/lighter/lighter";
-
-  // Create a texture loader for the logo
-  const texture = new THREE.TextureLoader().load('/mobile_screen_medium.png')
-
-  // Set texture properties for better rendering
-  texture.wrapS = texture.wrapT = THREE.ClampToEdgeWrapping
-  texture.minFilter = THREE.LinearFilter
-  texture.needsUpdate = true
-
-  // Create a material with the texture
-  // Create a material with the texture
-  const logoMaterial = new THREE.MeshStandardMaterial({
-    map: texture,
-    transparent: true,
-    roughness: 0.3,
-    metalness: 0.2,
-  })
-
-  // To use this material, we'll apply it to a mesh in the return function
-
-  // Animation using y value for rotation
-  useFrame(() => {
-    if (meshRef.current) {
-      // Use the y value to compute rotation - normalize it to a reasonable range
-      // The division factor controls how sensitive the rotation is to scrolling
-      const yRotation = y ? (y / 1000) * Math.PI : 0
-
-      // Apply rotation with smooth interpolation
-      meshRef.current.rotation.y = THREE.MathUtils.lerp(
-        meshRef.current.rotation.y,
-        yRotation,
-        0.05
-      )
-    }
-  })
-
-  return (
-    <group ref={meshRef} {...props} dispose={null} scale={1.5}>
-      <mesh position={[0, 0, 0]} castShadow receiveShadow>
-        <boxGeometry args={[1, 2, 0.5]} />
-        <meshStandardMaterial color='#222222' roughness={0.5} metalness={0.8} />
-      </mesh>
-      {/* Logo using the texture material */}
-      <mesh position={[0, 0, 0.26]} castShadow receiveShadow>
-        <planeGeometry args={[0.8, 1.6]} />
-        <primitive object={logoMaterial} attach='material' />
-      </mesh>
-    </group>
-  )
-
-  // return (
-  // 	<group ref={meshRef} {...props} dispose={null} scale={1.5}>
-  // 		{/* Lighter body */}
-  // 		<mesh position={[0, 0, 0]} castShadow receiveShadow>
-  // 			<boxGeometry args={[1, 2, 0.5]} />
-  // 			<meshStandardMaterial color="#222222" roughness={0.5} metalness={0.8} />
-  // 		</mesh>
-
-  // 		{/* Lighter top */}
-  // 		<mesh position={[0, 1.2, 0]} castShadow receiveShadow>
-  // 			<boxGeometry args={[1, 0.4, 0.5]} />
-  // 			<meshStandardMaterial color="#333333" roughness={0.3} metalness={0.9} />
-  // 		</mesh>
-
-  // 		{/* Wheel */}
-  // 		<mesh
-  // 			position={[0, 1.4, 0.3]}
-  // 			rotation={[Math.PI / 2, 0, 0]}
-  // 			castShadow
-  // 			receiveShadow
-  // 		>
-  // 			<cylinderGeometry args={[0.3, 0.3, 0.1, 32]} />
-  // 			<meshStandardMaterial color="#444444" roughness={0.2} metalness={1} />
-  // 		</mesh>
-
-  // 		{/* Yellow accent */}
-  // 		<mesh position={[0, 0, 0.26]} castShadow receiveShadow>
-  // 			<boxGeometry args={[0.8, 1.8, 0.05]} />
-  // 			<meshStandardMaterial color="#FFCC00" roughness={0.4} metalness={0.2} />
-  // 		</mesh>
-
-  // 		{/* FLS logo */}
-  // 		<mesh position={[0, -0.5, 0.29]} castShadow receiveShadow>
-  // 			<boxGeometry args={[0.6, 0.6, 0.01]} />
-  // 			<meshStandardMaterial color="#FFCC00" roughness={0.4} metalness={0.2} />
-  // 		</mesh>
-  // 	</group>
-  // );
-}
 
 // Define types for Scene
 interface SceneProps {
@@ -126,46 +32,6 @@ interface SceneProps {
 }
 
 // Scene component with camera controls
-function Scene({
-  y = 0,
-  defaultZoom = 6,
-  minZoom = 3,
-  maxZoom = 10,
-}: SceneProps) {
-  const controlsRef = useRef<CameraControls>(null)
-
-  return (
-    <>
-      <CameraControls ref={controlsRef} />
-
-      <ambientLight intensity={0.5} />
-      <directionalLight
-        position={[5, 5, 5]}
-        intensity={1}
-        castShadow
-        shadow-mapSize={1024}
-      />
-      <spotLight
-        position={[-5, 5, 5]}
-        angle={0.15}
-        penumbra={1}
-        intensity={0.5}
-        castShadow
-      />
-      <Environment preset='city' />
-
-      <Float rotationIntensity={0.4}>
-        {/* <LighterModel y={y} /> */}
-        <Image
-          src='/mobile_screen_medium.png'
-          alt='FLS Lighter'
-          width={100}
-          height={100}
-        />
-      </Float>
-    </>
-  )
-}
 
 // Define the HeroProps interface with proper types
 interface HeroProps {
@@ -225,10 +91,9 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(
       scrollTo(href)
     }
     // email
-    // name
-    // company
 
     const {isMobile} = useResponsive()
+
     return (
       <section
         id='hero'
@@ -309,7 +174,7 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(
                   Wholesalers <span className='text-[#F7CB00]'> & </span>{' '}
                   Distributors
                 </h2>
-                <p className='text-white max-w-md mx-auto text-center text-lg md:text-xl text-[#F7CB00] bottom-content-item'>
+                <p className='text-white max-w-md mx-auto text-center text-4xl md:text-6xl !text-[24px] mt-8 text-[#F7CB00] bottom-content-item'>
                   Get exclusive pricing and early access to new products
                 </p>
               </div>

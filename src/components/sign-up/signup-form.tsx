@@ -1,38 +1,27 @@
 'use client'
 
-import type React from 'react'
-import type {JSX} from 'react'
-
-import {useState, useCallback} from 'react'
-import {motion, AnimatePresence} from 'motion/react'
+import React, {forwardRef, useCallback, useState} from 'react'
+import {AnimatePresence, motion} from 'framer-motion'
 import {Mail} from 'lucide-react'
 
-// Components
-import {FormContainer} from './form-container'
+import {SIGN_UP_OPTIONS} from './constants'
 import {OptionsPanel} from './options-panel'
 import {EarlyAccessForm} from './early-access-form'
 import {NewsletterForm} from './newsletter-form'
 import {SuccessMessage} from './success-message'
+import {MagicLockPricingButton} from './magic-lock-pricing-button'
 
-// Hooks and utilities
-import {useFormSubmission} from '@/hooks/useFormSubmission'
-
-import {SIGN_UP_OPTIONS} from './constants'
-
-export type SignUpOption = {
-  id: number
-  icon: JSX.Element
-  title: string
-  description: string
+export interface SignUpFormProps {
+  variant?: 'default' | 'footer'
 }
 
+export type FormType = 'earlyAccess' | 'newsletter'
 export type SubmissionStatus = 'idle' | 'submitting' | 'success' | 'error'
-
-export type FormType = null | 'earlyAccess' | 'newsletter'
 
 /**
  * SignUpForm - A component that provides two sign-up options:
- * 1. Early Access Sign Up for distributors and wholesalers
+ * 1. Early Access Sign Up for distributors and wholesaler
+ * s
  * 2. Newsletter Sign Up for general users
  *
  * Features:
@@ -41,72 +30,90 @@ export type FormType = null | 'earlyAccess' | 'newsletter'
  * - Loading states during submission
  * - Success message after submission
  */
-export function SignUpForm() {
+export const SignUpForm = () => {
   // State for controlling the visibility of different panels
   const [isOpen, setIsOpen] = useState(false)
-  const [formType, setFormType] = useState<FormType>(null)
+  const [formType, setFormType] = useState<FormType | null>(null)
+  const [submissionStatus, setSubmissionStatus] =
+    useState<SubmissionStatus>('idle')
   const [submitted, setSubmitted] = useState(false)
-  // Reset form state
-  const resetForm = useCallback(() => {
-    setFormType(null)
-  }, [])
-
-  // Form submission handling
-  const {submissionStatus, successMessage, handleSubmit} = useFormSubmission({
-    onReset: resetForm,
-  })
+  const [successMessage, setSuccessMessage] = useState('')
 
   // Event handlers
   const handleOpenOptions = useCallback(() => {
-    setIsOpen(true)
-  }, [])
+    if (!submitted) {
+      setIsOpen(true)
+    }
+  }, [submitted])
 
-  const handleCloseOptions = useCallback(() => {
+  const handleCloseOptions = () => {
     setIsOpen(false)
     setFormType(null)
-  }, [])
+  }
 
-  const handleSelectOption = useCallback((selectedFormType: FormType) => {
+  const handleSelectOption = (option: FormType) => {
     setIsOpen(false)
-    setFormType(selectedFormType)
-  }, [])
+    setFormType(option)
+  }
 
-  const handleBackToOptions = useCallback(() => {
+  const handleBack = () => {
     setFormType(null)
     setIsOpen(true)
-  }, [])
+  }
 
-  const handleFormSubmit = useCallback(
-    (e: React.FormEvent<HTMLFormElement>) => {
-      handleSubmit(e, formType)
-      setSubmitted(true)
-    },
-    [handleSubmit, formType]
-  )
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    setSubmissionStatus('submitting')
+
+    try {
+      const formData = new FormData(e.currentTarget)
+      const apiEndpoint =
+        formType === 'earlyAccess'
+          ? '/api/send/wholesalers'
+          : '/api/send/newsletter'
+
+      const response = await fetch(apiEndpoint, {
+        method: 'POST',
+        body: formData,
+      })
+
+      if (response.ok) {
+        setSubmissionStatus('success')
+        setSubmitted(true)
+
+        // Set success message based on form type
+        const message =
+          formType === 'earlyAccess'
+            ? "We've received your request for early access. Our team will contact you soon with exclusive pricing details!"
+            : "Thank you for subscribing! You'll receive our latest updates and exclusive offers directly in your inbox."
+
+        setSuccessMessage(message)
+
+        setTimeout(() => {
+          setFormType(null)
+          setSubmissionStatus('idle')
+        }, 3000)
+      } else {
+        setSubmissionStatus('error')
+        setTimeout(() => setSubmissionStatus('idle'), 3000)
+      }
+    } catch (error) {
+      console.error('Submission error:', error)
+      setSubmissionStatus('error')
+      setTimeout(() => setSubmissionStatus('idle'), 3000)
+    }
+  }
 
   return (
     <section className='relative w-full flex items-start md:items-center justify-center md:justify-center px-4 md:py-10 z-50'>
       <div className='flex items-center justify-center relative z-50 w-full'>
         {/* Main Sign Up Button */}
-        <div className='flex items-center justify-center mt-8 mx-auto hero-buttons'>
-          <motion.button
+        <div className='flex items-center justify-center mt-12 mx-auto hero-buttons'>
+          <MagicLockPricingButton
             onClick={handleOpenOptions}
-            type='button'
-            layoutId='signup-button'
-            className='flex items-center gap-2 px-6 py-3 bg-yellow-400 button mx-auto text-black button'
-            id='sign-up-button'
             disabled={submitted}
-            style={{
-              borderRadius: 40,
-            }}
-          >
-            <span className='flex items-center justify-center text-black'>
-              <Mail className='h-4 w-4 block text-black' />
-            </span>
-            <span className='!text-black block ml-2 font-medium'>
-              {submitted ? 'Thank You!' : 'Lock In Your Pricing!'}
-            </span>
-          </motion.button>
+            submitted={submitted}
+          />
         </div>
 
         {/* Options Panel */}
@@ -134,47 +141,58 @@ export function SignUpForm() {
         {/* Early Access Form */}
         <AnimatePresence>
           {formType === 'earlyAccess' && submissionStatus !== 'success' && (
-            <div className='absolute  flex items-center justify-center z-50'>
-              <FormContainer>
+            <div className='absolute flex items-center justify-center z-50'>
+              <motion.div
+                initial={{opacity: 0, scale: 0.9}}
+                animate={{opacity: 1, scale: 1}}
+                exit={{opacity: 0, scale: 0.9}}
+                transition={{duration: 0.3}}
+                className='w-full md:w-[440px] bg-white shadow-sm p-6 border'
+                style={{borderRadius: 30}}
+              >
                 <EarlyAccessForm
-                  onBack={handleBackToOptions}
-                  onSubmit={handleFormSubmit}
+                  onBack={handleBack}
+                  onSubmit={handleSubmit}
                   submissionStatus={submissionStatus}
                 />
-              </FormContainer>
+              </motion.div>
             </div>
           )}
         </AnimatePresence>
 
-        {/* Newsletter Form
+        {/* Newsletter Form */}
         <AnimatePresence>
           {formType === 'newsletter' && submissionStatus !== 'success' && (
-            <div className='absolute flex items-center justify-center'>
-              <FormContainer>
+            <div className='absolute flex items-center justify-center z-50'>
+              <motion.div
+                initial={{opacity: 0, scale: 0.9}}
+                animate={{opacity: 1, scale: 1}}
+                exit={{opacity: 0, scale: 0.9}}
+                transition={{duration: 0.3}}
+                className='w-full md:w-[440px] bg-white shadow-sm p-6 border'
+                style={{borderRadius: 30}}
+              >
                 <NewsletterForm
-                  onBack={handleBackToOptions}
-                  onSubmit={handleFormSubmit}
+                  onBack={handleBack}
+                  onSubmit={handleSubmit}
                   submissionStatus={submissionStatus}
                 />
-              </FormContainer>
+              </motion.div>
             </div>
           )}
-        </AnimatePresence> */}
+        </AnimatePresence>
 
         {/* Success Message */}
         <AnimatePresence>
           {submissionStatus === 'success' && (
             <div className='absolute flex items-center justify-center z-50'>
               <motion.div
-                layoutId='signup-button'
-                className='w-full md:w-[440px] bg-white shadow-sm p-6 border'
-                style={{
-                  borderRadius: 30,
-                }}
                 initial={{opacity: 0, scale: 0.9}}
                 animate={{opacity: 1, scale: 1}}
-                exit={{opacity: 0, scale: 0.9, y: 10}}
-                transition={{duration: 0.4, delay: 0.1}}
+                exit={{opacity: 0, scale: 0.9}}
+                transition={{duration: 0.3}}
+                className='w-full md:w-[440px] bg-white shadow-sm p-6 border'
+                style={{borderRadius: 30}}
               >
                 <SuccessMessage message={successMessage} />
               </motion.div>
