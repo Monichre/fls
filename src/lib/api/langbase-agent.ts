@@ -16,9 +16,18 @@ export interface LangbaseAgentResponse {
 }
 
 export const LANGBASE_API_ENDPOINT =
-	"https://api.langbase.com/monichre/fls-website-agent";
-export const LANGBASE_AUTH_TOKEN =
-	"user_j1kyyhtUKA1S71EG8HTM7th9mX9CLC3G9fH8HFvRrWrVh5WEAXJ1pJDX1fEH1MWHUdHavb6PMVjiX1ZVpqQU36d";
+	process.env.NEXT_PUBLIC_LANGBASE_API_ENDPOINT || "https://api.langbase.com/monichre/fls-website-agent";
+
+// Use environment variable for authentication token
+// Never directly hardcode authentication tokens in source code
+const getAuthToken = (): string => {
+	if (!process.env.LANGBASE_AUTH_TOKEN) {
+		console.warn("LANGBASE_AUTH_TOKEN is not set in environment variables");
+		// Return empty string or throw an error in production
+		return process.env.NODE_ENV === "production" ? "" : "development_token";
+	}
+	return process.env.LANGBASE_AUTH_TOKEN;
+};
 
 /**
  * Calls the Langbase AI agent with the provided input
@@ -35,7 +44,7 @@ export async function callLangbaseAgent(
 		const response = await fetch(LANGBASE_API_ENDPOINT, {
 			method: "POST",
 			headers: {
-				Authorization: `Bearer ${LANGBASE_AUTH_TOKEN}`,
+				Authorization: `Bearer ${getAuthToken()}`,
 				"Content-Type": "application/json",
 			},
 			body: JSON.stringify({
