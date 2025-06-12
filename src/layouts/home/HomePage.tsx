@@ -34,10 +34,10 @@ const TrustBadges = dynamic(
 )
 
 // Floating Chat Component
-const FloatingChat = dynamic(
-  () => import('@/components/langbase-agent').then((mod) => mod.FloatingChat),
-  {ssr: false}
-)
+// const FloatingChat = dynamic(
+//   () => import('@/components/langbase-agent').then((mod) => mod.FloatingChat),
+//   {ssr: false}
+// )
 
 // New component for Digital Catalogue CTA
 const DigitalCatalogueCTA = dynamic(
