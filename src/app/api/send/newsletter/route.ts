@@ -1,5 +1,5 @@
 import { Resend } from "resend";
-import { NewsletterEmailTemplate } from "@/components/emails/newsletter-email-template";
+import { NewsletterEmailTemplate } from "@/emails/templates/newsletter-email-template";
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request: Request) {

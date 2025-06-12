@@ -1,0 +1,20 @@
+{
+  "templateType": "general",
+  "section": "footer",
+  "priority": 1,
+  "title": "Footer Information",
+  "body": {
+    "raw": "\n**FLS USA**\n123 Spark Street\nHouston, TX 77001\n\n**Contact Information:**\nPhone: 979-488-9207\nEmail: sales@flsusa.shop\nWebsite: https://flsusa.shop\n\n© {year} FLS USA. All rights reserved.\n\nThis email was sent to you because you are a valued partner in our network. If you no longer wish to receive these emails, you can [unsubscribe here]({unsubscribeUrl}).\n\nView our [Privacy Policy]({privacyUrl}) | [Terms of Service]({termsUrl})",
+    "html": "<p><strong>FLS USA</strong>\n123 Spark Street\nHouston, TX 77001</p>\n<p><strong>Contact Information:</strong>\nPhone: 979-488-9207\nEmail: sales@flsusa.shop\nWebsite: https://flsusa.shop</p>\n<p>© {year} FLS USA. All rights reserved.</p>\n<p>This email was sent to you because you are a valued partner in our network. If you no longer wish to receive these emails, you can <a href=\"%7BunsubscribeUrl%7D\">unsubscribe here</a>.</p>\n<p>View our <a href=\"%7BprivacyUrl%7D\">Privacy Policy</a> | <a href=\"%7BtermsUrl%7D\">Terms of Service</a></p>"
+  },
+  "_id": "emails/content/shared/footer.md",
+  "_raw": {
+    "sourceFilePath": "emails/content/shared/footer.md",
+    "sourceFileName": "footer.md",
+    "sourceFileDir": "emails/content/shared",
+    "contentType": "markdown",
+    "flattenedPath": "emails/content/shared/footer"
+  },
+  "type": "EmailContent",
+  "slug": "shared/footer"
+}

@@ -1,0 +1,20 @@
+{
+  "templateType": "product",
+  "section": "features",
+  "priority": 1,
+  "title": "Product Features",
+  "body": {
+    "raw": "\n## Why Choose FLS Lighters?\n\n**WINDPROOF TECHNOLOGY**\nReliable ignition in all weather conditions, from gentle breezes to strong winds.\n\n**DURABLE CONSTRUCTION**\nBuilt to last with premium materials and rigorous quality testing - up to 1,200 ignitions per lighter.\n\n**VIBRANT DESIGNS**\nEye-catching colors and patterns that appeal to collectors and impulse buyers alike.\n\n**ERGONOMIC DESIGN**\nCurved base design for comfortable grip and easy handling in any situation.\n\n**LONG-LASTING PERFORMANCE**\nConsistent flame output and reliable operation for years of dependable use.",
+    "html": "<h2>Why Choose FLS Lighters?</h2>\n<p><strong>WINDPROOF TECHNOLOGY</strong>\nReliable ignition in all weather conditions, from gentle breezes to strong winds.</p>\n<p><strong>DURABLE CONSTRUCTION</strong>\nBuilt to last with premium materials and rigorous quality testing - up to 1,200 ignitions per lighter.</p>\n<p><strong>VIBRANT DESIGNS</strong>\nEye-catching colors and patterns that appeal to collectors and impulse buyers alike.</p>\n<p><strong>ERGONOMIC DESIGN</strong>\nCurved base design for comfortable grip and easy handling in any situation.</p>\n<p><strong>LONG-LASTING PERFORMANCE</strong>\nConsistent flame output and reliable operation for years of dependable use.</p>"
+  },
+  "_id": "emails/content/shared/features.md",
+  "_raw": {
+    "sourceFilePath": "emails/content/shared/features.md",
+    "sourceFileName": "features.md",
+    "sourceFileDir": "emails/content/shared",
+    "contentType": "markdown",
+    "flattenedPath": "emails/content/shared/features"
+  },
+  "type": "EmailContent",
+  "slug": "shared/features"
+}

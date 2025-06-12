@@ -1,0 +1,429 @@
+{
+  "cacheItemsMap": {
+    "template_10_seasonal.md": {
+      "document": {
+        "templateType": "newsletter",
+        "section": "seasonal",
+        "priority": 1,
+        "title": "Seasonal Promotion Email Template",
+        "body": {
+          "raw": "\n# Seasonal Promotion Email Template\n\n## Subject Line: \nSummer Adventure Ready – Limited Time FLS Collection\n\n## Preview Text:\nIntroducing our Summer Adventure Collection with exclusive colorways and special pricing\n\n---\n\n![FLS Summer Collection]\n\n# IGNITE YOUR SUMMER ADVENTURES\n\n## LIMITED EDITION SUMMER COLLECTION\n\nVibrant new colors. Same unmatched reliability. Available for a limited time.\n\n---\n\n**Dear [Customer Name],**\n\nSummer adventure season is here, and we're celebrating with the launch of our exclusive Summer Adventure Collection – featuring our most popular FLS models in vibrant, limited-edition colorways inspired by summer landscapes.\n\n### INTRODUCING THE SUMMER ADVENTURE COLLECTION:\n\nFor a limited time, experience our signature wind-resistant technology and ergonomic design in four exclusive summer-inspired finishes:\n\n- **Sunset Orange** – Bold and vibrant like a perfect summer sunset\n- **Ocean Blue** – Deep and mesmerizing like coastal waters\n- **Mountain Green** – Rich and natural like summer forest canopies\n- **Desert Gold** – Warm and striking like sun-drenched landscapes\n\n### LIMITED TIME OFFER:\n\nTo celebrate the season of outdoor adventure, we're offering special pricing on the entire Summer Collection:\n\n- **Single Lighter:** $[Price] (Save 15%)\n- **Adventure Pack (Any 2):** $[Price] (Save 20%)\n- **Complete Collection (All 4):** $[Price] (Save 25%)\n\n**Plus:** Free premium gift packaging with every order – perfect for summer gifting.\n\n[SHOP THE SUMMER COLLECTION]\n\n### PERFECT FOR YOUR SUMMER PLANS:\n\n- **Beach Bonfires** – Wind-resistant flame performs perfectly on breezy shores\n- **Camping Trips** – Reliable ignition when you need it most in the wilderness\n- **Backyard BBQs** – Stylish functionality for your outdoor entertaining\n- **Collecting** – Limited production run makes these future collectibles\n\n### AVAILABILITY:\n\nThe Summer Adventure Collection will only be available until [End Date] or while supplies last. Based on previous limited editions, we expect these to sell quickly.\n\n[SECURE YOURS TODAY]\n\nHowever you plan to spend your summer, do it with the reliability and style of FLS at your side.\n\nHere's to summer adventures,\n\n**The FLS Team**\n\n---\n\n*© 2025 FLS USA, a CounterCulture company*  \n*979-488-9207 | sales@gocounterculture.com*\n\n[Unsubscribe] | [Privacy Policy] | [Terms of Service]\n",
+          "html": "<h1>Seasonal Promotion Email Template</h1>\n<h2>Subject Line:</h2>\n<p>Summer Adventure Ready – Limited Time FLS Collection</p>\n<h2>Preview Text:</h2>\n<p>Introducing our Summer Adventure Collection with exclusive colorways and special pricing</p>\n<hr>\n<p>![FLS Summer Collection]</p>\n<h1>IGNITE YOUR SUMMER ADVENTURES</h1>\n<h2>LIMITED EDITION SUMMER COLLECTION</h2>\n<p>Vibrant new colors. Same unmatched reliability. Available for a limited time.</p>\n<hr>\n<p><strong>Dear [Customer Name],</strong></p>\n<p>Summer adventure season is here, and we're celebrating with the launch of our exclusive Summer Adventure Collection – featuring our most popular FLS models in vibrant, limited-edition colorways inspired by summer landscapes.</p>\n<h3>INTRODUCING THE SUMMER ADVENTURE COLLECTION:</h3>\n<p>For a limited time, experience our signature wind-resistant technology and ergonomic design in four exclusive summer-inspired finishes:</p>\n<ul>\n<li><strong>Sunset Orange</strong> – Bold and vibrant like a perfect summer sunset</li>\n<li><strong>Ocean Blue</strong> – Deep and mesmerizing like coastal waters</li>\n<li><strong>Mountain Green</strong> – Rich and natural like summer forest canopies</li>\n<li><strong>Desert Gold</strong> – Warm and striking like sun-drenched landscapes</li>\n</ul>\n<h3>LIMITED TIME OFFER:</h3>\n<p>To celebrate the season of outdoor adventure, we're offering special pricing on the entire Summer Collection:</p>\n<ul>\n<li><strong>Single Lighter:</strong> $[Price] (Save 15%)</li>\n<li><strong>Adventure Pack (Any 2):</strong> $[Price] (Save 20%)</li>\n<li><strong>Complete Collection (All 4):</strong> $[Price] (Save 25%)</li>\n</ul>\n<p><strong>Plus:</strong> Free premium gift packaging with every order – perfect for summer gifting.</p>\n<p>[SHOP THE SUMMER COLLECTION]</p>\n<h3>PERFECT FOR YOUR SUMMER PLANS:</h3>\n<ul>\n<li><strong>Beach Bonfires</strong> – Wind-resistant flame performs perfectly on breezy shores</li>\n<li><strong>Camping Trips</strong> – Reliable ignition when you need it most in the wilderness</li>\n<li><strong>Backyard BBQs</strong> – Stylish functionality for your outdoor entertaining</li>\n<li><strong>Collecting</strong> – Limited production run makes these future collectibles</li>\n</ul>\n<h3>AVAILABILITY:</h3>\n<p>The Summer Adventure Collection will only be available until [End Date] or while supplies last. Based on previous limited editions, we expect these to sell quickly.</p>\n<p>[SECURE YOURS TODAY]</p>\n<p>However you plan to spend your summer, do it with the reliability and style of FLS at your side.</p>\n<p>Here's to summer adventures,</p>\n<p><strong>The FLS Team</strong></p>\n<hr>\n<p><em>© 2025 FLS USA, a CounterCulture company</em><br>\n<em>979-488-9207 | sales@gocounterculture.com</em></p>\n<p>[Unsubscribe] | [Privacy Policy] | [Terms of Service]</p>"
+        },
+        "_id": "template_10_seasonal.md",
+        "_raw": {
+          "sourceFilePath": "template_10_seasonal.md",
+          "sourceFileName": "template_10_seasonal.md",
+          "sourceFileDir": ".",
+          "contentType": "markdown",
+          "flattenedPath": "template_10_seasonal"
+        },
+        "type": "EmailContent",
+        "slug": "template_10_seasonal"
+      },
+      "documentHash": "1749735897760",
+      "hasWarnings": false,
+      "documentTypeName": "EmailContent"
+    },
+    "template_1_welcome.md": {
+      "document": {
+        "templateType": "welcome",
+        "section": "intro",
+        "priority": 1,
+        "title": "Welcome Email Template",
+        "body": {
+          "raw": "\n## Subject Line: \nWelcome to FLS – Ignite Your Adventure with Unrivaled Performance\n\n## Preview Text:\nDiscover the windproof lighter that performs flawlessly in any condition\n\n![FLS Logo]\n\n# WELCOME TO THE WORLD OF FLS\n\n## RELIABILITY MEETS INNOVATION\n\nThank you for joining the FLS community – where performance meets precision in every flame.\n\n---\n\n**Dear [Customer Name],**\n\nYour journey with FLS begins today, and we're thrilled to welcome you to a community that values quality, performance, and adventure as much as you do.\n\nAt FLS, we believe that reliability shouldn't be compromised by the elements. That's why our signature windproof lighters are engineered to perform flawlessly from mountain peaks to beach bonfires – delivering a perfect flame when you need it most.\n\n### DISCOVER THE FLS DIFFERENCE:\n\n- **Wind-Resistant Technology** that ensures a reliable flame in challenging environments\n- **Signature Curved Base** designed for ultimate comfort and stability\n- **Premium Construction** delivering up to 1200 ignitions of dependable flame\n- **Sleek, Ergonomic Design** that fits perfectly in your hand\n\n### WHAT'S NEXT?\n\n**Explore our collection** and find the perfect lighter for your lifestyle – whether you're an outdoor enthusiast, everyday carrier, or searching for the perfect gift.\n\n[SHOP THE COLLECTION]\n\n**Watch our demo** to see the FLS difference in action and discover why adventure seekers and everyday users alike trust our lighters.\n\n[WATCH DEMO]\n\n**Follow us** on social media for inspiration, product updates, and exclusive offers available only to our community.\n\n[INSTAGRAM] [FACEBOOK] [TWITTER]\n\nWe're excited to have you join us on this journey. Should you have any questions about your new FLS lighter, our team is always here to help.\n\nSpark the excitement,\n\n**Ibrahim, Bradly & Samuel**  \n*Founders, FLS USA*\n\n---\n\n*© 2025 FLS USA, a CounterCulture company*  \n*979-488-9207 | sales@gocounterculture.com*\n\n[Unsubscribe] | [Privacy Policy] | [Terms of Service]\n",
+          "html": "<h2>Subject Line:</h2>\n<p>Welcome to FLS – Ignite Your Adventure with Unrivaled Performance</p>\n<h2>Preview Text:</h2>\n<p>Discover the windproof lighter that performs flawlessly in any condition</p>\n<p>![FLS Logo]</p>\n<h1>WELCOME TO THE WORLD OF FLS</h1>\n<h2>RELIABILITY MEETS INNOVATION</h2>\n<p>Thank you for joining the FLS community – where performance meets precision in every flame.</p>\n<hr>\n<p><strong>Dear [Customer Name],</strong></p>\n<p>Your journey with FLS begins today, and we're thrilled to welcome you to a community that values quality, performance, and adventure as much as you do.</p>\n<p>At FLS, we believe that reliability shouldn't be compromised by the elements. That's why our signature windproof lighters are engineered to perform flawlessly from mountain peaks to beach bonfires – delivering a perfect flame when you need it most.</p>\n<h3>DISCOVER THE FLS DIFFERENCE:</h3>\n<ul>\n<li><strong>Wind-Resistant Technology</strong> that ensures a reliable flame in challenging environments</li>\n<li><strong>Signature Curved Base</strong> designed for ultimate comfort and stability</li>\n<li><strong>Premium Construction</strong> delivering up to 1200 ignitions of dependable flame</li>\n<li><strong>Sleek, Ergonomic Design</strong> that fits perfectly in your hand</li>\n</ul>\n<h3>WHAT'S NEXT?</h3>\n<p><strong>Explore our collection</strong> and find the perfect lighter for your lifestyle – whether you're an outdoor enthusiast, everyday carrier, or searching for the perfect gift.</p>\n<p>[SHOP THE COLLECTION]</p>\n<p><strong>Watch our demo</strong> to see the FLS difference in action and discover why adventure seekers and everyday users alike trust our lighters.</p>\n<p>[WATCH DEMO]</p>\n<p><strong>Follow us</strong> on social media for inspiration, product updates, and exclusive offers available only to our community.</p>\n<p>[INSTAGRAM] [FACEBOOK] [TWITTER]</p>\n<p>We're excited to have you join us on this journey. Should you have any questions about your new FLS lighter, our team is always here to help.</p>\n<p>Spark the excitement,</p>\n<p><strong>Ibrahim, Bradly &#x26; Samuel</strong><br>\n<em>Founders, FLS USA</em></p>\n<hr>\n<p><em>© 2025 FLS USA, a CounterCulture company</em><br>\n<em>979-488-9207 | sales@gocounterculture.com</em></p>\n<p>[Unsubscribe] | [Privacy Policy] | [Terms of Service]</p>"
+        },
+        "_id": "template_1_welcome.md",
+        "_raw": {
+          "sourceFilePath": "template_1_welcome.md",
+          "sourceFileName": "template_1_welcome.md",
+          "sourceFileDir": ".",
+          "contentType": "markdown",
+          "flattenedPath": "template_1_welcome"
+        },
+        "type": "EmailContent",
+        "slug": "template_1_welcome"
+      },
+      "documentHash": "1749735838227",
+      "hasWarnings": false,
+      "documentTypeName": "EmailContent"
+    },
+    "template_2_product_launch.md": {
+      "document": {
+        "templateType": "product",
+        "section": "launch",
+        "priority": 1,
+        "title": "Product Launch Email Template",
+        "body": {
+          "raw": "\n# Product Launch Email Template\n\n## Subject Line: \nIntroducing the FLS Signature Series – Performance Redefined\n\n## Preview Text:\nOur most advanced windproof lighter collection has arrived | Limited quantities available\n\n---\n\n![FLS Signature Series]\n\n# THE WAIT IS OVER\n\n## INTRODUCING THE FLS SIGNATURE SERIES\n\nEngineered for the elements. Designed for distinction.\n\n---\n\n**Dear [Customer Name],**\n\nWe're thrilled to announce the launch of our most anticipated collection yet – the FLS Signature Series. After months of meticulous engineering and rigorous testing in the most challenging environments, we've created a lighter that sets a new standard for both performance and design.\n\n### MEET THE SIGNATURE SERIES:\n\nThe FLS Signature Series combines our renowned wind-resistant technology with premium materials and enhanced ergonomics to deliver an unparalleled lighting experience. Each lighter is precision-crafted to ensure flawless performance in any condition – from mountain summits to coastal winds.\n\n### ELEVATED FEATURES:\n\n- **Enhanced Wind-Resistant Technology** – Performs reliably in extreme conditions\n- **Premium Metal Construction** – Durable, weighted feel with sophisticated finish\n- **Extended Fuel Capacity** – Up to 1500 ignitions between refills\n- **Refined Curved Base** – Our most comfortable grip yet\n- **Limited Edition Colorways** – Exclusive designs not available in our standard collection\n\n### LIMITED AVAILABILITY:\n\nThe Signature Series is being produced in limited quantities for this initial release. As a valued member of our community, you're receiving early access before our public announcement.\n\n[SHOP THE SIGNATURE SERIES NOW]\n\n### PERFECT FOR:\n\n- **Adventure Enthusiasts** seeking reliability in challenging environments\n- **Collectors** appreciating precision craftsmanship and limited editions\n- **Gift-Givers** looking for a premium present that combines function and style\n\nDon't miss your chance to experience our most advanced lighter collection to date. With limited quantities available, we expect the initial release to sell quickly.\n\n[SECURE YOURS TODAY]\n\nWe can't wait to hear about your experience with the new Signature Series.\n\nIgnite excellence,\n\n**The FLS Design Team**\n\n---\n\n*© 2025 FLS USA, a CounterCulture company*  \n*979-488-9207 | sales@gocounterculture.com*\n\n[Unsubscribe] | [Privacy Policy] | [Terms of Service]\n",
+          "html": "<h1>Product Launch Email Template</h1>\n<h2>Subject Line:</h2>\n<p>Introducing the FLS Signature Series – Performance Redefined</p>\n<h2>Preview Text:</h2>\n<p>Our most advanced windproof lighter collection has arrived | Limited quantities available</p>\n<hr>\n<p>![FLS Signature Series]</p>\n<h1>THE WAIT IS OVER</h1>\n<h2>INTRODUCING THE FLS SIGNATURE SERIES</h2>\n<p>Engineered for the elements. Designed for distinction.</p>\n<hr>\n<p><strong>Dear [Customer Name],</strong></p>\n<p>We're thrilled to announce the launch of our most anticipated collection yet – the FLS Signature Series. After months of meticulous engineering and rigorous testing in the most challenging environments, we've created a lighter that sets a new standard for both performance and design.</p>\n<h3>MEET THE SIGNATURE SERIES:</h3>\n<p>The FLS Signature Series combines our renowned wind-resistant technology with premium materials and enhanced ergonomics to deliver an unparalleled lighting experience. Each lighter is precision-crafted to ensure flawless performance in any condition – from mountain summits to coastal winds.</p>\n<h3>ELEVATED FEATURES:</h3>\n<ul>\n<li><strong>Enhanced Wind-Resistant Technology</strong> – Performs reliably in extreme conditions</li>\n<li><strong>Premium Metal Construction</strong> – Durable, weighted feel with sophisticated finish</li>\n<li><strong>Extended Fuel Capacity</strong> – Up to 1500 ignitions between refills</li>\n<li><strong>Refined Curved Base</strong> – Our most comfortable grip yet</li>\n<li><strong>Limited Edition Colorways</strong> – Exclusive designs not available in our standard collection</li>\n</ul>\n<h3>LIMITED AVAILABILITY:</h3>\n<p>The Signature Series is being produced in limited quantities for this initial release. As a valued member of our community, you're receiving early access before our public announcement.</p>\n<p>[SHOP THE SIGNATURE SERIES NOW]</p>\n<h3>PERFECT FOR:</h3>\n<ul>\n<li><strong>Adventure Enthusiasts</strong> seeking reliability in challenging environments</li>\n<li><strong>Collectors</strong> appreciating precision craftsmanship and limited editions</li>\n<li><strong>Gift-Givers</strong> looking for a premium present that combines function and style</li>\n</ul>\n<p>Don't miss your chance to experience our most advanced lighter collection to date. With limited quantities available, we expect the initial release to sell quickly.</p>\n<p>[SECURE YOURS TODAY]</p>\n<p>We can't wait to hear about your experience with the new Signature Series.</p>\n<p>Ignite excellence,</p>\n<p><strong>The FLS Design Team</strong></p>\n<hr>\n<p><em>© 2025 FLS USA, a CounterCulture company</em><br>\n<em>979-488-9207 | sales@gocounterculture.com</em></p>\n<p>[Unsubscribe] | [Privacy Policy] | [Terms of Service]</p>"
+        },
+        "_id": "template_2_product_launch.md",
+        "_raw": {
+          "sourceFilePath": "template_2_product_launch.md",
+          "sourceFileName": "template_2_product_launch.md",
+          "sourceFileDir": ".",
+          "contentType": "markdown",
+          "flattenedPath": "template_2_product_launch"
+        },
+        "type": "EmailContent",
+        "slug": "template_2_product_launch"
+      },
+      "documentHash": "1749735883466",
+      "hasWarnings": false,
+      "documentTypeName": "EmailContent"
+    },
+    "template_3_exclusive_offer.md": {
+      "document": {
+        "templateType": "product",
+        "section": "offer",
+        "priority": 1,
+        "title": "Exclusive Offer Email Template",
+        "body": {
+          "raw": "\n# Exclusive Offer Email Template\n\n## Subject Line: \n[Customer Name], Your Exclusive FLS Discount Awaits\n\n## Preview Text:\nLimited-time 20% savings on our premium windproof lighters | For valued customers only\n\n---\n\n![FLS Exclusive Offer]\n\n# EXCLUSIVE OFFER\n\n## FOR OUR VALUED CUSTOMERS ONLY\n\n**20% OFF YOUR NEXT PURCHASE**\n\n*Valid through [Expiration Date]*\n\n---\n\n**Dear [Customer Name],**\n\nAs a valued member of the FLS community, you deserve more than just exceptional performance – you deserve exclusive rewards.\n\nFor a limited time, we're offering you **20% off** your next purchase from our premium collection of windproof, high-performance lighters. This offer is being extended to select customers only and won't be available to the general public.\n\n### REDEEM YOUR EXCLUSIVE DISCOUNT:\n\nSimply use code **[EXCLUSIVE20]** at checkout to apply your savings to any full-priced item in our collection.\n\n[SHOP NOW AND SAVE]\n\n### PERFECT TIMING TO:\n\n- **Upgrade** your everyday carry with our latest innovations\n- **Explore** our Signature Series with its enhanced ergonomic design\n- **Gift** an FLS lighter to someone who appreciates quality and performance\n- **Stock up** on your favorite model in multiple colorways\n\n### WHY FLS CONTINUES TO LEAD:\n\nOur commitment to excellence hasn't changed. Every FLS lighter still delivers the perfect balance of reliability, comfort, and style that you've come to expect:\n\n- Wind-resistant technology that performs in any environment\n- Ergonomic curved base for ultimate comfort and stability\n- Premium construction for lasting durability\n- Sleek design that makes a statement\n\nThis exclusive offer expires on **[Expiration Date]**, so don't miss your opportunity to enhance your collection at a special rate reserved for our most valued customers.\n\n[REDEEM MY 20% DISCOUNT]\n\nThank you for your continued loyalty to FLS.\n\nIgnite your savings,\n\n**The FLS Team**\n\n---\n\n*© 2025 FLS USA, a CounterCulture company*  \n*979-488-9207 | sales@gocounterculture.com*\n\n[Unsubscribe] | [Privacy Policy] | [Terms of Service]\n\n*This offer is valid for one-time use per customer and cannot be combined with other promotions. Discount applies to full-priced items only and excludes limited edition collections where noted.*\n",
+          "html": "<h1>Exclusive Offer Email Template</h1>\n<h2>Subject Line:</h2>\n<p>[Customer Name], Your Exclusive FLS Discount Awaits</p>\n<h2>Preview Text:</h2>\n<p>Limited-time 20% savings on our premium windproof lighters | For valued customers only</p>\n<hr>\n<p>![FLS Exclusive Offer]</p>\n<h1>EXCLUSIVE OFFER</h1>\n<h2>FOR OUR VALUED CUSTOMERS ONLY</h2>\n<p><strong>20% OFF YOUR NEXT PURCHASE</strong></p>\n<p><em>Valid through [Expiration Date]</em></p>\n<hr>\n<p><strong>Dear [Customer Name],</strong></p>\n<p>As a valued member of the FLS community, you deserve more than just exceptional performance – you deserve exclusive rewards.</p>\n<p>For a limited time, we're offering you <strong>20% off</strong> your next purchase from our premium collection of windproof, high-performance lighters. This offer is being extended to select customers only and won't be available to the general public.</p>\n<h3>REDEEM YOUR EXCLUSIVE DISCOUNT:</h3>\n<p>Simply use code <strong>[EXCLUSIVE20]</strong> at checkout to apply your savings to any full-priced item in our collection.</p>\n<p>[SHOP NOW AND SAVE]</p>\n<h3>PERFECT TIMING TO:</h3>\n<ul>\n<li><strong>Upgrade</strong> your everyday carry with our latest innovations</li>\n<li><strong>Explore</strong> our Signature Series with its enhanced ergonomic design</li>\n<li><strong>Gift</strong> an FLS lighter to someone who appreciates quality and performance</li>\n<li><strong>Stock up</strong> on your favorite model in multiple colorways</li>\n</ul>\n<h3>WHY FLS CONTINUES TO LEAD:</h3>\n<p>Our commitment to excellence hasn't changed. Every FLS lighter still delivers the perfect balance of reliability, comfort, and style that you've come to expect:</p>\n<ul>\n<li>Wind-resistant technology that performs in any environment</li>\n<li>Ergonomic curved base for ultimate comfort and stability</li>\n<li>Premium construction for lasting durability</li>\n<li>Sleek design that makes a statement</li>\n</ul>\n<p>This exclusive offer expires on <strong>[Expiration Date]</strong>, so don't miss your opportunity to enhance your collection at a special rate reserved for our most valued customers.</p>\n<p>[REDEEM MY 20% DISCOUNT]</p>\n<p>Thank you for your continued loyalty to FLS.</p>\n<p>Ignite your savings,</p>\n<p><strong>The FLS Team</strong></p>\n<hr>\n<p><em>© 2025 FLS USA, a CounterCulture company</em><br>\n<em>979-488-9207 | sales@gocounterculture.com</em></p>\n<p>[Unsubscribe] | [Privacy Policy] | [Terms of Service]</p>\n<p><em>This offer is valid for one-time use per customer and cannot be combined with other promotions. Discount applies to full-priced items only and excludes limited edition collections where noted.</em></p>"
+        },
+        "_id": "template_3_exclusive_offer.md",
+        "_raw": {
+          "sourceFilePath": "template_3_exclusive_offer.md",
+          "sourceFileName": "template_3_exclusive_offer.md",
+          "sourceFileDir": ".",
+          "contentType": "markdown",
+          "flattenedPath": "template_3_exclusive_offer"
+        },
+        "type": "EmailContent",
+        "slug": "template_3_exclusive_offer"
+      },
+      "documentHash": "1749735883845",
+      "hasWarnings": false,
+      "documentTypeName": "EmailContent"
+    },
+    "template_4_cart_abandonment.md": {
+      "document": {
+        "templateType": "newsletter",
+        "section": "followup",
+        "priority": 1,
+        "title": "Cart Abandonment Email Template",
+        "body": {
+          "raw": "\n# Cart Abandonment Email Template\n\n## Subject Line: \nYour FLS Lighter is Waiting for You\n\n## Preview Text:\nComplete your purchase and never be left without a reliable flame again\n\n---\n\n![FLS Cart Reminder]\n\n# YOUR SELECTION IS RESERVED\n\n## BUT WON'T BE FOR LONG\n\nWe've saved the items in your cart, but they're in high demand.\n\n---\n\n**Dear [Customer Name],**\n\nWe noticed you left something special behind – your selected FLS lighter is still waiting in your cart, but it won't be reserved forever.\n\n### YOUR SELECTED ITEM:\n\n**[Product Name]** – [Brief Product Description]\n**Price:** $[Price]\n\n[VIEW MY CART]\n\n### WHY CUSTOMERS CHOOSE FLS:\n\n\"*I've tried countless lighters that fail when I need them most. My FLS hasn't let me down once – from windy beaches to mountain camping. Worth every penny.*\" – Michael T., Verified Customer\n\n\"*The curved design isn't just for looks – it's the most comfortable lighter I've ever held. Perfect flame every time.*\" – Sarah K., Verified Customer\n\n### STILL CONSIDERING?\n\nWe understand that quality purchases deserve thoughtful consideration. Here's why completing your purchase today makes sense:\n\n- **Guaranteed Performance** in challenging environments where other lighters fail\n- **Investment in Reliability** with up to 1200 ignitions of consistent flame\n- **Ergonomic Comfort** from our signature curved base design\n- **Premium Construction** that stands the test of time\n\n### HAVE QUESTIONS?\n\nOur team is standing by to assist with any questions you might have about your selected FLS lighter. Simply reply to this email or call us at 979-488-9207.\n\n[COMPLETE MY PURCHASE]\n\nWe look forward to welcoming you to the FLS community of discerning individuals who demand performance without compromise.\n\nReady when you are,\n\n**The FLS Customer Experience Team**\n\n---\n\n*© 2025 FLS USA, a CounterCulture company*  \n*979-488-9207 | sales@gocounterculture.com*\n\n[Unsubscribe] | [Privacy Policy] | [Terms of Service]\n",
+          "html": "<h1>Cart Abandonment Email Template</h1>\n<h2>Subject Line:</h2>\n<p>Your FLS Lighter is Waiting for You</p>\n<h2>Preview Text:</h2>\n<p>Complete your purchase and never be left without a reliable flame again</p>\n<hr>\n<p>![FLS Cart Reminder]</p>\n<h1>YOUR SELECTION IS RESERVED</h1>\n<h2>BUT WON'T BE FOR LONG</h2>\n<p>We've saved the items in your cart, but they're in high demand.</p>\n<hr>\n<p><strong>Dear [Customer Name],</strong></p>\n<p>We noticed you left something special behind – your selected FLS lighter is still waiting in your cart, but it won't be reserved forever.</p>\n<h3>YOUR SELECTED ITEM:</h3>\n<p><strong>[Product Name]</strong> – [Brief Product Description]\n<strong>Price:</strong> $[Price]</p>\n<p>[VIEW MY CART]</p>\n<h3>WHY CUSTOMERS CHOOSE FLS:</h3>\n<p>\"<em>I've tried countless lighters that fail when I need them most. My FLS hasn't let me down once – from windy beaches to mountain camping. Worth every penny.</em>\" – Michael T., Verified Customer</p>\n<p>\"<em>The curved design isn't just for looks – it's the most comfortable lighter I've ever held. Perfect flame every time.</em>\" – Sarah K., Verified Customer</p>\n<h3>STILL CONSIDERING?</h3>\n<p>We understand that quality purchases deserve thoughtful consideration. Here's why completing your purchase today makes sense:</p>\n<ul>\n<li><strong>Guaranteed Performance</strong> in challenging environments where other lighters fail</li>\n<li><strong>Investment in Reliability</strong> with up to 1200 ignitions of consistent flame</li>\n<li><strong>Ergonomic Comfort</strong> from our signature curved base design</li>\n<li><strong>Premium Construction</strong> that stands the test of time</li>\n</ul>\n<h3>HAVE QUESTIONS?</h3>\n<p>Our team is standing by to assist with any questions you might have about your selected FLS lighter. Simply reply to this email or call us at 979-488-9207.</p>\n<p>[COMPLETE MY PURCHASE]</p>\n<p>We look forward to welcoming you to the FLS community of discerning individuals who demand performance without compromise.</p>\n<p>Ready when you are,</p>\n<p><strong>The FLS Customer Experience Team</strong></p>\n<hr>\n<p><em>© 2025 FLS USA, a CounterCulture company</em><br>\n<em>979-488-9207 | sales@gocounterculture.com</em></p>\n<p>[Unsubscribe] | [Privacy Policy] | [Terms of Service]</p>"
+        },
+        "_id": "template_4_cart_abandonment.md",
+        "_raw": {
+          "sourceFilePath": "template_4_cart_abandonment.md",
+          "sourceFileName": "template_4_cart_abandonment.md",
+          "sourceFileDir": ".",
+          "contentType": "markdown",
+          "flattenedPath": "template_4_cart_abandonment"
+        },
+        "type": "EmailContent",
+        "slug": "template_4_cart_abandonment"
+      },
+      "documentHash": "1749735884280",
+      "hasWarnings": false,
+      "documentTypeName": "EmailContent"
+    },
+    "template_5_post_purchase.md": {
+      "document": {
+        "templateType": "general",
+        "section": "followup",
+        "priority": 1,
+        "title": "Post-Purchase Thank You Email Template",
+        "body": {
+          "raw": "\n# Post-Purchase Thank You Email Template\n\n## Subject Line: \nThank You for Choosing FLS – Your Adventure Awaits\n\n## Preview Text:\nImportant details about your order and how to get the most from your new FLS lighter\n\n---\n\n![FLS Thank You]\n\n# THANK YOU FOR YOUR ORDER\n\n## YOUR JOURNEY WITH FLS BEGINS NOW\n\nOrder #[Order Number] has been confirmed and is being prepared for shipment.\n\n---\n\n**Dear [Customer Name],**\n\nThank you for choosing FLS for your lighting needs. We're thrilled to confirm that your order has been received and is being prepared with care.\n\n### YOUR ORDER DETAILS:\n\n**Order Number:** [Order Number]\n**Date Placed:** [Order Date]\n**Estimated Delivery:** [Delivery Date Range]\n\n**[Product Name]** – [Brief Product Description]\n**Quantity:** [Quantity]\n**Price:** $[Price]\n\n[VIEW ORDER DETAILS]\n\n### GETTING THE MOST FROM YOUR FLS LIGHTER:\n\nTo ensure optimal performance and longevity of your new FLS lighter, we've prepared some resources to help you get started:\n\n- [**Quick Start Guide**] – Essential tips for first use\n- [**Maintenance Tips**] – Simple steps to keep your lighter performing at its best\n- [**Refilling Instructions**] – Easy-to-follow guidance for when it's time to refuel\n\n### THE FLS PROMISE:\n\nYour satisfaction is our priority. Each FLS lighter undergoes rigorous quality testing before shipment to ensure it meets our exacting standards for performance and durability.\n\nShould you have any questions or need assistance with your new lighter, our dedicated support team is here to help:\n\n- **Email:** support@flsusa.shop\n- **Phone:** 979-488-9207\n- **Hours:** Monday-Friday, 9am-6pm CST\n\n### SHARE YOUR EXPERIENCE:\n\nWe'd love to see your FLS lighter in action! Tag us on social media with #FLSLighters to be featured on our channels and join our community of adventure seekers and everyday carriers who rely on FLS performance.\n\n[INSTAGRAM] [FACEBOOK] [TWITTER]\n\nThank you again for your purchase. We're confident your new FLS lighter will exceed your expectations and become an essential part of your daily carry or outdoor adventures.\n\nReliably yours,\n\n**The FLS Team**\n\n---\n\n*© 2025 FLS USA, a CounterCulture company*  \n*979-488-9207 | sales@gocounterculture.com*\n\n[Unsubscribe] | [Privacy Policy] | [Terms of Service]\n",
+          "html": "<h1>Post-Purchase Thank You Email Template</h1>\n<h2>Subject Line:</h2>\n<p>Thank You for Choosing FLS – Your Adventure Awaits</p>\n<h2>Preview Text:</h2>\n<p>Important details about your order and how to get the most from your new FLS lighter</p>\n<hr>\n<p>![FLS Thank You]</p>\n<h1>THANK YOU FOR YOUR ORDER</h1>\n<h2>YOUR JOURNEY WITH FLS BEGINS NOW</h2>\n<p>Order #[Order Number] has been confirmed and is being prepared for shipment.</p>\n<hr>\n<p><strong>Dear [Customer Name],</strong></p>\n<p>Thank you for choosing FLS for your lighting needs. We're thrilled to confirm that your order has been received and is being prepared with care.</p>\n<h3>YOUR ORDER DETAILS:</h3>\n<p><strong>Order Number:</strong> [Order Number]\n<strong>Date Placed:</strong> [Order Date]\n<strong>Estimated Delivery:</strong> [Delivery Date Range]</p>\n<p><strong>[Product Name]</strong> – [Brief Product Description]\n<strong>Quantity:</strong> [Quantity]\n<strong>Price:</strong> $[Price]</p>\n<p>[VIEW ORDER DETAILS]</p>\n<h3>GETTING THE MOST FROM YOUR FLS LIGHTER:</h3>\n<p>To ensure optimal performance and longevity of your new FLS lighter, we've prepared some resources to help you get started:</p>\n<ul>\n<li>[<strong>Quick Start Guide</strong>] – Essential tips for first use</li>\n<li>[<strong>Maintenance Tips</strong>] – Simple steps to keep your lighter performing at its best</li>\n<li>[<strong>Refilling Instructions</strong>] – Easy-to-follow guidance for when it's time to refuel</li>\n</ul>\n<h3>THE FLS PROMISE:</h3>\n<p>Your satisfaction is our priority. Each FLS lighter undergoes rigorous quality testing before shipment to ensure it meets our exacting standards for performance and durability.</p>\n<p>Should you have any questions or need assistance with your new lighter, our dedicated support team is here to help:</p>\n<ul>\n<li><strong>Email:</strong> support@flsusa.shop</li>\n<li><strong>Phone:</strong> 979-488-9207</li>\n<li><strong>Hours:</strong> Monday-Friday, 9am-6pm CST</li>\n</ul>\n<h3>SHARE YOUR EXPERIENCE:</h3>\n<p>We'd love to see your FLS lighter in action! Tag us on social media with #FLSLighters to be featured on our channels and join our community of adventure seekers and everyday carriers who rely on FLS performance.</p>\n<p>[INSTAGRAM] [FACEBOOK] [TWITTER]</p>\n<p>Thank you again for your purchase. We're confident your new FLS lighter will exceed your expectations and become an essential part of your daily carry or outdoor adventures.</p>\n<p>Reliably yours,</p>\n<p><strong>The FLS Team</strong></p>\n<hr>\n<p><em>© 2025 FLS USA, a CounterCulture company</em><br>\n<em>979-488-9207 | sales@gocounterculture.com</em></p>\n<p>[Unsubscribe] | [Privacy Policy] | [Terms of Service]</p>"
+        },
+        "_id": "template_5_post_purchase.md",
+        "_raw": {
+          "sourceFilePath": "template_5_post_purchase.md",
+          "sourceFileName": "template_5_post_purchase.md",
+          "sourceFileDir": ".",
+          "contentType": "markdown",
+          "flattenedPath": "template_5_post_purchase"
+        },
+        "type": "EmailContent",
+        "slug": "template_5_post_purchase"
+      },
+      "documentHash": "1749735884710",
+      "hasWarnings": false,
+      "documentTypeName": "EmailContent"
+    },
+    "template_6_educational.md": {
+      "document": {
+        "templateType": "newsletter",
+        "section": "education",
+        "priority": 1,
+        "title": "Educational Content Email Template",
+        "body": {
+          "raw": "\n# Educational Content Email Template\n\n## Subject Line: \nThe Science Behind FLS Wind-Resistant Technology\n\n## Preview Text:\nDiscover how our innovative design ensures a reliable flame in any condition\n\n---\n\n![FLS Technology Showcase]\n\n# INNOVATION IN EVERY FLAME\n\n## THE SCIENCE BEHIND FLS WIND-RESISTANT TECHNOLOGY\n\nEngineering excellence that performs when others fail.\n\n---\n\n**Dear [Customer Name],**\n\nHave you ever wondered what makes your FLS lighter perform flawlessly even in challenging conditions? Today, we're taking you behind the scenes to explore the innovative technology that sets FLS apart from ordinary lighters.\n\n### THE WIND-RESISTANT ADVANTAGE:\n\nUnlike conventional lighters that falter in the slightest breeze, FLS lighters feature our proprietary wind-resistant technology that maintains a consistent flame even in challenging outdoor environments.\n\n### HOW IT WORKS:\n\n**1. Precision-Engineered Burner Design**\nOur burner features a specialized chamber that controls airflow, creating a concentrated, high-pressure flame that resists disruption from wind and movement.\n\n**2. Strategic Air Channels**\nCarefully positioned air channels redirect incoming wind around the flame rather than extinguishing it, maintaining performance in outdoor conditions.\n\n**3. Advanced Ignition System**\nOur reliable ignition system delivers consistent performance through thousands of uses, ensuring you're never left without a flame when you need it most.\n\n**4. Optimized Fuel Delivery**\nThe precision-calibrated fuel system provides the perfect amount of fuel for each ignition, maximizing efficiency and extending the life between refills.\n\n[WATCH OUR TECHNOLOGY IN ACTION]\n\n### ENGINEERED FOR REAL-WORLD PERFORMANCE:\n\nEvery FLS lighter undergoes rigorous testing in our state-of-the-art facility, where we simulate various environmental conditions – from gentle breezes to strong gusts – ensuring reliable performance in real-world scenarios.\n\n### EXPERIENCE THE DIFFERENCE:\n\nIf you haven't yet experienced the FLS difference, now is the perfect time to discover why outdoor enthusiasts, everyday carriers, and professionals trust our lighters for reliable performance.\n\n[EXPLORE THE FLS COLLECTION]\n\nWe're proud of the engineering excellence that goes into every FLS lighter and remain committed to innovation that enhances your experience.\n\nIgniting innovation,\n\n**The FLS Engineering Team**\n\n---\n\n*© 2025 FLS USA, a CounterCulture company*  \n*979-488-9207 | sales@gocounterculture.com*\n\n[Unsubscribe] | [Privacy Policy] | [Terms of Service]\n",
+          "html": "<h1>Educational Content Email Template</h1>\n<h2>Subject Line:</h2>\n<p>The Science Behind FLS Wind-Resistant Technology</p>\n<h2>Preview Text:</h2>\n<p>Discover how our innovative design ensures a reliable flame in any condition</p>\n<hr>\n<p>![FLS Technology Showcase]</p>\n<h1>INNOVATION IN EVERY FLAME</h1>\n<h2>THE SCIENCE BEHIND FLS WIND-RESISTANT TECHNOLOGY</h2>\n<p>Engineering excellence that performs when others fail.</p>\n<hr>\n<p><strong>Dear [Customer Name],</strong></p>\n<p>Have you ever wondered what makes your FLS lighter perform flawlessly even in challenging conditions? Today, we're taking you behind the scenes to explore the innovative technology that sets FLS apart from ordinary lighters.</p>\n<h3>THE WIND-RESISTANT ADVANTAGE:</h3>\n<p>Unlike conventional lighters that falter in the slightest breeze, FLS lighters feature our proprietary wind-resistant technology that maintains a consistent flame even in challenging outdoor environments.</p>\n<h3>HOW IT WORKS:</h3>\n<p><strong>1. Precision-Engineered Burner Design</strong>\nOur burner features a specialized chamber that controls airflow, creating a concentrated, high-pressure flame that resists disruption from wind and movement.</p>\n<p><strong>2. Strategic Air Channels</strong>\nCarefully positioned air channels redirect incoming wind around the flame rather than extinguishing it, maintaining performance in outdoor conditions.</p>\n<p><strong>3. Advanced Ignition System</strong>\nOur reliable ignition system delivers consistent performance through thousands of uses, ensuring you're never left without a flame when you need it most.</p>\n<p><strong>4. Optimized Fuel Delivery</strong>\nThe precision-calibrated fuel system provides the perfect amount of fuel for each ignition, maximizing efficiency and extending the life between refills.</p>\n<p>[WATCH OUR TECHNOLOGY IN ACTION]</p>\n<h3>ENGINEERED FOR REAL-WORLD PERFORMANCE:</h3>\n<p>Every FLS lighter undergoes rigorous testing in our state-of-the-art facility, where we simulate various environmental conditions – from gentle breezes to strong gusts – ensuring reliable performance in real-world scenarios.</p>\n<h3>EXPERIENCE THE DIFFERENCE:</h3>\n<p>If you haven't yet experienced the FLS difference, now is the perfect time to discover why outdoor enthusiasts, everyday carriers, and professionals trust our lighters for reliable performance.</p>\n<p>[EXPLORE THE FLS COLLECTION]</p>\n<p>We're proud of the engineering excellence that goes into every FLS lighter and remain committed to innovation that enhances your experience.</p>\n<p>Igniting innovation,</p>\n<p><strong>The FLS Engineering Team</strong></p>\n<hr>\n<p><em>© 2025 FLS USA, a CounterCulture company</em><br>\n<em>979-488-9207 | sales@gocounterculture.com</em></p>\n<p>[Unsubscribe] | [Privacy Policy] | [Terms of Service]</p>"
+        },
+        "_id": "template_6_educational.md",
+        "_raw": {
+          "sourceFilePath": "template_6_educational.md",
+          "sourceFileName": "template_6_educational.md",
+          "sourceFileDir": ".",
+          "contentType": "markdown",
+          "flattenedPath": "template_6_educational"
+        },
+        "type": "EmailContent",
+        "slug": "template_6_educational"
+      },
+      "documentHash": "1749735885127",
+      "hasWarnings": false,
+      "documentTypeName": "EmailContent"
+    },
+    "template_7_loyalty_program.md": {
+      "document": {
+        "templateType": "general",
+        "section": "loyalty",
+        "priority": 1,
+        "title": "Loyalty Program Email Template",
+        "body": {
+          "raw": "\n# Loyalty Program Email Template\n\n## Subject Line: \n[Customer Name], You've Unlocked FLS Elite Status\n\n## Preview Text:\nIntroducing our exclusive loyalty program with special perks for our most valued customers\n\n---\n\n![FLS Elite Program]\n\n# WELCOME TO FLS ELITE\n\n## OUR EXCLUSIVE LOYALTY PROGRAM\n\nYou're now part of a select group that receives premium benefits.\n\n---\n\n**Dear [Customer Name],**\n\nYour continued trust in FLS hasn't gone unnoticed. Based on your purchase history and engagement with our brand, we're delighted to welcome you to **FLS Elite** – our exclusive loyalty program designed to reward our most valued customers.\n\n### YOUR ELITE BENEFITS:\n\nAs an FLS Elite member, you now have access to:\n\n- **Early Access** to new product launches and limited editions\n- **Complimentary Shipping** on all orders, regardless of order value\n- **Exclusive Discounts** – 15% off all regular-priced items, automatically applied\n- **Priority Customer Service** with dedicated support representatives\n- **Birthday Reward** – Special gift during your birthday month\n- **Members-Only Events** – Virtual and in-person gatherings with fellow enthusiasts\n\n### YOUR CURRENT STATUS:\n\n**Membership Level:** [Silver/Gold/Platinum]\n**Points Balance:** [Points]\n**Next Reward:** [Points needed] points until your next $[Amount] reward\n\n[VIEW MY ELITE DASHBOARD]\n\n### EARNING MORE POINTS:\n\n- **Purchase any FLS product** – 10 points per $1 spent\n- **Refer a friend** – 500 points when they make their first purchase\n- **Share on social media** – 100 points when you tag us with #FLSElite\n- **Write a product review** – 250 points per verified review\n\n### UPCOMING ELITE EXCLUSIVES:\n\nMark your calendar for these upcoming Elite member opportunities:\n\n- **June 15:** Early access to our Summer Limited Edition Collection\n- **July 10:** Elite-only virtual workshop on lighter maintenance and care\n- **August 5:** Double points day on all purchases\n\nYour loyalty means everything to us, and we're committed to providing you with exceptional products and experiences that match your discerning standards.\n\n[EXPLORE ELITE BENEFITS]\n\nThank you for being part of the FLS family.\n\nWith appreciation,\n\n**Ibrahim Najajra**  \n*Founder, FLS USA*\n\n---\n\n*© 2025 FLS USA, a CounterCulture company*  \n*979-488-9207 | sales@gocounterculture.com*\n\n[Unsubscribe] | [Privacy Policy] | [Terms of Service]\n",
+          "html": "<h1>Loyalty Program Email Template</h1>\n<h2>Subject Line:</h2>\n<p>[Customer Name], You've Unlocked FLS Elite Status</p>\n<h2>Preview Text:</h2>\n<p>Introducing our exclusive loyalty program with special perks for our most valued customers</p>\n<hr>\n<p>![FLS Elite Program]</p>\n<h1>WELCOME TO FLS ELITE</h1>\n<h2>OUR EXCLUSIVE LOYALTY PROGRAM</h2>\n<p>You're now part of a select group that receives premium benefits.</p>\n<hr>\n<p><strong>Dear [Customer Name],</strong></p>\n<p>Your continued trust in FLS hasn't gone unnoticed. Based on your purchase history and engagement with our brand, we're delighted to welcome you to <strong>FLS Elite</strong> – our exclusive loyalty program designed to reward our most valued customers.</p>\n<h3>YOUR ELITE BENEFITS:</h3>\n<p>As an FLS Elite member, you now have access to:</p>\n<ul>\n<li><strong>Early Access</strong> to new product launches and limited editions</li>\n<li><strong>Complimentary Shipping</strong> on all orders, regardless of order value</li>\n<li><strong>Exclusive Discounts</strong> – 15% off all regular-priced items, automatically applied</li>\n<li><strong>Priority Customer Service</strong> with dedicated support representatives</li>\n<li><strong>Birthday Reward</strong> – Special gift during your birthday month</li>\n<li><strong>Members-Only Events</strong> – Virtual and in-person gatherings with fellow enthusiasts</li>\n</ul>\n<h3>YOUR CURRENT STATUS:</h3>\n<p><strong>Membership Level:</strong> [Silver/Gold/Platinum]\n<strong>Points Balance:</strong> [Points]\n<strong>Next Reward:</strong> [Points needed] points until your next $[Amount] reward</p>\n<p>[VIEW MY ELITE DASHBOARD]</p>\n<h3>EARNING MORE POINTS:</h3>\n<ul>\n<li><strong>Purchase any FLS product</strong> – 10 points per $1 spent</li>\n<li><strong>Refer a friend</strong> – 500 points when they make their first purchase</li>\n<li><strong>Share on social media</strong> – 100 points when you tag us with #FLSElite</li>\n<li><strong>Write a product review</strong> – 250 points per verified review</li>\n</ul>\n<h3>UPCOMING ELITE EXCLUSIVES:</h3>\n<p>Mark your calendar for these upcoming Elite member opportunities:</p>\n<ul>\n<li><strong>June 15:</strong> Early access to our Summer Limited Edition Collection</li>\n<li><strong>July 10:</strong> Elite-only virtual workshop on lighter maintenance and care</li>\n<li><strong>August 5:</strong> Double points day on all purchases</li>\n</ul>\n<p>Your loyalty means everything to us, and we're committed to providing you with exceptional products and experiences that match your discerning standards.</p>\n<p>[EXPLORE ELITE BENEFITS]</p>\n<p>Thank you for being part of the FLS family.</p>\n<p>With appreciation,</p>\n<p><strong>Ibrahim Najajra</strong><br>\n<em>Founder, FLS USA</em></p>\n<hr>\n<p><em>© 2025 FLS USA, a CounterCulture company</em><br>\n<em>979-488-9207 | sales@gocounterculture.com</em></p>\n<p>[Unsubscribe] | [Privacy Policy] | [Terms of Service]</p>"
+        },
+        "_id": "template_7_loyalty_program.md",
+        "_raw": {
+          "sourceFilePath": "template_7_loyalty_program.md",
+          "sourceFileName": "template_7_loyalty_program.md",
+          "sourceFileDir": ".",
+          "contentType": "markdown",
+          "flattenedPath": "template_7_loyalty_program"
+        },
+        "type": "EmailContent",
+        "slug": "template_7_loyalty_program"
+      },
+      "documentHash": "1749735896555",
+      "hasWarnings": false,
+      "documentTypeName": "EmailContent"
+    },
+    "template_8_referral_program.md": {
+      "document": {
+        "templateType": "general",
+        "section": "referral",
+        "priority": 1,
+        "title": "Referral Program Email Template",
+        "body": {
+          "raw": "\n# Referral Program Email Template\n\n## Subject Line: \nShare FLS With Friends, Earn Exclusive Rewards\n\n## Preview Text:\nRefer a friend to FLS and both of you will receive special benefits\n\n---\n\n![FLS Referral Program]\n\n# GREAT PRODUCTS ARE MEANT TO BE SHARED\n\n## INTRODUCE YOUR FRIENDS TO FLS\n\nYou'll both receive rewards when they make their first purchase.\n\n---\n\n**Dear [Customer Name],**\n\nYour satisfaction with FLS means the world to us, and we believe the best compliments come through recommendations to friends and family. That's why we've created a referral program that rewards both you and the people you introduce to our premium lighters.\n\n### HOW IT WORKS:\n\n**1. Share Your Unique Link**\nUse your personal referral link below to share FLS with friends who appreciate quality and performance.\n\n**Your Referral Link:** [https://flsusa.shop/refer/[CustomerID]]\n\n[SHARE VIA EMAIL] [SHARE VIA TEXT] [SHARE VIA SOCIAL]\n\n**2. Friends Receive a Special Offer**\nWhen your friends click your link, they'll receive **15% off** their first FLS purchase – introducing them to the reliability and craftsmanship that you already enjoy.\n\n**3. You Earn Rewards**\nFor each friend who makes a purchase using your link, you'll receive:\n\n- **$20 Credit** toward your next FLS purchase\n- **500 Elite Points** added to your loyalty account\n- **Early Access** to our next limited edition release\n\n### WHY YOUR FRIENDS WILL THANK YOU:\n\n- **Unmatched Reliability** with our wind-resistant technology\n- **Ergonomic Comfort** from our signature curved base design\n- **Premium Construction** that stands the test of time\n- **Sleek Aesthetics** that make a statement\n\n### TOP REFERRERS THIS MONTH:\n\n1. Michael T. – 8 referrals\n2. Jessica L. – 6 referrals\n3. David R. – 5 referrals\n\nWill you join our leaderboard? The top three referrers each month receive an exclusive FLS limited edition lighter not available for purchase.\n\n[START REFERRING NOW]\n\nThank you for being a valued part of the FLS community and for sharing our commitment to quality with others who appreciate the difference.\n\nSpark connections,\n\n**The FLS Team**\n\n---\n\n*© 2025 FLS USA, a CounterCulture company*  \n*979-488-9207 | sales@gocounterculture.com*\n\n[Unsubscribe] | [Privacy Policy] | [Terms of Service]\n",
+          "html": "<h1>Referral Program Email Template</h1>\n<h2>Subject Line:</h2>\n<p>Share FLS With Friends, Earn Exclusive Rewards</p>\n<h2>Preview Text:</h2>\n<p>Refer a friend to FLS and both of you will receive special benefits</p>\n<hr>\n<p>![FLS Referral Program]</p>\n<h1>GREAT PRODUCTS ARE MEANT TO BE SHARED</h1>\n<h2>INTRODUCE YOUR FRIENDS TO FLS</h2>\n<p>You'll both receive rewards when they make their first purchase.</p>\n<hr>\n<p><strong>Dear [Customer Name],</strong></p>\n<p>Your satisfaction with FLS means the world to us, and we believe the best compliments come through recommendations to friends and family. That's why we've created a referral program that rewards both you and the people you introduce to our premium lighters.</p>\n<h3>HOW IT WORKS:</h3>\n<p><strong>1. Share Your Unique Link</strong>\nUse your personal referral link below to share FLS with friends who appreciate quality and performance.</p>\n<p><strong>Your Referral Link:</strong> [https://flsusa.shop/refer/[CustomerID]]</p>\n<p>[SHARE VIA EMAIL] [SHARE VIA TEXT] [SHARE VIA SOCIAL]</p>\n<p><strong>2. Friends Receive a Special Offer</strong>\nWhen your friends click your link, they'll receive <strong>15% off</strong> their first FLS purchase – introducing them to the reliability and craftsmanship that you already enjoy.</p>\n<p><strong>3. You Earn Rewards</strong>\nFor each friend who makes a purchase using your link, you'll receive:</p>\n<ul>\n<li><strong>$20 Credit</strong> toward your next FLS purchase</li>\n<li><strong>500 Elite Points</strong> added to your loyalty account</li>\n<li><strong>Early Access</strong> to our next limited edition release</li>\n</ul>\n<h3>WHY YOUR FRIENDS WILL THANK YOU:</h3>\n<ul>\n<li><strong>Unmatched Reliability</strong> with our wind-resistant technology</li>\n<li><strong>Ergonomic Comfort</strong> from our signature curved base design</li>\n<li><strong>Premium Construction</strong> that stands the test of time</li>\n<li><strong>Sleek Aesthetics</strong> that make a statement</li>\n</ul>\n<h3>TOP REFERRERS THIS MONTH:</h3>\n<ol>\n<li>Michael T. – 8 referrals</li>\n<li>Jessica L. – 6 referrals</li>\n<li>David R. – 5 referrals</li>\n</ol>\n<p>Will you join our leaderboard? The top three referrers each month receive an exclusive FLS limited edition lighter not available for purchase.</p>\n<p>[START REFERRING NOW]</p>\n<p>Thank you for being a valued part of the FLS community and for sharing our commitment to quality with others who appreciate the difference.</p>\n<p>Spark connections,</p>\n<p><strong>The FLS Team</strong></p>\n<hr>\n<p><em>© 2025 FLS USA, a CounterCulture company</em><br>\n<em>979-488-9207 | sales@gocounterculture.com</em></p>\n<p>[Unsubscribe] | [Privacy Policy] | [Terms of Service]</p>"
+        },
+        "_id": "template_8_referral_program.md",
+        "_raw": {
+          "sourceFilePath": "template_8_referral_program.md",
+          "sourceFileName": "template_8_referral_program.md",
+          "sourceFileDir": ".",
+          "contentType": "markdown",
+          "flattenedPath": "template_8_referral_program"
+        },
+        "type": "EmailContent",
+        "slug": "template_8_referral_program"
+      },
+      "documentHash": "1749735896934",
+      "hasWarnings": false,
+      "documentTypeName": "EmailContent"
+    },
+    "template_9_reengagement.md": {
+      "document": {
+        "templateType": "newsletter",
+        "section": "reengagement",
+        "priority": 1,
+        "title": "Re-engagement Email Template",
+        "body": {
+          "raw": "\n# Re-engagement Email Template\n\n## Subject Line: \nWe Miss You, [Customer Name] – Come Back for Something Special\n\n## Preview Text:\nIt's been a while since your last visit – here's an exclusive offer to welcome you back\n\n---\n\n![FLS Re-engagement]\n\n# WE'VE KEPT YOUR FLAME BURNING\n\n## IT'S BEEN A WHILE SINCE WE'VE SEEN YOU\n\nWe've been busy innovating – and we have something special just for you.\n\n---\n\n**Dear [Customer Name],**\n\nWe've noticed it's been some time since your last interaction with FLS, and we wanted to reach out to let you know you've been missed. A lot has happened since we last connected – new products, innovations, and improvements – all designed with the same commitment to quality and performance that initially brought you to FLS.\n\n### WHAT YOU'VE BEEN MISSING:\n\n- **New Signature Series** with enhanced wind-resistant technology\n- **Expanded Color Options** including limited edition finishes\n- **Improved Ergonomics** based on customer feedback\n- **Enhanced Customer Experience** with faster shipping and premium packaging\n\n### EXCLUSIVELY FOR RETURNING CUSTOMERS:\n\nTo welcome you back, we're offering a special **25% discount** on any product in our collection – including our newest releases.\n\n**Your Exclusive Code:** WELCOME-BACK-[CustomerID]\n**Valid Until:** [Expiration Date]\n\n[REDISCOVER FLS]\n\n### WHY CUSTOMERS STAY WITH FLS:\n\n\"*After trying several premium lighters, I always come back to FLS. Nothing matches their reliability in real-world conditions.*\" – James M., 3-year customer\n\n\"*The attention to detail and quality craftsmanship make FLS worth every penny. My collection keeps growing!*\" – Alexis T., Collector\n\n### NEED A REFRESH?\n\nIf it's been a while since you've used your FLS lighter, here are some quick tips to ensure optimal performance:\n\n- **Check Fuel Levels** – Even the best lighters need refueling\n- **Clean the Ignition** – A quick maintenance check can restore like-new performance\n- **Update Your Profile** – Ensure you're receiving the latest offers and updates\n\n[MAINTENANCE GUIDE]\n\nWe value your past support and would love to welcome you back to the FLS community. If there's anything we can assist with or if you have questions about our latest offerings, our team is here to help.\n\n[EXPLORE WHAT'S NEW]\n\nWe hope to see you again soon.\n\nKeeping your flame alive,\n\n**The FLS Team**\n\n---\n\n*© 2025 FLS USA, a CounterCulture company*  \n*979-488-9207 | sales@gocounterculture.com*\n\n[Unsubscribe] | [Privacy Policy] | [Terms of Service]\n",
+          "html": "<h1>Re-engagement Email Template</h1>\n<h2>Subject Line:</h2>\n<p>We Miss You, [Customer Name] – Come Back for Something Special</p>\n<h2>Preview Text:</h2>\n<p>It's been a while since your last visit – here's an exclusive offer to welcome you back</p>\n<hr>\n<p>![FLS Re-engagement]</p>\n<h1>WE'VE KEPT YOUR FLAME BURNING</h1>\n<h2>IT'S BEEN A WHILE SINCE WE'VE SEEN YOU</h2>\n<p>We've been busy innovating – and we have something special just for you.</p>\n<hr>\n<p><strong>Dear [Customer Name],</strong></p>\n<p>We've noticed it's been some time since your last interaction with FLS, and we wanted to reach out to let you know you've been missed. A lot has happened since we last connected – new products, innovations, and improvements – all designed with the same commitment to quality and performance that initially brought you to FLS.</p>\n<h3>WHAT YOU'VE BEEN MISSING:</h3>\n<ul>\n<li><strong>New Signature Series</strong> with enhanced wind-resistant technology</li>\n<li><strong>Expanded Color Options</strong> including limited edition finishes</li>\n<li><strong>Improved Ergonomics</strong> based on customer feedback</li>\n<li><strong>Enhanced Customer Experience</strong> with faster shipping and premium packaging</li>\n</ul>\n<h3>EXCLUSIVELY FOR RETURNING CUSTOMERS:</h3>\n<p>To welcome you back, we're offering a special <strong>25% discount</strong> on any product in our collection – including our newest releases.</p>\n<p><strong>Your Exclusive Code:</strong> WELCOME-BACK-[CustomerID]\n<strong>Valid Until:</strong> [Expiration Date]</p>\n<p>[REDISCOVER FLS]</p>\n<h3>WHY CUSTOMERS STAY WITH FLS:</h3>\n<p>\"<em>After trying several premium lighters, I always come back to FLS. Nothing matches their reliability in real-world conditions.</em>\" – James M., 3-year customer</p>\n<p>\"<em>The attention to detail and quality craftsmanship make FLS worth every penny. My collection keeps growing!</em>\" – Alexis T., Collector</p>\n<h3>NEED A REFRESH?</h3>\n<p>If it's been a while since you've used your FLS lighter, here are some quick tips to ensure optimal performance:</p>\n<ul>\n<li><strong>Check Fuel Levels</strong> – Even the best lighters need refueling</li>\n<li><strong>Clean the Ignition</strong> – A quick maintenance check can restore like-new performance</li>\n<li><strong>Update Your Profile</strong> – Ensure you're receiving the latest offers and updates</li>\n</ul>\n<p>[MAINTENANCE GUIDE]</p>\n<p>We value your past support and would love to welcome you back to the FLS community. If there's anything we can assist with or if you have questions about our latest offerings, our team is here to help.</p>\n<p>[EXPLORE WHAT'S NEW]</p>\n<p>We hope to see you again soon.</p>\n<p>Keeping your flame alive,</p>\n<p><strong>The FLS Team</strong></p>\n<hr>\n<p><em>© 2025 FLS USA, a CounterCulture company</em><br>\n<em>979-488-9207 | sales@gocounterculture.com</em></p>\n<p>[Unsubscribe] | [Privacy Policy] | [Terms of Service]</p>"
+        },
+        "_id": "template_9_reengagement.md",
+        "_raw": {
+          "sourceFilePath": "template_9_reengagement.md",
+          "sourceFileName": "template_9_reengagement.md",
+          "sourceFileDir": ".",
+          "contentType": "markdown",
+          "flattenedPath": "template_9_reengagement"
+        },
+        "type": "EmailContent",
+        "slug": "template_9_reengagement"
+      },
+      "documentHash": "1749735897366",
+      "hasWarnings": false,
+      "documentTypeName": "EmailContent"
+    },
+    "product/showcase.md": {
+      "document": {
+        "templateType": "product",
+        "section": "showcase",
+        "priority": 1,
+        "title": "Product Showcase",
+        "body": {
+          "raw": "\n## Featured FLS Lighter Collection\n\n**Crimson Blaze Series**\nBold red and black design with premium wind-resistant flame technology. Perfect for outdoor enthusiasts and collectors.\n\n**Azure Fusion Collection**\nCool blue and purple gradient designs that catch the eye and drive impulse purchases. Popular with younger demographics.\n\n**Golden Spark Premium**\nElegant gold-toned finish with sophisticated styling. Appeals to upscale customers and gift buyers.\n\n**Classic Series**\nTime-tested designs in traditional colors. Reliable sellers with broad appeal across all customer segments.\n\nEach design is engineered with our signature wind-proof technology and backed by our quality guarantee.",
+          "html": "<h2>Featured FLS Lighter Collection</h2>\n<p><strong>Crimson Blaze Series</strong>\nBold red and black design with premium wind-resistant flame technology. Perfect for outdoor enthusiasts and collectors.</p>\n<p><strong>Azure Fusion Collection</strong>\nCool blue and purple gradient designs that catch the eye and drive impulse purchases. Popular with younger demographics.</p>\n<p><strong>Golden Spark Premium</strong>\nElegant gold-toned finish with sophisticated styling. Appeals to upscale customers and gift buyers.</p>\n<p><strong>Classic Series</strong>\nTime-tested designs in traditional colors. Reliable sellers with broad appeal across all customer segments.</p>\n<p>Each design is engineered with our signature wind-proof technology and backed by our quality guarantee.</p>"
+        },
+        "_id": "product/showcase.md",
+        "_raw": {
+          "sourceFilePath": "product/showcase.md",
+          "sourceFileName": "showcase.md",
+          "sourceFileDir": "product",
+          "contentType": "markdown",
+          "flattenedPath": "product/showcase"
+        },
+        "type": "EmailContent",
+        "slug": "product/showcase"
+      },
+      "documentHash": "1749734354286",
+      "hasWarnings": false,
+      "documentTypeName": "EmailContent"
+    },
+    "shared/company-info.md": {
+      "document": {
+        "templateType": "general",
+        "section": "company-info",
+        "priority": 1,
+        "title": "Company Information",
+        "body": {
+          "raw": "\nFLS USA is about more than just a flame - we're pioneers in crafting high-performance lighters that combine innovative technology with eye-catching designs. Our commitment to quality and reliability has made us a trusted name among retailers and consumers alike.\n\nFounded by passionate entrepreneurs, FLS stands for durability, style, and performance. Each lighter in our collection is engineered to deliver consistent ignition in any weather condition, making them the perfect choice for outdoor enthusiasts, collectors, and everyday users.",
+          "html": "<p>FLS USA is about more than just a flame - we're pioneers in crafting high-performance lighters that combine innovative technology with eye-catching designs. Our commitment to quality and reliability has made us a trusted name among retailers and consumers alike.</p>\n<p>Founded by passionate entrepreneurs, FLS stands for durability, style, and performance. Each lighter in our collection is engineered to deliver consistent ignition in any weather condition, making them the perfect choice for outdoor enthusiasts, collectors, and everyday users.</p>"
+        },
+        "_id": "shared/company-info.md",
+        "_raw": {
+          "sourceFilePath": "shared/company-info.md",
+          "sourceFileName": "company-info.md",
+          "sourceFileDir": "shared",
+          "contentType": "markdown",
+          "flattenedPath": "shared/company-info"
+        },
+        "type": "EmailContent",
+        "slug": "shared/company-info"
+      },
+      "documentHash": "1749733510913",
+      "hasWarnings": false,
+      "documentTypeName": "EmailContent"
+    },
+    "shared/features.md": {
+      "document": {
+        "templateType": "product",
+        "section": "features",
+        "priority": 1,
+        "title": "Product Features",
+        "body": {
+          "raw": "\n## Why Choose FLS Lighters?\n\n**WINDPROOF TECHNOLOGY**\nReliable ignition in all weather conditions, from gentle breezes to strong winds.\n\n**DURABLE CONSTRUCTION**\nBuilt to last with premium materials and rigorous quality testing - up to 1,200 ignitions per lighter.\n\n**VIBRANT DESIGNS**\nEye-catching colors and patterns that appeal to collectors and impulse buyers alike.\n\n**ERGONOMIC DESIGN**\nCurved base design for comfortable grip and easy handling in any situation.\n\n**LONG-LASTING PERFORMANCE**\nConsistent flame output and reliable operation for years of dependable use.",
+          "html": "<h2>Why Choose FLS Lighters?</h2>\n<p><strong>WINDPROOF TECHNOLOGY</strong>\nReliable ignition in all weather conditions, from gentle breezes to strong winds.</p>\n<p><strong>DURABLE CONSTRUCTION</strong>\nBuilt to last with premium materials and rigorous quality testing - up to 1,200 ignitions per lighter.</p>\n<p><strong>VIBRANT DESIGNS</strong>\nEye-catching colors and patterns that appeal to collectors and impulse buyers alike.</p>\n<p><strong>ERGONOMIC DESIGN</strong>\nCurved base design for comfortable grip and easy handling in any situation.</p>\n<p><strong>LONG-LASTING PERFORMANCE</strong>\nConsistent flame output and reliable operation for years of dependable use.</p>"
+        },
+        "_id": "shared/features.md",
+        "_raw": {
+          "sourceFilePath": "shared/features.md",
+          "sourceFileName": "features.md",
+          "sourceFileDir": "shared",
+          "contentType": "markdown",
+          "flattenedPath": "shared/features"
+        },
+        "type": "EmailContent",
+        "slug": "shared/features"
+      },
+      "documentHash": "1749733581699",
+      "hasWarnings": false,
+      "documentTypeName": "EmailContent"
+    },
+    "shared/footer.md": {
+      "document": {
+        "templateType": "general",
+        "section": "footer",
+        "priority": 1,
+        "title": "Footer Information",
+        "body": {
+          "raw": "\n**FLS USA**\n123 Spark Street\nHouston, TX 77001\n\n**Contact Information:**\nPhone: 979-488-9207\nEmail: sales@flsusa.shop\nWebsite: https://flsusa.shop\n\n© {year} FLS USA. All rights reserved.\n\nThis email was sent to you because you are a valued partner in our network. If you no longer wish to receive these emails, you can [unsubscribe here]({unsubscribeUrl}).\n\nView our [Privacy Policy]({privacyUrl}) | [Terms of Service]({termsUrl})",
+          "html": "<p><strong>FLS USA</strong>\n123 Spark Street\nHouston, TX 77001</p>\n<p><strong>Contact Information:</strong>\nPhone: 979-488-9207\nEmail: sales@flsusa.shop\nWebsite: https://flsusa.shop</p>\n<p>© {year} FLS USA. All rights reserved.</p>\n<p>This email was sent to you because you are a valued partner in our network. If you no longer wish to receive these emails, you can <a href=\"%7BunsubscribeUrl%7D\">unsubscribe here</a>.</p>\n<p>View our <a href=\"%7BprivacyUrl%7D\">Privacy Policy</a> | <a href=\"%7BtermsUrl%7D\">Terms of Service</a></p>"
+        },
+        "_id": "shared/footer.md",
+        "_raw": {
+          "sourceFilePath": "shared/footer.md",
+          "sourceFileName": "footer.md",
+          "sourceFileDir": "shared",
+          "contentType": "markdown",
+          "flattenedPath": "shared/footer"
+        },
+        "type": "EmailContent",
+        "slug": "shared/footer"
+      },
+      "documentHash": "1749733611367",
+      "hasWarnings": false,
+      "documentTypeName": "EmailContent"
+    },
+    "shared/value-proposition.md": {
+      "document": {
+        "templateType": "general",
+        "section": "value-proposition",
+        "priority": 1,
+        "title": "Value Proposition",
+        "body": {
+          "raw": "\n**Spark the Excitement** with FLS USA's premium lighter collection!\n\nOur lighters aren't just functional tools - they're conversation starters, collectible items, and reliable companions for life's important moments. Whether your customers need dependable ignition for outdoor adventures or want to add style to their everyday carry, FLS lighters deliver unmatched performance and eye-catching design.\n\n**What makes FLS different:**\n- Wind-resistant technology that works when others fail\n- Premium materials and construction for lasting durability  \n- Vibrant, collectible designs that drive impulse purchases\n- Consistent quality that builds customer loyalty\n- Competitive wholesale pricing that maximizes your profit margins",
+          "html": "<p><strong>Spark the Excitement</strong> with FLS USA's premium lighter collection!</p>\n<p>Our lighters aren't just functional tools - they're conversation starters, collectible items, and reliable companions for life's important moments. Whether your customers need dependable ignition for outdoor adventures or want to add style to their everyday carry, FLS lighters deliver unmatched performance and eye-catching design.</p>\n<p><strong>What makes FLS different:</strong></p>\n<ul>\n<li>Wind-resistant technology that works when others fail</li>\n<li>Premium materials and construction for lasting durability</li>\n<li>Vibrant, collectible designs that drive impulse purchases</li>\n<li>Consistent quality that builds customer loyalty</li>\n<li>Competitive wholesale pricing that maximizes your profit margins</li>\n</ul>"
+        },
+        "_id": "shared/value-proposition.md",
+        "_raw": {
+          "sourceFilePath": "shared/value-proposition.md",
+          "sourceFileName": "value-proposition.md",
+          "sourceFileDir": "shared",
+          "contentType": "markdown",
+          "flattenedPath": "shared/value-proposition"
+        },
+        "type": "EmailContent",
+        "slug": "shared/value-proposition"
+      },
+      "documentHash": "1749733701315",
+      "hasWarnings": false,
+      "documentTypeName": "EmailContent"
+    },
+    "signature/launch.md": {
+      "document": {
+        "templateType": "signature",
+        "section": "launch",
+        "priority": 1,
+        "title": "Signature Series Launch",
+        "body": {
+          "raw": "\n## Introducing the FLS Signature Series\n\n**Experience Unrivaled Craftsmanship**\n\nThe FLS Signature Series represents the pinnacle of lighter engineering and design. Each piece in this exclusive collection combines cutting-edge technology with premium materials to create lighters that are as beautiful as they are functional.\n\n**What Makes the Signature Series Special:**\n\n- **Premium Materials**: Crafted with high-grade metals and finishes\n- **Advanced Ignition**: Next-generation windproof technology\n- **Limited Edition**: Exclusive designs with numbered authentication\n- **Collector Value**: Investment-quality pieces that appreciate over time\n- **Gift-Ready**: Elegant packaging suitable for any occasion\n\n**Perfect For:**\n- Discerning collectors seeking premium pieces\n- Gift buyers looking for something truly special  \n- Retailers targeting upscale customers\n- Anyone who appreciates superior craftsmanship",
+          "html": "<h2>Introducing the FLS Signature Series</h2>\n<p><strong>Experience Unrivaled Craftsmanship</strong></p>\n<p>The FLS Signature Series represents the pinnacle of lighter engineering and design. Each piece in this exclusive collection combines cutting-edge technology with premium materials to create lighters that are as beautiful as they are functional.</p>\n<p><strong>What Makes the Signature Series Special:</strong></p>\n<ul>\n<li><strong>Premium Materials</strong>: Crafted with high-grade metals and finishes</li>\n<li><strong>Advanced Ignition</strong>: Next-generation windproof technology</li>\n<li><strong>Limited Edition</strong>: Exclusive designs with numbered authentication</li>\n<li><strong>Collector Value</strong>: Investment-quality pieces that appreciate over time</li>\n<li><strong>Gift-Ready</strong>: Elegant packaging suitable for any occasion</li>\n</ul>\n<p><strong>Perfect For:</strong></p>\n<ul>\n<li>Discerning collectors seeking premium pieces</li>\n<li>Gift buyers looking for something truly special</li>\n<li>Retailers targeting upscale customers</li>\n<li>Anyone who appreciates superior craftsmanship</li>\n</ul>"
+        },
+        "_id": "signature/launch.md",
+        "_raw": {
+          "sourceFilePath": "signature/launch.md",
+          "sourceFileName": "launch.md",
+          "sourceFileDir": "signature",
+          "contentType": "markdown",
+          "flattenedPath": "signature/launch"
+        },
+        "type": "EmailContent",
+        "slug": "signature/launch"
+      },
+      "documentHash": "1749734391584",
+      "hasWarnings": false,
+      "documentTypeName": "EmailContent"
+    },
+    "welcome/intro.md": {
+      "document": {
+        "templateType": "welcome",
+        "section": "intro",
+        "priority": 1,
+        "title": "Welcome Introduction",
+        "body": {
+          "raw": "\nWelcome to the FLS USA family! We're thrilled to have you join our network of successful retailers and look forward to helping you grow your business with our premium lighter collection.\n\nAs a new partner, you now have access to:\n- Exclusive wholesale pricing and volume discounts\n- Priority access to new product launches\n- Dedicated account management and support\n- Marketing materials and display solutions\n- Flexible ordering and fast shipping options",
+          "html": "<p>Welcome to the FLS USA family! We're thrilled to have you join our network of successful retailers and look forward to helping you grow your business with our premium lighter collection.</p>\n<p>As a new partner, you now have access to:</p>\n<ul>\n<li>Exclusive wholesale pricing and volume discounts</li>\n<li>Priority access to new product launches</li>\n<li>Dedicated account management and support</li>\n<li>Marketing materials and display solutions</li>\n<li>Flexible ordering and fast shipping options</li>\n</ul>"
+        },
+        "_id": "welcome/intro.md",
+        "_raw": {
+          "sourceFilePath": "welcome/intro.md",
+          "sourceFileName": "intro.md",
+          "sourceFileDir": "welcome",
+          "contentType": "markdown",
+          "flattenedPath": "welcome/intro"
+        },
+        "type": "EmailContent",
+        "slug": "welcome/intro"
+      },
+      "documentHash": "1749733799327",
+      "hasWarnings": false,
+      "documentTypeName": "EmailContent"
+    }
+  }
+}
