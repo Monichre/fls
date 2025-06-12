@@ -326,9 +326,6 @@ export const HomePage = ({data}: HomePageProps) => {
             isMobile={isMobile}
           />
         </Suspense>
-
-        {/* Floating Chat Component */}
-        <FloatingChat buttonLabel='Chat with FLS' mobile={isMobile} />
       </div>
     </>
   )

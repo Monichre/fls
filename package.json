@@ -5,12 +5,13 @@
   "scripts": {
     "dev": "next dev",
     "dev:email": "email dev",
-    "build": "next build",
+    "build": "next build && npm run build:email",
     "start": "next start",
     "lint": "next lint",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "new": "plop"
+    "new": "plop",
+    "build:email": "email build"
   },
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^16.0.1",
