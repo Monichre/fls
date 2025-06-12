@@ -1,0 +1,20 @@
+{
+  "templateType": "general",
+  "section": "value-proposition",
+  "priority": 1,
+  "title": "Value Proposition",
+  "body": {
+    "raw": "\n**Spark the Excitement** with FLS USA's premium lighter collection!\n\nOur lighters aren't just functional tools - they're conversation starters, collectible items, and reliable companions for life's important moments. Whether your customers need dependable ignition for outdoor adventures or want to add style to their everyday carry, FLS lighters deliver unmatched performance and eye-catching design.\n\n**What makes FLS different:**\n- Wind-resistant technology that works when others fail\n- Premium materials and construction for lasting durability  \n- Vibrant, collectible designs that drive impulse purchases\n- Consistent quality that builds customer loyalty\n- Competitive wholesale pricing that maximizes your profit margins",
+    "html": "<p><strong>Spark the Excitement</strong> with FLS USA's premium lighter collection!</p>\n<p>Our lighters aren't just functional tools - they're conversation starters, collectible items, and reliable companions for life's important moments. Whether your customers need dependable ignition for outdoor adventures or want to add style to their everyday carry, FLS lighters deliver unmatched performance and eye-catching design.</p>\n<p><strong>What makes FLS different:</strong></p>\n<ul>\n<li>Wind-resistant technology that works when others fail</li>\n<li>Premium materials and construction for lasting durability</li>\n<li>Vibrant, collectible designs that drive impulse purchases</li>\n<li>Consistent quality that builds customer loyalty</li>\n<li>Competitive wholesale pricing that maximizes your profit margins</li>\n</ul>"
+  },
+  "_id": "emails/content/shared/value-proposition.md",
+  "_raw": {
+    "sourceFilePath": "emails/content/shared/value-proposition.md",
+    "sourceFileName": "value-proposition.md",
+    "sourceFileDir": "emails/content/shared",
+    "contentType": "markdown",
+    "flattenedPath": "emails/content/shared/value-proposition"
+  },
+  "type": "EmailContent",
+  "slug": "shared/value-proposition"
+}

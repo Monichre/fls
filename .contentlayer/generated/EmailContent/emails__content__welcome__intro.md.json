@@ -1,0 +1,20 @@
+{
+  "templateType": "welcome",
+  "section": "intro",
+  "priority": 1,
+  "title": "Welcome Introduction",
+  "body": {
+    "raw": "\nWelcome to the FLS USA family! We're thrilled to have you join our network of successful retailers and look forward to helping you grow your business with our premium lighter collection.\n\nAs a new partner, you now have access to:\n- Exclusive wholesale pricing and volume discounts\n- Priority access to new product launches\n- Dedicated account management and support\n- Marketing materials and display solutions\n- Flexible ordering and fast shipping options",
+    "html": "<p>Welcome to the FLS USA family! We're thrilled to have you join our network of successful retailers and look forward to helping you grow your business with our premium lighter collection.</p>\n<p>As a new partner, you now have access to:</p>\n<ul>\n<li>Exclusive wholesale pricing and volume discounts</li>\n<li>Priority access to new product launches</li>\n<li>Dedicated account management and support</li>\n<li>Marketing materials and display solutions</li>\n<li>Flexible ordering and fast shipping options</li>\n</ul>"
+  },
+  "_id": "emails/content/welcome/intro.md",
+  "_raw": {
+    "sourceFilePath": "emails/content/welcome/intro.md",
+    "sourceFileName": "intro.md",
+    "sourceFileDir": "emails/content/welcome",
+    "contentType": "markdown",
+    "flattenedPath": "emails/content/welcome/intro"
+  },
+  "type": "EmailContent",
+  "slug": "welcome/intro"
+}

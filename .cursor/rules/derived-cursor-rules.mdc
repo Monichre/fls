@@ -14,7 +14,7 @@ This file defines all project rules, coding standards, workflow guidelines, refe
 * Mobile layout and UI should be optimized for the `@features-section.tsx` component.  Specific improvements include: stacked vertical layout for features on mobile; logical feature order with clean borders and spacing;  hidden absolute positioning layout on mobile (desktop only); reduced mobile text sizes; responsive margins/padding; darker backgrounds (60% opacity); backdrop blur for legibility; disabled mobile rotation and scaling effects; optimized image quality (90 instead of 100) with `sizes='100vw'`; full-width mobile CTA button;  added left border accent to mobile feature cards. (Added 2025-05-15 based on user request)
 * Desktop feature tooltips should have purposeful placement, clearly referencing aspects of the lighter in the background image. (Added 2025-05-15 based on user request)
 * The background image should crossfade between the white and black lighter images. (Added 2025-05-15 based on user request)
-* A sticky sub-navigation should be implemented below the main navigation, aligned right on desktop, containing email and phone contact buttons.  Mobile version should display these buttons below the navigation items. (Added 2025-05-15)  Buttons should utilize `lucide-react` icons for email and phone. (Added 2025-05-15)  Desktop buttons should have a semi-transparent black background with backdrop blur and smooth entrance animations. (Added 2025-05-15)  The desktop email button should utilize a dropdown menu to allow the user to select their preferred email client (Gmail, Outlook, Yahoo, or default). (Added 2025-05-15 based on user request) The mobile email button should also utilize a dropdown menu for email client selection. (Added 2025-05-15 based on user request)
+* A sticky sub-navigation should be implemented below the main navigation, aligned right on desktop, containing email and phone contact buttons.  Mobile version should display these buttons below the main navigation items. (Added 2025-05-15)  Buttons should utilize `lucide-react` icons for email and phone. (Added 2025-05-15)  Desktop buttons should have a semi-transparent black background with backdrop blur and smooth entrance animations. (Added 2025-05-15)  The desktop email button should utilize a dropdown menu to allow the user to select their preferred email client (Gmail, Outlook, Yahoo, or default). (Added 2025-05-15 based on user request) The mobile email button should also utilize a dropdown menu for email client selection. (Added 2025-05-15 based on user request)
 * The contact sub-navigation should include a dropdown menu for email client selection on both desktop and mobile versions.  (Added 2025-05-15 based on user request)  The dropdown should offer options for Gmail, Outlook, Yahoo, and the default email client. (Added 2025-05-15 based on user request)
 * Phone number clicks should utilize the `tel:` URL scheme for direct dialing.  (Added 2025-05-15 based on user request)  Additionally, a dropdown menu should be provided to allow users to select their preferred calling application (Phone, WhatsApp, Skype, FaceTime, Telegram, SMS). (Added 2025-05-15 based on user request)
 * Implement an AI chatbot modal UI, modeled after employee Ibrahim, using the Vercel AI SDK UI.  The modal should be accessible from most pages, support desktop and mobile layouts, persist messages, have entrance/exit animations, and be dismissible.  The chatbot should use the `useChat` hook, be styled with shadcn/ui and Tailwind, and have a backend API route (e.g., `/api/chat`). (Added 2025-05-15 based on user request)  The chatbot should display Ibrahim’s avatar and name in the header. The chat UI should use the Vercel AI SDK’s `useChat` hook for real-time streaming. The modal should be styled with shadcn/ui and Tailwind, matching the site’s design system. The chatbot should have a friendly, helpful, and knowledgeable tone, reflecting Ibrahim’s persona. The modal should not interfere with other UI elements (z-index, focus management). The modal should be accessible (ARIA roles, keyboard navigation). The chatbot should handle errors gracefully (e.g., API errors, network issues). The modal should be responsive and mobile-optimized.  The chatbot should use a backend API route (e.g., `/api/chat`) for model interaction. The modal should not require authentication for basic use. The chatbot should not expose sensitive company information. The modal should be performant and not bloat the initial page load (dynamic import). The chatbot should have a recognizable icon/button for opening (e.g., chat bubble with Ibrahim’s avatar).
@@ -23,6 +23,79 @@ This file defines all project rules, coding standards, workflow guidelines, refe
 * Implement a floating chat popup in the bottom right corner of the home page, connecting to the Langbase agent. (Added 2025-05-16 based on user request)
 * Use `21st_magic_component_inspiration` and `21st_magic_component_builder` to build an extremely eye-catching animation for the "Lock In Your Pricing" button to grab attention. (Added 2025-05-29 based on user request)
 * The "Lock In Your Pricing" button should now be implemented using the `MagicLockPricingButton` component. (Added 2025-05-29 based on user request)
+* Email templates are located in `src/components/emails`. (Added 2025-06-04)
+* Implement an email template preview gallery located in `src/components/emails/EmailTemplateGallery.tsx`. (Added 2025-06-04 based on user request)
+* The email template preview gallery should be accessible at the `/email-gallery` route. (Added 2025-06-04 based on user request)
+* The email template gallery should include the following templates: F3 Product Showcase, FLS Sales Email, Monthly Newsletter, Order Confirmation, Original FLS Template, Signature Series Launch, Welcome Email (Enhanced), Welcome Email (Classic), Simple Newsletter, and Wholesaler Welcome. (Added 2025-06-04 based on user request)
+* The email template gallery should use `Badge`, `Tabs`, and `ScrollArea` components from `shadcn/ui`. (Added 2025-06-04 based on user request)
+* Documentation for the Email Template Gallery is located in `EmailTemplateGallery.md`. (Added 2025-06-04)
+* The correct import paths for `EmailHeader` and `EmailFooter` should be `@/components/EmailHeader` and `@/components/EmailFooter`. (Added 2025-06-04)
+* Email template previews should use a fixed height of 240px, overflow hidden, and a scaling factor of 0.3 with `origin-top-left` to maintain readability. (Added 2025-06-04 based on user request)
+* The EmailTemplateCard component should utilize the `EmailPreviewModal` component to display full previews and code views. (Added 2025-06-04 based on user request)
+* The `EmailPreviewModal` component should be used for displaying full email template previews and code, with a toggle for switching between preview and code views. (Added 2025-06-04 based on user request)
+* When integrating React Email and Resend, follow the manual setup guide at https://react.email/docs/getting-started/manual-setup. (Added 2025-06-10)
+* When setting up React Email for local development, refer to the official documentation for the most up-to-date instructions. (Added 2025-06-12 based on user request)
+* **All image `src` values in email templates located in `src/components/emails` and `src/components/emails/templates` must use CDN or remote image sources.** (Added 2025-06-12 based on user request)
+* **All image `src` values in email templates located in `src/components/emails` and `src/components/emails/templates` must use Vercel Blob store: `https://drfcdoakhkresrzk.public.blob.vercel-storage.com`.** (Updated 2025-06-12 based on user request)
+* Image CDN Mapping documentation: `emails/image-cdn-mapping.md` (Added 2025-06-12)
+* Image CDN Migration documentation: `ImageCdnMigration.md` (Added 2025-06-12)
+* **The `emails/image-cdn-mapping.md` file should be updated to reflect the current blob URLs using the Vercel Blob SDK's `list` function. The root URL is correct, but qualified routes may need updating. Use the `downloadUrl` property to ensure the correct `content-disposition` header is used (either `attachment` or `inline` based on the MIME type). Use `getDownloadUrl` helper function to achieve the same result.** (Updated 2025-06-12 based on user request)
+* A script for listing all Vercel Blob storage URLs is located in `scripts/list-blobs.js`. (Added 2025-06-12)
+* The `scripts/list-blobs.js` script lists all blobs from Vercel Blob storage, including their paths, URLs, and sizes, and generates a markdown mapping for use in email templates. The base URL and token are documented at the top of the generated file for future reference. (Added 2025-06-12 based on user request)
+* All local or relative image paths in email templates should be replaced with the corresponding Vercel Blob URLs from the `image-cdn-mapping.md` file. (Added 2025-06-12 based on user request)
+* Email templates should use global theme styles from `@/app/globals.css`. (Added 2025-06-12 based on user request)
+* Email templates should reference custom fonts from `@/app/_fonts`. (Added 2025-06-12 based on user request)
+* Email templates should apply the general theme (colors, font families, etc.) as defined in CSS and font setup. (Added 2025-06-12 based on user request)
+* Headings in email templates should use the `var(--font-poppins-black)` font. (Added 2025-06-12 based on user request)
+* Body text in email templates should use the `var(--font-proxima-nova)` font. (Added 2025-06-12 based on user request)
+* All email templates must use CSS variables from `globals.css` as the single authoritative source. (Added 2025-06-12 based on user request)
+* Email templates should now use direct CSS variables instead of the intermediate `email-theme.ts` system. (Added 2025-06-12 based on user request)
+* `EmailHeader` components must use `var(--font-proxima-nova)` for body text and `var(--font-poppins-black)` for tagline headings. (Added 2025-06-12 based on user request)
+* `EmailFooter` components must use `var(--font-proxima-nova)` for all text and `var(--brand-yellow)` for brand elements. (Added 2025-06-12 based on user request)
+* Documentation for email template fixes is located in `EmailTemplateFix.md`. (Added 2025-06-12)
+* Pseudocode for email template fixes is located in `EmailTemplateFix_PSEUDOCODE.md`. (Added 2025-06-12)
+* Fix images on `@F3ProductShowcaseTemplate.tsx`, `@NewsletterTemplate.tsx`, and `@OriginalFlsEmailTemplate.tsx`. (Added 2025-06-12 based on user request)
+* `@base-styled-template.tsx` is the best email template so far regarding image implementation. (Added 2025-06-12 based on user request)
+* `EmailTemplateImageFixes.md` documents the fixes for image URLs and styling inconsistencies in email templates. (Added 2025-06-12 based on user request)
+* `EmailTemplateImageFixes_PSEUDOCODE.md` contains the implementation plan for fixing image URLs and styling inconsistencies in email templates. (Added 2025-06-12 based on user request)
+* **All font resource use or attribution in the `@/emails` and `@/templates` folders must use the hosted font URLs.** (Added 2025-06-12 based on user request)
+* Create a `emails/styles/fonts.ts` file containing `@font-face` rules for Proxima Nova, Poppins Black, and other Poppins variants, using hosted URLs from Vercel Blob Storage. Include fallback fonts for email client compatibility and export font family constants. (Added 2025-06-12 based on user request)
+* Create a `emails/styles/email-fonts.tsx` file, importing font definitions from `fonts.ts`. This should be a React component that includes a `<style>` tag with `@font-face` definitions, CSS custom properties that map to font families, and fallback font stacks for email clients. Export the `EmailFonts` component for use in templates. (Added 2025-06-12 based on user request)
+* Update all email templates in `emails/templates/` to import the `EmailFonts` component and add it to the template head. Replace CSS variables with direct font family references, such as replacing `'var(--font-proxima-nova)'` with `'Proxima Nova, Arial, sans-serif'` and `'var(--font-poppins-black)'` with `'Poppins Black, Impact, Arial Black, sans-serif'`. Ensure proper fallback fonts for email client compatibility. (Added 2025-06-12 based on user request)
+* Identify and update templates with incomplete `fontFamily` properties to use proper font definitions. Ensure no undefined or empty font family values. (Added 2025-06-12 based on user request)
+* Create a `emails/test-font-template.tsx` template that demonstrates all font styles, including different weights, sizes, and styles, for visual verification of font loading. (Added 2025-06-12 based on user request)
+* Update `image-cdn-mapping.md` to add a section for font usage guidelines, documenting proper font implementation patterns and including email client compatibility notes. (Added 2025-06-12 based on user request)
+* **All email templates in `src/components/emails` and `src/components/emails/templates` must be wrapped with the `<Tailwind>` component from `@react-email/components`.** (Added 2025-06-12 based on user request)
+* Implementation planning and progress tracking for adding the `<Tailwind>` component to email templates are located in `AddTailwindToEmailTemplates_PSEUDOCODE.md` and `AddTailwindToEmailTemplates.md`. (Added 2025-06-12)
+* To allow image loading from various sources, including Vercel blob storage, common CDNs (Unsplash, JSDelivr, GitHub), cloud providers (AWS, CloudFront, Vercel, Netlify), and local development (localhost and 127.0.0.1), the `next.config.ts` file should be configured to be permissive. This includes setting up hostname patterns and potentially using a catch-all pattern `"**"` to allow any HTTPS domain. (Added 2025-06-12 based on user request)
+* The `next.config.ts` file should maintain `dangerouslyAllowSVG: true` for SVG support and include a `contentSecurityPolicy` for SVG safety. Image optimization (`unoptimized: false`) should still be used. (Added 2025-06-12)
+* **All email templates must include a default font and CSS injection in the `<Head>` section.** (Added 2025-06-12 based on user request)
+* **All email templates in `src/components/emails` and `src/components/emails/templates` must include the following `<Head>` code block for default font and CSS injection:**
+```html
+<Head>
+  <Font
+    fontFamily='Poppins'
+    fallbackFontFamily='Arial'
+    webFont={{
+      url: 'https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLDz8Z1xlFQ.woff2',
+      format: 'woff2',
+    }}
+    fontWeight={400}
+    fontStyle='normal'
+  />
+  <Font
+    fontFamily='Poppins'
+    fallbackFontFamily='Arial'
+    webFont={{
+      url: 'https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrJJfecg.woff2',
+      format: 'woff2',
+    }}
+    fontWeight={700}
+    fontStyle='normal'
+  />
+</Head>
+```
+(Added 2025-06-12 based on user request)
 
 ## WORKFLOW & RELEASE RULES
 
@@ -37,6 +110,43 @@ This file defines all project rules, coding standards, workflow guidelines, refe
 * All API calls must use the `callLangbaseAgent` function from `src/lib/api/langbase-agent.ts`. (Added 2025-05-16)
 * The Langbase chat popup should be thoroughly tested on various devices and browsers. (Added 2025-05-16 based on user request)
 * The "Lock In Your Pricing" button animation must be thoroughly tested across different browsers and devices to ensure it is eye-catching and attention-grabbing. (Added 2025-05-29 based on user request)
+* Ensure the email template gallery at `/email-gallery` is fully functional and responsive on all devices before release. (Added 2025-06-04 based on user request)
+* Ensure all email templates import `EmailHeader` and `EmailFooter` from the correct paths (`@/components/EmailHeader` and `@/components/EmailFooter`). (Added 2025-06-04)
+* Verify that the "Preview Full" and "View Code" buttons in the email template gallery function correctly, opening the email preview in a modal. (Added 2025-06-04 based on user request)
+* **Verify that all image `src` values in email templates located in `src/components/emails` and `src/components/emails/templates` use CDN or remote image sources.** (Added 2025-06-12 based on user request)
+* **Verify that all image `src` values in email templates located in `src/components/emails` and `src/components/emails/templates` use Vercel Blob store: `https://drfcdoakhkresrzk.public.blob.vercel-storage.com`.** (Updated 2025-06-12 based on user request)
+* **Before releasing any changes to email templates, ensure that the `emails/image-cdn-mapping.md` file has been updated with the correct blob URLs using the Vercel Blob SDK's `list` function.** (Added 2025-06-12 based on user request)
+* Before running the script to update image mappings, verify that the `@vercel/blob` package is installed. (Added 2025-06-12 based on user request)
+* Verify that the `scripts/list-blobs.js` script can be executed to list all Vercel Blob storage URLs. (Added 2025-06-12)
+* **Before executing `scripts/list-blobs.js` to update image mappings, ensure that the `BLOB_READ_WRITE_TOKEN` environment variable is correctly configured.** (Added 2025-06-12 based on user request)
+* Review `@image-cdn-mapping.md` after running the `scripts/list-blobs.js` script and ensure the image mappings are correct before releasing changes. (Added 2025-06-12 based on user request)
+* Before releasing any changes to email templates, ensure all local or relative image paths in the templates have been replaced with the correct blob URLs from the `image-cdn-mapping.md` file. (Added 2025-06-12 based on user request)
+* Before releasing any changes to email templates, ensure that they use the global theme styles from `@/app/globals.css`. (Added 2025-06-12 based on user request)
+* Before releasing any changes to email templates, ensure that they reference the custom fonts from `@/app/_fonts`. (Added 2025-06-12 based on user request)
+* Before releasing any changes to email templates, ensure that they apply the general theme (colors, font families, etc.) as defined in CSS and font setup. (Added 2025-06-12 based on user request)
+* Before releasing any changes to email templates, ensure that headings use the `var(--font-poppins-black)` font. (Added 2025-06-12 based on user request)
+* Before releasing any changes to email templates, ensure that body text uses the `var(--font-proxima-nova)` font. (Added 2025-06-12 based on user request)
+* Before releasing any changes to email templates, verify that all hardcoded font families are replaced with the correct CSS variable: `fontFamily: 'var(--font-poppins-black)'` for headings and `fontFamily: 'var(--font-proxima-nova)'` for body. (Added 2025-06-12 based on user request)
+* Before releasing any changes to email templates, verify that all hardcoded color values are replaced with the corresponding CSS variable from `globals.css`. (Added 2025-06-12 based on user request)
+* Before releasing any changes to email templates, verify that hardcoded spacing, border radius, etc., are replaced with CSS variables where possible. (Added 2025-06-12 based on user request)
+* Before releasing any changes to email templates, verify that direct `'Arial, sans-serif'` or system font stacks are removed. (Added 2025-06-12 based on user request)
+* Before releasing any changes to email templates, create a shared style object (e.g., `emailTheme`) that can be imported and reused across email templates where possible. (Added 2025-06-12 based on user request)
+* Before releasing any changes to email templates, update `EmailHeader` and `EmailFooter` to use the same theme variables as the email templates. (Added 2025-06-12 based on user request)
+* Before releasing any changes to email templates, verify that the `EmailHeader` component uses `var(--font-proxima-nova)` for body text and `var(--font-poppins-black)` for tagline headings. (Added 2025-06-12 based on user request)
+* Before releasing any changes to email templates, verify that the `EmailFooter` component uses `var(--font-proxima-nova)` for all text and `var(--brand-yellow)` for brand elements. (Added 2025-06-12 based on user request)
+* Before releasing the updated email templates, specifically check images on `@F3ProductShowcaseTemplate.tsx`, `@NewsletterTemplate.tsx`, and `@OriginalFlsEmailTemplate.tsx` to ensure they use Vercel Blob URLs. (Added 2025-06-12 based on user request)
+* When updating email templates, use `@base-styled-template.tsx` as a reference for image implementation. (Added 2025-06-12 based on user request)
+* Before releasing the updated email templates, ensure all styling uses CSS variables from `globals.css` as the single authoritative source. (Added 2025-06-12 based on user request)
+* **Before releasing any changes to email templates, ensure that all font resource use or attribution in the `@/emails` and `@/templates` folders use the hosted font URLs.** (Added 2025-06-12 based on user request)
+* Ensure that all email templates are updated to use hosted fonts instead of CSS variables by running `scripts/update-email-fonts.js`. (Added 2025-06-12 based on user request)
+* Review all updated email templates after running `scripts/update-email-fonts.js`. (Added 2025-06-12 based on user request)
+* Test email rendering in preview after running `scripts/update-email-fonts.js`. (Added 2025-06-12 based on user request)
+* Check font loading across email clients after running `scripts/update-email-fonts.js`. (Added 2025-06-12 based on user request)
+* **Before releasing any changes to email templates, verify that all templates are wrapped with the `<Tailwind>` component from `@react-email/components`.** (Added 2025-06-12 based on user request)
+* When configuring image loading in `next.config.ts`, ensure that the configuration is valid and free of syntax errors. (Added 2025-06-12 based on user request)
+* When configuring image loading in `next.config.ts`, ensure that hostname patterns are correctly formatted and do not include invalid suffixes like `/*`. (Added 2025-06-12 based on user request)
+* When configuring image loading in `next.config.ts`, after making changes, restart the development server and test loading images from various sources to ensure the configuration is working as expected. (Added 2025-06-12 based on user request)
+* **Before releasing any changes to email templates, ensure that all templates include a default font and CSS injection in the `<Head>` section.** (Added 2025-06-12 based on user request)
 
 ## DEBUGGING
 
@@ -50,24 +160,24 @@ This file defines all project rules, coding standards, workflow guidelines, refe
 * When debugging the AI chatbot, verify that the chatbot responds appropriately, handles errors gracefully, and maintains session persistence.  Test various user inputs and edge cases. (Added 2025-05-15 based on user request)
 * When debugging the Langbase chat popup, ensure it functions correctly and displays appropriately on various devices and screen sizes. (Added 2025-05-16 based on user request)
 * When debugging the "Lock In Your Pricing" button animation, verify that it is eye-catching and attention-grabbing across different browsers and devices. (Added 2025-05-29 based on user request)
-
-## CODING STANDARDS
-
-* Maintain consistent naming conventions for animation files and functions.
-* Use `framer-motion` for animation libraries. (Added 2025-05-15 based on user request)
-* All new API services must be written in TypeScript. (Added 2025-05-16)
-* API functions should include comprehensive error handling and logging. (Added 2025-05-16)
-
-## TECH STACK
-
-* [List existing technologies]
-* framer-motion (Added 2025-05-15 based on user request)
-* lucide-react (Added 2025-05-15)
-* shadcn/ui (Added 2025-05-15 based on user request)
-* Vercel AI SDK UI (Added 2025-05-15 based on user request)
-* Langbase API (Added 2025-05-16)
-
-## REFERENCES
-
-* [List existing references]
-* Langbase AI Agent documentation: `docs/LangbaseAgent.md` (Added 2025-05-16)
+* When debugging the email template gallery, ensure that all email templates render correctly, the category filtering works as expected, and the layout is responsive across different screen sizes. (Added 2025-06-04 based on user request)
+* When debugging the email template gallery, check for module resolution errors due to incorrect import paths for `EmailHeader` and `EmailFooter`. (Added 2025-06-04)
+* When debugging the email template gallery, ensure the preview scaling issue is resolved by checking that the email templates are displayed correctly within the preview area. (Added 2025-06-04 based on user request)
+* When debugging the email template gallery, ensure that the "Preview Full" and "View Code" buttons function correctly, opening the corresponding modal with the correct content. (Added 2025-06-04 based on user request)
+* **When debugging email templates, ensure that all image `src` values use CDN or remote image sources.** (Added 2025-06-12 based on user request)
+* **When debugging email templates, ensure that all image `src` values use Vercel Blob store: `https://drfcdoakhkresrzk.public.blob.vercel-storage.com`.** (Updated 2025-06-12 based on user request)
+* **When debugging image URLs in email templates, use the Vercel Blob SDK's `list` function to verify the correct qualified routes in the `emails/image-cdn-mapping.md` file. The root URL is assumed to be correct, but the qualified routes may be incorrect. Also, verify that you are using the `downloadUrl` property to ensure the correct `content-disposition` header (either `attachment` or `inline`) is used.** (Updated 2025-06-12 based on user request)
+* When debugging issues related to listing Vercel Blob storage URLs, ensure the `@vercel/blob` package is installed correctly and that the `scripts/list-blobs.js` script is correctly configured. (Added 2025-06-12)
+* **When debugging issues related to listing Vercel Blob storage URLs, ensure the `BLOB_READ_WRITE_TOKEN` environment variable is correctly configured.** (Added 2025-06-12 based on user request)
+* When debugging email templates, ensure all local or relative image paths have been replaced with the correct blob URLs. (Added 2025-06-12 based on user request)
+* When debugging email templates, ensure that they use the global theme styles from `@/app/globals.css`. (Added 2025-06-12 based on user request)
+* When debugging email templates, ensure that they reference the custom fonts from `@/app/_fonts`. (Added 2025-06-12 based on user request)
+* When debugging email templates, ensure that they apply the general theme (colors, font families, etc.) as defined in CSS and font setup. (Added 2025-06-12 based on user request)
+* When debugging email templates, ensure that headings use the `var(--font-poppins-black)` font. (Added 2025-06-12 based on user request)
+* When debugging email templates, ensure that body text uses the `var(--font-proxima-nova)` font. (Added 2025-06-12 based on user request)
+* When debugging email templates, verify that all hardcoded font families are replaced with the correct CSS variable: `fontFamily: 'var(--font-poppins-black)'` for headings and `fontFamily: 'var(--font-proxima-nova)'` for body. (Added 2025-06-12 based on user request)
+* When debugging email templates, verify that all hardcoded color values are replaced with the corresponding CSS variable from `globals.css`. (Added 2025-06-12 based on user request)
+* When debugging email templates, verify that hardcoded spacing, border radius, etc., are replaced with CSS variables where possible. (Added 2025-06-12 based on user request)
+* When debugging email templates, verify that direct `'Arial, sans-serif'` or system font stacks are removed. (Added 2025-06-12 based on user request)
+* When debugging email templates, verify that all hardcoded font families are replaced with the correct CSS variable: `fontFamily: 'var(--font-poppins-black)'` for headings and `fontFamily: 'var(--font-proxima-nova)'` for body. (Added 2025-06-12 based on user request)
+* When debugging email
