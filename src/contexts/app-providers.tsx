@@ -1,11 +1,14 @@
 'use client'
 import {VFXProvider} from 'react-vfx'
 import {MobileProvider} from './mobile-context'
+import { PostHogProvider } from './PostHogProvider'
 
 export const AppProviders = ({children}: {children: React.ReactNode}) => {
   return (
-    <VFXProvider>
-      <MobileProvider>{children}</MobileProvider>
-    </VFXProvider>
+    <PostHogProvider>
+      <VFXProvider>
+        <MobileProvider>{children}</MobileProvider>
+      </VFXProvider>
+    </PostHogProvider>
   )
 }
