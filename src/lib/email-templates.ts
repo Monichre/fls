@@ -1,13 +1,6 @@
 import { promises as fs } from 'fs'
 import path from 'path'
-
-export interface EmailTemplate {
-  name: string
-  slug: string
-  description: string
-  category: string
-  component: any
-}
+import { EmailTemplate } from './email-templates-client'
 
 const emailTemplatesDir = path.join(process.cwd(), 'emails', 'templates')
 
@@ -57,7 +50,8 @@ export async function getEmailTemplate(slug: string) {
     await fs.access(templatePath)
     
     // Dynamically import the template
-    const templateModule = await import(`../../emails/templates/${slug}.tsx`)
+    const fullPath = path.resolve(process.cwd(), 'emails', 'templates', `${slug}.tsx`)
+    const templateModule = await import(fullPath)
     return templateModule.default || templateModule
   } catch (error) {
     console.error(`Error loading template ${slug}:`, error)
@@ -65,15 +59,3 @@ export async function getEmailTemplate(slug: string) {
   }
 }
 
-export function categorizeTemplates(templates: EmailTemplate[]) {
-  const categories: { [key: string]: EmailTemplate[] } = {}
-  
-  templates.forEach(template => {
-    if (!categories[template.category]) {
-      categories[template.category] = []
-    }
-    categories[template.category].push(template)
-  })
-  
-  return categories
-}

@@ -1,6 +1,6 @@
+import React from 'react'
 import {render} from '@react-email/render'
 import {getEmailTemplate} from '@/lib/email-templates'
-import {EmailRenderer} from '@react-email/components'
 
 interface EmailTemplatePageProps {
   params: {
@@ -31,9 +31,23 @@ export default async function EmailTemplatePage({
       )
     }
 
-    const html = render(<EmailComponent />)
+    const html = render(React.createElement(EmailComponent))
 
-    return <EmailRenderer html={html} templateName={templateName} />
+    return (
+      <div className="min-h-screen bg-gray-50 p-8">
+        <div className="max-w-4xl mx-auto">
+          <div className="mb-6">
+            <h1 className="text-3xl font-bold text-gray-900 mb-2">
+              {templateName}
+            </h1>
+            <p className="text-gray-600">Email Template Preview</p>
+          </div>
+          <div className="bg-white rounded-lg shadow-lg p-6">
+            <div dangerouslySetInnerHTML={{ __html: html }} />
+          </div>
+        </div>
+      </div>
+    )
   } catch (error) {
     console.error('Error rendering email template:', error)
     return (

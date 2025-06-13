@@ -4,7 +4,7 @@ export { isType } from 'contentlayer/client'
 
 // NOTE During development Contentlayer imports from `.mjs` files to improve HMR speeds.
 // During (production) builds Contentlayer it imports from `.json` files to improve build performance.
-import { allEmailContents } from './EmailContent/_index.mjs'
+import allEmailContents from './EmailContent/_index.json' assert { type: 'json' }
 
 export { allEmailContents }
 

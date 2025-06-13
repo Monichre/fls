@@ -1,3 +1,4 @@
+import React from 'react'
 import { render } from '@react-email/render'
 import { getEmailTemplate } from '@/lib/email-templates'
 import { NextRequest, NextResponse } from 'next/server'
@@ -21,22 +22,22 @@ export async function GET(
     }
 
     if (format === 'html') {
-      const html = render(<EmailComponent />)
+      const html = render(React.createElement(EmailComponent))
       return new NextResponse(html, {
         headers: { 'Content-Type': 'text/html' },
       })
     }
     
     if (format === 'text') {
-      const text = render(<EmailComponent />, { plainText: true })
+      const text = render(React.createElement(EmailComponent), { plainText: true })
       return new NextResponse(text, {
         headers: { 'Content-Type': 'text/plain' },
       })
     }
     
     if (format === 'json') {
-      const html = render(<EmailComponent />)
-      const text = render(<EmailComponent />, { plainText: true })
+      const html = render(React.createElement(EmailComponent))
+      const text = render(React.createElement(EmailComponent), { plainText: true })
       
       return NextResponse.json({
         html,
