@@ -50,7 +50,6 @@ const heading = {
   marginBottom: '20px',
   color: '#111827',
   textAlign: 'center' as const,
-  fontFamily: FONT_FAMILIES.poppinsBlack,
 }
 
 const paragraph = {

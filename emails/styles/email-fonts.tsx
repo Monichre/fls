@@ -78,7 +78,6 @@ export const EMAIL_INLINE_STYLES = {
     padding: 0,
   },
   heading: {
-    fontFamily: FONT_FAMILIES.poppinsBlack,
     lineHeight: '1.2',
     margin: '0 0 16px 0',
     color: '#333333',

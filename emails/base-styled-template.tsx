@@ -14,7 +14,7 @@ import {
   Text,
   Font,
 } from '@react-email/components'
-import {EmailFonts, FONT_FAMILIES} from '../styles'
+import {EmailFonts, FONT_FAMILIES} from './styles'
 
 interface EmailTemplateProps {
   firstName?: string
@@ -78,16 +78,14 @@ const BaseStyledTemplate = ({
           {/* Hero Section */}
           <Section style={heroSection}>
             <Heading style={heroHeading}>SPARK THE EXCITEMENT</Heading>
-            <Text style={heroSubheading}>
+            <h2 style={heroSubheading}>
               Windproof, High-Performance Lighters for Adventure, Home &
               Everywhere in Between
-            </Text>
+            </h2>
           </Section>
 
           {/* Main Content */}
           <Section style={contentSection}>
-            <Text style={greeting}>Hi {firstName},</Text>
-
             <Text style={paragraph}>
               Every great sale starts with a spark – and our FLS windproof
               lighters can provide it. FLS USA offers high-performance lighters
@@ -189,8 +187,6 @@ const BaseStyledTemplate = ({
 
             <Text style={signature}>
               Best regards,
-              <br />
-              {senderName}
               <br />
               FLS USA
             </Text>

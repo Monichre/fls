@@ -1,5 +1,25 @@
 [
   {
+    "templateType": "bic",
+    "section": "template",
+    "priority": 1,
+    "title": "FLS’s Designs Ignite Customer Love!",
+    "body": {
+      "raw": "\nSubject: FLS’s Designs Ignite Customer Love!\n\nWelcome to FLS – Ignite Your Adventure with Unrivaled Performance\n\n## Preview Text:\nDiscover the windproof lighter that performs flawlessly in any condition\n\n![FLS Logo]\n\n# WELCOME TO THE WORLD OF FLS\n\n## RELIABILITY MEETS INNOVATION\n\nThank you for joining the FLS community – where performance meets precision in every flame.\n\n--\nSubject: FLS’s Designs Ignite Customer Love!\nHi [Name],\nFLS-USA.shop disposable lighters bring style that BIC and other brands can only dream of. Think Spooky or Foliage series—way cooler than bland competitor designs!\n\nUp to 100% better margins than BIC or others\n\nUnique designs that scream “buy me!”\n\nSmooth ignition, no thumb tantrums\nCheck the vibrant pics! FLS’s 50+ quality tests ensure reliability, despite some grumpy reviews. Switch for hotter sales. Give FLS a shot, you’ll be glad you did! Reply or visit FLS-USA.shop.\n\nBest,\n\n[Your Name]\n\n**Follow us** on social media for inspiration, product updates, and exclusive offers available only to our community.\n\n[INSTAGRAM] [FACEBOOK] [TWITTER]\n\nWe're excited to have you join us on this journey. Should you have any questions about your new FLS lighter, our team is always here to help.\n\nSpark the excitement,\n\n**Ibrahim, Bradly & Samuel**  \n*Founders, FLS USA*\n\n---\n\n*© 2025 FLS USA, a CounterCulture company*  \n*979-488-9207 | sales@gocounterculture.com*\n\n[Unsubscribe] | [Privacy Policy] | [Terms of Service]\n",
+      "html": "<p>Subject: FLS’s Designs Ignite Customer Love!</p>\n<p>Welcome to FLS – Ignite Your Adventure with Unrivaled Performance</p>\n<h2>Preview Text:</h2>\n<p>Discover the windproof lighter that performs flawlessly in any condition</p>\n<p>![FLS Logo]</p>\n<h1>WELCOME TO THE WORLD OF FLS</h1>\n<h2>RELIABILITY MEETS INNOVATION</h2>\n<p>Thank you for joining the FLS community – where performance meets precision in every flame.</p>\n<p>--\nSubject: FLS’s Designs Ignite Customer Love!\nHi [Name],\nFLS-USA.shop disposable lighters bring style that BIC and other brands can only dream of. Think Spooky or Foliage series—way cooler than bland competitor designs!</p>\n<p>Up to 100% better margins than BIC or others</p>\n<p>Unique designs that scream “buy me!”</p>\n<p>Smooth ignition, no thumb tantrums\nCheck the vibrant pics! FLS’s 50+ quality tests ensure reliability, despite some grumpy reviews. Switch for hotter sales. Give FLS a shot, you’ll be glad you did! Reply or visit FLS-USA.shop.</p>\n<p>Best,</p>\n<p>[Your Name]</p>\n<p><strong>Follow us</strong> on social media for inspiration, product updates, and exclusive offers available only to our community.</p>\n<p>[INSTAGRAM] [FACEBOOK] [TWITTER]</p>\n<p>We're excited to have you join us on this journey. Should you have any questions about your new FLS lighter, our team is always here to help.</p>\n<p>Spark the excitement,</p>\n<p><strong>Ibrahim, Bradly &#x26; Samuel</strong><br>\n<em>Founders, FLS USA</em></p>\n<hr>\n<p><em>© 2025 FLS USA, a CounterCulture company</em><br>\n<em>979-488-9207 | sales@gocounterculture.com</em></p>\n<p>[Unsubscribe] | [Privacy Policy] | [Terms of Service]</p>"
+    },
+    "_id": "bic_template_3.md",
+    "_raw": {
+      "sourceFilePath": "bic_template_3.md",
+      "sourceFileName": "bic_template_3.md",
+      "sourceFileDir": ".",
+      "contentType": "markdown",
+      "flattenedPath": "bic_template_3"
+    },
+    "type": "EmailContent",
+    "slug": "bic_template_3"
+  },
+  {
     "templateType": "newsletter",
     "section": "seasonal",
     "priority": 1,

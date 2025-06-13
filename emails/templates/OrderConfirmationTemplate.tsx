@@ -139,7 +139,6 @@ export const OrderConfirmationTemplate: React.FC<
               marginBottom: '20px',
               color: '#111827',
               textAlign: 'center',
-              fontFamily: FONT_FAMILIES.poppinsBlack,
             }}
           >
             Thank You for Your Order!
@@ -176,7 +175,6 @@ export const OrderConfirmationTemplate: React.FC<
               fontWeight: '600',
               color: '#111827',
               margin: '20px 0 10px 0',
-              fontFamily: FONT_FAMILIES.poppinsBlack,
             }}
           >
             Order Summary
@@ -375,7 +373,6 @@ export const OrderConfirmationTemplate: React.FC<
                   fontWeight: '600',
                   color: '#111827',
                   margin: '20px 0 10px 0',
-                  fontFamily: FONT_FAMILIES.poppinsBlack,
                 }}
               >
                 Shipping Address
@@ -400,7 +397,6 @@ export const OrderConfirmationTemplate: React.FC<
                   fontWeight: '600',
                   color: '#111827',
                   margin: '20px 0 10px 0',
-                  fontFamily: FONT_FAMILIES.poppinsBlack,
                 }}
               >
                 Billing Address

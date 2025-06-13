@@ -747,7 +747,7 @@ Now I'll implement the solution following the pseudocode. Let me start by creati
 +     padding: 0,
 +   },
 +   heading: {
-+     fontFamily: FONT_FAMILIES.poppinsBlack,
++     
 +     lineHeight: '1.2',
 +     margin: '0 0 16px 0',
 +     color: '#333333',
@@ -902,7 +902,7 @@ Now I'll implement the solution following the pseudocode. Let me start by creati
 +             <Heading
 +               as='h2'
 +               style={{
-+                 fontFamily: FONT_FAMILIES.poppinsBlack,
++                 
 +                 fontSize: '24px',
 +                 marginBottom: '16px',
 +                 color: '#333333',
@@ -914,7 +914,7 @@ Now I'll implement the solution following the pseudocode. Let me start by creati
 +             <Heading
 +               as='h3'
 +               style={{
-+                 fontFamily: FONT_FAMILIES.poppinsBlack,
++                 
 +                 fontSize: '20px',
 +                 marginBottom: '12px',
 +                 color: '#333333',
@@ -959,7 +959,7 @@ Now I'll implement the solution following the pseudocode. Let me start by creati
 +             <Heading
 +               as='h3'
 +               style={{
-+                 fontFamily: FONT_FAMILIES.poppinsBlack,
++                 
 +                 fontSize: '20px',
 +                 marginBottom: '16px',
 +                 color: '#333333',
@@ -995,7 +995,7 @@ Now I'll implement the solution following the pseudocode. Let me start by creati
 +             <Heading
 +               as='h3'
 +               style={{
-+                 fontFamily: FONT_FAMILIES.poppinsBlack,
++                 
 +                 fontSize: '20px',
 +                 marginBottom: '16px',
 +                 color: '#333333',

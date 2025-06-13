@@ -132,7 +132,6 @@ const h1 = {
   color: '#111827',
   margin: '0',
   padding: '0',
-  fontFamily: FONT_FAMILIES.poppinsBlack,
 }
 
 const content = {

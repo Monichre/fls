@@ -57,7 +57,6 @@ const heading = {
   textAlign: 'center' as const,
   color: '#f7cb00',
   margin: '30px 0',
-  fontFamily: FONT_FAMILIES.poppinsBlack,
 }
 
 const paragraph = {
@@ -103,7 +102,7 @@ const featureIcon = {
 const featureTitle = {
   fontSize: '18px',
   fontWeight: '600',
-  fontFamily: FONT_FAMILIES.poppinsBlack,
+
   color: '#E0E0E0', // White for feature titles
   marginBottom: '5px',
 }
@@ -191,7 +190,6 @@ export const WelcomeEmailNewTemplate: React.FC<
                 color: '#f7cb00',
                 margin: '0 0 20px 0',
                 textAlign: 'center' as const,
-                fontFamily: FONT_FAMILIES.poppinsBlack,
               }}
             >
               Getting Started with FLS
@@ -236,7 +234,6 @@ export const WelcomeEmailNewTemplate: React.FC<
                 color: '#f7cb00',
                 margin: '0 0 20px 0',
                 textAlign: 'center' as const,
-                fontFamily: FONT_FAMILIES.poppinsBlack,
               }}
             >
               Why Partner with FLS?
@@ -304,7 +301,6 @@ export const WelcomeEmailNewTemplate: React.FC<
                 fontWeight: 'bold',
                 color: '#f7cb00',
                 margin: '0 0 15px 0',
-                fontFamily: FONT_FAMILIES.poppinsBlack,
               }}
             >
               Connect With Us

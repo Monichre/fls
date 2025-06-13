@@ -13,9 +13,9 @@ import {
   Column,
   Font,
 } from '@react-email/components'
-import {EmailFonts, FONT_FAMILIES} from '../styles'
+import {EmailFonts, FONT_FAMILIES} from './styles'
 import type React from 'react'
-import {EmailFooter} from '../ui/email-footer'
+import {EmailFooter} from './ui/email-footer'
 
 interface SignatureSeriesLaunchProps {
   customerName?: string
@@ -45,7 +45,6 @@ interface SignatureSeriesLaunchProps {
 const main = {
   backgroundColor: '#0a0a0a', // Even darker, premium black
   color: '#f0f0f0',
-  fontFamily: FONT_FAMILIES.proximaNova,
 }
 
 const container = {
@@ -73,21 +72,19 @@ const productNameHeader = {
   fontWeight: 'normal',
   letterSpacing: '1px',
   margin: '10px 0 0 0',
-  fontFamily: FONT_FAMILIES.poppinsBlack,
 }
 
 const mainHeadlineStyle = {
-  fontSize: '36px',
+  fontSize: '24px',
   fontWeight: 'bold',
   color: '#FFFFFF',
   textAlign: 'center' as const,
   margin: '30px 20px 10px 20px',
   lineHeight: '1.2',
-  fontFamily: FONT_FAMILIES.poppinsBlack,
 }
 
 const introParagraphStyle = {
-  fontSize: '17px', // Slightly larger for readability
+  fontSize: '14px', // Slightly larger for readability
   lineHeight: '28px',
   color: '#cccccc',
   padding: '0 30px',
@@ -98,9 +95,11 @@ const introParagraphStyle = {
 
 const heroImageStyle = {
   width: '100%',
-  maxWidth: '580px',
+  maxWidth: '',
   borderRadius: '4px',
   margin: '20px auto',
+  height: '300px',
+  objectFit: 'contain',
   display: 'block',
   border: '2px solid #D4AF37', // Gold border
 }
@@ -118,7 +117,6 @@ const featuresHeading = {
   color: '#D4AF37',
   textAlign: 'center' as const,
   marginBottom: '25px',
-  fontFamily: FONT_FAMILIES.poppinsBlack,
 }
 
 const featureItem = {
@@ -149,7 +147,6 @@ const targetAudienceHeading = {
   color: '#FFFFFF',
   textAlign: 'center' as const,
   marginBottom: '20px',
-  fontFamily: FONT_FAMILIES.poppinsBlack,
 }
 
 const ctaSection = {

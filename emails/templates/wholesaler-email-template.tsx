@@ -1,6 +1,6 @@
 import * as React from 'react'
 import {Tailwind, Html, Head, Font} from '@react-email/components'
-import {EmailFonts, FONT_FAMILIES} from '../styles'
+import {FONT_FAMILIES} from '../styles/fonts'
 
 interface WholesalerEmailTemplateProps {
   name: string
@@ -8,16 +8,14 @@ interface WholesalerEmailTemplateProps {
   businessEmail: string
   businessType: string
   phoneNumber?: string | null
-  industry?: string | null
 }
 
 const WholesalerEmailTemplate = ({
   name,
   companyName,
   businessEmail,
-  businessType,
+
   phoneNumber,
-  industry,
 }: WholesalerEmailTemplateProps) => {
   return (
     <Html>
@@ -58,7 +56,7 @@ const WholesalerEmailTemplate = ({
             style={{
               color: '#f7cb00',
               fontSize: '24px',
-              fontFamily: FONT_FAMILIES.poppinsBlack,
+
               fontWeight: 'bold',
               marginBottom: '20px',
             }}
@@ -95,10 +93,9 @@ const WholesalerEmailTemplate = ({
               fontFamily: FONT_FAMILIES.proximaNova,
             }}
           >
-            As a valued distributor/wholesaler
-            {industry ? ` in the ${industry} industry` : ''}, you'll be among
-            the first to access our platform and new product offerings. Our team
-            will reach out to you shortly at <strong>{businessEmail}</strong>
+            As a valued distributor/wholesaler you'll be among the first to
+            access our platform and new product offerings. Our team will reach
+            out to you shortly at <strong>{businessEmail}</strong>
             {phoneNumber ? ` or ${phoneNumber}` : ''} to discuss how we can help
             maximize your business needs.
           </p>

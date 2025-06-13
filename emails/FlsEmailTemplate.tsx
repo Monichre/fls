@@ -13,10 +13,10 @@ import {
   Column,
   Font,
 } from '@react-email/components'
-import {EmailFonts, FONT_FAMILIES} from '../styles'
+import {EmailFonts, FONT_FAMILIES} from './styles'
 import type React from 'react'
-import {EmailHeader} from '../ui/email-header'
-import {EmailFooter} from '../ui/email-footer'
+import {EmailHeader} from './ui/email-header'
+import {EmailFooter} from './ui/email-footer'
 
 interface FlsEmailTemplateProps {
   firstName?: string
@@ -47,7 +47,6 @@ const heading = {
   marginBottom: '20px',
   color: '#111827',
   textAlign: 'center' as const,
-  fontFamily: FONT_FAMILIES.poppinsBlack,
 }
 
 const paragraph = {
@@ -245,7 +244,6 @@ export const FlsEmailTemplate: React.FC<Readonly<FlsEmailTemplateProps>> = ({
                 color: '#111827',
                 textAlign: 'left' as const,
                 marginBottom: '15px',
-                fontFamily: FONT_FAMILIES.poppinsBlack,
               }}
             >
               Featured Designs:

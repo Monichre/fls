@@ -301,26 +301,26 @@ export const F3ProductShowcaseTemplate: React.FC<
 }
 
 const main: React.CSSProperties = {
-  backgroundColor: darkBg,
-  fontFamily: 'Poppins, Arial, sans-serif',
-  color: lightText,
-  margin: 0,
-  padding: 0,
+  // backgroundColor: darkBg,
+  // fontFamily: 'Poppins, Arial, sans-serif',
+  // color: lightText,
+  // margin: 0,
+  // padding: 0,
 }
 
 const container: React.CSSProperties = {
-  maxWidth: '600px',
-  margin: '0 auto',
-  backgroundColor: '#ffffff', // Content area background
-  color: darkText, // Default text color for content area
-  borderRadius: '8px',
-  overflow: 'hidden',
+  // maxWidth: '600px',
+  // margin: '0 auto',
+  // backgroundColor: '#ffffff', // Content area background
+  // color: darkText, // Default text color for content area
+  // borderRadius: '8px',
+  // overflow: 'hidden',
 }
 
 const heroSection: React.CSSProperties = {
-  padding: '0',
-  textAlign: 'center',
-  backgroundColor: darkText, // Dark background for hero image container
+  // padding: '0',
+  // textAlign: 'center',
+  // backgroundColor: darkText, // Dark background for hero image container
 }
 
 const heroImage: React.CSSProperties = {
@@ -349,20 +349,20 @@ const heroText: React.CSSProperties = {
 }
 
 const contentSection: React.CSSProperties = {
-  padding: '20px 30px',
-  color: darkText,
+  // padding: '20px 30px',
+  // color: darkText,
 }
 
 const greeting: React.CSSProperties = {
-  fontSize: '18px',
-  fontWeight: 'bold',
-  marginBottom: '16px',
+  // fontSize: '18px',
+  // fontWeight: 'bold',
+  // marginBottom: '16px',
 }
 
 const paragraph: React.CSSProperties = {
-  fontSize: '15px',
-  lineHeight: '1.6',
-  marginBottom: '16px',
+  // fontSize: '15px',
+  // lineHeight: '1.6',
+  // marginBottom: '16px',
   color: midGray,
 }
 

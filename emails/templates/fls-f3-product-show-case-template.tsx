@@ -143,7 +143,6 @@ export const F3ProductShowcaseTemplate: React.FC<
               color: '#f7cb00',
               margin: '0 0 10px 0',
               textShadow: '1px 1px 2px #000000',
-              fontFamily: FONT_FAMILIES.poppinsBlack,
             }}
           >
             {mainHeadline}
@@ -175,7 +174,6 @@ export const F3ProductShowcaseTemplate: React.FC<
               fontWeight: 'bold',
               color: '#f7cb00',
               marginBottom: '15px',
-              fontFamily: FONT_FAMILIES.poppinsBlack,
             }}
           >
             Key Features
@@ -278,7 +276,6 @@ export const F3ProductShowcaseTemplate: React.FC<
                   fontWeight: '600',
                   color: '#FFFFFF',
                   marginBottom: '5px',
-                  fontFamily: FONT_FAMILIES.poppinsBlack,
                 }}
               >
                 {feature3Title}
@@ -312,7 +309,6 @@ export const F3ProductShowcaseTemplate: React.FC<
               fontWeight: 'bold',
               color: '#f7cb00',
               marginBottom: '15px',
-              fontFamily: FONT_FAMILIES.poppinsBlack,
             }}
           >
             Diverse Designs
@@ -414,7 +410,6 @@ export const F3ProductShowcaseTemplate: React.FC<
               fontWeight: 'bold',
               color: '#f7cb00',
               marginBottom: '15px',
-              fontFamily: FONT_FAMILIES.poppinsBlack,
             }}
           >
             Packaging & Display

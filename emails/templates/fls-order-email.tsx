@@ -176,7 +176,6 @@ export const OriginalFlsEmailTemplate: React.FC<
               ...headingStyle,
               fontSize: '22px',
               marginTop: 0,
-              fontFamily: FONT_FAMILIES.poppinsBlack,
             }}
           >
             Why Choose FLS?
