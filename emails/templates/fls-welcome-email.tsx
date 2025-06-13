@@ -226,7 +226,7 @@ export const WelcomeEmailNewTemplate: React.FC<
             <Row>
               <Column style={{width: '33%', padding: '0 10px'}}>
                 <Img
-                  src='https://drfcdoakhkresrzk.public.blob.vercel-storage.com/icons/innovation.png'
+                  src='https://drfcdoakhkresrzk.public.blob.vercel-storage.com/98219c_7bd75a9cc4254ffea09ed1f6d5081b06~mv2.png'
                   alt='Innovation Icon'
                   style={featureIcon}
                 />
@@ -237,7 +237,7 @@ export const WelcomeEmailNewTemplate: React.FC<
               </Column>
               <Column style={{width: '33%', padding: '0 10px'}}>
                 <Img
-                  src='https://drfcdoakhkresrzk.public.blob.vercel-storage.com/icons/support.png'
+                  src='https://drfcdoakhkresrzk.public.blob.vercel-storage.com/98219c_f92f26ad811c4afebe0551f8bdc9644c~mv2.png'
                   alt='Support Icon'
                   style={featureIcon}
                 />
@@ -246,7 +246,7 @@ export const WelcomeEmailNewTemplate: React.FC<
               </Column>
               <Column style={{width: '33%', padding: '0 10px'}}>
                 <Img
-                  src='https://drfcdoakhkresrzk.public.blob.vercel-storage.com/icons/quality.png'
+                  src='https://drfcdoakhkresrzk.public.blob.vercel-storage.com/image%20%2814%29.png'
                   alt='Quality Icon'
                   style={featureIcon}
                 />
@@ -258,7 +258,7 @@ export const WelcomeEmailNewTemplate: React.FC<
 
           <Section style={{textAlign: 'center' as const, padding: '20px'}}>
             <Img
-              src='https://drfcdoakhkresrzk.public.blob.vercel-storage.com/lifestyle/fls-adventure-flame.png'
+              src='https://drfcdoakhkresrzk.public.blob.vercel-storage.com/IMG-20250318-WA0006-1hwPEQIZvxt7bZ1RLLjeha6cZcqCSS.jpg'
               alt='FLS Lighter demonstrating windproof flame outdoors'
               style={{
                 width: '100%',
@@ -282,21 +282,21 @@ export const WelcomeEmailNewTemplate: React.FC<
             </Heading>
             <Link href={instagramUrl}>
               <Img
-                src='https://drfcdoakhkresrzk.public.blob.vercel-storage.com/social/instagram-icon-yellow.png'
+                src='https://drfcdoakhkresrzk.public.blob.vercel-storage.com/IMG-20250318-WA0007-x6rAISi5vfeiRRD4QGbqCBF3OCAkhY.jpg'
                 alt='Instagram'
                 style={socialIcon}
               />
             </Link>
             <Link href={facebookUrl}>
               <Img
-                src='https://drfcdoakhkresrzk.public.blob.vercel-storage.com/social/facebook-icon-yellow.png'
+                src='https://drfcdoakhkresrzk.public.blob.vercel-storage.com/IMG-20250318-WA0008-t9lh7Qrptxru5PLDR6kqYYz87qtajN.jpg'
                 alt='Facebook'
                 style={socialIcon}
               />
             </Link>
             <Link href={twitterUrl}>
               <Img
-                src='https://drfcdoakhkresrzk.public.blob.vercel-storage.com/social/twitter-icon-yellow.png'
+                src='https://drfcdoakhkresrzk.public.blob.vercel-storage.com/IMG-20250318-WA0009-9QwV1xBU8IpBASiPVLzKUbSXsZC0B6.jpg'
                 alt='Twitter'
                 style={socialIcon}
               />

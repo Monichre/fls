@@ -92,7 +92,7 @@ const NewsletterTemplate: React.FC<NewsletterTemplateProps> = ({
                 <Column style={productColumn}>
                   <div style={productCard}>
                     <Img
-                      src='https://hebbkx1anhila5yf.public.blob.vercel-storage.com/dual-lighters-bPm9GyxoCNfSrJB2RbcWPBbsEo2h2e.png'
+                      src='https://drfcdoakhkresrzk.public.blob.vercel-storage.com/dual-lighters-DDbYuPzwTH53bubLp1hGXt4Hjmr7OC.png'
                       alt='Limited Edition F3 Collection'
                       width='200'
                       height='150'
@@ -116,7 +116,7 @@ const NewsletterTemplate: React.FC<NewsletterTemplateProps> = ({
                 <Column style={productColumn}>
                   <div style={productCard}>
                     <Img
-                      src='https://hebbkx1anhila5yf.public.blob.vercel-storage.com/box.jpg-GJCj3oZ6bibV5rnaqP81Z34lhl1r3B.jpeg'
+                      src='https://drfcdoakhkresrzk.public.blob.vercel-storage.com/98219c_7bd75a9cc4254ffea09ed1f6d5081b06~mv2.png'
                       alt='Wholesale Bundle Deals'
                       width='200'
                       height='150'

@@ -107,7 +107,7 @@ const BaseStyledTemplate = ({
               <Row style={{marginBottom: '30px'}}>
                 <Column style={{width: '50%', paddingRight: '10px'}}>
                   <Img
-                    src='https://hebbkx1anhila5yf.public.blob.vercel-storage.com/dual-lighters-dWjQxDLWKZD4eO2hUzTsrlK3xnaPru.png'
+                    src='https://drfcdoakhkresrzk.public.blob.vercel-storage.com/dual-lighters-DDbYuPzwTH53bubLp1hGXt4Hjmr7OC.png'
                     width='250'
                     height='200'
                     alt='FLS Premium Windproof Lighters'
@@ -148,7 +148,7 @@ const BaseStyledTemplate = ({
                 </Column>
                 <Column style={{width: '50%', paddingLeft: '10px'}}>
                   <Img
-                    src='https://hebbkx1anhila5yf.public.blob.vercel-storage.com/box.jpg-sAej5ZEofSxQF0GYAHBNaRfXO8UKWw.jpeg'
+                    src='https://drfcdoakhkresrzk.public.blob.vercel-storage.com/98219c_f92f26ad811c4afebe0551f8bdc9644c~mv2.png'
                     width='250'
                     height='250'
                     alt='FLS Lighter Display Box with Variety of Designs'

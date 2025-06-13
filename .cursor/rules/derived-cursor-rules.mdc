@@ -96,6 +96,10 @@ This file defines all project rules, coding standards, workflow guidelines, refe
 </Head>
 ```
 (Added 2025-06-12 based on user request)
+* Ensure any missing or broken image URLs are replaced with the following Vercel Blob URLs:
+  * `https://drfcdoakhkresrzk.public.blob.vercel-storage.com/98219c_7bd75a9cc4254ffea09ed1f6d5081b06~mv2.png`
+  * `https://drfcdoakhkresrzk.public.blob.vercel-storage.com/98219c_f92f26ad811c4afebe0551f8bdc9644c~mv2.png`
+  * `https://drfcdoakhkresrzk.public.blob.vercel-storage.com/image%20%2814%29.png` (Added 2025-06-12 based on user request)
 
 ## WORKFLOW & RELEASE RULES
 
@@ -147,6 +151,7 @@ This file defines all project rules, coding standards, workflow guidelines, refe
 * When configuring image loading in `next.config.ts`, ensure that hostname patterns are correctly formatted and do not include invalid suffixes like `/*`. (Added 2025-06-12 based on user request)
 * When configuring image loading in `next.config.ts`, after making changes, restart the development server and test loading images from various sources to ensure the configuration is working as expected. (Added 2025-06-12 based on user request)
 * **Before releasing any changes to email templates, ensure that all templates include a default font and CSS injection in the `<Head>` section.** (Added 2025-06-12 based on user request)
+* Before releasing any changes to email templates, ensure any missing or broken image URLs are replaced with the correct Vercel Blob URLs. (Added 2025-06-12 based on user request)
 
 ## DEBUGGING
 
@@ -175,9 +180,4 @@ This file defines all project rules, coding standards, workflow guidelines, refe
 * When debugging email templates, ensure that they apply the general theme (colors, font families, etc.) as defined in CSS and font setup. (Added 2025-06-12 based on user request)
 * When debugging email templates, ensure that headings use the `var(--font-poppins-black)` font. (Added 2025-06-12 based on user request)
 * When debugging email templates, ensure that body text uses the `var(--font-proxima-nova)` font. (Added 2025-06-12 based on user request)
-* When debugging email templates, verify that all hardcoded font families are replaced with the correct CSS variable: `fontFamily: 'var(--font-poppins-black)'` for headings and `fontFamily: 'var(--font-proxima-nova)'` for body. (Added 2025-06-12 based on user request)
-* When debugging email templates, verify that all hardcoded color values are replaced with the corresponding CSS variable from `globals.css`. (Added 2025-06-12 based on user request)
-* When debugging email templates, verify that hardcoded spacing, border radius, etc., are replaced with CSS variables where possible. (Added 2025-06-12 based on user request)
-* When debugging email templates, verify that direct `'Arial, sans-serif'` or system font stacks are removed. (Added 2025-06-12 based on user request)
-* When debugging email templates, verify that all hardcoded font families are replaced with the correct CSS variable: `fontFamily: 'var(--font-poppins-black)'` for headings and `fontFamily: 'var(--font-proxima-nova)'` for body. (Added 2025-06-12 based on user request)
-* When debugging email
+* When debugging email templates, verify that all hardcoded font families are replaced with the correct CSS variable: `fontFamily: 'var(--font-poppins-

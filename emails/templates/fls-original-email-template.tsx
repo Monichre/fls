@@ -178,7 +178,7 @@ export const OriginalFlsEmailTemplate: React.FC<
           <Row style={{marginBottom: '20px'}}>
             <Column style={{width: '33%', padding: '0 10px'}}>
               <Img
-                src='https://drfcdoakhkresrzk.public.blob.vercel-storage.com/icons/badge-windproof.png'
+                src='https://drfcdoakhkresrzk.public.blob.vercel-storage.com/98219c_7bd75a9cc4254ffea09ed1f6d5081b06~mv2.png'
                 alt='Windproof Icon'
                 style={featureIconStyle}
               />
@@ -189,7 +189,7 @@ export const OriginalFlsEmailTemplate: React.FC<
             </Column>
             <Column style={{width: '33%', padding: '0 10px'}}>
               <Img
-                src='https://drfcdoakhkresrzk.public.blob.vercel-storage.com/icons/badge-design.png'
+                src='https://drfcdoakhkresrzk.public.blob.vercel-storage.com/98219c_f92f26ad811c4afebe0551f8bdc9644c~mv2.png'
                 alt='Stylish Design Icon'
                 style={featureIconStyle}
               />
@@ -200,7 +200,7 @@ export const OriginalFlsEmailTemplate: React.FC<
             </Column>
             <Column style={{width: '33%', padding: '0 10px'}}>
               <Img
-                src='https://drfcdoakhkresrzk.public.blob.vercel-storage.com/icons/badge-quality.png'
+                src='https://drfcdoakhkresrzk.public.blob.vercel-storage.com/image%20%2814%29.png'
                 alt='Premium Quality Icon'
                 style={featureIconStyle}
               />
@@ -224,7 +224,7 @@ export const OriginalFlsEmailTemplate: React.FC<
 
         <Section style={lifestyleSection}>
           <Img
-            src='https://drfcdoakhkresrzk.public.blob.vercel-storage.com/lifestyle/fls-outdoor-lifestyle.png'
+            src='https://drfcdoakhkresrzk.public.blob.vercel-storage.com/IMG-20250318-WA0005-uIVw141m70Du8QxVFAswpUJUP42pJh.jpg'
             alt='FLS Lighter in an outdoor lifestyle setting'
             style={lifestyleImage}
           />

@@ -68,7 +68,7 @@ export const F3ProductShowcaseTemplate: React.FC<
 
           <Section style={heroSection}>
             <Img
-              src='https://hebbkx1anhila5yf.public.blob.vercel-storage.com/dual-lighters-bPm9GyxoCNfSrJB2RbcWPBbsEo2h2e.png'
+              src='https://drfcdoakhkresrzk.public.blob.vercel-storage.com/dual-lighters-DDbYuPzwTH53bubLp1hGXt4Hjmr7OC.png'
               alt='FLS F3 Lighters Collection'
               width='100%'
               style={heroImage}
@@ -140,7 +140,7 @@ export const F3ProductShowcaseTemplate: React.FC<
               <Row style={{marginBottom: '20px'}}>
                 <Column style={productColumnStyle}>
                   <Img
-                    src='https://hebbkx1anhila5yf.public.blob.vercel-storage.com/dual-lighters-bPm9GyxoCNfSrJB2RbcWPBbsEo2h2e.png'
+                    src='https://drfcdoakhkresrzk.public.blob.vercel-storage.com/dual-lighters-DDbYuPzwTH53bubLp1hGXt4Hjmr7OC.png'
                     alt='F3 Lighter Black'
                     style={productImageStyle}
                   />
@@ -148,7 +148,7 @@ export const F3ProductShowcaseTemplate: React.FC<
                 </Column>
                 <Column style={productColumnStyle}>
                   <Img
-                    src={`${baseUrl}/placeholder.svg?width=160&height=160&query=FLS+F3+Lighter+Gold`}
+                    src='https://drfcdoakhkresrzk.public.blob.vercel-storage.com/98219c_7bd75a9cc4254ffea09ed1f6d5081b06~mv2.png'
                     alt='F3 Lighter Gold'
                     style={productImageStyle}
                   />
@@ -156,7 +156,7 @@ export const F3ProductShowcaseTemplate: React.FC<
                 </Column>
                 <Column style={productColumnStyle}>
                   <Img
-                    src='https://hebbkx1anhila5yf.public.blob.vercel-storage.com/interface_medium-3ul6cZTl8tnhZFLvRKV6uD9ca4XccP.png'
+                    src='https://drfcdoakhkresrzk.public.blob.vercel-storage.com/98219c_f92f26ad811c4afebe0551f8bdc9644c~mv2.png'
                     alt='F3 Lighter Purple'
                     style={productImageStyle}
                   />
@@ -166,7 +166,7 @@ export const F3ProductShowcaseTemplate: React.FC<
               <Row>
                 <Column style={productColumnStyle}>
                   <Img
-                    src={`${baseUrl}/placeholder.svg?width=160&height=160&query=FLS+F3+Lighter+Legalize+Theme`}
+                    src='https://drfcdoakhkresrzk.public.blob.vercel-storage.com/image%20%2814%29.png'
                     alt='F3 Lighter Legalize Theme'
                     style={productImageStyle}
                   />
@@ -174,7 +174,7 @@ export const F3ProductShowcaseTemplate: React.FC<
                 </Column>
                 <Column style={productColumnStyle}>
                   <Img
-                    src={`${baseUrl}/placeholder.svg?width=160&height=160&query=FLS+F3+Lighter+420+Theme`}
+                    src='https://drfcdoakhkresrzk.public.blob.vercel-storage.com/IMG-20250318-WA0001-FuP5BPuEn4jh00IsIq8M5sGCKAK8vo.jpg'
                     alt='F3 Lighter 420 Theme'
                     style={productImageStyle}
                   />
@@ -182,7 +182,7 @@ export const F3ProductShowcaseTemplate: React.FC<
                 </Column>
                 <Column style={productColumnStyle}>
                   <Img
-                    src={`${baseUrl}/placeholder.svg?width=160&height=160&query=FLS+F3+Lighter+Space+Theme`}
+                    src='https://drfcdoakhkresrzk.public.blob.vercel-storage.com/IMG-20250318-WA0002-jfVBzVQwyk4ovQVmY5tHRCrUt99LC4.jpg'
                     alt='F3 Lighter Space Theme'
                     style={productImageStyle}
                   />
@@ -225,7 +225,7 @@ export const F3ProductShowcaseTemplate: React.FC<
                   }}
                 >
                   <Img
-                    src='https://hebbkx1anhila5yf.public.blob.vercel-storage.com/box.jpg-GJCj3oZ6bibV5rnaqP81Z34lhl1r3B.jpeg'
+                    src='https://drfcdoakhkresrzk.public.blob.vercel-storage.com/98219c_7bd75a9cc4254ffea09ed1f6d5081b06~mv2.png'
                     alt='FLS Lighter Display Tray'
                     style={{...productImageStyle, margin: '0 auto'}}
                   />
@@ -272,7 +272,7 @@ export const F3ProductShowcaseTemplate: React.FC<
               <Column align='right' style={{width: '50%', paddingRight: '8px'}}>
                 <Link href='https://facebook.com/FLSLighters'>
                   <Img
-                    src={`${baseUrl}/placeholder.svg?width=32&height=32&query=Facebook+Icon+Yellow`}
+                    src='https://drfcdoakhkresrzk.public.blob.vercel-storage.com/IMG-20250318-WA0003-3b6QCGldg5Ka2t206JZ4R8eYG4l7Io.jpg'
                     alt='Facebook'
                     width='32'
                     height='32'
@@ -282,7 +282,7 @@ export const F3ProductShowcaseTemplate: React.FC<
               <Column align='left' style={{width: '50%', paddingLeft: '8px'}}>
                 <Link href='https://instagram.com/FLSLighters'>
                   <Img
-                    src={`${baseUrl}/placeholder.svg?width=32&height=32&query=Instagram+Icon+Yellow`}
+                    src='https://drfcdoakhkresrzk.public.blob.vercel-storage.com/IMG-20250318-WA0004-3A7V8j8jPDyu2PZXpTmN93grcedHmX.jpg'
                     alt='Instagram'
                     width='32'
                     height='32'
@@ -323,7 +323,7 @@ const heroSection: React.CSSProperties = {
 }
 
 const heroImage: React.CSSProperties = {
-  maxWidth: '100%',
+  width: '100%',
   height: 'auto',
 }
 

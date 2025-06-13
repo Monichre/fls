@@ -187,7 +187,7 @@ export const FlsEmailTemplate: React.FC<Readonly<FlsEmailTemplateProps>> = ({
           </Text>
 
           <Img
-            src='https://drfcdoakhkresrzk.public.blob.vercel-storage.com/products/shared/fls-display-stand.jpg'
+            src='https://drfcdoakhkresrzk.public.blob.vercel-storage.com/98219c_7bd75a9cc4254ffea09ed1f6d5081b06~mv2.png'
             width='540'
             height='300'
             alt='FLS Lighters Display Stand'
@@ -242,7 +242,7 @@ export const FlsEmailTemplate: React.FC<Readonly<FlsEmailTemplateProps>> = ({
             <Row>
               <Column style={productColumn}>
                 <Img
-                  src='https://drfcdoakhkresrzk.public.blob.vercel-storage.com/products/shared/fls-lighter-black-red.png'
+                  src='https://drfcdoakhkresrzk.public.blob.vercel-storage.com/98219c_f92f26ad811c4afebe0551f8bdc9644c~mv2.png'
                   alt='FLS Black and Red Lighter'
                   style={productImage}
                 />
@@ -251,7 +251,7 @@ export const FlsEmailTemplate: React.FC<Readonly<FlsEmailTemplateProps>> = ({
               </Column>
               <Column style={productColumn}>
                 <Img
-                  src='https://drfcdoakhkresrzk.public.blob.vercel-storage.com/products/shared/fls-lighter-blue-purple.png'
+                  src='https://drfcdoakhkresrzk.public.blob.vercel-storage.com/image%20%2814%29.png'
                   alt='FLS Blue and Purple Lighter'
                   style={productImage}
                 />
@@ -260,7 +260,7 @@ export const FlsEmailTemplate: React.FC<Readonly<FlsEmailTemplateProps>> = ({
               </Column>
               <Column style={productColumn}>
                 <Img
-                  src='https://drfcdoakhkresrzk.public.blob.vercel-storage.com/products/f3/f3-lighter-gold.png'
+                  src='https://drfcdoakhkresrzk.public.blob.vercel-storage.com/IMG-20250318-WA0010-F3TQL3Dg5ZTqrBwrLZ9fGG4TU3VyVA.jpg'
                   alt='FLS Gold Lighter'
                   style={productImage}
                 />
