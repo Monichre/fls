@@ -192,6 +192,7 @@ export const FlsEmailTemplate: React.FC<Readonly<FlsEmailTemplateProps>> = ({
             height='300'
             alt='FLS Lighters Display Stand'
             style={imageStyle}
+            className='object-contain max-w-full max-h-300'
           />
 
           <Text style={paragraph}>{valueProposition}</Text>

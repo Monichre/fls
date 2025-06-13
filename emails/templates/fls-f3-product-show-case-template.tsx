@@ -93,7 +93,7 @@ export const F3ProductShowcaseTemplate: React.FC<
   PackagingDetail2 = 'Innerbox and Export Cartons Available',
   PackagingDetail3 = 'Eye-catching FLS Display Stands',
   callToActionText = 'Explore the F3 Collection & Wholesale Pricing',
-  websiteUrl = 'https://flsusa.shop/f3-collection',
+  websiteUrl = 'https://flsusa.shop/limited-edition',
   phoneNumber = '979-488-9207',
   email = 'sales@flsusa.shop',
 }) => (

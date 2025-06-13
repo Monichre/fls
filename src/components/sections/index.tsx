@@ -1,7 +1,0 @@
-export * from './lighter-collection'
-export * from './display-box-section'
-export * from './digital-catalogue-cta'
-export * from './dual-section'
-export * from './signature-design-section'
-export * from './features-section'
-export * from './hero'
