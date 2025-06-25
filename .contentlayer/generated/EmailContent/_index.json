@@ -220,6 +220,26 @@
     "slug": "template_9_reengagement"
   },
   {
+    "templateType": "product",
+    "section": "showcase",
+    "priority": 1,
+    "title": "Product Showcase",
+    "body": {
+      "raw": "\n## Featured FLS Lighter Collection\n\n**Crimson Blaze Series**\nBold red and black design with premium wind-resistant flame technology. Perfect for outdoor enthusiasts and collectors.\n\n**Azure Fusion Collection**\nCool blue and purple gradient designs that catch the eye and drive impulse purchases. Popular with younger demographics.\n\n**Golden Spark Premium**\nElegant gold-toned finish with sophisticated styling. Appeals to upscale customers and gift buyers.\n\n**Classic Series**\nTime-tested designs in traditional colors. Reliable sellers with broad appeal across all customer segments.\n\nEach design is engineered with our signature wind-proof technology and backed by our quality guarantee.",
+      "html": "<h2>Featured FLS Lighter Collection</h2>\n<p><strong>Crimson Blaze Series</strong>\nBold red and black design with premium wind-resistant flame technology. Perfect for outdoor enthusiasts and collectors.</p>\n<p><strong>Azure Fusion Collection</strong>\nCool blue and purple gradient designs that catch the eye and drive impulse purchases. Popular with younger demographics.</p>\n<p><strong>Golden Spark Premium</strong>\nElegant gold-toned finish with sophisticated styling. Appeals to upscale customers and gift buyers.</p>\n<p><strong>Classic Series</strong>\nTime-tested designs in traditional colors. Reliable sellers with broad appeal across all customer segments.</p>\n<p>Each design is engineered with our signature wind-proof technology and backed by our quality guarantee.</p>"
+    },
+    "_id": "product/showcase.md",
+    "_raw": {
+      "sourceFilePath": "product/showcase.md",
+      "sourceFileName": "showcase.md",
+      "sourceFileDir": "product",
+      "contentType": "markdown",
+      "flattenedPath": "product/showcase"
+    },
+    "type": "EmailContent",
+    "slug": "product/showcase"
+  },
+  {
     "templateType": "general",
     "section": "company-info",
     "priority": 1,
@@ -318,26 +338,6 @@
     },
     "type": "EmailContent",
     "slug": "signature/launch"
-  },
-  {
-    "templateType": "product",
-    "section": "showcase",
-    "priority": 1,
-    "title": "Product Showcase",
-    "body": {
-      "raw": "\n## Featured FLS Lighter Collection\n\n**Crimson Blaze Series**\nBold red and black design with premium wind-resistant flame technology. Perfect for outdoor enthusiasts and collectors.\n\n**Azure Fusion Collection**\nCool blue and purple gradient designs that catch the eye and drive impulse purchases. Popular with younger demographics.\n\n**Golden Spark Premium**\nElegant gold-toned finish with sophisticated styling. Appeals to upscale customers and gift buyers.\n\n**Classic Series**\nTime-tested designs in traditional colors. Reliable sellers with broad appeal across all customer segments.\n\nEach design is engineered with our signature wind-proof technology and backed by our quality guarantee.",
-      "html": "<h2>Featured FLS Lighter Collection</h2>\n<p><strong>Crimson Blaze Series</strong>\nBold red and black design with premium wind-resistant flame technology. Perfect for outdoor enthusiasts and collectors.</p>\n<p><strong>Azure Fusion Collection</strong>\nCool blue and purple gradient designs that catch the eye and drive impulse purchases. Popular with younger demographics.</p>\n<p><strong>Golden Spark Premium</strong>\nElegant gold-toned finish with sophisticated styling. Appeals to upscale customers and gift buyers.</p>\n<p><strong>Classic Series</strong>\nTime-tested designs in traditional colors. Reliable sellers with broad appeal across all customer segments.</p>\n<p>Each design is engineered with our signature wind-proof technology and backed by our quality guarantee.</p>"
-    },
-    "_id": "product/showcase.md",
-    "_raw": {
-      "sourceFilePath": "product/showcase.md",
-      "sourceFileName": "showcase.md",
-      "sourceFileDir": "product",
-      "contentType": "markdown",
-      "flattenedPath": "product/showcase"
-    },
-    "type": "EmailContent",
-    "slug": "product/showcase"
   },
   {
     "templateType": "welcome",

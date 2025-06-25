@@ -21,7 +21,7 @@
         "type": "EmailContent",
         "slug": "bic_template_3"
       },
-      "documentHash": "1749813488153",
+      "documentHash": "1750882858211",
       "hasWarnings": false,
       "documentTypeName": "EmailContent"
     },
@@ -46,7 +46,7 @@
         "type": "EmailContent",
         "slug": "template_10_seasonal"
       },
-      "documentHash": "1749735897760",
+      "documentHash": "1750882858215",
       "hasWarnings": false,
       "documentTypeName": "EmailContent"
     },
@@ -71,7 +71,7 @@
         "type": "EmailContent",
         "slug": "template_1_welcome"
       },
-      "documentHash": "1749735838227",
+      "documentHash": "1750882858215",
       "hasWarnings": false,
       "documentTypeName": "EmailContent"
     },
@@ -96,7 +96,7 @@
         "type": "EmailContent",
         "slug": "template_2_product_launch"
       },
-      "documentHash": "1749735883466",
+      "documentHash": "1750882858215",
       "hasWarnings": false,
       "documentTypeName": "EmailContent"
     },
@@ -121,7 +121,7 @@
         "type": "EmailContent",
         "slug": "template_3_exclusive_offer"
       },
-      "documentHash": "1749735883845",
+      "documentHash": "1750882858216",
       "hasWarnings": false,
       "documentTypeName": "EmailContent"
     },
@@ -146,7 +146,7 @@
         "type": "EmailContent",
         "slug": "template_4_cart_abandonment"
       },
-      "documentHash": "1749735884280",
+      "documentHash": "1750882858216",
       "hasWarnings": false,
       "documentTypeName": "EmailContent"
     },
@@ -171,7 +171,7 @@
         "type": "EmailContent",
         "slug": "template_5_post_purchase"
       },
-      "documentHash": "1749735884710",
+      "documentHash": "1750882858216",
       "hasWarnings": false,
       "documentTypeName": "EmailContent"
     },
@@ -196,7 +196,7 @@
         "type": "EmailContent",
         "slug": "template_6_educational"
       },
-      "documentHash": "1749735885127",
+      "documentHash": "1750882858216",
       "hasWarnings": false,
       "documentTypeName": "EmailContent"
     },
@@ -221,7 +221,7 @@
         "type": "EmailContent",
         "slug": "template_7_loyalty_program"
       },
-      "documentHash": "1749735896555",
+      "documentHash": "1750882858216",
       "hasWarnings": false,
       "documentTypeName": "EmailContent"
     },
@@ -246,7 +246,7 @@
         "type": "EmailContent",
         "slug": "template_8_referral_program"
       },
-      "documentHash": "1749735896934",
+      "documentHash": "1750882858217",
       "hasWarnings": false,
       "documentTypeName": "EmailContent"
     },
@@ -271,132 +271,7 @@
         "type": "EmailContent",
         "slug": "template_9_reengagement"
       },
-      "documentHash": "1749735897366",
-      "hasWarnings": false,
-      "documentTypeName": "EmailContent"
-    },
-    "shared/company-info.md": {
-      "document": {
-        "templateType": "general",
-        "section": "company-info",
-        "priority": 1,
-        "title": "Company Information",
-        "body": {
-          "raw": "\nFLS USA is about more than just a flame - we're pioneers in crafting high-performance lighters that combine innovative technology with eye-catching designs. Our commitment to quality and reliability has made us a trusted name among retailers and consumers alike.\n\nFounded by passionate entrepreneurs, FLS stands for durability, style, and performance. Each lighter in our collection is engineered to deliver consistent ignition in any weather condition, making them the perfect choice for outdoor enthusiasts, collectors, and everyday users.",
-          "html": "<p>FLS USA is about more than just a flame - we're pioneers in crafting high-performance lighters that combine innovative technology with eye-catching designs. Our commitment to quality and reliability has made us a trusted name among retailers and consumers alike.</p>\n<p>Founded by passionate entrepreneurs, FLS stands for durability, style, and performance. Each lighter in our collection is engineered to deliver consistent ignition in any weather condition, making them the perfect choice for outdoor enthusiasts, collectors, and everyday users.</p>"
-        },
-        "_id": "shared/company-info.md",
-        "_raw": {
-          "sourceFilePath": "shared/company-info.md",
-          "sourceFileName": "company-info.md",
-          "sourceFileDir": "shared",
-          "contentType": "markdown",
-          "flattenedPath": "shared/company-info"
-        },
-        "type": "EmailContent",
-        "slug": "shared/company-info"
-      },
-      "documentHash": "1749733510913",
-      "hasWarnings": false,
-      "documentTypeName": "EmailContent"
-    },
-    "shared/features.md": {
-      "document": {
-        "templateType": "product",
-        "section": "features",
-        "priority": 1,
-        "title": "Product Features",
-        "body": {
-          "raw": "\n## Why Choose FLS Lighters?\n\n**WINDPROOF TECHNOLOGY**\nReliable ignition in all weather conditions, from gentle breezes to strong winds.\n\n**DURABLE CONSTRUCTION**\nBuilt to last with premium materials and rigorous quality testing - up to 1,200 ignitions per lighter.\n\n**VIBRANT DESIGNS**\nEye-catching colors and patterns that appeal to collectors and impulse buyers alike.\n\n**ERGONOMIC DESIGN**\nCurved base design for comfortable grip and easy handling in any situation.\n\n**LONG-LASTING PERFORMANCE**\nConsistent flame output and reliable operation for years of dependable use.",
-          "html": "<h2>Why Choose FLS Lighters?</h2>\n<p><strong>WINDPROOF TECHNOLOGY</strong>\nReliable ignition in all weather conditions, from gentle breezes to strong winds.</p>\n<p><strong>DURABLE CONSTRUCTION</strong>\nBuilt to last with premium materials and rigorous quality testing - up to 1,200 ignitions per lighter.</p>\n<p><strong>VIBRANT DESIGNS</strong>\nEye-catching colors and patterns that appeal to collectors and impulse buyers alike.</p>\n<p><strong>ERGONOMIC DESIGN</strong>\nCurved base design for comfortable grip and easy handling in any situation.</p>\n<p><strong>LONG-LASTING PERFORMANCE</strong>\nConsistent flame output and reliable operation for years of dependable use.</p>"
-        },
-        "_id": "shared/features.md",
-        "_raw": {
-          "sourceFilePath": "shared/features.md",
-          "sourceFileName": "features.md",
-          "sourceFileDir": "shared",
-          "contentType": "markdown",
-          "flattenedPath": "shared/features"
-        },
-        "type": "EmailContent",
-        "slug": "shared/features"
-      },
-      "documentHash": "1749733581699",
-      "hasWarnings": false,
-      "documentTypeName": "EmailContent"
-    },
-    "shared/footer.md": {
-      "document": {
-        "templateType": "general",
-        "section": "footer",
-        "priority": 1,
-        "title": "Footer Information",
-        "body": {
-          "raw": "\n**FLS USA**\n123 Spark Street\nHouston, TX 77001\n\n**Contact Information:**\nPhone: 979-488-9207\nEmail: sales@flsusa.shop\nWebsite: https://flsusa.shop\n\n© {year} FLS USA. All rights reserved.\n\nThis email was sent to you because you are a valued partner in our network. If you no longer wish to receive these emails, you can [unsubscribe here]({unsubscribeUrl}).\n\nView our [Privacy Policy]({privacyUrl}) | [Terms of Service]({termsUrl})",
-          "html": "<p><strong>FLS USA</strong>\n123 Spark Street\nHouston, TX 77001</p>\n<p><strong>Contact Information:</strong>\nPhone: 979-488-9207\nEmail: sales@flsusa.shop\nWebsite: https://flsusa.shop</p>\n<p>© {year} FLS USA. All rights reserved.</p>\n<p>This email was sent to you because you are a valued partner in our network. If you no longer wish to receive these emails, you can <a href=\"%7BunsubscribeUrl%7D\">unsubscribe here</a>.</p>\n<p>View our <a href=\"%7BprivacyUrl%7D\">Privacy Policy</a> | <a href=\"%7BtermsUrl%7D\">Terms of Service</a></p>"
-        },
-        "_id": "shared/footer.md",
-        "_raw": {
-          "sourceFilePath": "shared/footer.md",
-          "sourceFileName": "footer.md",
-          "sourceFileDir": "shared",
-          "contentType": "markdown",
-          "flattenedPath": "shared/footer"
-        },
-        "type": "EmailContent",
-        "slug": "shared/footer"
-      },
-      "documentHash": "1749733611367",
-      "hasWarnings": false,
-      "documentTypeName": "EmailContent"
-    },
-    "shared/value-proposition.md": {
-      "document": {
-        "templateType": "general",
-        "section": "value-proposition",
-        "priority": 1,
-        "title": "Value Proposition",
-        "body": {
-          "raw": "\n**Spark the Excitement** with FLS USA's premium lighter collection!\n\nOur lighters aren't just functional tools - they're conversation starters, collectible items, and reliable companions for life's important moments. Whether your customers need dependable ignition for outdoor adventures or want to add style to their everyday carry, FLS lighters deliver unmatched performance and eye-catching design.\n\n**What makes FLS different:**\n- Wind-resistant technology that works when others fail\n- Premium materials and construction for lasting durability  \n- Vibrant, collectible designs that drive impulse purchases\n- Consistent quality that builds customer loyalty\n- Competitive wholesale pricing that maximizes your profit margins",
-          "html": "<p><strong>Spark the Excitement</strong> with FLS USA's premium lighter collection!</p>\n<p>Our lighters aren't just functional tools - they're conversation starters, collectible items, and reliable companions for life's important moments. Whether your customers need dependable ignition for outdoor adventures or want to add style to their everyday carry, FLS lighters deliver unmatched performance and eye-catching design.</p>\n<p><strong>What makes FLS different:</strong></p>\n<ul>\n<li>Wind-resistant technology that works when others fail</li>\n<li>Premium materials and construction for lasting durability</li>\n<li>Vibrant, collectible designs that drive impulse purchases</li>\n<li>Consistent quality that builds customer loyalty</li>\n<li>Competitive wholesale pricing that maximizes your profit margins</li>\n</ul>"
-        },
-        "_id": "shared/value-proposition.md",
-        "_raw": {
-          "sourceFilePath": "shared/value-proposition.md",
-          "sourceFileName": "value-proposition.md",
-          "sourceFileDir": "shared",
-          "contentType": "markdown",
-          "flattenedPath": "shared/value-proposition"
-        },
-        "type": "EmailContent",
-        "slug": "shared/value-proposition"
-      },
-      "documentHash": "1749733701315",
-      "hasWarnings": false,
-      "documentTypeName": "EmailContent"
-    },
-    "signature/launch.md": {
-      "document": {
-        "templateType": "signature",
-        "section": "launch",
-        "priority": 1,
-        "title": "Signature Series Launch",
-        "body": {
-          "raw": "\n## Introducing the FLS Signature Series\n\n**Experience Unrivaled Craftsmanship**\n\nThe FLS Signature Series represents the pinnacle of lighter engineering and design. Each piece in this exclusive collection combines cutting-edge technology with premium materials to create lighters that are as beautiful as they are functional.\n\n**What Makes the Signature Series Special:**\n\n- **Premium Materials**: Crafted with high-grade metals and finishes\n- **Advanced Ignition**: Next-generation windproof technology\n- **Limited Edition**: Exclusive designs with numbered authentication\n- **Collector Value**: Investment-quality pieces that appreciate over time\n- **Gift-Ready**: Elegant packaging suitable for any occasion\n\n**Perfect For:**\n- Discerning collectors seeking premium pieces\n- Gift buyers looking for something truly special  \n- Retailers targeting upscale customers\n- Anyone who appreciates superior craftsmanship",
-          "html": "<h2>Introducing the FLS Signature Series</h2>\n<p><strong>Experience Unrivaled Craftsmanship</strong></p>\n<p>The FLS Signature Series represents the pinnacle of lighter engineering and design. Each piece in this exclusive collection combines cutting-edge technology with premium materials to create lighters that are as beautiful as they are functional.</p>\n<p><strong>What Makes the Signature Series Special:</strong></p>\n<ul>\n<li><strong>Premium Materials</strong>: Crafted with high-grade metals and finishes</li>\n<li><strong>Advanced Ignition</strong>: Next-generation windproof technology</li>\n<li><strong>Limited Edition</strong>: Exclusive designs with numbered authentication</li>\n<li><strong>Collector Value</strong>: Investment-quality pieces that appreciate over time</li>\n<li><strong>Gift-Ready</strong>: Elegant packaging suitable for any occasion</li>\n</ul>\n<p><strong>Perfect For:</strong></p>\n<ul>\n<li>Discerning collectors seeking premium pieces</li>\n<li>Gift buyers looking for something truly special</li>\n<li>Retailers targeting upscale customers</li>\n<li>Anyone who appreciates superior craftsmanship</li>\n</ul>"
-        },
-        "_id": "signature/launch.md",
-        "_raw": {
-          "sourceFilePath": "signature/launch.md",
-          "sourceFileName": "launch.md",
-          "sourceFileDir": "signature",
-          "contentType": "markdown",
-          "flattenedPath": "signature/launch"
-        },
-        "type": "EmailContent",
-        "slug": "signature/launch"
-      },
-      "documentHash": "1749734391584",
+      "documentHash": "1750882858217",
       "hasWarnings": false,
       "documentTypeName": "EmailContent"
     },
@@ -421,7 +296,132 @@
         "type": "EmailContent",
         "slug": "product/showcase"
       },
-      "documentHash": "1749734354286",
+      "documentHash": "1750882858211",
+      "hasWarnings": false,
+      "documentTypeName": "EmailContent"
+    },
+    "shared/company-info.md": {
+      "document": {
+        "templateType": "general",
+        "section": "company-info",
+        "priority": 1,
+        "title": "Company Information",
+        "body": {
+          "raw": "\nFLS USA is about more than just a flame - we're pioneers in crafting high-performance lighters that combine innovative technology with eye-catching designs. Our commitment to quality and reliability has made us a trusted name among retailers and consumers alike.\n\nFounded by passionate entrepreneurs, FLS stands for durability, style, and performance. Each lighter in our collection is engineered to deliver consistent ignition in any weather condition, making them the perfect choice for outdoor enthusiasts, collectors, and everyday users.",
+          "html": "<p>FLS USA is about more than just a flame - we're pioneers in crafting high-performance lighters that combine innovative technology with eye-catching designs. Our commitment to quality and reliability has made us a trusted name among retailers and consumers alike.</p>\n<p>Founded by passionate entrepreneurs, FLS stands for durability, style, and performance. Each lighter in our collection is engineered to deliver consistent ignition in any weather condition, making them the perfect choice for outdoor enthusiasts, collectors, and everyday users.</p>"
+        },
+        "_id": "shared/company-info.md",
+        "_raw": {
+          "sourceFilePath": "shared/company-info.md",
+          "sourceFileName": "company-info.md",
+          "sourceFileDir": "shared",
+          "contentType": "markdown",
+          "flattenedPath": "shared/company-info"
+        },
+        "type": "EmailContent",
+        "slug": "shared/company-info"
+      },
+      "documentHash": "1750882858211",
+      "hasWarnings": false,
+      "documentTypeName": "EmailContent"
+    },
+    "shared/features.md": {
+      "document": {
+        "templateType": "product",
+        "section": "features",
+        "priority": 1,
+        "title": "Product Features",
+        "body": {
+          "raw": "\n## Why Choose FLS Lighters?\n\n**WINDPROOF TECHNOLOGY**\nReliable ignition in all weather conditions, from gentle breezes to strong winds.\n\n**DURABLE CONSTRUCTION**\nBuilt to last with premium materials and rigorous quality testing - up to 1,200 ignitions per lighter.\n\n**VIBRANT DESIGNS**\nEye-catching colors and patterns that appeal to collectors and impulse buyers alike.\n\n**ERGONOMIC DESIGN**\nCurved base design for comfortable grip and easy handling in any situation.\n\n**LONG-LASTING PERFORMANCE**\nConsistent flame output and reliable operation for years of dependable use.",
+          "html": "<h2>Why Choose FLS Lighters?</h2>\n<p><strong>WINDPROOF TECHNOLOGY</strong>\nReliable ignition in all weather conditions, from gentle breezes to strong winds.</p>\n<p><strong>DURABLE CONSTRUCTION</strong>\nBuilt to last with premium materials and rigorous quality testing - up to 1,200 ignitions per lighter.</p>\n<p><strong>VIBRANT DESIGNS</strong>\nEye-catching colors and patterns that appeal to collectors and impulse buyers alike.</p>\n<p><strong>ERGONOMIC DESIGN</strong>\nCurved base design for comfortable grip and easy handling in any situation.</p>\n<p><strong>LONG-LASTING PERFORMANCE</strong>\nConsistent flame output and reliable operation for years of dependable use.</p>"
+        },
+        "_id": "shared/features.md",
+        "_raw": {
+          "sourceFilePath": "shared/features.md",
+          "sourceFileName": "features.md",
+          "sourceFileDir": "shared",
+          "contentType": "markdown",
+          "flattenedPath": "shared/features"
+        },
+        "type": "EmailContent",
+        "slug": "shared/features"
+      },
+      "documentHash": "1750882858214",
+      "hasWarnings": false,
+      "documentTypeName": "EmailContent"
+    },
+    "shared/footer.md": {
+      "document": {
+        "templateType": "general",
+        "section": "footer",
+        "priority": 1,
+        "title": "Footer Information",
+        "body": {
+          "raw": "\n**FLS USA**\n123 Spark Street\nHouston, TX 77001\n\n**Contact Information:**\nPhone: 979-488-9207\nEmail: sales@flsusa.shop\nWebsite: https://flsusa.shop\n\n© {year} FLS USA. All rights reserved.\n\nThis email was sent to you because you are a valued partner in our network. If you no longer wish to receive these emails, you can [unsubscribe here]({unsubscribeUrl}).\n\nView our [Privacy Policy]({privacyUrl}) | [Terms of Service]({termsUrl})",
+          "html": "<p><strong>FLS USA</strong>\n123 Spark Street\nHouston, TX 77001</p>\n<p><strong>Contact Information:</strong>\nPhone: 979-488-9207\nEmail: sales@flsusa.shop\nWebsite: https://flsusa.shop</p>\n<p>© {year} FLS USA. All rights reserved.</p>\n<p>This email was sent to you because you are a valued partner in our network. If you no longer wish to receive these emails, you can <a href=\"%7BunsubscribeUrl%7D\">unsubscribe here</a>.</p>\n<p>View our <a href=\"%7BprivacyUrl%7D\">Privacy Policy</a> | <a href=\"%7BtermsUrl%7D\">Terms of Service</a></p>"
+        },
+        "_id": "shared/footer.md",
+        "_raw": {
+          "sourceFilePath": "shared/footer.md",
+          "sourceFileName": "footer.md",
+          "sourceFileDir": "shared",
+          "contentType": "markdown",
+          "flattenedPath": "shared/footer"
+        },
+        "type": "EmailContent",
+        "slug": "shared/footer"
+      },
+      "documentHash": "1750882858214",
+      "hasWarnings": false,
+      "documentTypeName": "EmailContent"
+    },
+    "shared/value-proposition.md": {
+      "document": {
+        "templateType": "general",
+        "section": "value-proposition",
+        "priority": 1,
+        "title": "Value Proposition",
+        "body": {
+          "raw": "\n**Spark the Excitement** with FLS USA's premium lighter collection!\n\nOur lighters aren't just functional tools - they're conversation starters, collectible items, and reliable companions for life's important moments. Whether your customers need dependable ignition for outdoor adventures or want to add style to their everyday carry, FLS lighters deliver unmatched performance and eye-catching design.\n\n**What makes FLS different:**\n- Wind-resistant technology that works when others fail\n- Premium materials and construction for lasting durability  \n- Vibrant, collectible designs that drive impulse purchases\n- Consistent quality that builds customer loyalty\n- Competitive wholesale pricing that maximizes your profit margins",
+          "html": "<p><strong>Spark the Excitement</strong> with FLS USA's premium lighter collection!</p>\n<p>Our lighters aren't just functional tools - they're conversation starters, collectible items, and reliable companions for life's important moments. Whether your customers need dependable ignition for outdoor adventures or want to add style to their everyday carry, FLS lighters deliver unmatched performance and eye-catching design.</p>\n<p><strong>What makes FLS different:</strong></p>\n<ul>\n<li>Wind-resistant technology that works when others fail</li>\n<li>Premium materials and construction for lasting durability</li>\n<li>Vibrant, collectible designs that drive impulse purchases</li>\n<li>Consistent quality that builds customer loyalty</li>\n<li>Competitive wholesale pricing that maximizes your profit margins</li>\n</ul>"
+        },
+        "_id": "shared/value-proposition.md",
+        "_raw": {
+          "sourceFilePath": "shared/value-proposition.md",
+          "sourceFileName": "value-proposition.md",
+          "sourceFileDir": "shared",
+          "contentType": "markdown",
+          "flattenedPath": "shared/value-proposition"
+        },
+        "type": "EmailContent",
+        "slug": "shared/value-proposition"
+      },
+      "documentHash": "1750882858214",
+      "hasWarnings": false,
+      "documentTypeName": "EmailContent"
+    },
+    "signature/launch.md": {
+      "document": {
+        "templateType": "signature",
+        "section": "launch",
+        "priority": 1,
+        "title": "Signature Series Launch",
+        "body": {
+          "raw": "\n## Introducing the FLS Signature Series\n\n**Experience Unrivaled Craftsmanship**\n\nThe FLS Signature Series represents the pinnacle of lighter engineering and design. Each piece in this exclusive collection combines cutting-edge technology with premium materials to create lighters that are as beautiful as they are functional.\n\n**What Makes the Signature Series Special:**\n\n- **Premium Materials**: Crafted with high-grade metals and finishes\n- **Advanced Ignition**: Next-generation windproof technology\n- **Limited Edition**: Exclusive designs with numbered authentication\n- **Collector Value**: Investment-quality pieces that appreciate over time\n- **Gift-Ready**: Elegant packaging suitable for any occasion\n\n**Perfect For:**\n- Discerning collectors seeking premium pieces\n- Gift buyers looking for something truly special  \n- Retailers targeting upscale customers\n- Anyone who appreciates superior craftsmanship",
+          "html": "<h2>Introducing the FLS Signature Series</h2>\n<p><strong>Experience Unrivaled Craftsmanship</strong></p>\n<p>The FLS Signature Series represents the pinnacle of lighter engineering and design. Each piece in this exclusive collection combines cutting-edge technology with premium materials to create lighters that are as beautiful as they are functional.</p>\n<p><strong>What Makes the Signature Series Special:</strong></p>\n<ul>\n<li><strong>Premium Materials</strong>: Crafted with high-grade metals and finishes</li>\n<li><strong>Advanced Ignition</strong>: Next-generation windproof technology</li>\n<li><strong>Limited Edition</strong>: Exclusive designs with numbered authentication</li>\n<li><strong>Collector Value</strong>: Investment-quality pieces that appreciate over time</li>\n<li><strong>Gift-Ready</strong>: Elegant packaging suitable for any occasion</li>\n</ul>\n<p><strong>Perfect For:</strong></p>\n<ul>\n<li>Discerning collectors seeking premium pieces</li>\n<li>Gift buyers looking for something truly special</li>\n<li>Retailers targeting upscale customers</li>\n<li>Anyone who appreciates superior craftsmanship</li>\n</ul>"
+        },
+        "_id": "signature/launch.md",
+        "_raw": {
+          "sourceFilePath": "signature/launch.md",
+          "sourceFileName": "launch.md",
+          "sourceFileDir": "signature",
+          "contentType": "markdown",
+          "flattenedPath": "signature/launch"
+        },
+        "type": "EmailContent",
+        "slug": "signature/launch"
+      },
+      "documentHash": "1750882858215",
       "hasWarnings": false,
       "documentTypeName": "EmailContent"
     },
@@ -446,7 +446,7 @@
         "type": "EmailContent",
         "slug": "welcome/intro"
       },
-      "documentHash": "1749733799327",
+      "documentHash": "1750882858217",
       "hasWarnings": false,
       "documentTypeName": "EmailContent"
     }
