@@ -100,6 +100,9 @@ This file defines all project rules, coding standards, workflow guidelines, refe
   * `https://drfcdoakhkresrzk.public.blob.vercel-storage.com/98219c_7bd75a9cc4254ffea09ed1f6d5081b06~mv2.png`
   * `https://drfcdoakhkresrzk.public.blob.vercel-storage.com/98219c_f92f26ad811c4afebe0551f8bdc9644c~mv2.png`
   * `https://drfcdoakhkresrzk.public.blob.vercel-storage.com/image%20%2814%29.png` (Added 2025-06-12 based on user request)
+* The "Watch Demo" button on `@Hero.tsx` should trigger the demo video, similar to the functionality in `@DualSection.tsx`. (Added 2025-06-13 based on user request)
+* The `@Hero.tsx` component should maintain its original column alignment. (Added 2025-06-13 based on user request)
+* The right side content of `@Hero.tsx` should have adequate spacing. (Added 2025-06-13 based on user request)
 
 ## WORKFLOW & RELEASE RULES
 
@@ -152,6 +155,9 @@ This file defines all project rules, coding standards, workflow guidelines, refe
 * When configuring image loading in `next.config.ts`, after making changes, restart the development server and test loading images from various sources to ensure the configuration is working as expected. (Added 2025-06-12 based on user request)
 * **Before releasing any changes to email templates, ensure that all templates include a default font and CSS injection in the `<Head>` section.** (Added 2025-06-12 based on user request)
 * Before releasing any changes to email templates, ensure any missing or broken image URLs are replaced with the correct Vercel Blob URLs. (Added 2025-06-12 based on user request)
+* Before releasing changes to `@Hero.tsx`, ensure that the "Watch Demo" button triggers the demo video, similar to the functionality in `@DualSection.tsx`. (Added 2025-06-13 based on user request)
+* Before releasing changes to `@Hero.tsx`, ensure that the original column alignment is restored. (Added 2025-06-13 based on user request)
+* Before releasing changes to `@Hero.tsx`, ensure that the right side content has adequate spacing. (Added 2025-06-13 based on user request)
 
 ## DEBUGGING
 
@@ -175,9 +181,3 @@ This file defines all project rules, coding standards, workflow guidelines, refe
 * When debugging issues related to listing Vercel Blob storage URLs, ensure the `@vercel/blob` package is installed correctly and that the `scripts/list-blobs.js` script is correctly configured. (Added 2025-06-12)
 * **When debugging issues related to listing Vercel Blob storage URLs, ensure the `BLOB_READ_WRITE_TOKEN` environment variable is correctly configured.** (Added 2025-06-12 based on user request)
 * When debugging email templates, ensure all local or relative image paths have been replaced with the correct blob URLs. (Added 2025-06-12 based on user request)
-* When debugging email templates, ensure that they use the global theme styles from `@/app/globals.css`. (Added 2025-06-12 based on user request)
-* When debugging email templates, ensure that they reference the custom fonts from `@/app/_fonts`. (Added 2025-06-12 based on user request)
-* When debugging email templates, ensure that they apply the general theme (colors, font families, etc.) as defined in CSS and font setup. (Added 2025-06-12 based on user request)
-* When debugging email templates, ensure that headings use the `var(--font-poppins-black)` font. (Added 2025-06-12 based on user request)
-* When debugging email templates, ensure that body text uses the `var(--font-proxima-nova)` font. (Added 2025-06-12 based on user request)
-* When debugging email templates, verify that all hardcoded font families are replaced with the correct CSS variable: `fontFamily: 'var(--font-poppins-

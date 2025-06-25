@@ -30,9 +30,9 @@ export async function POST(request: Request) {
 		}
 
 		const { data, error } = await resend.emails.send({
-			from: "Team <team@flsusa.shop>",
+			from: "Sales Team <sales@gocounterculture.com>",
 			to: [body.businessEmail],
-			subject: "Welcome to FLS USA",
+			subject: "Welcome to FLS USA, a Counter Culture Brand",
 			react: WholesalerEmailTemplate({
 				name: body.name,
 				companyName: body.companyName,
