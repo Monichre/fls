@@ -149,7 +149,7 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(
               >
                 {primaryCTA}
               </Button>
-              {isMobile ? null : (
+              {/* {isMobile ? null : (
                 <Button
                   className='bg-white text-black hover:bg-white/10 hover:text-white rounded-full button transition-all duration-300'
                   size='lg'
@@ -158,7 +158,7 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(
                 >
                   {secondaryCTA}
                 </Button>
-              )}
+              )} */}
             </div>
           </div>
 

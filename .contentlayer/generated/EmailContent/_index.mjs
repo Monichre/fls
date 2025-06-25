@@ -15,8 +15,8 @@ import shared__companyInfoMd from './shared__company-info.md.json' assert { type
 import shared__featuresMd from './shared__features.md.json' assert { type: 'json' }
 import shared__footerMd from './shared__footer.md.json' assert { type: 'json' }
 import shared__valuePropositionMd from './shared__value-proposition.md.json' assert { type: 'json' }
-import product__showcaseMd from './product__showcase.md.json' assert { type: 'json' }
 import signature__launchMd from './signature__launch.md.json' assert { type: 'json' }
+import product__showcaseMd from './product__showcase.md.json' assert { type: 'json' }
 import welcome__introMd from './welcome__intro.md.json' assert { type: 'json' }
 
-export const allEmailContents = [bic_template_3Md, template_10_seasonalMd, template_1_welcomeMd, template_2_product_launchMd, template_3_exclusive_offerMd, template_4_cart_abandonmentMd, template_5_post_purchaseMd, template_6_educationalMd, template_7_loyalty_programMd, template_8_referral_programMd, template_9_reengagementMd, shared__companyInfoMd, shared__featuresMd, shared__footerMd, shared__valuePropositionMd, product__showcaseMd, signature__launchMd, welcome__introMd]
+export const allEmailContents = [bic_template_3Md, template_10_seasonalMd, template_1_welcomeMd, template_2_product_launchMd, template_3_exclusive_offerMd, template_4_cart_abandonmentMd, template_5_post_purchaseMd, template_6_educationalMd, template_7_loyalty_programMd, template_8_referral_programMd, template_9_reengagementMd, shared__companyInfoMd, shared__featuresMd, shared__footerMd, shared__valuePropositionMd, signature__launchMd, product__showcaseMd, welcome__introMd]
