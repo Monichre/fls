@@ -14,6 +14,7 @@ import {useScrollToSection} from '@/hooks/useScrollToSection'
 import {SignUpForm} from '@/components/sign-up/signup-form'
 import {Divider} from '@/components/ui'
 import {useResponsive} from '@/hooks'
+import {HeroVideoDialog} from '@/components/sections/dual-section/video-modal'
 
 // Define types for the LighterModel
 interface LighterModelProps {
@@ -43,7 +44,6 @@ interface HeroProps {
   isMobile?: boolean
   isLandscape?: boolean
   prefersReducedMotion?: boolean
-  [key: string]: unknown
 }
 
 export const Hero = forwardRef<HTMLDivElement, HeroProps>(
@@ -60,6 +60,12 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(
   ) => {
     const [zoom, setZoom] = useState(6)
     const cameraControlsRef = useRef<CameraControls>(null)
+    const [isVideoOpen, setIsVideoOpen] = useState(false)
+
+    // Video toggle function
+    const toggleVideo = () => {
+      setIsVideoOpen(!isVideoOpen)
+    }
 
     // Zoom in/out functions
     const zoomIn = () => {
@@ -98,7 +104,7 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(
       <section
         id='hero'
         ref={ref}
-        className='relative !h-[944px] flex items-center'
+        className='relative !h-[944px] w-full flex items-center'
         style={{height: '944px'}}
       >
         {/* Hero Background Image */}
@@ -119,9 +125,9 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(
         <motion.div
           layoutId='hero-content'
           // style={{y, opacity}}
-          className='container h-full flex flex-col justify-center align-center items-center  mx-auto px-4 lg:px-6 z-20 md:flex md:flex-row justify-center items-center overflow-visible'
+          className='w-full h-full flex flex-col justify-center align-center items-center mx-auto px-4 lg:px-6 z-20 md:flex-row items-center align-center'
         >
-          <div className='sm:w-full sm:h-auto md:w-1/2 md:w-[40vw] mb-10 lg:mb-0 mx-auto px-12'>
+          <div className='sm:w-full sm:h-auto md:w-1/2  mb-10 lg:mb-0 mx-auto px-12'>
             <Image
               width={isMobile ? 150 : 190}
               height={isMobile ? 40 : 65}
@@ -149,20 +155,20 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(
               >
                 {primaryCTA}
               </Button>
-              {/* {isMobile ? null : (
+              {isMobile ? null : (
                 <Button
                   className='bg-white text-black hover:bg-white/10 hover:text-white rounded-full button transition-all duration-300'
                   size='lg'
-                  onClick={(e) => handleClick('#signature-design')}
+                  onClick={toggleVideo}
                   variant='outline'
                 >
                   {secondaryCTA}
                 </Button>
-              )} */}
+              )}
             </div>
           </div>
 
-          <div className='lg:w-1/2 relative z-50  overflow-visible flex items-center justify-center content-center'>
+          <div className='relative z-50 overflow-visible flex items-center justify-center content-center sm:w-full sm:h-auto md:w-1/2 md:ml-auto'>
             {/* Semi-transparent backdrop for 3D model */}
 
             <div className='relative z-10 z-50'>
@@ -185,6 +191,17 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(
             </div>
           </div>
         </motion.div>
+
+        {/* Video Modal */}
+        <HeroVideoDialog
+          animationStyle='top-in-bottom-out'
+          isVideoOpen={isVideoOpen}
+          toggleVideoOpen={toggleVideo}
+          videoSrc='/fls-video.mp4'
+          thumbnailSrc='/thumbnail.png'
+          thumbnailAlt='Hero Video'
+          className='w-full'
+        />
 
         {/* Bottom border */}
         <Divider

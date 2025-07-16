@@ -231,15 +231,27 @@ export function LighterCollection({
               Trusted by thousands of customers
             </span>
           </div>
-          <Button
-            size='lg'
-            className='bg-yellow-400 hover:bg-yellow-500 text-black rounded-full px-8 py-6'
-            asChild
-          >
-            <a href='/catalogue.pdf' target='_blank' rel='noopener noreferrer'>
-              See Catalogue <ChevronRight className='ml-2 h-4 w-4' />
-            </a>
-          </Button>
+          <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
+            <Button
+              size='lg'
+              className='bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white rounded-full px-8 py-6 shadow-lg hover:shadow-xl transition-all'
+              asChild
+            >
+              <a href='/customizer'>
+                🔥 Try 3D Customizer <Sparkles className='ml-2 h-4 w-4' />
+              </a>
+            </Button>
+            <Button
+              size='lg'
+              variant='outline'
+              className='border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black rounded-full px-8 py-6'
+              asChild
+            >
+              <a href='/catalogue.pdf' target='_blank' rel='noopener noreferrer'>
+                See Catalogue <ChevronRight className='ml-2 h-4 w-4' />
+              </a>
+            </Button>
+          </div>
         </div>
       </div>
     </section>
