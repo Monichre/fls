@@ -5,7 +5,7 @@ import Image from 'next/image'
 import {gsap} from 'gsap'
 import {ScrollTrigger} from 'gsap/ScrollTrigger'
 import {Button} from '@/components/ui/button'
-import {ChevronRight, ChevronLeft, ShoppingCart, Star} from 'lucide-react'
+import {ChevronRight, ChevronLeft, ShoppingCart, Star, Sparkles} from 'lucide-react'
 import useEmblaCarousel from 'embla-carousel-react'
 import {useParallax} from '@/hooks/useParallax'
 

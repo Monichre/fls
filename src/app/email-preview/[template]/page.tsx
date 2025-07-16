@@ -1,6 +1,7 @@
 import React from 'react'
 import {render} from '@react-email/render'
-import {getEmailTemplate} from '@/lib/email-templates'
+import {getEmailTemplate, getEmailTemplates} from '@/lib/email-templates'
+import {getEmailTemplateBySlug} from '@/lib/email-template-registry'
 
 interface EmailTemplatePageProps {
   params: {
@@ -14,7 +15,8 @@ export default async function EmailTemplatePage({
   const {template: templateName} = params
 
   try {
-    const EmailComponent = await getEmailTemplate(templateName)
+    // Use static registry instead of dynamic import
+    const EmailComponent = getEmailTemplateBySlug(templateName)
 
     if (!EmailComponent) {
       return (

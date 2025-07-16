@@ -1,6 +1,6 @@
 import React from 'react'
 import { render } from '@react-email/render'
-import { getEmailTemplate } from '@/lib/email-templates'
+import { getEmailTemplateBySlug } from '@/lib/email-template-registry'
 import { NextRequest, NextResponse } from 'next/server'
 
 export async function GET(
@@ -12,7 +12,7 @@ export async function GET(
   const format = searchParams.get('format') || 'html'
   
   try {
-    const EmailComponent = await getEmailTemplate(templateName)
+    const EmailComponent = getEmailTemplateBySlug(templateName)
     
     if (!EmailComponent) {
       return NextResponse.json(
