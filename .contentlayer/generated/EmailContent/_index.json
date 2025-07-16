@@ -240,26 +240,6 @@
     "slug": "product/showcase"
   },
   {
-    "templateType": "signature",
-    "section": "launch",
-    "priority": 1,
-    "title": "Signature Series Launch",
-    "body": {
-      "raw": "\n## Introducing the FLS Signature Series\n\n**Experience Unrivaled Craftsmanship**\n\nThe FLS Signature Series represents the pinnacle of lighter engineering and design. Each piece in this exclusive collection combines cutting-edge technology with premium materials to create lighters that are as beautiful as they are functional.\n\n**What Makes the Signature Series Special:**\n\n- **Premium Materials**: Crafted with high-grade metals and finishes\n- **Advanced Ignition**: Next-generation windproof technology\n- **Limited Edition**: Exclusive designs with numbered authentication\n- **Collector Value**: Investment-quality pieces that appreciate over time\n- **Gift-Ready**: Elegant packaging suitable for any occasion\n\n**Perfect For:**\n- Discerning collectors seeking premium pieces\n- Gift buyers looking for something truly special  \n- Retailers targeting upscale customers\n- Anyone who appreciates superior craftsmanship",
-      "html": "<h2>Introducing the FLS Signature Series</h2>\n<p><strong>Experience Unrivaled Craftsmanship</strong></p>\n<p>The FLS Signature Series represents the pinnacle of lighter engineering and design. Each piece in this exclusive collection combines cutting-edge technology with premium materials to create lighters that are as beautiful as they are functional.</p>\n<p><strong>What Makes the Signature Series Special:</strong></p>\n<ul>\n<li><strong>Premium Materials</strong>: Crafted with high-grade metals and finishes</li>\n<li><strong>Advanced Ignition</strong>: Next-generation windproof technology</li>\n<li><strong>Limited Edition</strong>: Exclusive designs with numbered authentication</li>\n<li><strong>Collector Value</strong>: Investment-quality pieces that appreciate over time</li>\n<li><strong>Gift-Ready</strong>: Elegant packaging suitable for any occasion</li>\n</ul>\n<p><strong>Perfect For:</strong></p>\n<ul>\n<li>Discerning collectors seeking premium pieces</li>\n<li>Gift buyers looking for something truly special</li>\n<li>Retailers targeting upscale customers</li>\n<li>Anyone who appreciates superior craftsmanship</li>\n</ul>"
-    },
-    "_id": "signature/launch.md",
-    "_raw": {
-      "sourceFilePath": "signature/launch.md",
-      "sourceFileName": "launch.md",
-      "sourceFileDir": "signature",
-      "contentType": "markdown",
-      "flattenedPath": "signature/launch"
-    },
-    "type": "EmailContent",
-    "slug": "signature/launch"
-  },
-  {
     "templateType": "general",
     "section": "company-info",
     "priority": 1,
@@ -338,6 +318,26 @@
     },
     "type": "EmailContent",
     "slug": "shared/value-proposition"
+  },
+  {
+    "templateType": "signature",
+    "section": "launch",
+    "priority": 1,
+    "title": "Signature Series Launch",
+    "body": {
+      "raw": "\n## Introducing the FLS Signature Series\n\n**Experience Unrivaled Craftsmanship**\n\nThe FLS Signature Series represents the pinnacle of lighter engineering and design. Each piece in this exclusive collection combines cutting-edge technology with premium materials to create lighters that are as beautiful as they are functional.\n\n**What Makes the Signature Series Special:**\n\n- **Premium Materials**: Crafted with high-grade metals and finishes\n- **Advanced Ignition**: Next-generation windproof technology\n- **Limited Edition**: Exclusive designs with numbered authentication\n- **Collector Value**: Investment-quality pieces that appreciate over time\n- **Gift-Ready**: Elegant packaging suitable for any occasion\n\n**Perfect For:**\n- Discerning collectors seeking premium pieces\n- Gift buyers looking for something truly special  \n- Retailers targeting upscale customers\n- Anyone who appreciates superior craftsmanship",
+      "html": "<h2>Introducing the FLS Signature Series</h2>\n<p><strong>Experience Unrivaled Craftsmanship</strong></p>\n<p>The FLS Signature Series represents the pinnacle of lighter engineering and design. Each piece in this exclusive collection combines cutting-edge technology with premium materials to create lighters that are as beautiful as they are functional.</p>\n<p><strong>What Makes the Signature Series Special:</strong></p>\n<ul>\n<li><strong>Premium Materials</strong>: Crafted with high-grade metals and finishes</li>\n<li><strong>Advanced Ignition</strong>: Next-generation windproof technology</li>\n<li><strong>Limited Edition</strong>: Exclusive designs with numbered authentication</li>\n<li><strong>Collector Value</strong>: Investment-quality pieces that appreciate over time</li>\n<li><strong>Gift-Ready</strong>: Elegant packaging suitable for any occasion</li>\n</ul>\n<p><strong>Perfect For:</strong></p>\n<ul>\n<li>Discerning collectors seeking premium pieces</li>\n<li>Gift buyers looking for something truly special</li>\n<li>Retailers targeting upscale customers</li>\n<li>Anyone who appreciates superior craftsmanship</li>\n</ul>"
+    },
+    "_id": "signature/launch.md",
+    "_raw": {
+      "sourceFilePath": "signature/launch.md",
+      "sourceFileName": "launch.md",
+      "sourceFileDir": "signature",
+      "contentType": "markdown",
+      "flattenedPath": "signature/launch"
+    },
+    "type": "EmailContent",
+    "slug": "signature/launch"
   },
   {
     "templateType": "welcome",

@@ -104,7 +104,7 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(
       <section
         id='hero'
         ref={ref}
-        className='relative !h-[944px] w-full flex items-center'
+        className='relative !h-[944px] w-full flex flex-col items-center'
         style={{height: '944px'}}
       >
         {/* Hero Background Image */}
@@ -125,7 +125,7 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(
         <motion.div
           layoutId='hero-content'
           // style={{y, opacity}}
-          className='w-full h-full flex flex-col justify-center align-center items-center mx-auto px-4 lg:px-6 z-20 md:flex-row items-center align-center'
+          className='mx-auto h-full flex flex-col justify-center align-center items-center mx-auto px-4 lg:px-6 z-20 md:flex-row items-center align-center'
         >
           <div className='sm:w-full sm:h-auto md:w-1/2  mb-10 lg:mb-0 mx-auto px-12'>
             <Image
